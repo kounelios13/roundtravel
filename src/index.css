@@ -7,7 +7,76 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+@media only screen and (max-width: 600px) {
+  .image-header-image{
+    height: 70vh !important;
+    /*background-position: center center !important;*/
+  }
+
+  .navbar-main{
+    padding: 10px 10px !important;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .image-header-image{
+    height: 100vh !important;
+    /*background-position: center center !important;*/
+  }
+}
+
+.menu-logo{
+  width: 70%;
+}
+
+.navbar-main{
+  /*box-shadow: inset 0px 55px 34px -20px rgba(0,0,0,0.7);*/
+  padding: 30px 60px;
+}
+
+.nav-link{
+  color: white !important;
+  margin-left: 15px;
+}
+
+.top-bar{
+  color: white;
+}
+
+.image-header-container{
+  overflow: hidden;
+}
+
+
+.image-header-image{
+  background: url(../src/assets/images/1.jpg) no-repeat center center;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1);
+  animation-name: zoom-out;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+
+}
+
+@keyframes zoom-out {
+  from {transform: scale(1.2);}
+  to {transform: scale(1);}
+}
+
+.toggle-menu-item{
+  width: 20vw;
+}
+
+.progress-spinner-container{
+  position: absolute;
+  z-index: 300000;
+  bottom: 5vh;
+}
+
+.progress-spinner{
+  padding-top: 10px;
+  width: 20px !important;
 }
