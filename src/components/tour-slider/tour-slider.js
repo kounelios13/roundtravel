@@ -6,35 +6,32 @@ class TourSlider extends Component {
 
     constructor(props) {
         super(props);
+        this.sliderTimeOut = 25000
+        this.sliderTickInterval = this.sliderTimeOut / 50
         this.imageDiv= React.createRef()
-        this.spinnerInterval = {}
-        this.spinnerTimeout = {}
+        this.timeIncrementInterval = 0
 
         this.state = {
-
             sliderIndex: 0,
-            sliderPercentage: 30,
+            sliderPercentage: 0,
             sliderTrips: [
                 {
                     id: 1,
                     imageUrl: 'https://cdn.sooribali.com//img/site_images/soori-bali-beachfront-infinity-pool.jpg',
-                    text1: 'Bali Tour',
-                    text2: 'Lorem',
-                    text3: 'Lorem Ipsum'
+                    tripTitle: 'ΜΠΑΛΙ',
+                    tripSubtitle: 'ΤΟ ΝΗΣΙ ΤΩΝ ΘΕΩΝ',
+                    caption1: 'ΑΠ\' ΕΥΘΕΙΑΣ',
+                    caption2: 'ΑΠΟ ΗΡΑΚΛΕΙΟ',
+                    price: 950
                 },
                 {
                     id: 2,
-                    imageUrl: 'https://images.thrillophilia.com/image/upload/s--DGqAXu3R--/c_fill,f_auto,fl_strip_profile,h_775,q_auto,w_1600/v1/images/photos/000/110/247/original/1491907892_krabi.jpg.jpg?1491907892',
-                    text1: 'Bali Tour',
-                    text2: 'Lorem',
-                    text3: 'Lorem Ipsum'
-                },
-                {
-                    id: 3,
-                    imageUrl: 'https://cdn.shopify.com/s/files/1/1003/7610/products/night_scene_of_the_Louvre_Museum_Wall_Mural_Wallpaper_a.jpg?v=1527599727',
-                    text1: 'Bali Tour',
-                    text2: 'Lorem',
-                    text3: 'Lorem Ipsum'
+                    imageUrl: 'https://static.wixstatic.com/media/93339c_aa35521281d248e78d39640ae26c1ecd~mv2.jpg',
+                    tripSubtitle: 'ΠΟΛΗ ΤΟΥ ΦΩΤΟΣ',
+                    tripTitle: 'ΠΑΡΙΣΙ',
+                    caption1: 'ΠΤΗΣΕΙΣ ΑΠΟ',
+                    caption2: 'ΑΘΗΝΑ',
+                    price: 450
                 }
             ],
 
@@ -42,35 +39,43 @@ class TourSlider extends Component {
         this.increaseSliderIndex = this.increaseSliderIndex.bind(this)
         this.setActiveIndex = this.setActiveIndex.bind(this)
         this.getRemainingPercentage = this.getRemainingPercentage.bind(this)
-        this.increaseSliderInterval = this.increaseSliderInterval.bind(this)
+        this.tickSliderInterval = this.tickSliderInterval.bind(this)
     }
 
+    tickSliderInterval(){
+        let percentage = (this.timeIncrementInterval / this.sliderTimeOut) * 100
+        this.setState({sliderPercentage: percentage})
+        this.timeIncrementInterval += this.sliderTickInterval
+    }
 
     componentDidMount() {
-        this.spinnerTimeout = setInterval(this.increaseSliderIndex, 3000)
+        this.sliderInterval = setInterval(this.increaseSliderIndex, this.sliderTimeOut)
+        this.sliderPercentageInterval = setInterval(this.tickSliderInterval, this.sliderTickInterval);
     }
+
+
 
     increaseSliderIndex(){
         console.log('increasing index')
         if(this.state.sliderIndex < this.state.sliderTrips.length-1){
             this.setActiveIndex(this.state.sliderIndex + 1)
+            this.timeIncrementInterval = 0
         }else{
             this.setActiveIndex(0)
+            this.timeIncrementInterval = 0
         }
-        // clearInterval(this.spinnerInterval)
-        // this.setState({sliderPercentage: 0})
-        // this.spinnerInterval = setInterval(this.increaseSliderInterval, 100)
     }
 
     setActiveIndex(i){
         this.imageDiv.current.style.background = 'url(' + this.state.sliderTrips[i].imageUrl + ') no-repeat center center';
         this.imageDiv.current.style.backgroundSize = 'cover'
         this.setState({sliderIndex: i})
+        this.setState({percentage: 0})
+        this.timeIncrementInterval = 0
+        clearInterval(this.sliderInterval)
+        this.sliderInterval = setInterval(this.increaseSliderIndex, this.sliderTimeOut)
     }
 
-    increaseSliderInterval(){
-        this.setState({sliderPercentage: this.state.sliderPercentage + 1})
-    }
 
     getRemainingPercentage(i){
         console.log('called')
@@ -84,6 +89,7 @@ class TourSlider extends Component {
 
 
     render() {
+        const trip = this.state.sliderTrips[this.state.sliderIndex]
 
         return (
             <div className='row p-0 m-0'>
@@ -91,12 +97,47 @@ class TourSlider extends Component {
                     <div className='image-header-image' ref={this.imageDiv}>
 
                     </div>
-                    <div className='progress-spinner-container'>
+
+                    <div className='text-container bg-red text-uppercase  col-5'>
+                        <div className="d-flex">
+                            <div className='slider-trip-title col-10'>
+                                {trip.tripTitle}
+                            </div>
+                        </div>
+                        <div className="col-12 d-flex">
+                            <div className='slider-trip-subtitle'>
+                                {trip.tripSubtitle}
+                            </div>
+                            <div className='slider-container-1 col-4'>
+                                <div className='slider-caption-1'>
+                                    {trip.caption1}
+                                </div>
+                                <div>
+                                    <div className='slider-caption-2'>
+                                        {trip.caption2}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className='price offset-8 d-flex'>
+                            <div className={'slider-badge-container'}>
+                                <span className='badge badge-info slider-badge mr-2'>Early price</span>
+                            </div>
+                            <div>
+                                {trip.price}
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div className='progress-slider-container'>
                         <ul className='list-unstyled ml-4 mb-3'>
                             {this.state.sliderTrips.map((trip, i)=>{
                                 return (
-                                    <li key={trip.id} onClick={()=>{this.setActiveIndex(i)}}>
-                                        <CircularProgressbar  strokeWidth={15} circleRatio={1} className='progress-spinner' value={i === this.state.sliderIndex ? this.state.sliderPercentage : 0} styles={buildStyles({pathColor: '#3e98c7', trailColor: 'rgba(0,0,0,.8)'})} />
+                                    <li key={trip.id} className='cursor-pointer opacity-hover' onClick={()=>{this.setActiveIndex(i)}}>
+                                        <CircularProgressbar strokeWidth={15} circleRatio={1} className='progress-slider' value={i === this.state.sliderIndex ? this.state.sliderPercentage : 0} styles={buildStyles({pathColor: '#3e98c7', trailColor: 'rgba(0,0,0,.8)'})} />
                                     </li>
                                 )
                             })}

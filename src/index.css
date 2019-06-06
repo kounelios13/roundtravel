@@ -56,8 +56,8 @@ body {
   background-position: center;
   transform: scale(1);
   animation-name: zoom-out;
-  animation-duration: 3s;
-  animation-iteration-count: 1;
+  animation-duration: 28s;
+  animation-iteration-count: infinite;
 }
 
 @keyframes zoom-out {
@@ -69,13 +69,97 @@ body {
   width: 20vw;
 }
 
-.progress-spinner-container{
+.progress-slider-container{
   position: absolute;
-  z-index: 300000;
+  z-index: 3000;
   bottom: 5vh;
 }
 
-.progress-spinner{
+.price{
+  color: #fff;
+  font-size: 3.3em;
+  font-weight: 300;
+}
+
+
+
+.price::after{
+  content: "€";
+  font-size: 0.55em;
+  transform: translateY(15%)
+}
+
+.progress-slider{
   padding-top: 10px;
-  width: 20px !important;
+  width: 17px !important;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.opacity-hover:hover{
+  opacity: 0.75 !important;
+}
+
+.text-container{
+  z-index: 1000;
+  position: absolute;
+  top: 30vh;
+  left: 40vw;
+}
+
+.slider-trip-subtitle{
+  color: #fff;
+  font-size: 4.0em;
+  white-space: nowrap;
+  font-weight: 300;
+  line-height: 110%;
+
+}
+
+.slider-trip-title{
+  color: #fff;
+  font-size: 6.05em;
+  transform: translateX(-15%);
+  font-weight: 400;
+  white-space: nowrap;
+  line-height: 110%;
+  animation-name: text-slide-in;
+  animation-duration: 6s;
+  -webkit-animation-delay: 3s;
+  -moz-animation-delay: 3s;
+  -o-animation-delay: 3s;
+  animation-delay: 3s;
+
+
+}
+
+@keyframes text-slide-in {
+  0% { opacity:0; transform: translateX(-45%); letter-spacing: -9px;}
+  100% { opacity:1; transform: translateX(-15%); letter-spacing: 0px;}
+}
+
+
+
+
+.slider-container-1{
+  font-size: 1.4em;
+  color: #fff;
+  line-height: 95%;
+  transform: translateY(20%)
+}
+
+.slider-caption-1{
+  font-size: 0.9em;
+  font-weight: 300;
+}
+
+.slider-caption-2{
+  font-size: 1.2em;
+}
+
+.slider-badge{
+  font-size: 0.25em;
+  transform: translateY(-100%)
 }
