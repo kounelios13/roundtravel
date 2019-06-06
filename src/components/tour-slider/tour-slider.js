@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {buildStyles, CircularProgressbar} from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
+import distanceInWords from 'date-fns/distance_in_words';
+import grLocale from 'date-fns/locale/el'
 
 class TourSlider extends Component {
 
@@ -22,7 +24,8 @@ class TourSlider extends Component {
                     tripSubtitle: 'ΤΟ ΝΗΣΙ ΤΩΝ ΘΕΩΝ',
                     caption1: 'ΑΠ\' ΕΥΘΕΙΑΣ',
                     caption2: 'ΑΠΟ ΗΡΑΚΛΕΙΟ',
-                    price: 950
+                    price: 950,
+                    earlyBookingExpiration: new Date(2019, 5, 7)
                 },
                 {
                     id: 2,
@@ -31,7 +34,9 @@ class TourSlider extends Component {
                     tripTitle: 'ΠΑΡΙΣΙ',
                     caption1: 'ΠΤΗΣΕΙΣ ΑΠΟ',
                     caption2: 'ΑΘΗΝΑ',
-                    price: 450
+                    price: 450,
+                    earlyBookingExpiration: new Date(2019, 6, 9)
+
                 }
             ],
 
@@ -46,6 +51,10 @@ class TourSlider extends Component {
         let percentage = (this.timeIncrementInterval / this.sliderTimeOut) * 100
         this.setState({sliderPercentage: percentage})
         this.timeIncrementInterval += this.sliderTickInterval
+    }
+
+    normalizeGreek(text) {
+        return text.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
     }
 
     componentDidMount() {
@@ -91,14 +100,18 @@ class TourSlider extends Component {
     render() {
         const trip = this.state.sliderTrips[this.state.sliderIndex]
 
+        let remainingTime = this.normalizeGreek(distanceInWords(
+            new Date().toLocaleString('en-US', { timeZone: 'Europe/Athens' }),
+            trip.earlyBookingExpiration,
+            {locale: grLocale}
+        ))
         return (
             <div className='row p-0 m-0'>
                 <div className='col-12 p-0 m-0 image-header-container'>
                     <div className='image-header-image' ref={this.imageDiv}>
-
                     </div>
 
-                    <div className='text-container bg-red text-uppercase  col-5'>
+                    <div className='slider-container  text-uppercase col-5'>
                         <div className="d-flex">
                             <div className='slider-trip-title col-10'>
                                 {trip.tripTitle}
@@ -108,7 +121,7 @@ class TourSlider extends Component {
                             <div className='slider-trip-subtitle'>
                                 {trip.tripSubtitle}
                             </div>
-                            <div className='slider-container-1 col-4'>
+                            <div className='slider-caption-container col-4'>
                                 <div className='slider-caption-1'>
                                     {trip.caption1}
                                 </div>
@@ -120,15 +133,23 @@ class TourSlider extends Component {
                             </div>
                         </div>
 
-                        <div className='price offset-8 d-flex'>
-                            <div className={'slider-badge-container'}>
-                                <span className='badge badge-info slider-badge mr-2'>Early price</span>
+                        <div className=' offset-8 d-flex'>
+                            <div className='slider-badge-container'>
+                                <span className='badge badge-info slider-badge'>Early Booking</span>
                             </div>
-                            <div>
+                            <div className='slider-price'>
                                 {trip.price}
                             </div>
                         </div>
-
+                        <div className='slider-countdown-container col-6 offset-7'>
+                            <div className='price-caption'>
+                                <small>Ληγει σε</small>
+                            </div>
+                            <div>
+                                <span className='slider-time-remaining'>{remainingTime}</span>
+                            </div>
+                            {/*1 <small>Μέρα</small> 4 <small>Ωρες</small> 15 <small>Λέπτα</small>*/}
+                        </div>
                     </div>
 
 
@@ -143,7 +164,6 @@ class TourSlider extends Component {
                             })}
                         </ul>
                     </div>
-
                 </div>
             </div>
         );
