@@ -3,6 +3,11 @@ import {buildStyles, CircularProgressbar} from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import distanceInWords from 'date-fns/distance_in_words';
 import grLocale from 'date-fns/locale/el'
+import InputGroup from "react-bootstrap/InputGroup";
+import FormControl from "react-bootstrap/es/FormControl";
+import Tabs from "react-bootstrap/Tabs";
+import Tab from "react-bootstrap/Tab";
+import {FaSearch} from "react-icons/fa";
 
 class TourSlider extends Component {
 
@@ -164,7 +169,18 @@ class TourSlider extends Component {
                             })}
                         </ul>
                     </div>
+                    <div className="bg-semi-transparent slider-search">
+                        <div className='text-center'>
+                            <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
+                                <Tab eventKey="profile" title={<span> <FaSearch /> ΑΝΑΖΗΤΗΣΗ</span>} tabClassName={'tab-top-pane'}>
+                                    <input className='my-2 mr-3' type="text"/>
+                                    <button className={'btn btn-secondary px-3 py-1'}>ΓΡΗΓΟΡΗ ΑΝΑΖΗΤΗΣΗ</button>
+                                </Tab>
+                            </Tabs>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         );
     }
