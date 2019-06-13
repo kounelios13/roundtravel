@@ -169,7 +169,7 @@ class TourSlider extends Component {
                             })}
                         </ul>
                     </div>
-                    <div className="bg-semi-transparent slider-search">
+                    <div className="slider-search">
                         <div className='text-center'>
                             <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
                                 <Tab eventKey="profile" title={<span> <FaSearch /> ΑΝΑΖΗΤΗΣΗ</span>} tabClassName={'tab-top-pane'}>
