@@ -65,61 +65,79 @@ class AppRouter extends Component {
                                                                         <li className='rt-nav-dropdown-item'>Θεσσαλονίκη</li>
                                                                         <li className='rt-nav-dropdown-item'>Ηράκλειο</li>
                                                                         <li className='rt-nav-dropdown-item'>Κύπρος</li>
-                                                                        <hr className='rt-nav-hr'/>
                                                                     </ul>
                                                                 </div>
                                                             </div>
-                                                            <div className="col-3 d-flex">
-
-                                                                <div>
-                                                                    <div className=''>
-                                                                        <span className='rt-nav-dropdown-title'>ΠΡΟΟΡΙΣΜΟΙ</span>
+                                                            <div className="col-3">
+                                                                <div className='rt-nav-dropdown-title'>ΠΡΟΟΡΙΣΜΟΙ</div>
+                                                                <div className="d-flex mt-4">
+                                                                    <div className='pr-3'>
+                                                                        <div className=''>
+                                                                            <span className='rt-nav-dropdown-title-sub'>ΗΠΕΙΡΟΙ</span>
+                                                                        </div>
+                                                                        <div className=''>
+                                                                            <ul className='list-unstyled mt-3'>
+                                                                                <li className='rt-nav-dropdown-item'>Ευρώπη</li>
+                                                                                <li className='rt-nav-dropdown-item'>Αφρική</li>
+                                                                                <li className='rt-nav-dropdown-item'>Ασία</li>
+                                                                                <li className='rt-nav-dropdown-item'>Αμερική</li>
+                                                                                <li className='rt-nav-dropdown-item'>Οκέανια</li>
+                                                                            </ul>
+                                                                        </div>
                                                                     </div>
-                                                                    <div className='bg-danger'>
-                                                                        <ul className='list-unstyled mt-3'>
-                                                                            <li className='rt-nav-dropdown-item'>Ευρώπη</li>
-                                                                            <li className='rt-nav-dropdown-item'>Ελλάδα</li>
-                                                                            <li className='rt-nav-dropdown-item'>Αφρική</li>
-                                                                            <li className='rt-nav-dropdown-item'>Ασία</li>
-                                                                            <li className='rt-nav-dropdown-item'>Αμερική</li>
-                                                                            <li className='rt-nav-dropdown-item'>Οκέανια</li>
-                                                                            <hr className='rt-nav-hr'/>
-                                                                        </ul>
+
+                                                                    <div className='pl-5'>
+                                                                        <div className=''>
+                                                                            <span className='rt-nav-dropdown-title-sub'>ΔΗΜΟΦΙΛΗΣ</span>
+                                                                        </div>
+                                                                        <div className=''>
+                                                                            <ul className='list-unstyled mt-3'>
+                                                                                <li className='rt-nav-dropdown-item'>Ελλάδα</li>
+                                                                                <li className='rt-nav-dropdown-item'>Γαλλία</li>
+                                                                                <li className='rt-nav-dropdown-item'>Ισπανία</li>
+                                                                                <li className='rt-nav-dropdown-item'>Ινδία</li>
+                                                                                <li className='rt-nav-dropdown-item'>Κίνα</li>
+                                                                                <li className='rt-nav-dropdown-item'>Ταίλανδη</li>
+                                                                            </ul>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
 
+                                                            </div>
+                                                            <div className="col-3">
+                                                                <div className=''>
+                                                                    <span className='rt-nav-dropdown-title'>ΤΥΠΟΣ ΤΑΞΙΔΙΟΥ</span>
+                                                                </div>
                                                                 <div>
-                                                                    <div className=''>
-                                                                        <span className='rt-nav-dropdown-title'>ΠΡΟΟΡΙΣΜΟΙ</span>
-                                                                    </div>
-                                                                    <div className='bg-danger'>
-                                                                        <ul className='list-unstyled mt-3'>
-                                                                            <li className='rt-nav-dropdown-item'>Ευρώπη</li>
-                                                                            <li className='rt-nav-dropdown-item'>Ελλάδα</li>
-                                                                            <li className='rt-nav-dropdown-item'>Αφρική</li>
-                                                                            <li className='rt-nav-dropdown-item'>Ασία</li>
-                                                                            <li className='rt-nav-dropdown-item'>Αμερική</li>
-                                                                            <li className='rt-nav-dropdown-item'>Οκέανια</li>
-                                                                            <hr className='rt-nav-hr'/>
-                                                                        </ul>
-                                                                    </div>
+                                                                    <ul className='list-unstyled mt-3'>
+                                                                        <li className='rt-nav-dropdown-item'>Αεροπορικώς</li>
+                                                                        <li className='rt-nav-dropdown-item'>Οδικώς</li>
+                                                                        <li className='rt-nav-dropdown-item'>Κρουαζίερες</li>
+                                                                    </ul>
                                                                 </div>
                                                             </div>
-                                                            <div className="col-3 text-center">
-                                                                <span>ΑΝΑ ΤΥΠΟ ΤΑΞΙΔΙΟΥ</span>
-                                                            </div>
-                                                            <div className="col-3 text-center">
-                                                                <span>ΑΝΑ ΤΥΠΟ ΤΑΞΙΔΙΟΥ</span>
+                                                            <div className="col-3">
+                                                                <div className=''>
+                                                                    <span className='rt-nav-dropdown-title'>ΠΕΡΙΟΔΟΙ</span>
+                                                                </div>
+                                                                <div>
+                                                                    <ul className='list-unstyled mt-3'>
+                                                                        <li className='rt-nav-dropdown-item'>Καλοκαίρι</li>
+                                                                        <li className='rt-nav-dropdown-item'>Χριστούγεννα / Πρωτοχρονία</li>
+                                                                        <li className='rt-nav-dropdown-item'>Πάσχα</li>
+                                                                        <li className='rt-nav-dropdown-item'>Πρωτομαγία</li>
+                                                                        <li className='rt-nav-dropdown-item'>Αγίου πνευματος</li>
+                                                                        <li className='rt-nav-dropdown-item'>25ή Μαρτίου</li>
+                                                                    </ul>
+                                                                </div>
                                                             </div>
                                                         </div>
-
                                                     </div>
-
-
                                                 </div>
                                             }
                                             <li className='rt-nav-item'>ΠΡΟΣΦΟΡΕΣ</li>
                                             <li className='rt-nav-item'>ΕΝΤΥΠΑ</li>
+                                            <li className='rt-nav-item'>ΠΟΙΟΙ ΕΙΜΑΣΤΕ</li>
                                         </ul>
                                     </nav>
                                 </div>
