@@ -24,7 +24,7 @@ class TourSlider extends Component {
             sliderTrips: [
                 {
                     id: 1,
-                    imageUrl: 'https://cdn.sooribali.com//img/site_images/soori-bali-beachfront-infinity-pool.jpg',
+                    imageUrl: 'https://wallpaperplay.com/walls/full/0/8/9/203246.jpg',
                     tripTitle: 'ΜΠΑΛΙ',
                     tripSubtitle: 'ΤΟ ΝΗΣΙ ΤΩΝ ΘΕΩΝ',
                     caption1: 'ΑΠ\' ΕΥΘΕΙΑΣ',
@@ -34,7 +34,7 @@ class TourSlider extends Component {
                 },
                 {
                     id: 2,
-                    imageUrl: 'https://static.wixstatic.com/media/93339c_aa35521281d248e78d39640ae26c1ecd~mv2.jpg',
+                    imageUrl: 'https://wallpaperplay.com/walls/full/0/8/9/203246.jpg',
                     tripSubtitle: 'ΠΟΛΗ ΤΟΥ ΦΩΤΟΣ',
                     tripTitle: 'ΠΑΡΙΣΙ',
                     caption1: 'ΠΤΗΣΕΙΣ ΑΠΟ',
@@ -169,16 +169,16 @@ class TourSlider extends Component {
                             })}
                         </ul>
                     </div>
-                    <div className="slider-search">
-                        <div className='text-center'>
-                            <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
-                                <Tab eventKey="profile" title={<span> <FaSearch /> ΑΝΑΖΗΤΗΣΗ</span>} tabClassName={'tab-top-pane'}>
-                                    <input className='my-2 mr-3' type="text"/>
-                                    <button className={'btn btn-secondary px-3 py-1'}>ΓΡΗΓΟΡΗ ΑΝΑΖΗΤΗΣΗ</button>
-                                </Tab>
-                            </Tabs>
-                        </div>
-                    </div>
+                    {/*<div className="slider-search">*/}
+                    {/*    <div className='text-center'>*/}
+                    {/*        <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">*/}
+                    {/*            <Tab eventKey="profile" title={<span> <FaSearch /> ΑΝΑΖΗΤΗΣΗ</span>} tabClassName={'tab-top-pane'}>*/}
+                    {/*                <input className='my-2 mr-3' type="text"/>*/}
+                    {/*                <button className={'btn btn-secondary px-3 py-1'}>ΓΡΗΓΟΡΗ ΑΝΑΖΗΤΗΣΗ</button>*/}
+                    {/*            </Tab>*/}
+                    {/*        </Tabs>*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
                 </div>
 
             </div>

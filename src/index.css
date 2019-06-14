@@ -53,7 +53,7 @@ body {
 
 
 .image-header-image{
-  background: url(https://cdn.sooribali.com//img/site_images/soori-bali-beachfront-infinity-pool.jpg) no-repeat center center;
+  background: url(https://wallpaperplay.com/walls/full/0/8/9/203246.jpg) no-repeat center center;
   height: 100%;
   width: 100%;
   background-size: cover;
@@ -272,18 +272,53 @@ body {
   border-bottom: 1px solid rgba(255,255,255,.3);
 }
 
-.nav-wrap{
+.rt-nav-wrap{
   position: absolute;
   z-index: 3000;
   color: rgba(255,255,255,.9);
+  padding: 10px 50px 10px 50px;
+}
+
+.rt-nav-dropdown{
+  position: fixed;
+  left: 10vw;
+  width: 80vw;
 }
 
 .rt-nav-item{
   display: inline;
-  font-size: 1.7em;
+  font-size: 1.4em;
   margin-right: 25px;
-  border-botttom: 1px solid red;
+  padding: 2px 0px !important;
+  border-bottom: 3px green;
+  color: #fff;
+}
+
+.rt-nav-item:hover{
+  text-decoration: none !important;
+  color: #eee;
 }
 
 .rt-nav-brand{
+}
+
+.bg-black{
+  background-color: #222;
+}
+
+.display-5{
+  line-height: 1.9em;
+  font-size: 1.8em;
+}
+
+.rt-nav-dropdown-item{
+  padding: 2px 0px;
+}
+
+.rt-nav-hr{
+  background-color: rgba(255,255,255,.3);
+}
+
+.rt-nav-dropdown-title{
+  font-size: 1.3em;
 }
