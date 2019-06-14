@@ -303,7 +303,7 @@ body {
 }
 
 .bg-black{
-  background-color: #222;
+  background-color: rgba(0,0,0,.92);
 }
 
 .display-5{

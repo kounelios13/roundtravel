@@ -34,13 +34,13 @@ class AppRouter extends Component {
                             <div className="d-flex flex-wrap">
                                 <div className="col-12 ml-auto rt-pre-nav">
                                     <div className='float-right'>
-                                        <img src={telSvg} alt="call-us"/><span>+30 801 11 40840</span> | <span>+30 2811 217 188</span>
+                                        <img src={telSvg} alt="call-us"/><span> Κάλεστε μας τώρα! +30 801 11 40840</span> | <span>+30 2811 217 188</span>
                                     </div>
                                 </div>
 
                                 <hr/>
 
-                                <div className="col-12">
+                                <div className="col-12 mt-2">
                                     <nav>
                                         <ul className='m-0'>
                                             <Link to={'/'} as='li' onMouseEnter={()=>{this.updateHoverState(true)}}
@@ -65,13 +65,45 @@ class AppRouter extends Component {
                                                                         <li className='rt-nav-dropdown-item'>Θεσσαλονίκη</li>
                                                                         <li className='rt-nav-dropdown-item'>Ηράκλειο</li>
                                                                         <li className='rt-nav-dropdown-item'>Κύπρος</li>
-
                                                                         <hr className='rt-nav-hr'/>
                                                                     </ul>
                                                                 </div>
                                                             </div>
-                                                            <div className="col-3 text-center">
-                                                                <span>ΑΝΑ ΠΕΡΙΟΧΗ</span>
+                                                            <div className="col-3 d-flex">
+
+                                                                <div>
+                                                                    <div className=''>
+                                                                        <span className='rt-nav-dropdown-title'>ΠΡΟΟΡΙΣΜΟΙ</span>
+                                                                    </div>
+                                                                    <div className='bg-danger'>
+                                                                        <ul className='list-unstyled mt-3'>
+                                                                            <li className='rt-nav-dropdown-item'>Ευρώπη</li>
+                                                                            <li className='rt-nav-dropdown-item'>Ελλάδα</li>
+                                                                            <li className='rt-nav-dropdown-item'>Αφρική</li>
+                                                                            <li className='rt-nav-dropdown-item'>Ασία</li>
+                                                                            <li className='rt-nav-dropdown-item'>Αμερική</li>
+                                                                            <li className='rt-nav-dropdown-item'>Οκέανια</li>
+                                                                            <hr className='rt-nav-hr'/>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div>
+                                                                    <div className=''>
+                                                                        <span className='rt-nav-dropdown-title'>ΠΡΟΟΡΙΣΜΟΙ</span>
+                                                                    </div>
+                                                                    <div className='bg-danger'>
+                                                                        <ul className='list-unstyled mt-3'>
+                                                                            <li className='rt-nav-dropdown-item'>Ευρώπη</li>
+                                                                            <li className='rt-nav-dropdown-item'>Ελλάδα</li>
+                                                                            <li className='rt-nav-dropdown-item'>Αφρική</li>
+                                                                            <li className='rt-nav-dropdown-item'>Ασία</li>
+                                                                            <li className='rt-nav-dropdown-item'>Αμερική</li>
+                                                                            <li className='rt-nav-dropdown-item'>Οκέανια</li>
+                                                                            <hr className='rt-nav-hr'/>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                             <div className="col-3 text-center">
                                                                 <span>ΑΝΑ ΤΥΠΟ ΤΑΞΙΔΙΟΥ</span>
