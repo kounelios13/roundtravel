@@ -16,5 +16,5 @@ require('./routes/tours')(app)
 
 
 app.listen(9000,()=>{
-    console.log('Api serving content on port 9000');
+    console.log('Api serving contente on port 9000');
 })
