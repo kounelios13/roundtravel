@@ -3,11 +3,8 @@ import {buildStyles, CircularProgressbar} from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import distanceInWords from 'date-fns/distance_in_words';
 import grLocale from 'date-fns/locale/el'
-import InputGroup from "react-bootstrap/InputGroup";
-import FormControl from "react-bootstrap/es/FormControl";
-import Tabs from "react-bootstrap/Tabs";
-import Tab from "react-bootstrap/Tab";
-import {FaSearch} from "react-icons/fa";
+import {connect} from "react-redux";
+import {loadTours} from "../../state/actions/tours";
 
 class TourSlider extends Component {
 
@@ -63,6 +60,7 @@ class TourSlider extends Component {
     }
 
     componentDidMount() {
+        this.props.loadTours()
         this.sliderInterval = setInterval(this.increaseSliderIndex, this.sliderTimeOut)
         this.sliderPercentageInterval = setInterval(this.tickSliderInterval, this.sliderTickInterval);
     }
@@ -100,6 +98,9 @@ class TourSlider extends Component {
         }
     }
 
+    componentWillMount() {
+
+    }
 
 
     render() {
@@ -195,4 +196,10 @@ class TourSlider extends Component {
     }
 }
 
-export default TourSlider;
+const mapStateToProps = (state) => {
+    return {
+        tours: state.tours
+    }
+}
+
+export default connect(mapStateToProps, {loadTours})(TourSlider);

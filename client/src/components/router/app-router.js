@@ -1,7 +1,4 @@
 import React, {Component} from 'react';
-import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
-import NavDropdown from "react-bootstrap/NavDropdown";
 import roundTravelLogo from '../../assets/images/general/logo.png'
 import telSvg from '../../assets/images/general/phone-dial.svg'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";

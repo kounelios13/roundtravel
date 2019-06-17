@@ -1,14 +1,27 @@
-var express = require('express')
-var app = express()
-var mongoose = require('mongoose');
-// mongoose.connect('mongodb+srv://exil33t:redrock1404~@cluster0-fdgjk.mongodb.net/test?retryWrites=true&w=majority');
-// var db = mongoose.connection;
-// db.on('error', console.error.bind(console, 'connection error:'));
+const Tour = require('./mongo-schemas/Tour')
 
-var mongoKey = require('./env/keys').mongodb
+var express = require('express')
+const path = require('path');
+
+var app = express()
+
+
+/* Databse intialization */
+var mongoose = require('mongoose');
+mongoose.connect(require('./env/keys').mongoUri);
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', ()=> {
+    console.log("Db connection initialized");
+});
+
+app.use('/public', express.static('public'));
+
+
+
 
 app.get('/', (req,res)=>{
-    res.send('eokreok')
+    res.json({'torakos': 3})
 })
 
 require('./routes/tours')(app)
