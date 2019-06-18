@@ -41,7 +41,6 @@ class TourSlider extends Component {
 
                 }
             ],
-
         }
         this.increaseSliderIndex = this.increaseSliderIndex.bind(this)
         this.setActiveIndex = this.setActiveIndex.bind(this)
@@ -64,7 +63,6 @@ class TourSlider extends Component {
         this.sliderInterval = setInterval(this.increaseSliderIndex, this.sliderTimeOut)
         this.sliderPercentageInterval = setInterval(this.tickSliderInterval, this.sliderTickInterval);
     }
-
 
 
     increaseSliderIndex(){

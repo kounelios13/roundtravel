@@ -3,8 +3,8 @@ module.exports = function(app){
     app.get('/tours', function(req, res){
 
         const tor = new Tour({
-            title: 'Μπαλι',
-            thumbUrl: 'https://www.manessistravel.gr/_storageWeb_/n/17631550672101/ig/17469038976422/b/692033667068/isk/innerWide/shutterstock_631736717-pura-ulun-danu-bratan-temple-in-Bali_-indonesia.jpeg',
+            title: 'Παρισι',
+            thumbUrl: 'https://wallpaperplay.com/walls/full/0/8/9/203246.jpg',
             price: 45,
             shortDesc: 'Το νισι των θεων',
             longDesc: 'Εξερευνηστε κεεπο',
@@ -26,7 +26,9 @@ module.exports = function(app){
                     day: '2',
                     content: 'Lorem ipsum sit Lorem ipsum sit Lorem ipsum sit Lorem ipsum sitdolor'
                 }
-            ]
+            ],
+            shownInSlider: true,
+            extraField: 'tokrewo'
         })
         tor.save()
     });

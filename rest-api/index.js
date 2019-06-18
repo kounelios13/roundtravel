@@ -8,7 +8,7 @@ var app = express()
 
 /* Databse intialization */
 var mongoose = require('mongoose');
-mongoose.connect(require('./env/keys').mongoUri);
+mongoose.connect(require('./env/keys').mongoUri, { useNewUrlParser: true });
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', ()=> {
@@ -17,6 +17,10 @@ db.once('open', ()=> {
 
 app.use('/public', express.static('public'));
 
+var bodyParser = require("body-parser")
+app.use(bodyParser.json());
+//configures body parser to parse JSON
+app.use(bodyParser.urlencoded({ extended: false }));
 
 
 
@@ -25,6 +29,7 @@ app.get('/', (req,res)=>{
 })
 
 require('./routes/tours')(app)
+require('./routes/auth')(app)
 
 
 

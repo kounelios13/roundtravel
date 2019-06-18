@@ -68,9 +68,18 @@ const TourSchema = new Schema({
         type: String,
         required: false
     },
+    shownInSlider: {
+        type: Boolean,
+        required: false,
+        default: false
+    },
     createdAt: {
         type: Date,
         default: Date.now()
+    },
+    extraField: {
+        type: String,
+        required: true
     }
 });
 
