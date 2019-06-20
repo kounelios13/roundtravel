@@ -1,5 +1,5 @@
 const Tour = require('./mongo-schemas/Tour')
-
+const jwt = require('jsonwebtoken')
 var express = require('express')
 const path = require('path');
 
@@ -16,21 +16,36 @@ db.once('open', ()=> {
 });
 
 app.use('/public', express.static('public'));
-
 var bodyParser = require("body-parser")
 app.use(bodyParser.json());
 //configures body parser to parse JSON
 app.use(bodyParser.urlencoded({ extended: false }));
 
+app.use((req, res, next)=>{
+    if(req.path.split('/')[1] === 'private'){
+        const bearerToken = req.headers['authorization']
 
-
-app.get('/', (req,res)=>{
-    res.json({'torakos': 3})
+        if(typeof bearerToken !== 'undefined'){
+            const token = bearerToken.split(' ')[1]
+            jwt.verify(token, require('./env/keys').jwtSalt, (err, data)=>{
+                if(err){
+                    res.sendStatus(403)
+                }else{
+                    console.log(data)
+                    next()
+                }
+            })
+        }else{
+            return res.sendStatus(403)
+        }
+    }else{
+        next()
+    }
 })
+
 
 require('./routes/tours')(app)
 require('./routes/auth')(app)
-
 
 
 app.listen(9000,()=>{
