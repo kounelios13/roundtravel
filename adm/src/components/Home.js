@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import AppRouter from "./app-router";
 import '../App.css';
 import {connect} from "react-redux";
+import Login from "./auth/login";
 
 class Home extends Component {
 
@@ -20,23 +21,11 @@ class Home extends Component {
     }
 
     render() {
-        console.log(this.props.auth)
         return (
+
             <div>
-                {!this.state.auth.isAuthenticated &&
-                    <div className='login-input'>
-                        <input className='login-input-form' type="password"/>
-                        <br/>
-                        <div>
-                            <div>
-                                Little monkey locked the door 🙈
-                            </div>
-                            <div>
-                                Say what he'd like to hear
-                            </div>
-                        </div>
-                    </div>
-                }
+                {!this.props.auth.isAuthenticated && <Login /> }
+                {this.props.auth.isAuthenticated && <h1>U logged boy</h1>}
             </div>
         );
     }

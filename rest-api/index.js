@@ -22,6 +22,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use((req, res, next)=>{
+
+    next();
+})
+
+app.use((req, res, next)=>{
     if(req.path.split('/')[1] === 'private'){
         const bearerToken = req.headers['authorization']
 
@@ -31,7 +36,6 @@ app.use((req, res, next)=>{
                 if(err){
                     res.sendStatus(403)
                 }else{
-                    console.log(data)
                     next()
                 }
             })

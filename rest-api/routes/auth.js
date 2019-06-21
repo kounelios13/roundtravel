@@ -1,8 +1,8 @@
-
 const jwt = require('jsonwebtoken')
 
 module.exports = (app) =>{
-    app.get('/auth/login', (req, res)=>{
+    app.post('/auth/login', (req, res)=>{
+        console.log(req)
         if(req.body.password === process.env.KEY){
             jwt.sign({}, require('../env/keys').jwtSalt, {expiresIn: '1d'}, (err, token)=>{
                 if(err){
