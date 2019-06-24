@@ -71,8 +71,20 @@ h6 {
   padding: 3px 50px;
 }
 
+.add-new-wrapper{
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+}
 
+.add-btn{
+  width: 75px;
+  height: 75px;
+}
 
+.add-city{
+  border: 1px solid rgba(0,0,0,.1);
+}
 
 
 .rt-adm-nav{

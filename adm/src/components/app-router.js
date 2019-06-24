@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import '../index.css';
 import Home from "./Home";
 import {connect} from "react-redux";
+import Cities from "./cities/cities";
+import AddCity from "./cities/add-city";
 
 class AppRouter extends Component {
 
@@ -23,10 +25,10 @@ class AppRouter extends Component {
         return (
             <Router>
                 {
-                    this.state.auth.isAuthenticated &&
+                    this.props.auth.isAuthenticated &&
                     <div>
                         <nav className="navbar navbar-expand-lg navbar-dark bg-light navbar-fixed-top rt-adm-nav">
-                            <a className="navbar-brand" href="#">RoundTravel</a>
+                            <Link className="navbar-brand" to={'/'}>RoundTravel</Link>
                             <button className="navbar-toggler" type="button" data-toggle="collapse"
                                     data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
                                     aria-label="Toggle navigation">
@@ -35,10 +37,10 @@ class AppRouter extends Component {
                             <div className="collapse navbar-collapse" id="navbarNavDropdown">
                                 <ul className="navbar-nav">
                                     <li className="nav-item active">
-                                        <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
+                                        <Link className="nav-link" to='/home'>Home <span className="sr-only">(current)</span></Link>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link" href="#">Features</a>
+                                        <Link className="nav-link" to={'/cities'}>Cities</Link>
                                     </li>
                                 </ul>
                             </div>
@@ -46,10 +48,20 @@ class AppRouter extends Component {
                     </div>
                 }
                 <Route path="/" exact component={Home} />
+                <Route path="/home" exact component={Home} />
+                <Route path="/cities" exact component={Cities} />
+                <Route path="/cities/add" exact component={AddCity} />
+
+
             </Router>
         );
     }
 }
 
+const mapStateToProps = (state) => {
+    return {
+        auth: state.auth
+    }
+}
 
-export default AppRouter;
+export default connect(mapStateToProps)(AppRouter);
