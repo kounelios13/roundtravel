@@ -2,7 +2,7 @@ const Tour = require('./mongo-schemas/Tour')
 const jwt = require('jsonwebtoken')
 var express = require('express')
 const path = require('path');
-
+const cors = require('cors')
 var app = express()
 
 
@@ -21,10 +21,11 @@ app.use(bodyParser.json());
 //configures body parser to parse JSON
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use((req, res, next)=>{
+app.use(cors())
 
-    next();
-})
+// app.use((req, res, next)=>{
+//     next();
+// })
 
 app.use((req, res, next)=>{
     if(req.path.split('/')[1] === 'private'){
