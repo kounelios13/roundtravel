@@ -4,7 +4,7 @@ import '../index.css';
 import Home from "./Home";
 import {connect} from "react-redux";
 import Cities from "./cities/cities";
-import AddCity from "./cities/add-city";
+import EditCity from "./cities/edit-city";
 
 class AppRouter extends Component {
 
@@ -50,9 +50,7 @@ class AppRouter extends Component {
                 <Route path="/" exact component={Home} />
                 <Route path="/home" exact component={Home} />
                 <Route path="/cities" exact component={Cities} />
-                <Route path="/cities/add" exact component={AddCity} />
-
-
+                <Route path="/cities/edit/:id" exact component={EditCity} />
             </Router>
         );
     }

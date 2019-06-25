@@ -8,7 +8,7 @@ class Cities extends Component {
             <div>
                 <h1>Welcome</h1>
                 <div className='add-new-wrapper'>
-                    <Link to={'/cities/add'}> <img src={addBtn} className='add-btn' alt=""/> </Link>
+                    <Link to={'/cities/edit/0'}> <img src={addBtn} className='add-btn' alt=""/> </Link>
                 </div>
             </div>
         );
