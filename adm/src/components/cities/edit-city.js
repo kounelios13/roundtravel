@@ -1,7 +1,11 @@
 import React, {Component} from 'react';
-import plusSign from '../../assets/images/plus.png'
 import {FaMinus, FaPlus} from "react-icons/fa";
 import axios from 'axios'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import FileUpload from "../utils/file-upload";
+import config from '../../config/config'
+
 
 class EditCity extends Component {
 
@@ -15,16 +19,13 @@ class EditCity extends Component {
             history: '',
             tags: '',
             activities: [],
-            images: [{}]
+            images: [{url: 'public/parisi/64531.jpg', alt: ''},{url: 'public/parisi/64531.jpg', alt: ''},{url: 'public/parisi/64531.jpg', alt: ''}]
         }
         this.addActivity = this.addActivity.bind(this)
         this.deleteActivity = this.deleteActivity.bind(this)
         this.handleChange = this.handleChange.bind(this)
         this.handleActivityChange = this.handleActivityChange.bind(this)
         this.addImage = this.addImage.bind(this)
-        this.handleImageSubmit = this.handleImageSubmit.bind(this)
-
-        this.uploadInput = React.createRef()
     }
 
     handleChange(e){
@@ -64,36 +65,12 @@ class EditCity extends Component {
         })
     }
 
-    handleImageSubmit(e){
-        e.preventDefault()
-        console.log()
-        let data = new FormData()
-        const config = {
-            headers: {
-                'Content-Type': 'multipart/form-data',
-            }
-        };
-
-        const files = Array.from(this.uploadInput.current.files)
-        files.forEach((file,i)=>{
-            data.append(i, file)
-        })
-
-        console.log(data)
-
-        axios
-            .post('http://localhost:9000/private/upload', data, config)
-            .then((res)=>{
-                console.log(res)
-            })
-
-    }
 
     render() {
         return (
             <div>
-                <div className='col-8 offset-2 border mt-5'>
-                                <div className='col-6 offset-3  p-5'>
+                <div className='col-8 offset-2  mt-5'>
+                                <div className='col-6 offset-3 p-5 bg-info bg-form'>
                                     <form>
                                         <h4>Γενικές πληροφορίες</h4>
                                         <hr/>
@@ -135,22 +112,28 @@ class EditCity extends Component {
                                             }
                                         </div>
                                         <div>
-                                            <h3 className='d-inline'>Εικόνες</h3> <span className='text-danger' onClick={this.addImage}><FaPlus /></span>
+                                            <h4 className='d-inline'>Είκονες πόλης</h4>
                                             <hr/>
-                                            {
-                                                this.state.images.map(image=>{
-                                                    return(
-                                                        <div>
-                                                            {/*<input ref={this.uploadInput} type="file" name="sampleFile" />*/}
-                                                            <input ref={this.uploadInput} type='file' id='multi' onChange={this.handleImageSubmit} multiple />
-
-                                                            <button onClick={this.handleImageSubmit} className='btn btn-info'>Upload</button>
-                                                        </div>
-
-                                                    )
-                                                })
-                                            }
+                                            <div className={'my-5'}>
+                                                {
+                                                    this.state.images.map(img=>{
+                                                        const imgSrc = config.serverUrl + img.url
+                                                        console.log(imgSrc)
+                                                        return(
+                                                            <div className='border'>
+                                                                <img src={imgSrc} className='city-edit-img img-fluid' alt=""/>
+                                                            </div>
+                                                        )
+                                                    })
+                                                }
+                                            </div>
                                         </div>
+                                        <div>
+                                            <h4 className='d-inline'>Μεταφορτώση είκονων</h4>
+                                            <hr/>
+                                            <FileUpload path={this.state.name} />
+                                        </div>
+
                                     </form>
                                 </div>
                 </div>

@@ -1,8 +1,11 @@
 import React, {Component} from 'react';
 import AppRouter from "./components/app-router";
 import {initAuthData} from "./utils/init-auth-data";
+import { ToastContainer} from 'react-toastify';
 
 class App extends Component {
+
+
 
     componentDidMount() {
         initAuthData()
@@ -12,6 +15,8 @@ class App extends Component {
         return (
             <div className="App">
                 <AppRouter/>
+                <ToastContainer />
+
             </div>
         );
     }
