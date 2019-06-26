@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {FaMinus, FaPlus} from "react-icons/fa";
+import {FaArrowDown, FaArrowUp, FaMinus, FaPlus} from "react-icons/fa";
 import axios from 'axios'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -19,13 +19,15 @@ class EditCity extends Component {
             history: '',
             tags: '',
             activities: [],
-            images: [{url: 'public/parisi/64531.jpg', alt: ''},{url: 'public/parisi/64531.jpg', alt: ''},{url: 'public/parisi/64531.jpg', alt: ''}]
+            images: [{url: 'public/parisi/1.jpeg', alt: ''},{url: 'public/parisi/2.jpg', alt: ''},{url: 'public/parisi/3.jpg', alt: ''}]
         }
         this.addActivity = this.addActivity.bind(this)
         this.deleteActivity = this.deleteActivity.bind(this)
         this.handleChange = this.handleChange.bind(this)
         this.handleActivityChange = this.handleActivityChange.bind(this)
         this.addImage = this.addImage.bind(this)
+        this.moveImageUp = this.moveImageUp.bind(this)
+        this.moveImageDown = this.moveImageDown.bind(this)
     }
 
     handleChange(e){
@@ -43,6 +45,28 @@ class EditCity extends Component {
     addImage(){
         this.setState({images: [...this.state.images, {url: '', alt: ''}]})
     }
+
+    moveImageDown(i){
+        if(i ==  this.state.images.length)
+            return
+        const newArray = this.state.images
+        this.swapArrayElements(newArray, i, ++i)
+        this.setState({images: newArray})
+    }
+
+    moveImageUp(i){
+        if(i==0)
+            return
+        const newArray = this.state.images
+        this.swapArrayElements(newArray, i, --i)
+        this.setState({images: newArray})
+    }
+
+    swapArrayElements(a, x, y) {
+        if (a.length === 1) return a;
+        a.splice(y, 1, a.splice(x, 1, a[y])[0]);
+        return a;
+    };
 
     handleActivityChange(e){
         let field = e.target.name.split('-')[1]
@@ -64,6 +88,8 @@ class EditCity extends Component {
             activities: [...this.state.activities, {name: '', description: ''}]
         })
     }
+
+
 
 
     render() {
@@ -116,12 +142,29 @@ class EditCity extends Component {
                                             <hr/>
                                             <div className={'my-5'}>
                                                 {
-                                                    this.state.images.map(img=>{
+                                                    this.state.images.map((img, i)=>{
                                                         const imgSrc = config.serverUrl + img.url
-                                                        console.log(imgSrc)
+                                                        const im = new Image()
+                                                        im.src= imgSrc
+                                                        const dimenensions = im.naturalWidth + 'x' + im.naturalHeight + 'px'
                                                         return(
-                                                            <div className='border'>
-                                                                <img src={imgSrc} className='city-edit-img img-fluid' alt=""/>
+                                                            <div className=' mb-3'>
+                                                                <div>
+                                                                    <div className='d-inline'>
+                                                                        <div className='position-absolute text-danger bg-dark'>
+                                                                            <span onClick={()=>{this.moveImageUp(i)}} className='city-edit-img-icon mr-2'><FaArrowUp /></span>
+                                                                            <span onClick={()=>{this.moveImageDown(i)}} className='city-edit-img-icon mr-2'><FaArrowDown /></span>
+                                                                            <span onClick={()=>{this.setState({images: this.state.images.filter((img, ind)=>{return ind!=i})})}} className='city-edit-img-icon mr-2'><FaMinus /></span>
+                                                                        </div>
+                                                                        <img src={imgSrc} className='img-fluid city-edit-img' alt=""/>
+
+
+
+                                                                    </div>
+                                                                    <div>
+                                                                        <input placeholder='Περιγραφή εικόνας' type="text"/> Διαστασεις: {dimenensions}
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         )
                                                     })

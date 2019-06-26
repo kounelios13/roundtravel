@@ -6,7 +6,6 @@ class FileUpload extends Component {
 
     constructor(props) {
         super(props);
-
         this.uploadInput = React.createRef()
         this.handleImageSubmit = this.handleImageSubmit.bind(this)
 
@@ -31,7 +30,11 @@ class FileUpload extends Component {
         axios
             .post('http://localhost:9000/private/upload', data)
             .then((res)=>{
-                console.log(res)
+                toast.success('Η μεταφόρτωση ηταν επιτύχης', {position: toast.POSITION.BOTTOM_RIGHT})
+            })
+            .catch(err=>{
+                toast.error('Η μεταφόρτωση ηταν ανεπιτυχής', {position: toast.POSITION.BOTTOM_RIGHT});
+
             })
     }
 

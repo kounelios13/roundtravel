@@ -11,14 +11,11 @@ module.exports = (app) =>{
         Object.values(req.files).map(img=>{
             img.mv('./public/' + req.body.name + '/' + img.name)
                 .then((img)=>{
-                    console.log(img)
+                    res.sendStatus(200)
                 })
                 .catch(err=>{
-                    console.log(err)
+                    res.sendStatus(400)
                 })
         })
-
-
-
     })
 }
