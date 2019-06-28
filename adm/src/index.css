@@ -113,6 +113,26 @@ h6 {
   height: 200px;
 }
 
+.file-browser{
+
+}
+
+.file-browser-title{
+  color: black !important;
+}
+
+.file-browser-body{
+  color: black;
+}
+
+.file-browser-image{
+  width: 100px;
+  height: 100px;
+}
+
+.file-browser-image-selected{
+  border: 3px solid red;
+}
 
 .rt-adm-nav{
   background-color: rgba(0,0,0,.3) !important;

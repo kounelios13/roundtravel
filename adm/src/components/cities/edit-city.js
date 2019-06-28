@@ -5,6 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import FileUpload from "../utils/file-upload";
 import config from '../../config/config'
+import FileBrowser from "../utils/file-browser";
 
 
 class EditCity extends Component {
@@ -14,7 +15,7 @@ class EditCity extends Component {
         super(props);
 
         this.state = {
-            name: '',
+            name: 'parisi',
             description: '',
             history: '',
             tags: '',
@@ -28,6 +29,7 @@ class EditCity extends Component {
         this.addImage = this.addImage.bind(this)
         this.moveImageUp = this.moveImageUp.bind(this)
         this.moveImageDown = this.moveImageDown.bind(this)
+        this.addImages = this.addImages.bind(this)
     }
 
     handleChange(e){
@@ -89,6 +91,13 @@ class EditCity extends Component {
         })
     }
 
+     addImages(images){
+         const imagesToAdd = images.map(img=>{
+             return {url: img.url, alt: ''}
+         })
+         this.setState({images: [...this.state.images, ...imagesToAdd]})
+         console.log(this.state.images);
+     }
 
 
 
@@ -140,13 +149,17 @@ class EditCity extends Component {
                                         <div>
                                             <h4 className='d-inline'>Είκονες πόλης</h4>
                                             <hr/>
+                                            <h5>Επίλογη είκονων</h5>
+                                            {
+                                                this.state.name.length > 0
+                                                && <FileBrowser folderPath={this.state.name} addFiles={this.addImages} />
+                                            }
                                             <div className={'my-5'}>
                                                 {
                                                     this.state.images.map((img, i)=>{
                                                         const imgSrc = config.serverUrl + img.url
-                                                        const im = new Image()
-                                                        im.src= imgSrc
-                                                        const dimenensions = im.naturalWidth + 'x' + im.naturalHeight + 'px'
+                                                        console.log(this.state.images)
+
                                                         return(
                                                             <div className=' mb-3'>
                                                                 <div>
@@ -162,7 +175,7 @@ class EditCity extends Component {
 
                                                                     </div>
                                                                     <div>
-                                                                        <input placeholder='Περιγραφή εικόνας' type="text"/> Διαστασεις: {dimenensions}
+                                                                        <input placeholder='Περιγραφή εικόνας' type="text"/>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -178,7 +191,7 @@ class EditCity extends Component {
                                         </div>
 
                                     </form>
-                                </div>
+                        </div>
                 </div>
             </div>
         );

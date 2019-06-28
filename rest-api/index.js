@@ -52,6 +52,7 @@ app.use((req, res, next)=>{
 require('./routes/tours')(app)
 require('./routes/auth')(app)
 require('./routes/upload')(app)
+require('./routes/browse-files')(app)
 
 app.listen(9000,()=>{
     console.log('Api serving contente on port 9000');
