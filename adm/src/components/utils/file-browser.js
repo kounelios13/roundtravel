@@ -12,7 +12,7 @@ class FileBrowser extends Component {
         this.toogleSelected = this.toogleSelected.bind(this)
 
         this.state = {
-            show: true,
+            show: false,
             files: [],
             selectedFiles: [1, 3]
         };

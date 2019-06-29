@@ -20,7 +20,7 @@ class EditCity extends Component {
             history: '',
             tags: '',
             activities: [],
-            images: [{url: 'public/parisi/1.jpeg', alt: ''},{url: 'public/parisi/2.jpg', alt: ''},{url: 'public/parisi/3.jpg', alt: ''}]
+            images: []
         }
         this.addActivity = this.addActivity.bind(this)
         this.deleteActivity = this.deleteActivity.bind(this)
@@ -30,6 +30,9 @@ class EditCity extends Component {
         this.moveImageUp = this.moveImageUp.bind(this)
         this.moveImageDown = this.moveImageDown.bind(this)
         this.addImages = this.addImages.bind(this)
+        this.submitForm = this.submitForm.bind(this)
+        this.formIsComplete = this.formIsComplete.bind(this)
+        this.onImageAltChange = this.onImageAltChange.bind(this)
     }
 
     handleChange(e){
@@ -54,6 +57,13 @@ class EditCity extends Component {
         const newArray = this.state.images
         this.swapArrayElements(newArray, i, ++i)
         this.setState({images: newArray})
+    }
+
+    onImageAltChange(e, i){
+        const images = this.state.images
+        images[i].alt = e.target.value
+        this.setState({images: images})
+
     }
 
     moveImageUp(i){
@@ -83,6 +93,42 @@ class EditCity extends Component {
             activities[index].description = e.target.value
             this.setState({activities: activities})
         }
+    }
+
+    submitForm(e){
+        e.preventDefault()
+        if(this.formIsComplete()){
+            axios.post(config.serverUrl + 'private/cities', this.state)
+                .then(res=>{
+                    console.log('res')
+                })
+                .catch(err=>{
+                    console.log('err')
+                })
+
+
+        }else{
+            toast.error("Συμπληρώστε ολα τα απαραίτητα πεδια", {position: toast.POSITION.BOTTOM_RIGHT});
+        }
+    }
+
+    formIsComplete(){
+        let formComplete = true
+        if(this.state.name === '' || this.state.description === '' || this.state.history === '' || this.state.tags === ''){
+
+            formComplete = false
+        }
+        this.state.images.map(img=>{
+            if(img.alt === ''){
+                formComplete = false
+            }
+        })
+        this.state.activities.map(act=>{
+            if(act.name === '' || act.description === ''){
+                formComplete = false
+            }
+        })
+        return formComplete
     }
 
     addActivity(){
@@ -158,8 +204,6 @@ class EditCity extends Component {
                                                 {
                                                     this.state.images.map((img, i)=>{
                                                         const imgSrc = config.serverUrl + img.url
-                                                        console.log(this.state.images)
-
                                                         return(
                                                             <div className=' mb-3'>
                                                                 <div>
@@ -170,12 +214,9 @@ class EditCity extends Component {
                                                                             <span onClick={()=>{this.setState({images: this.state.images.filter((img, ind)=>{return ind!=i})})}} className='city-edit-img-icon mr-2'><FaMinus /></span>
                                                                         </div>
                                                                         <img src={imgSrc} className='img-fluid city-edit-img' alt=""/>
-
-
-
                                                                     </div>
                                                                     <div>
-                                                                        <input placeholder='Περιγραφή εικόνας' type="text"/>
+                                                                        <input value={this.state.images[i].alt} onChange={(e)=>{this.onImageAltChange(e, i)}} placeholder='Περιγραφή εικόνας' type="text"/>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -189,8 +230,8 @@ class EditCity extends Component {
                                             <hr/>
                                             <FileUpload path={this.state.name} />
                                         </div>
-
-                                    </form>
+                                        <button onClick={this.submitForm} className='btn btn-primary btn-block mt-4'>Αποθήκευση</button>
+                                </form>
                         </div>
                 </div>
             </div>
