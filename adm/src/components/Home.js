@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import AppRouter from "./app-router";
 import '../App.css';
 import {connect} from "react-redux";
 import Login from "./auth/login";

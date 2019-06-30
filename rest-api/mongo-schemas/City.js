@@ -19,6 +19,10 @@ const CitySchema = new Schema({
         type: String,
         required: true
     },
+    url: {
+        type: String,
+        required: true
+    },
     activities: {
         type: [],
         required: false,

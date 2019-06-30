@@ -27,7 +27,7 @@ class Login extends Component {
                     <br/>
                     <div>
                         <div>
-                            Little monkey guarding the doorway <span>🙈</span>
+                            Little monkey guarding the doorway <span role='img' aria-label='monkey-emoji'>🙈</span>
                         </div>
 
                     </div>

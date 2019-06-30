@@ -1,24 +1,27 @@
 import React, {Component} from 'react';
-import {FaArrowDown, FaArrowUp, FaMinus, FaPlus} from "react-icons/fa";
+import {FaArrowDown, FaArrowUp, FaMinus, FaPlus, FaQuestion} from "react-icons/fa";
 import axios from 'axios'
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import FileUpload from "../utils/file-upload";
 import config from '../../config/config'
 import FileBrowser from "../utils/file-browser";
+import ReactTooltip from 'react-tooltip'
 
 
 class EditCity extends Component {
 
-    constructor(props) {
 
+
+    constructor(props) {
         super(props);
 
         this.state = {
-            name: 'parisi',
+            name: '',
             description: '',
             history: '',
             tags: '',
+            url: '',
             activities: [],
             images: []
         }
@@ -35,13 +38,24 @@ class EditCity extends Component {
         this.onImageAltChange = this.onImageAltChange.bind(this)
     }
 
+    componentWillMount(){
+        if(this.props.match.params.id !== 'new'){
+            axios.
+                post(config.serverUrl + 'private/cities/get', {_id: this.props.match.params.id})
+            .then(res=>{
+                console.log(res.data)
+                this.setState({...res.data})
+            })
+        }
+    }
+
     handleChange(e){
         this.setState({[e.target.name]: e.target.value});
     }
 
     deleteActivity(i){
         let activities = this.state.activities.filter((item, ind)=>{
-            return ind != i
+            return ind !== i
         })
 
         this.setState({activities: activities})
@@ -52,7 +66,7 @@ class EditCity extends Component {
     }
 
     moveImageDown(i){
-        if(i ==  this.state.images.length)
+        if(i ===  this.state.images.length)
             return
         const newArray = this.state.images
         this.swapArrayElements(newArray, i, ++i)
@@ -67,7 +81,7 @@ class EditCity extends Component {
     }
 
     moveImageUp(i){
-        if(i==0)
+        if(i===0)
             return
         const newArray = this.state.images
         this.swapArrayElements(newArray, i, --i)
@@ -98,15 +112,17 @@ class EditCity extends Component {
     submitForm(e){
         e.preventDefault()
         if(this.formIsComplete()){
+
             axios.post(config.serverUrl + 'private/cities', this.state)
                 .then(res=>{
-                    console.log('res')
+                    if(res.data._id){
+                        toast.success("Η πόλη αποθηκέυτηκε επιτυχώς.", {position: toast.POSITION.BOTTOM_RIGHT});
+                        this.props.history.push('/cities')
+                    }
                 })
                 .catch(err=>{
                     console.log('err')
                 })
-
-
         }else{
             toast.error("Συμπληρώστε ολα τα απαραίτητα πεδια", {position: toast.POSITION.BOTTOM_RIGHT});
         }
@@ -114,16 +130,21 @@ class EditCity extends Component {
 
     formIsComplete(){
         let formComplete = true
-        if(this.state.name === '' || this.state.description === '' || this.state.history === '' || this.state.tags === ''){
-
+        if(this.state.name === '' || this.state.description === '' || this.state.history === '' || this.state.tags === '' || this.state.url === ''){
             formComplete = false
         }
-        this.state.images.map(img=>{
+        this.state.images.forEach(img=>{
             if(img.alt === ''){
                 formComplete = false
             }
         })
-        this.state.activities.map(act=>{
+
+        if(this.state.images.length === 0){
+            toast.error("Πρέπει να υπάρχει τουλάχιστον μια είκονα", {position: toast.POSITION.BOTTOM_RIGHT});
+            formComplete = false
+        }
+
+        this.state.activities.forEach(act=>{
             if(act.name === '' || act.description === ''){
                 formComplete = false
             }
@@ -142,7 +163,6 @@ class EditCity extends Component {
              return {url: img.url, alt: ''}
          })
          this.setState({images: [...this.state.images, ...imagesToAdd]})
-         console.log(this.state.images);
      }
 
 
@@ -150,6 +170,8 @@ class EditCity extends Component {
     render() {
         return (
             <div>
+                <ReactTooltip />
+
                 <div className='col-8 offset-2  mt-5'>
                                 <div className='col-6 offset-3 p-5 bg-info bg-form'>
                                     <form>
@@ -157,7 +179,8 @@ class EditCity extends Component {
                                         <hr/>
 
                                         <div className='mt-3'>
-                                            <label htmlFor="name">Ονομα πολης</label>
+                                            <label htmlFor="name"></label>
+
                                             <input name='name' value={this.state.name} className={'w-100'} type="text" onChange={this.handleChange} />
                                         </div>
                                         
@@ -171,10 +194,17 @@ class EditCity extends Component {
                                             <textarea name="history" value={this.state.history} onChange={this.handleChange} className="w-100" rows="4"></textarea>
                                         </div>
 
+                                        <div className='mt-3'>
+                                            <label htmlFor="url">URL</label><p className='d-inline bg-primary rounded ml-2' data-tip="hello world"><FaQuestion /></p>
+                                            <input name='url' value={this.state.url} onChange={this.handleChange} className={'w-100'} type="text"/>
+                                        </div>
+
                                         <div className='mt-3 mb-5'>
-                                            <label htmlFor="tags">Tags (Χρησημα για αναζητηση εντος του site)</label>
+                                            <label htmlFor="tags">Tags</label>
                                             <input name='tags' value={this.state.tags} onChange={this.handleChange} className={'w-100'} type="text"/>
                                         </div>
+
+
 
                                         <h3 className='d-inline'>Δραστηριοτητες</h3> <span className='text-danger' onClick={this.addActivity}><FaPlus /></span>
                                         <hr/>
@@ -183,10 +213,10 @@ class EditCity extends Component {
                                                 this.state.activities.map((activity,i)=>{
                                                     return (
                                                         <div className='mt-3 mb-3' key={i}>
-                                                            <label htmlFor={'activity-name'+ '-' + i}>Όνομα δραστηριότητας</label> <span onClick={()=>{this.deleteActivity(i)}} className='text-danger'><FaMinus /></span>
-                                                            <input name={'activity-name'+ '-' + i} value={this.state.activities[i].name} onChange={this.handleActivityChange} className={'w-100 mb-3'} type="text"/>
+                                                            <label htmlFor={'activity-name-' + i}>Όνομα δραστηριότητας</label> <span onClick={()=>{this.deleteActivity(i)}} className='text-danger'><FaMinus /></span>
+                                                            <input name={'activity-name-' + i} value={this.state.activities[i].name} onChange={this.handleActivityChange} className={'w-100 mb-3'} type="text"/>
                                                             <label htmlFor="name">Περιγραφη δραστηριότητας</label>
-                                                            <textarea name={'activity-description' + '-' + i} value={this.state.activities[i].description} onChange={this.handleActivityChange} className="w-100" rows="4"></textarea>
+                                                            <textarea name={'activity-description-' + i} value={this.state.activities[i].description} onChange={this.handleActivityChange} className="w-100" rows="4"></textarea>
                                                         </div>
                                                     )
                                                 })
@@ -205,13 +235,13 @@ class EditCity extends Component {
                                                     this.state.images.map((img, i)=>{
                                                         const imgSrc = config.serverUrl + img.url
                                                         return(
-                                                            <div className=' mb-3'>
+                                                            <div className=' mb-3' key={i}>
                                                                 <div>
                                                                     <div className='d-inline'>
                                                                         <div className='position-absolute text-danger bg-dark'>
                                                                             <span onClick={()=>{this.moveImageUp(i)}} className='city-edit-img-icon mr-2'><FaArrowUp /></span>
                                                                             <span onClick={()=>{this.moveImageDown(i)}} className='city-edit-img-icon mr-2'><FaArrowDown /></span>
-                                                                            <span onClick={()=>{this.setState({images: this.state.images.filter((img, ind)=>{return ind!=i})})}} className='city-edit-img-icon mr-2'><FaMinus /></span>
+                                                                            <span onClick={()=>{this.setState({images: this.state.images.filter((img, ind)=>{return ind!==i})})}} className='city-edit-img-icon mr-2'><FaMinus /></span>
                                                                         </div>
                                                                         <img src={imgSrc} className='img-fluid city-edit-img' alt=""/>
                                                                     </div>
@@ -228,10 +258,12 @@ class EditCity extends Component {
                                         <div>
                                             <h4 className='d-inline'>Μεταφορτώση είκονων</h4>
                                             <hr/>
+
                                             <FileUpload path={this.state.name} />
                                         </div>
-                                        <button onClick={this.submitForm} className='btn btn-primary btn-block mt-4'>Αποθήκευση</button>
-                                </form>
+                                        <button onClick={this.submitForm} className='btn btn-primary w-75 mt-4'>Αποθήκευση</button><button onClick={this.submitForm} className='btn btn-danger w-25 mt-4'>Διαγραφή</button>
+
+                                    </form>
                         </div>
                 </div>
             </div>

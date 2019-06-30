@@ -28,7 +28,7 @@ class FileBrowser extends Component {
             this.setState({ show: false });
             if(this.state.files.length > 0){
                 const selectedFiles = this.state.files.filter((file)=>{
-                    return file.selected != false
+                    return file.selected !== false
                 })
                 this.props.addFiles(selectedFiles)
             }
@@ -74,7 +74,7 @@ class FileBrowser extends Component {
                     size={'xl'}
                 >
                     <Modal.Header closeButton>
-                        <Modal.Title class="file-browser-title">
+                        <Modal.Title className="file-browser-title">
                             Επιλογή αρχείων
                         </Modal.Title>
                     </Modal.Header>
