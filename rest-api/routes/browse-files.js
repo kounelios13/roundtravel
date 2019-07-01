@@ -12,5 +12,4 @@ module.exports = (app) =>{
             return res.json({files: fullPath})
         }
     })
-
 }

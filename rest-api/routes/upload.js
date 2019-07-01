@@ -9,6 +9,7 @@ module.exports = (app) =>{
     app.post('/private/upload',  (req,res,next)=>{
 
         Object.values(req.files).map(img=>{
+            console.log(req.body.name)
             img.mv('./public/' + req.body.name + '/' + img.name)
                 .then((img)=>{
                     res.sendStatus(200)

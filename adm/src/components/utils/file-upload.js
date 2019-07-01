@@ -25,7 +25,7 @@ class FileUpload extends Component {
         files.forEach((file,i)=>{
             data.append(i, file)
         })
-        data.append('name', this.props.path)
+        data.append('name', this.props.parentDir + '/' + this.props.path)
 
         axios
             .post('http://localhost:9000/private/upload', data)
@@ -41,7 +41,7 @@ class FileUpload extends Component {
     render() {
         return (
             <div>
-                <input ref={this.uploadInput} type='file' onChange={this.handleImageSubmit} className='bg-secondary w-100' multiple  />
+                <input ref={this.uploadInput} type='file'  onChange={this.handleImageSubmit} className='bg-secondary w-100' multiple  />
             </div>
         );
     }

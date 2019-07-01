@@ -24,7 +24,7 @@ class Home extends Component {
 
             <div>
                 {!this.props.auth.isAuthenticated && <Login /> }
-                {this.props.auth.isAuthenticated && <h1>U logged boy</h1>}
+                {this.props.auth.isAuthenticated && <h1>Welcome to RT Admin panel, have a pleasant stay!</h1>}
             </div>
         );
     }

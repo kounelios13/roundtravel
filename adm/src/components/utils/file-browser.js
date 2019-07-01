@@ -14,7 +14,6 @@ class FileBrowser extends Component {
         this.state = {
             show: false,
             files: [],
-            selectedFiles: [1, 3]
         };
 
 
@@ -31,13 +30,14 @@ class FileBrowser extends Component {
                     return file.selected !== false
                 })
                 this.props.addFiles(selectedFiles)
+                this.setState({files: []})
             }
         };
     }
 
     getDirectoryData(){
         axios
-            .post(config.serverUrl + 'private/browse', {folderPath: this.props.folderPath})
+            .post(config.serverUrl + 'private/browse', {folderPath: this.props.parentDir + '/' + this.props.folderPath})
             .then((res)=>{
                 const files = res.data.files.map(file=>{
                     return {selected: false, url: file}

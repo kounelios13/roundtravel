@@ -5,6 +5,8 @@ import Home from "./Home";
 import {connect} from "react-redux";
 import Cities from "./cities/cities";
 import EditCity from "./cities/edit-city";
+import Locations from "./locations/locations";
+import EditLocation from "./locations/edit-location";
 
 class AppRouter extends Component {
 
@@ -14,6 +16,7 @@ class AppRouter extends Component {
             auth: {}
         }
     }
+
 
     static getDerivedStateFromProps(props, state){
         return {
@@ -37,11 +40,15 @@ class AppRouter extends Component {
                             <div className="collapse navbar-collapse" id="navbarNavDropdown">
                                 <ul className="navbar-nav">
                                     <li className="nav-item active">
-                                        <Link className="nav-link" to='/home'>Home <span className="sr-only">(current)</span></Link>
+                                        <Link className="nav-link" to='/home'>ΚΕΝΤΡΙΚΗ<span className="sr-only">(current)</span></Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link className="nav-link" to={'/cities'}>Cities</Link>
+                                        <Link className="nav-link" to={'/cities'}>ΠΟΛΕΙΣ</Link>
                                     </li>
+                                    <li className="nav-item">
+                                        <Link className="nav-link" to={'/locations'}>ΠΡΟΟΡΙΣΜΟΙ</Link>
+                                    </li>
+
                                 </ul>
                             </div>
                         </nav>
@@ -49,8 +56,14 @@ class AppRouter extends Component {
                 }
                 <Route path="/" exact component={Home} />
                 <Route path="/home" exact component={Home} />
+
                 <Route path="/cities" exact component={Cities} />
                 <Route path="/cities/edit/:id" exact component={EditCity} />
+
+                <Route path="/locations" exact component={Locations} />
+                <Route path="/locations/edit/:id" exact component={EditLocation} />
+
+
             </Router>
         );
     }

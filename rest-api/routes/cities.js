@@ -30,6 +30,18 @@ module.exports = (app) =>{
         }
     })
 
+    app.post('/private/cities/delete', (req, res)=>{
+        console.log(req.body._id)
+        City.deleteOne({_id: req.body._id}, (err, city)=>{
+            if(err){
+                return res.sendStatus(400)
+            }
+            if(city){
+                return res.json({success: true})
+            }
+        })
+    })
+
 
     app.post('/private/cities', (req, res)=>{
         if(typeof req.body._id === 'undefined'){
@@ -38,6 +50,7 @@ module.exports = (app) =>{
             })
             city.save((err,city)=>{
                 if(err){
+                    console.log(err)
                     return res.sendStatus(400)
                 }
                 if(city){

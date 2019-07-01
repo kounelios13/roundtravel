@@ -7,6 +7,8 @@ import FileUpload from "../utils/file-upload";
 import config from '../../config/config'
 import FileBrowser from "../utils/file-browser";
 import ReactTooltip from 'react-tooltip'
+import {initAuthData} from "../../utils/init-auth-data";
+import setAuthToken from "../../utils/set-auth-token";
 
 
 class EditCity extends Component {
@@ -16,14 +18,21 @@ class EditCity extends Component {
     constructor(props) {
         super(props);
 
+
+
         this.state = {
             name: '',
             description: '',
             history: '',
             tags: '',
+            lat: '',
+            lon: '',
             url: '',
+            visibleInMap: true,
             activities: [],
-            images: []
+            images: [],
+            continent: '',
+            continents: []
         }
         this.addActivity = this.addActivity.bind(this)
         this.deleteActivity = this.deleteActivity.bind(this)
@@ -36,17 +45,59 @@ class EditCity extends Component {
         this.submitForm = this.submitForm.bind(this)
         this.formIsComplete = this.formIsComplete.bind(this)
         this.onImageAltChange = this.onImageAltChange.bind(this)
+        this.deleteCity = this.deleteCity.bind(this)
+        this.onSelectChange = this.onSelectChange.bind(this)
+        this.fetchGeolocationData = this.fetchGeolocationData.bind(this)
+    }
+
+    deleteCity(e){
+        e.preventDefault()
+        if(this.state._id !== 'undefined'){
+            axios
+                .post(config.serverUrl + 'private/cities/delete', {_id: this.state._id})
+                .then(res=>{
+                    toast.success("Η πόλη διεγραφή επιτυχώς.", {position: toast.POSITION.BOTTOM_RIGHT});
+                    this.props.history.push('/cities')
+
+                })
+                .catch(err=>{
+                    toast.error("Υπήρξε κάποιο πρόβλημα κατα την διαγραφή της πόλης", {position: toast.POSITION.BOTTOM_RIGHT});
+                })
+        }
     }
 
     componentWillMount(){
         if(this.props.match.params.id !== 'new'){
-            axios.
-                post(config.serverUrl + 'private/cities/get', {_id: this.props.match.params.id})
-            .then(res=>{
-                console.log(res.data)
-                this.setState({...res.data})
+            axios
+                .post(config.serverUrl + 'private/cities/get', {_id: this.props.match.params.id})
+                .then(res=>{
+                this.setState({...res.data}, ()=>{
+                    axios.get(config.serverUrl + 'continents')
+                        .then(res=>{
+                            console.log('else')
+                            const continentsWithoutSelected = res.data.filter(cont=>{
+                                return cont._id !== this.state.continent
+                            })
+                            const selectedContinent = res.data.filter(cont=>{
+                                return cont._id === this.state.continent
+                            })
+                            const continents = [...selectedContinent, ...continentsWithoutSelected]
+                            this.setState({continents: continents})
+                        })
+                })
             })
+        }else if(this.props.match.params.id === 'new'){
+            axios.get(config.serverUrl + 'continents')
+                .then(res=>{
+                    this.setState({continents: res.data, continent: res.data[0]._id})
+                })
+                .catch(err=>{
+
+                })
         }
+
+
+
     }
 
     handleChange(e){
@@ -130,7 +181,7 @@ class EditCity extends Component {
 
     formIsComplete(){
         let formComplete = true
-        if(this.state.name === '' || this.state.description === '' || this.state.history === '' || this.state.tags === '' || this.state.url === ''){
+        if(this.state.name === '' || this.state.description === '' || this.state.history === '' || this.state.tags === '' || this.state.url === '' || this.state.lat === '' || this.state.lon === ''){
             formComplete = false
         }
         this.state.images.forEach(img=>{
@@ -165,23 +216,39 @@ class EditCity extends Component {
          this.setState({images: [...this.state.images, ...imagesToAdd]})
      }
 
+     onSelectChange(e){
+        this.setState({continent: e.target.value})
+     }
 
+     fetchGeolocationData(){
+         delete axios.defaults.headers.common["Authorization"];
+         axios.
+            post('https://maps.googleapis.com/maps/api/geocode/json?address=' + this.state.name + '&key=AIzaSyDqg3XehTDw4eYitJkooo81xmw1jmynVt8')
+            .then(res=>{
+                if(res.data.status === 'OK'){
+                    this.setState({lat: res.data.results[0].geometry.location.lat, lon: res.data.results[0].geometry.location.lng}, ()=>{
+                        toast.info("Τα πεδία lat, lon ανανεώθηκαν επιτυχώς.", {position: toast.POSITION.BOTTOM_RIGHT});
+                    })
+                }else if(res.data.status === 'ZERO_RESULTS'){
+                    toast.warn("Τα πεδία lat, lon απέτυχαν να ανανεωθούν.", {position: toast.POSITION.BOTTOM_RIGHT});
+                }
+            })
+         setAuthToken(localStorage.token)
+     }
 
     render() {
         return (
             <div>
                 <ReactTooltip />
-
-                <div className='col-8 offset-2  mt-5'>
+                <div className='col-8 offset-2 mt-5'>
                                 <div className='col-6 offset-3 p-5 bg-info bg-form'>
                                     <form>
                                         <h4>Γενικές πληροφορίες</h4>
                                         <hr/>
 
                                         <div className='mt-3'>
-                                            <label htmlFor="name"></label>
-
-                                            <input name='name' value={this.state.name} className={'w-100'} type="text" onChange={this.handleChange} />
+                                            <label htmlFor="name">Όνομα πόλης</label>
+                                            <input name='name' onBlur={this.fetchGeolocationData} value={this.state.name} className={'w-100'} type="text" onChange={this.handleChange} />
                                         </div>
                                         
                                         <div className='mt-3'>
@@ -197,6 +264,29 @@ class EditCity extends Component {
                                         <div className='mt-3'>
                                             <label htmlFor="url">URL</label><p className='d-inline bg-primary rounded ml-2' data-tip="hello world"><FaQuestion /></p>
                                             <input name='url' value={this.state.url} onChange={this.handleChange} className={'w-100'} type="text"/>
+                                        </div>
+
+                                        <div className='mt-3'>
+                                            <label htmlFor="continent">Ηπειρος</label>
+                                            <select onChange={this.onSelectChange} className={'w-100 custom-select'}>
+                                                {this.state.continents.map(cont=>{
+                                                    return (
+                                                        <option key={cont._id} value={cont._id}>{cont.name}</option>
+                                                    )
+                                                })}
+                                            </select>
+
+                                        </div>
+
+                                        <div className='mt-3'>
+                                            <label htmlFor="lat">Lat/ Lon</label><br/>
+                                            <input name='lat' value={this.state.lat} onChange={this.handleChange} className={'w-50'} placeholder='lat' type="text"/>
+                                            <input name='lon' value={this.state.lon} onChange={this.handleChange} className={'w-50'} placeholder='lon' type="text"/>
+                                        </div>
+
+                                        <div className="mt-3 col-6 ml-2">
+                                            <input checked={this.state.visibleInMap} name='visibleInMap' value={this.state.visibleInMap} onChange={()=>{this.setState({visibleInMap: !this.state.visibleInMap})}} type="checkbox" className="form-check-input"></input>
+                                            <label className="form-check-label" htmlFor="visibleInMap">Εμφάνιση στον χάρτη</label>
                                         </div>
 
                                         <div className='mt-3 mb-5'>
@@ -228,7 +318,7 @@ class EditCity extends Component {
                                             <h5>Επίλογη είκονων</h5>
                                             {
                                                 this.state.name.length > 0
-                                                && <FileBrowser folderPath={this.state.name} addFiles={this.addImages} />
+                                                && <FileBrowser parentDir={'πολη'} folderPath={this.state.name} addFiles={this.addImages} />
                                             }
                                             <div className={'my-5'}>
                                                 {
@@ -259,9 +349,9 @@ class EditCity extends Component {
                                             <h4 className='d-inline'>Μεταφορτώση είκονων</h4>
                                             <hr/>
 
-                                            <FileUpload path={this.state.name} />
+                                            <FileUpload parentDir={'πολη'} path={this.state.name} />
                                         </div>
-                                        <button onClick={this.submitForm} className='btn btn-primary w-75 mt-4'>Αποθήκευση</button><button onClick={this.submitForm} className='btn btn-danger w-25 mt-4'>Διαγραφή</button>
+                                        <button onClick={this.submitForm} className='btn btn-primary w-75 mt-4'>Αποθήκευση</button><button onClick={this.deleteCity} className='btn btn-danger w-25 mt-4'>Διαγραφή</button>
 
                                     </form>
                         </div>

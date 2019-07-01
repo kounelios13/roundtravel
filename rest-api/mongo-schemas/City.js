@@ -31,6 +31,22 @@ const CitySchema = new Schema({
         type: [],
         required: false
     },
+    lat: {
+      type: Number,
+      required: false
+    },
+    lon: {
+        type: Number,
+        required: false
+    },
+    visibleInMap: {
+        type: Boolean,
+        required: false
+    },
+    continent: {
+      type: String,
+      required: true
+    },
     createdAt: {
         type: Date,
         default: Date.now()

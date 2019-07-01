@@ -8,7 +8,8 @@ class Cities extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            cities: []
+            cities: [],
+            searchQuery: ''
         }
     }
 
@@ -28,8 +29,18 @@ class Cities extends Component {
         return (
             <div>
                 <div>
-                    <div className='offset-2 col-8 bg-info mt-5 d-flex flex-wrap p-0'>
-                        {this.state.cities.map((city,i)=>{
+                    <div className='offset-2 col-8 bg-secondary mt-5 d-flex flex-wrap p-0'>
+                        <input onChange={(e)=>{this.setState({searchQuery: e.target.value})}} value={this.state.searchQuery} placeholder={'Αναζητηση πολης'} className='col-8 offset-2' type="text"/>
+                        {this.state.cities.filter(city=> {
+                            if(this.state.searchQuery !== ''){
+                                if(city.name.toLowerCase().includes(this.state.searchQuery.toLowerCase())){
+                                    return city
+                                }
+                            }else{
+                                return city
+                            }
+                        })
+                            .map((city,i)=>{
                             return (
                                 <div key={i} className={'m-5 app-pointer'} onClick={()=>{this.props.history.push('/cities/edit/' + city._id)}}>
 
