@@ -223,7 +223,7 @@ class EditCity extends Component {
      fetchGeolocationData(){
          delete axios.defaults.headers.common["Authorization"];
          axios.
-            post('https://maps.googleapis.com/maps/api/geocode/json?address=' + this.state.name + '&key=AIzaSyDqg3XehTDw4eYitJkooo81xmw1jmynVt8')
+            post('https://maps.googleapis.com/maps/api/geocode/json?address=' + this.state.name + '&key=' + config.googleApiKey)
             .then(res=>{
                 if(res.data.status === 'OK'){
                     this.setState({lat: res.data.results[0].geometry.location.lat, lon: res.data.results[0].geometry.location.lng}, ()=>{
