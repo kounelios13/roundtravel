@@ -26,7 +26,6 @@ module.exports = (app) =>{
                     return res.json(city)
                 }
             })
-
         }
     })
 
@@ -59,7 +58,6 @@ module.exports = (app) =>{
                 }
             })
         }else{
-            console.log(req.body)
             City.updateOne({_id: req.body._id}, {...req.body}, (err, city)=>{
                 if(err){
                     return res.sendStatus(400)
@@ -72,6 +70,5 @@ module.exports = (app) =>{
                 }
             })
         }
-
     })
 }

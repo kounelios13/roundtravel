@@ -146,3 +146,11 @@ h6 {
 .app-pointer{
   cursor: pointer;
 }
+
+.display-7{
+  font-size: 1.3em;
+}
+
+.app-hover:hover{
+   opacity: .7;
+}

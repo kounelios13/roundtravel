@@ -55,6 +55,8 @@ require('./routes/upload')(app)
 require('./routes/browse-files')(app)
 require('./routes/cities')(app)
 require('./routes/continents')(app)
+require('./routes/countries')(app)
+
 
 
 app.listen(9000,()=>{

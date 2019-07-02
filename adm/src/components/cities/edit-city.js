@@ -7,7 +7,6 @@ import FileUpload from "../utils/file-upload";
 import config from '../../config/config'
 import FileBrowser from "../utils/file-browser";
 import ReactTooltip from 'react-tooltip'
-import {initAuthData} from "../../utils/init-auth-data";
 import setAuthToken from "../../utils/set-auth-token";
 
 
@@ -163,7 +162,6 @@ class EditCity extends Component {
     submitForm(e){
         e.preventDefault()
         if(this.formIsComplete()){
-
             axios.post(config.serverUrl + 'private/cities', this.state)
                 .then(res=>{
                     if(res.data._id){
@@ -275,7 +273,6 @@ class EditCity extends Component {
                                                     )
                                                 })}
                                             </select>
-
                                         </div>
 
                                         <div className='mt-3'>
@@ -352,7 +349,6 @@ class EditCity extends Component {
                                             <FileUpload parentDir={'πολη'} path={this.state.name} />
                                         </div>
                                         <button onClick={this.submitForm} className='btn btn-primary w-75 mt-4'>Αποθήκευση</button><button onClick={this.deleteCity} className='btn btn-danger w-25 mt-4'>Διαγραφή</button>
-
                                     </form>
                         </div>
                 </div>

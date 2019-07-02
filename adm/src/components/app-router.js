@@ -5,8 +5,8 @@ import Home from "./Home";
 import {connect} from "react-redux";
 import Cities from "./cities/cities";
 import EditCity from "./cities/edit-city";
-import Locations from "./locations/locations";
-import EditLocation from "./locations/edit-location";
+import Countries from "./countries/countries";
+import EditCountry from "./countries/edit-country";
 
 class AppRouter extends Component {
 
@@ -42,12 +42,14 @@ class AppRouter extends Component {
                                     <li className="nav-item active">
                                         <Link className="nav-link" to='/home'>ΚΕΝΤΡΙΚΗ<span className="sr-only">(current)</span></Link>
                                     </li>
+
+                                    <li className="nav-item">
+                                        <Link className="nav-link" to={'/countries'}>ΧΩΡΕΣ</Link>
+                                    </li>
                                     <li className="nav-item">
                                         <Link className="nav-link" to={'/cities'}>ΠΟΛΕΙΣ</Link>
                                     </li>
-                                    <li className="nav-item">
-                                        <Link className="nav-link" to={'/locations'}>ΠΡΟΟΡΙΣΜΟΙ</Link>
-                                    </li>
+
 
                                 </ul>
                             </div>
@@ -60,8 +62,8 @@ class AppRouter extends Component {
                 <Route path="/cities" exact component={Cities} />
                 <Route path="/cities/edit/:id" exact component={EditCity} />
 
-                <Route path="/locations" exact component={Locations} />
-                <Route path="/locations/edit/:id" exact component={EditLocation} />
+                <Route path="/countries" exact component={Countries} />
+                <Route path="/countries/edit/:id" exact component={EditCountry} />
 
 
             </Router>
