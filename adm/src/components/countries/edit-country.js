@@ -97,7 +97,7 @@ class EditCountry extends Component {
         return (
             <div>
                 <div className='col-8 offset-3 mt-5'>
-                    <div className='col-6 offset-3 m-5 bg-info bg-form'>
+                    <div className='col-6 offset-3 m-5 bg-info bg-form p-4'>
                         <form>
                             <h4>Πληροφορίες χώρας</h4>
                             <hr/>
@@ -123,7 +123,7 @@ class EditCountry extends Component {
                                 <input name='url' value={this.state.url} onChange={this.handleChange} className={'w-100'} type="text"/>
                             </div>
 
-                            <div className='mt-3 mb-5'>
+                            <div className='mt-3 mb-4'>
                                 <label htmlFor="tags">Tags</label>
                                 <input name='tags' value={this.state.tags} onChange={this.handleChange} className={'w-100'} type="text"/>
                             </div>

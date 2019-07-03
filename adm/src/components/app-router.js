@@ -7,6 +7,8 @@ import Cities from "./cities/cities";
 import EditCity from "./cities/edit-city";
 import Countries from "./countries/countries";
 import EditCountry from "./countries/edit-country";
+import Categories from "./categories/categories";
+import EditCategories from "./categories/edit-categories";
 
 class AppRouter extends Component {
 
@@ -50,6 +52,10 @@ class AppRouter extends Component {
                                         <Link className="nav-link" to={'/cities'}>ΠΟΛΕΙΣ</Link>
                                     </li>
 
+                                    <li className="nav-item">
+                                        <Link className="nav-link" to={'/categories'}>ΚΑΤΗΓΟΡΙΕΣ</Link>
+                                    </li>
+
 
                                 </ul>
                             </div>
@@ -65,6 +71,8 @@ class AppRouter extends Component {
                 <Route path="/countries" exact component={Countries} />
                 <Route path="/countries/edit/:id" exact component={EditCountry} />
 
+                <Route path="/categories" exact component={Categories} />
+                <Route path="/categories/edit/:id" exact component={EditCategories} />
 
             </Router>
         );
