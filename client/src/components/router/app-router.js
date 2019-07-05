@@ -3,13 +3,14 @@ import roundTravelLogo from '../../assets/images/general/logo.png'
 import telSvg from '../../assets/images/general/phone-dial.svg'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Home from "../home/home";
+import City from "../city/city";
 
 
 class AppRouter extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            tripsHover: true
+            tripsHover: false
         }
     }
 
@@ -144,6 +145,8 @@ class AppRouter extends Component {
                 </div>
 
                 <Route path="/" exact component={Home} />
+                <Route path="/:country/:city" exact component={City} />
+
 
             </Router>
         );

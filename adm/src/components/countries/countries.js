@@ -29,7 +29,6 @@ class Countries extends Component {
     render() {
         return (
             <div>
-
                 <div className='bg-info col-6 offset-3 p-0 mt-5'>
                     <input placeholder='Αναζητηση πολης' value={this.state.searchQuery} onChange={(e)=>{this.setState({searchQuery: e.target.value})}} type="text" autoFocus className='w-100'/>
                     {

@@ -6,7 +6,7 @@ import grLocale from 'date-fns/locale/el'
 import {connect} from "react-redux";
 import {loadTours} from "../../state/actions/tours";
 
-class TourSlider extends Component {
+class LandingSlider extends Component {
 
     constructor(props) {
         super(props);
@@ -111,8 +111,8 @@ class TourSlider extends Component {
         ))
         return (
             <div className='row p-0 m-0'>
-                <div className='col-12 p-0 m-0 image-header-container'>
-                    <div className='image-header-image' ref={this.imageDiv}>
+                <div className='col-12 p-0 m-0 slider-header-container'>
+                    <div className='slider-header-image' ref={this.imageDiv}>
                     </div>
 
                     <div className='slider-container  text-uppercase col-5'>
@@ -200,4 +200,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps, {loadTours})(TourSlider);
+export default connect(mapStateToProps, {loadTours})(LandingSlider);

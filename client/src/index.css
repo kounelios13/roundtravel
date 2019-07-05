@@ -10,7 +10,7 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
-  .image-header-image{
+  .slider-header-image{
     height: 70vh !important;
     /*background-position: center center !important;*/
   }
@@ -21,7 +21,7 @@ body {
 }
 
 @media only screen and (min-width: 600px) {
-  .image-header-image{
+  .slider-header-image{
     height: 100vh !important;
     /*background-position: center center !important;*/
   }
@@ -47,12 +47,11 @@ body {
   color: white;
 }
 
-.image-header-container{
+.slider-header-container{
   overflow: hidden;
 }
 
-
-.image-header-image{
+.slider-header-image{
   background: url(https://wallpaperplay.com/walls/full/0/8/9/203246.jpg) no-repeat center center;
   height: 100%;
   width: 100%;
@@ -64,7 +63,7 @@ body {
   animation-iteration-count: infinite;
 }
 
-.image-header-image:before{
+.slider-header-image:before{
   content: "";
   width: 100%;
   height: 25vh;
@@ -88,7 +87,6 @@ body {
   z-index: 3000;
   bottom: 5vh;
 }
-
 
 
 .progress-slider{
@@ -370,4 +368,38 @@ body {
     opacity: 0;
     transform: rotate(45deg) translate(20px,20px);
   }
+}
+
+.image-header-container{
+  height: 90vh;
+}
+
+.image-header-image{
+  background: url(https://i.imgur.com/eEBV6Nj.jpg) no-repeat center center;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.image-header-image:before{
+  content: "";
+  width: 100%;
+  height: 25vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(rgba(0,0,0,0.58), transparent);
+}
+
+.image-header-text{
+  color: white;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 40px;
+}
+
+.image-header-text.h1{
+  font-size: 1.3em !important;
 }

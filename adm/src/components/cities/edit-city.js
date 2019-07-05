@@ -345,7 +345,6 @@ class EditCity extends Component {
                                         <div>
                                             <h4 className='d-inline'>Μεταφορτώση είκονων</h4>
                                             <hr/>
-
                                             <FileUpload parentDir={'πολη'} path={this.state.name} />
                                         </div>
                                         <button onClick={this.submitForm} className='btn btn-primary w-75 mt-4'>Αποθήκευση</button><button onClick={this.deleteCity} className='btn btn-danger w-25 mt-4'>Διαγραφή</button>

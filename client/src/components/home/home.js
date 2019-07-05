@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import TourSlider from "../tour-slider/tour-slider";
+import TourSlider from "../image-headers/landing-slider";
 import WelcomeHeader from "./welcome-header";
 
 class Home extends Component {
