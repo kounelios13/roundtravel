@@ -375,7 +375,7 @@ body {
 }
 
 .image-header-image{
-  background: url(https://i.imgur.com/eEBV6Nj.jpg) no-repeat center center;
+  background: url(http://www.ihrm2020.org/sites/all/themes/ihrm_theme/images/slide-image-2.jpg) no-repeat center center;
   height: 100%;
   width: 100%;
   background-size: cover;
@@ -402,4 +402,18 @@ body {
 
 .image-header-text.h1{
   font-size: 1.3em !important;
+}
+
+.tours-group-wrapper{
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.tour-group-image{
+
+}
+
+.display-5{
+  font-size: 2.7em;
+  font-weight: 300;
 }

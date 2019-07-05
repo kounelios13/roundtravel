@@ -9,7 +9,7 @@ class ImageHeader extends Component {
                     <div className='image-header-image' ref={this.imageDiv}>
                             <div className="image-header-text">
                                 <h1 className='display-4'>Εκδρομη στο Παρισι</h1>
-                                <h3>Εκδρομες και εισητηρια για παρισι</h3>
+                                <h2>Εκδρομες και εισητηρια για την πολη του φωτος</h2>
                             </div>
                     </div>
                 </div>
