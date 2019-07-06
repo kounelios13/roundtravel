@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a586540-f268-4dbe-9c70-a1eddaaceab3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../client/src/components/city/city.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/src/components/image-headers/image-header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/categories/categories.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/categories/categories.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cities/edit-city.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cities/edit-city.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/countries/countries.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/countries/countries.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/components/home/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/components/home/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/components/router/app-router.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/components/router/app-router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/components/tour-slider/tour-slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/components/image-headers/landing-slider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rest-api/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../rest-api/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -41,8 +30,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/cities/edit-city.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="330" column="72" selection-start-line="330" selection-start-column="72" selection-end-line="330" selection-end-column="72" />
+            <state relative-caret-position="521">
+              <caret line="333" column="67" lean-forward="true" selection-start-line="333" selection-start-column="67" selection-end-line="333" selection-end-column="67" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -86,7 +75,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/countries/edit-country.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="638">
+            <state relative-caret-position="851">
               <caret line="41" column="37" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="37" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
@@ -299,15 +288,15 @@
       <workItem from="1562141649803" duration="2691000" />
       <workItem from="1562236101110" duration="606000" />
       <workItem from="1562316126959" duration="3224000" />
+      <workItem from="1562400121067" duration="92000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="139534000" />
+    <option name="totallyTimeSpent" value="139626000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13856691" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -553,7 +542,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/countries/edit-country.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
+        <state relative-caret-position="851">
           <caret line="41" column="37" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="37" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
@@ -563,8 +552,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/cities/edit-city.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="330" column="72" selection-start-line="330" selection-start-column="72" selection-end-line="330" selection-end-column="72" />
+        <state relative-caret-position="521">
+          <caret line="333" column="67" lean-forward="true" selection-start-line="333" selection-start-column="67" selection-end-line="333" selection-end-column="67" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
