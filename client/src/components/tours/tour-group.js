@@ -73,20 +73,27 @@ class TourGroup extends Component {
         const circleCount = Math.ceil(this.state.tours.length / 3)
 
         return (
-            <div className='row p-0 m-0'>
+            <div className='row p-0 m-0 bg-jumbotron pb-7'>
                 <div className="col-8 offset-2 mt-5">
-                    <h3 className='display-5'>Τα πιο αγαπημενα</h3>
-                    <h4 className='text-info'>Ανακαλυψτε τα παντα στο Παρισι</h4>
-                    <hr className='col-12' />
+                    <div className='mt-5'>
+                        <h3 className='display-5'>Τα πιο αγαπημενα</h3>
+                        <h4 className='text-info'>Ανακαλυψτε τα παντα στο Παρισι</h4>
+                        <hr className='col-12' />
+                    </div>
                 </div>
                 <div ref={this.state.groupContainer} className="d-flex tours-group-wrapper col-8 p-0 offset-2">
                     {this.state.tours.map(tour=>{
                         return (
-                            <div className='border col-4 mt-5 p-0'>
+                            <div className='border-black col-4 mt-4 p-0'>
                                 <div>
                                     <img className='tour-group-image img-fluid col-12 p-0' src={tour.url} alt=""/>
                                     <div className='position-absolute tour-group-price-caption'>
                                         από 330€
+                                    </div>
+                                    <div className="tour-group-expires bg-dark">
+                                        <div className='text-info'>
+                                        </div>
+                                        Λήγει σε : 1 μερα 3 ωρες
                                     </div>
                                 </div>
                                 <div className='text-center'>
@@ -96,7 +103,7 @@ class TourGroup extends Component {
                         )
                     })}
                     </div>
-                <div className='col-12 text-center mb-5'>
+                <div className='col-12 text-center mb-5 mt-4'>
                     {
                         Array(circleCount).fill(1).map((el, i)=>{
                             let img = circle
@@ -105,7 +112,7 @@ class TourGroup extends Component {
                                 img = circleSelected
                             }
                             return (
-                                <span onClick={()=>{this.selectIndex(i)}}>
+                                <span className='mb-5' onClick={()=>{this.selectIndex(i)}}>
                                     <img className='img-circle' src={img} alt=""/>
                                 </span>
                             )
