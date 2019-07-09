@@ -22,7 +22,7 @@ class AppRouter extends Component {
     render() {
         return (
             <Router>
-                <div className=' rt-nav-wrap col-12'>
+                <div className=' rt-nav-wrap col-12 d-none d-md-block'>
                     <div className='d-flex px-3 mt-3'>
                         <div className='col-2 mt-3'>
                             <img src={roundTravelLogo} alt=""/>

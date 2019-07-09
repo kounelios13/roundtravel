@@ -455,7 +455,7 @@ body {
 }
 
 .city-wide-bg{
-    background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.7)), url(./assets/images/city/louvre.jpg) no-repeat center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.7)), url(./assets/images/city/louvre.jpg) no-repeat center center;
     height: 100%;
     width: 100%;
     background-size: cover;
@@ -474,4 +474,25 @@ body {
 }
 
 .border-black{
+}
+
+.mt-6{
+  margin-top: 130px;
+}
+
+.mt-7{
+  padding-top: 180px;
+}
+
+.app-pointer{
+  cursor: pointer;
+}
+
+.app-poi-hover:hover p{
+   color: #424a54;
+}
+
+.app-text-overflow-ellipsis{
+  text-overflow: fade;
+  white-space: nowrap;
 }
