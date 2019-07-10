@@ -5,6 +5,8 @@ import ShowMore from 'react-show-more';
 import CityDescription from "./city-description";
 import PointsOfInterest from "../utils/points-of-interest";
 import PhotoGrid from "../utils/photo-grid";
+import TourOffer from "../tours/tour-offer";
+import CityInfo from "./city-info";
 
 class City extends Component {
     render() {
@@ -14,6 +16,8 @@ class City extends Component {
                 <TourGroup />
                 <CityDescription />
                 <PointsOfInterest />
+                <TourOffer />
+                <CityInfo />
                 <PhotoGrid />
 
 

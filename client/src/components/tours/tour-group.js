@@ -18,7 +18,7 @@ class TourGroup extends Component {
             tours: [
                 {
                     url: lubre,
-                    title: 'Φανταστικο Μονακο'
+                    title: 'Φανταστικο Μονακο',
                 },
                 {
                     url: alsace,
@@ -115,10 +115,12 @@ class TourGroup extends Component {
                                         <div className='position-absolute tour-group-price-caption'>
                                             από 330€
                                         </div>
-
                                     </div>
                                     <div className='text-center'>
                                         <span className='tour-grou-title'>{tour.title}</span>
+                                        <div>
+                                            Η προσφορα ληγει σε <span className="text-info">3 ώρες</span>
+                                        </div>
                                     </div>
 
                             </Swipe>
@@ -141,7 +143,6 @@ class TourGroup extends Component {
                             )
                         })
                     }
-
                 </div>
             </div>
         );

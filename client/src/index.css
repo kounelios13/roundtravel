@@ -15,6 +15,15 @@ body {
     /*background-position: center center !important;*/
   }
 
+  .tour-offer-price{
+    padding: 7px 15px !important;
+    font-size: 1.3em !important;
+  }
+
+  .tour-offer-title{
+    font-size: 1.4em !important;
+  }
+
   .navbar-main{
     padding: 10px 10px !important;
   }
@@ -470,6 +479,7 @@ body {
   position: absolute;
   width: 100%;
   bottom: 33px;
+  padding-left: 10px;
   color: white;
 }
 
@@ -495,4 +505,34 @@ body {
 .app-text-overflow-ellipsis{
   text-overflow: fade;
   white-space: nowrap;
+}
+
+.tour-offer-title{
+  top: 0px;
+  z-index: 300;
+  background-color: rgba(0,0,0,.85);
+  font-size: 2.5em;
+}
+
+.tour-offer-price{
+  background-color: #4c95ff !important;
+  position: absolute;
+  bottom: 15px;
+  right: 40px;
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-size: 2em;
+  color: white;
+}
+
+.tour-offer-wrapper{
+  margin: 200px 0px;
+}
+
+.tour-offer-days{
+  font-size: .5em;
+}
+
+.mb-6{
+  margin-bottom: 110px;
 }
