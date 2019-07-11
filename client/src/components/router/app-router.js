@@ -4,6 +4,7 @@ import telSvg from '../../assets/images/general/phone-dial.svg'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Home from "../home/home";
 import City from "../city/city";
+import Tour from "../tours/tour";
 
 
 class AppRouter extends Component {
@@ -146,6 +147,7 @@ class AppRouter extends Component {
 
                 <Route path="/" exact component={Home} />
                 <Route path="/:country/:city" exact component={City} />
+                <Route path="/:country/:city/:tour" exact component={Tour} />
 
 
             </Router>

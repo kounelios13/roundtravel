@@ -54,9 +54,15 @@ class PhotoGrid extends Component {
 
     render() {
         return (
-            <div className='col-12 bg-jumbotron mt-6 p-0 m-0'>
-                <div className="col-12 offset-0 col-md-8 offset-md-2 p-0">
-                    <Gallery photos={this.state.photos} />
+            <div className='my-6'>
+                <div className='col-12 bg-jumbotron p-0 m-0'>
+                    <div className="col-12 offset-0 col-md-8 offset-md-2 p-0">
+                        <div className='col-12 py-5'>
+                            <h2 className='display-5'>Εκδρομες για παρισι</h2>
+                            <h3 className='display-6'>Ολα τα πακετα</h3>
+                        </div>
+                        <Gallery photos={this.state.photos} />
+                    </div>
                 </div>
             </div>
         );

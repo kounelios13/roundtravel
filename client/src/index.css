@@ -319,6 +319,11 @@ body {
   line-height: 0.85em;
 }
 
+.display-6{
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
 .rt-nav-dropdown-item{
   padding: 2px 0px;
 }
@@ -385,11 +390,10 @@ body {
 }
 
 .image-header-image{
-  background: url(http://www.ihrm2020.org/sites/all/themes/ihrm_theme/images/slide-image-2.jpg) no-repeat center center;
   height: 100%;
   width: 100%;
-  background-size: cover;
-  background-position: center;
+  background-size: cover !important;
+  background-position: center !important;
 }
 
 .image-header-image:before{
@@ -535,4 +539,8 @@ body {
 
 .mb-6{
   margin-bottom: 110px;
+}
+
+.my-6{
+  margin: 180px 0px !important;
 }
