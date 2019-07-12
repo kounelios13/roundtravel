@@ -51,6 +51,9 @@ class PhotoGrid extends Component {
     }
 
 
+    testFunc(){
+
+    }
 
     render() {
         return (
