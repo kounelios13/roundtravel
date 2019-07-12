@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {FaCalendarDay, FaClock, FaMapMarkerAlt} from "react-icons/fa";
+import {FaCalendarDay, FaClock, FaMapMarkerAlt, FaPlane, FaPlaneDeparture} from "react-icons/fa";
 
 
 class GeneralInfo extends Component {
@@ -31,6 +31,15 @@ class GeneralInfo extends Component {
                             </div>
                             <div className='text-secondary'>
                                 Αθήνα/ Ηράκλειο/ Χανία
+                            </div>
+                        </div>
+
+                        <div className='mt-3'>
+                            <div>
+                                <FaPlaneDeparture /> <b>Τροπος ταξιδιού</b>
+                            </div>
+                            <div className='text-secondary'>
+                                Αεροπορικώς
                             </div>
                         </div>
                     </div>

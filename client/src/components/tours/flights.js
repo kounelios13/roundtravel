@@ -14,7 +14,7 @@ class Flights extends Component {
                         <h2 className="pl-4 display-7 bg-info-2 p-3 text-white">Πτήσεις</h2>
                     </div>
                 </div>
-                <div className='align-items-center'>
+                <div className='py-4'>
                     <div>
                         <div>
                             <div className='d-flex text-center align-items-center'>
@@ -38,6 +38,7 @@ class Flights extends Component {
                                     </div>
                                 </div>
                             </div>
+                            <hr/>
                             <div className='d-flex text-center align-items-center'>
                                 <div className="col-5">
                                     <div>
@@ -60,11 +61,8 @@ class Flights extends Component {
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
         );
     }
