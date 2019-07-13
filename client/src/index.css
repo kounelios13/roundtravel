@@ -632,3 +632,7 @@ body {
   list-style: none !important;
 }
 
+.tour-cities-visited-wrapper{
+  border-bottom: 1px solid grey;
+}
+

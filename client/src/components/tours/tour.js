@@ -20,7 +20,7 @@ class Tour extends Component {
                 <TourImageHeader title={'Ταξιδι για οικογενεια 4ων'} subtitle={'Μαγικο παρισι'} imageUrl={eiffel}  />
                 <div>
                     <div className="d-flex my-6 flex-wrap align-items-start">
-                        <div className="col-12 col-lg-8 offset-lg-2 col-lg-6">
+                        <div className="col-12 offset-lg-2 col-lg-6">
                             <TourIntro />
                             <TourInfoTabs />
                         </div>
