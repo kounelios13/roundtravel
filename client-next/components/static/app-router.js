@@ -1,4 +1,6 @@
 import Link from "next/link";
+import '../../styles/main.scss'
+
 
 const linkStyle = {
     marginRight: 15

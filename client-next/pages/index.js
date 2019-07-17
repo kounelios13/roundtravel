@@ -1,16 +1,17 @@
 import Link from "next/link";
-import { withAmp } from 'next/amp'
 
 import Layout from "../components/layouts/layout";
 export const config = { amp: true };
 
+const multipleSizes = require('../static/images/1.jpg?webp?resize&sizes[]=30&sizes[]=60&sizes[]=500');
 
 const Index = () => (
-    <div>
-        <p>asdas</p>
-        <div>
-            <amp-img width={200} height={200} layout='responsive' src="https://www.fodors.com/wp-content/uploads/2018/10/HERO_UltimateParis_Heroshutterstock_112137761.jpg" alt=""/>
-        </div>
+    <div style={{width: '100px !important'}}>
+        <picture>
+            <noscript>
+                <img srcSet={multipleSizes.srcSet} src={multipleSizes.src}  type="image/jpeg" />
+            </noscript>
+        </picture>
     </div>
 )
 

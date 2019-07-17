@@ -120,19 +120,19 @@ var withLayout = function withLayout(Page) {
       style: layoutStyle,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 11
+        lineNumber: 13
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_static_app_router__WEBPACK_IMPORTED_MODULE_1__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 12
+        lineNumber: 14
       },
       __self: this
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Page, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 13
+        lineNumber: 15
       },
       __self: this
     }));
@@ -156,7 +156,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../styles/main.scss */ "./styles/main.scss");
+/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_styles_main_scss__WEBPACK_IMPORTED_MODULE_2__);
 var _jsxFileName = "C:\\Users\\Pc04\\WebstormProjects\\roundtravel\\client-next\\components\\static\\app-router.js";
+
 
 
 var linkStyle = {
@@ -167,35 +170,35 @@ var Header = function Header() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 10
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 11
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     style: linkStyle,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 12
     },
     __self: this
   }, "Home")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/about",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 14
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     style: linkStyle,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 15
     },
     __self: this
   }, "About")));
@@ -1272,11 +1275,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var next_amp__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/amp */ "next/amp");
-/* harmony import */ var next_amp__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_amp__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _components_layouts_layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/layouts/layout */ "./components/layouts/layout.js");
+/* harmony import */ var _components_layouts_layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/layouts/layout */ "./components/layouts/layout.js");
 var _jsxFileName = "C:\\Users\\Pc04\\WebstormProjects\\roundtravel\\client-next\\pages\\index.js";
-
 
 
 
@@ -1284,40 +1284,65 @@ var config = {
   amp: true
 };
 
+var multipleSizes = __webpack_require__(/*! ../static/images/1.jpg?webp?resize&sizes[]=30&sizes[]=60&sizes[]=500 */ "./static/images/1.jpg?webp");
+
 var Index = function Index() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    style: {
+      width: '100px !important'
+    },
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("picture", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
     },
     __self: this
-  }, "asdas"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("noscript", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 11
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("amp-img", {
-    width: 200,
-    height: 200,
-    layout: "responsive",
-    src: "https://www.fodors.com/wp-content/uploads/2018/10/HERO_UltimateParis_Heroshutterstock_112137761.jpg",
-    alt: "",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    srcSet: multipleSizes.srcSet,
+    src: multipleSizes.src,
+    type: "image/jpeg",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12
     },
     __self: this
-  })));
+  }))));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(_components_layouts_layout__WEBPACK_IMPORTED_MODULE_3__["default"])(Index));
+/* harmony default export */ __webpack_exports__["default"] = (Object(_components_layouts_layout__WEBPACK_IMPORTED_MODULE_2__["default"])(Index));
+
+/***/ }),
+
+/***/ "./static/images/1.jpg?webp":
+/*!***************************************************************************!*\
+  !*** ./static/images/1.jpg?webp?resize&sizes[]=30&sizes[]=60&sizes[]=500 ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = {srcSet:"/_next/static/images/1-30-a4b2e65143dd3e18ce0f92cb0fcf20c5.jpg"+" 30w"+","+"/_next/static/images/1-60-3044f77843c5292cb3795444289a5150.jpg"+" 60w"+","+"/_next/static/images/1-500-8b14b8cc8eb90129606b4de4a79aeefd.jpg"+" 500w",images:[{path:"/_next/static/images/1-30-a4b2e65143dd3e18ce0f92cb0fcf20c5.jpg",width:30,height:17},{path:"/_next/static/images/1-60-3044f77843c5292cb3795444289a5150.jpg",width:60,height:34},{path:"/_next/static/images/1-500-8b14b8cc8eb90129606b4de4a79aeefd.jpg",width:500,height:281}],src:"/_next/static/images/1-30-a4b2e65143dd3e18ce0f92cb0fcf20c5.jpg",toString:function(){return "/_next/static/images/1-30-a4b2e65143dd3e18ce0f92cb0fcf20c5.jpg"},placeholder: undefined,width:30,height:17};
+
+/***/ }),
+
+/***/ "./styles/main.scss":
+/*!**************************!*\
+  !*** ./styles/main.scss ***!
+  \**************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
 
 /***/ }),
 
@@ -1495,17 +1520,6 @@ module.exports = require("next-server/dist/lib/router/router");
 /***/ (function(module, exports) {
 
 module.exports = require("next-server/dist/lib/utils");
-
-/***/ }),
-
-/***/ "next/amp":
-/*!***************************!*\
-  !*** external "next/amp" ***!
-  \***************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("next/amp");
 
 /***/ }),
 
