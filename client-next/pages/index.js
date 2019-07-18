@@ -1,17 +1,17 @@
 import Link from "next/link";
+import Head from 'next/head'
 
 import Layout from "../components/layouts/layout";
-export const config = { amp: true };
 
-const multipleSizes = require('../static/images/1.jpg?webp?resize&sizes[]=30&sizes[]=60&sizes[]=500');
+const multipleSizes = require('../static/images/1.jpg?resize&sizes[]=375&sizes[]=568&sizes[]=768&sizes[]=1024&sizes[]=1366&sizes[]=1680&sizes[]=1920');
 
 const Index = () => (
-    <div style={{width: '100px !important'}}>
-        <picture>
-            <noscript>
-                <img srcSet={multipleSizes.srcSet} src={multipleSizes.src}  type="image/jpeg" />
-            </noscript>
-        </picture>
+    <div>
+
+        {/*<picture>*/}
+        {/*    <img className='img-fluid' srcSet={multipleSizes.srcSet} src={multipleSizes.src}  type="image/jpeg" />*/}
+        {/*</picture>*/}
+
     </div>
 )
 

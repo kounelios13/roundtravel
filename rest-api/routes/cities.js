@@ -8,7 +8,6 @@ module.exports = (app) =>{
                 console.log(err)
                 return res.sendStatus(400)
             }
-
             if(cities){
                 console.log(cities)
                 return res.json(cities)
@@ -41,6 +40,18 @@ module.exports = (app) =>{
         })
     })
 
+    app.post('/cities/get', (req, res)=>{
+        console.log(req.body)
+        City.findOne({url: req.body.url}, (err, city)=>{
+            if(err){
+                return res.sendStatus(400)
+            }
+            if(city){
+                return res.json(city)
+            }
+        })
+        return res.json({ok: 'ok'})
+    })
 
     app.post('/private/cities', (req, res)=>{
         if(typeof req.body._id === 'undefined'){
