@@ -44,13 +44,14 @@ module.exports = (app) =>{
         console.log(req.body)
         City.findOne({url: req.body.url}, (err, city)=>{
             if(err){
-                return res.sendStatus(400)
+                return res.json({status: 400})
             }
             if(city){
                 return res.json(city)
+            }else{
+                return res.json({status: 404})
             }
         })
-        return res.json({ok: 'ok'})
     })
 
     app.post('/private/cities', (req, res)=>{
@@ -77,7 +78,6 @@ module.exports = (app) =>{
                     City.findOne({_id: req.body._id}, (err, city)=>{
                         return res.json(city)
                     })
-
                 }
             })
         }

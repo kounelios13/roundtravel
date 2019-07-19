@@ -2,22 +2,77 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e304725-736e-4f95-ac59-5a7ff6c01b61" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../client-next/.idea/client-next.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../client-next/.idea/client-next.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client-next/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client-next/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client-next/.next/build-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../client-next/.next/build-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/autodll-webpack-plugin/development_instance_0_ab2113ed3ae72c05acf0468ddd77f46d/stats.json" beforeDir="false" afterPath="$PROJECT_DIR$/../client-next/.next/cache/autodll-webpack-plugin/development_instance_0_ab2113ed3ae72c05acf0468ddd77f46d/stats.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/autodll-webpack-plugin/package.json.hash" beforeDir="false" afterPath="$PROJECT_DIR$/../client-next/.next/cache/autodll-webpack-plugin/package.json.hash" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/next-babel-loader/37c23e4a550f525092f7710de106de6c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/autodll-webpack-plugin/development_instance_0_ab2113ed3ae72c05acf0468ddd77f46d/dll.manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/autodll-webpack-plugin/development_instance_0_ab2113ed3ae72c05acf0468ddd77f46d/dll_92fa9139568d8c3d8f78.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/autodll-webpack-plugin/development_instance_0_ab2113ed3ae72c05acf0468ddd77f46d/dll_92fa9139568d8c3d8f78.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/autodll-webpack-plugin/development_instance_0_ab2113ed3ae72c05acf0468ddd77f46d/stats.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/next-babel-loader/1733dad3f498cb1b2cc04e6c846428f7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/next-babel-loader/19e5ddf0fc611726b9049d88192e53f9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/next-babel-loader/1add81f656f653a3d757bedad56a9df9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/next-babel-loader/21150347cf0480eac5b744d166e2810c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/next-babel-loader/2972b2e72cf8f528923c828417baffc0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/next-babel-loader/2e96391d1b785553a24270630de3fcf1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/next-babel-loader/36b8b1fdde87910f19fcf659996b1ce5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/next-babel-loader/483a0da457bad4d7a433f99b5e722813.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/next-babel-loader/493155aa077d14a5791cee4fa3b3c98f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/next-babel-loader/4e5ee1fe44d1ea8a90176fc6fc9f2de9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/next-babel-loader/5c8ddff6150b756d0bbf61b735315263.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/next-babel-loader/6077373994ffe1c51df94a84c7eb71e0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/next-babel-loader/6462669284b831a5630647344054c7b6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/next-babel-loader/718a04454a9ce4ec070f410898b8b435.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/next-babel-loader/75189a5b60cf83301fe09c2d1178da54.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/next-babel-loader/78c1f84d119afcf12a9e6a96c3e05d35.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/next-babel-loader/7b93fd6e9582ab78fb0d79f6d8b48da4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/next-babel-loader/7bb71b180b4d4987fd22eee4b23c7cdb.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/next-babel-loader/8076288ae5a2ab84eefacd9a0b26fcb1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/next-babel-loader/8187a89e27d19e80e9dc643885b07814.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/next-babel-loader/82a2ca55595fcd6417652749b5fbafbd.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/next-babel-loader/84af33bbdd2012df192a81295451195b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/next-babel-loader/87600d181ed7a6d5dea45f9f13c51fd6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/next-babel-loader/8d31485f7e2e268ba382cb3b6d2742e9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/next-babel-loader/8f1998c7f6cd1897e6ef79364a459d71.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/next-babel-loader/9134dd4ca5384360ea89837e9894ee42.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/next-babel-loader/a2f767be7ff4c680da2c96d429b39414.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/next-babel-loader/b3110d65dfb54fa0b9af38bd1b4d3e19.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/next-babel-loader/b7625c373023790c2465ab6fbad0b095.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/next-babel-loader/b82a7dff9a76e27208a5a6d56921fc00.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/next-babel-loader/c0181f12242725f519d0a37e53dbeb10.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/next-babel-loader/c7871f24116747b707e4dd379e4bfabb.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/next-babel-loader/cf9c0ae4f613d8513a4706563ae773c6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/next-babel-loader/d5b9342a15c36661373f5f097699040d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/next-babel-loader/d5f83c677f61359a148a252607dc8417.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/next-babel-loader/de4e517beb76e3f3b715dcdb106b4e62.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/next-babel-loader/df0bbef7432b4b5c7871bb521089b883.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/next-babel-loader/df6bf372661848e1bf6bd1f2b63f960f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/next-babel-loader/f49bbb14fd0aae688b61468cd8dc22f8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/next-babel-loader/f6562b515e522cbdd581d49c54c1ab6c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/next-babel-loader/fae1695b1aa6f1a325ba8ff0e2bd7a9c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/next-babel-loader/fd41517d2ecc45801514b7e099f2eb66.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/cache/next-babel-loader/fda0455860a19a10f4fa4f16bac4c697.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/react-loadable-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../client-next/.next/react-loadable-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client-next/.next/server/pages-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../client-next/.next/server/pages-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-next/.next/server/static/development/pages/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-next/.next/server/static/development/pages/index.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../client-next/.next/server/static/development/pages/index.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-next/.next/static/development/pages/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-next/.next/static/development/pages/index.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../client-next/.next/static/development/pages/index.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/server/ssr-module-cache.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client-next/.next/server/ssr-module-cache.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/server/static/development/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client-next/.next/server/static/development/pages/_app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/server/static/development/pages/_document.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client-next/.next/server/static/development/pages/_document.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/server/static/development/pages/_error.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client-next/.next/server/static/development/pages/_error.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/server/static/development/pages/index.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/static/chunks/0.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client-next/.next/static/chunks/0.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/static/development/dll/dll_92fa9139568d8c3d8f78.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client-next/.next/static/development/dll/dll_92fa9139568d8c3d8f78.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/static/development/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client-next/.next/static/development/pages/_app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/static/development/pages/_error.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client-next/.next/static/development/pages/_error.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/static/development/pages/index.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/static/development/pages/next/dist/pages/_error.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../client-next/.next/static/development/pages/next/dist/pages/_error.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/static/runtime/amp.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client-next/.next/static/runtime/amp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/static/runtime/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client-next/.next/static/runtime/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client-next/.next/static/runtime/webpack.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client-next/.next/static/runtime/webpack.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client-next/.next/static/runtime/webpack.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../client-next/.next/static/runtime/webpack.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-next/components/layouts/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client-next/components/layouts/layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/components/layouts/layout.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../client-next/components/static/app-router.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client-next/components/static/app-router.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client-next/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../client-next/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-next/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../client-next/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/pages/city/[name].js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../client-next/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client-next/pages/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client-next/styles/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../client-next/styles/main.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/cities.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/cities.js" afterDir="false" />
@@ -54,8 +109,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/cities.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="505">
-              <caret line="52" selection-start-line="52" selection-end-line="52" />
+            <state relative-caret-position="1053">
+              <caret line="47" column="13" lean-forward="true" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -63,8 +118,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/env/keys.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+            <state relative-caret-position="70">
+              <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -72,7 +127,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mongo-schemas/City.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
+            <state relative-caret-position="312">
               <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
             </state>
           </provider>
@@ -150,26 +205,6 @@
               <item name="rest-api" type="b2602c69:ProjectViewProjectNode" />
               <item name="rest-api" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="rest-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rest-api" type="462c0819:PsiDirectoryNode" />
-              <item name="env" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rest-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rest-api" type="462c0819:PsiDirectoryNode" />
-              <item name="mongo-schemas" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rest-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rest-api" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rest-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rest-api" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -239,17 +274,18 @@
       <workItem from="1562236124129" duration="583000" />
       <workItem from="1562316127139" duration="1885000" />
       <workItem from="1563447840498" duration="3898000" />
+      <workItem from="1563459787165" duration="6800000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97228000" />
+    <option name="totallyTimeSpent" value="104028000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17913593" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17913593" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -263,7 +299,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32917964" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32896066" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -358,22 +394,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/env/keys.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        <state relative-caret-position="70">
+          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mongo-schemas/City.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
+        <state relative-caret-position="312">
           <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/cities.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
+        <state relative-caret-position="1053">
+          <caret line="47" column="13" lean-forward="true" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
         </state>
       </provider>
     </entry>
