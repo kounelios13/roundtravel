@@ -1,7 +1,6 @@
 const City = require('../mongo-schemas/City')
 
 module.exports = (app) =>{
-
     app.get('/private/cities', (req, res)=>{
         City.find({}, (err, cities)=>{
             if(err){

@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="6a586540-f268-4dbe-9c70-a1eddaaceab3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client-next/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/components/city/city.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/components/city/city.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rest-api/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../rest-api/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rest-api/routes/cities.js" beforeDir="false" afterPath="$PROJECT_DIR$/../rest-api/routes/cities.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,14 +31,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/cities/edit-city.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="521">
-              <caret line="333" column="67" lean-forward="true" selection-start-line="333" selection-start-column="67" selection-end-line="333" selection-end-column="67" />
+              <caret line="333" column="67" selection-start-line="333" selection-start-column="67" selection-end-line="333" selection-end-column="67" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="437">
+              <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -289,14 +302,16 @@
       <workItem from="1562236101110" duration="606000" />
       <workItem from="1562316126959" duration="3224000" />
       <workItem from="1562400121067" duration="92000" />
+      <workItem from="1563616530164" duration="1441000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="139626000" />
+    <option name="totallyTimeSpent" value="141067000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13856691" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -364,13 +379,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="328">
           <caret line="32" column="14" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -553,10 +561,17 @@
     <entry file="file://$PROJECT_DIR$/src/components/cities/edit-city.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="521">
-          <caret line="333" column="67" lean-forward="true" selection-start-line="333" selection-start-column="67" selection-end-line="333" selection-end-column="67" />
+          <caret line="333" column="67" selection-start-line="333" selection-start-column="67" selection-end-line="333" selection-end-column="67" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
         </state>
       </provider>
     </entry>

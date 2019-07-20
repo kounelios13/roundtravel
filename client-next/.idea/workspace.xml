@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50518602-481f-4e0a-9429-3d267aaf573c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/static/images/2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../adm/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../adm/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.next/cache/autodll-webpack-plugin/development_instance_0_ab2113ed3ae72c05acf0468ddd77f46d/stats.json" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/autodll-webpack-plugin/development_instance_0_ab2113ed3ae72c05acf0468ddd77f46d/stats.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/components/city/city.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/components/city/city.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rest-api/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../rest-api/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rest-api/routes/cities.js" beforeDir="false" afterPath="$PROJECT_DIR$/../rest-api/routes/cities.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -34,13 +39,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/city/[city].js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+            <state relative-caret-position="140">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/components/layouts/withLayout.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="394">
+              <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#45#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -58,8 +75,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/next.config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="231">
+              <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -73,11 +90,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/contact.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+            <state relative-caret-position="175">
+              <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -136,8 +153,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="528" />
-    <option name="y" value="43" />
+    <option name="x" value="17" />
+    <option name="y" value="84" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
@@ -165,15 +182,24 @@
             <path>
               <item name="client-next" type="b2602c69:ProjectViewProjectNode" />
               <item name="client-next" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="client-next" type="b2602c69:ProjectViewProjectNode" />
               <item name="client-next" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="city" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="client-next" type="b2602c69:ProjectViewProjectNode" />
+              <item name="client-next" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="client-next" type="b2602c69:ProjectViewProjectNode" />
+              <item name="client-next" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="client-next" type="b2602c69:ProjectViewProjectNode" />
@@ -196,7 +222,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/images" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -204,14 +230,15 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2018.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Pc04\WebstormProjects\roundtravel\client-next\static\images" />
-      <recent name="C:\Users\Pc04\WebstormProjects\roundtravel\client-next\assets\images" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Pc04\WebstormProjects\roundtravel\client-next\static\images" />
       <recent name="C:\Users\Pc04\WebstormProjects\roundtravel\client-next\assets\images" />
       <recent name="C:\Users\exil33t\WebstormProjects\roundtravel\client-next\components" />
       <recent name="C:\Users\exil33t\WebstormProjects\roundtravel\client-next\assets\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Pc04\WebstormProjects\roundtravel\client-next\static\images" />
+      <recent name="C:\Users\Pc04\WebstormProjects\roundtravel\client-next\assets\images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -247,12 +274,13 @@
       <workItem from="1563469963882" duration="6472000" />
       <workItem from="1563477267996" duration="6995000" />
       <workItem from="1563533699959" duration="1253000" />
-      <workItem from="1563608414801" duration="561000" />
+      <workItem from="1563608414801" duration="887000" />
+      <workItem from="1563609682200" duration="2805000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62424000" />
+    <option name="totallyTimeSpent" value="65555000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -265,8 +293,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -279,7 +308,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32917964" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32917964" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32606438" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32606438" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -310,16 +339,6 @@
           <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/layouts/withLayout.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -371,16 +390,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/city/[city].js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/styles/general.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
@@ -395,17 +404,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/next.config.js">
+    <entry file="file://$PROJECT_DIR$/pages/contact.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="175">
+          <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/contact.js">
+    <entry file="file://$PROJECT_DIR$/next.config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        <state relative-caret-position="231">
+          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/layouts/withLayout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/city/[city].js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

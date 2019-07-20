@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1e304725-736e-4f95-ac59-5a7ff6c01b61" name="Default Changelist" comment="" />
+    <list default="true" id="1e304725-736e-4f95-ac59-5a7ff6c01b61" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../adm/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../adm/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client-next/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/components/city/city.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/components/city/city.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/cities.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/cities.js" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -34,8 +40,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/cities.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="517">
-              <caret line="54" selection-start-line="54" selection-end-line="54" />
+            <state relative-caret-position="410">
+              <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -81,6 +87,7 @@
       <find>cities/get</find>
       <find>req.body</find>
       <find>/cities/get</find>
+      <find>)</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -108,9 +115,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="528" />
-    <option name="y" value="43" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="17" />
+    <option name="y" value="84" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
@@ -222,17 +229,19 @@
       <workItem from="1563459787165" duration="6800000" />
       <workItem from="1563523599267" duration="626000" />
       <workItem from="1563533699963" duration="599000" />
-      <workItem from="1563608302027" duration="599000" />
+      <workItem from="1563608302027" duration="630000" />
+      <workItem from="1563616508448" duration="1917000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106711000" />
+    <option name="totallyTimeSpent" value="108659000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="528" y="43" width="1400" height="1000" extended-state="1" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1277533" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.091675445" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -246,7 +255,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.29411766" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2647975" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -261,13 +270,6 @@
     <entry file="file://$PROJECT_DIR$/uploads/paris/29433186_2098848080362454_1755678661719218180_n.jpg" />
     <entry file="file://$PROJECT_DIR$/package-lock.json">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mongo-schemas/Tour.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -353,10 +355,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/cities.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
+        <state relative-caret-position="410">
+          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
         </state>
       </provider>
     </entry>
