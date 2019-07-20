@@ -6765,7 +6765,7 @@ function connect(options) {
       error.name = err.name;
       error.stack = err.stack; // __NEXT_DIST_DIR is provided by webpack
 
-      (0, _sourceMapSupport.rewriteStacktrace)(error, "C:\\Users\\exil33t\\WebstormProjects\\roundtravel\\client-next\\.next");
+      (0, _sourceMapSupport.rewriteStacktrace)(error, "C:\\Users\\Pc04\\WebstormProjects\\roundtravel\\client-next\\.next");
       return error;
     }
   };

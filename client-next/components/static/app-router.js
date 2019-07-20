@@ -45,9 +45,12 @@ class AppRouter extends Component {
                                 <div className="col-12 mt-2">
                                     <nav>
                                         <ul className='m-0'>
-                                            <Link href={'/'}><a><span onMouseEnter={()=>{this.updateHoverState(true)}}
-                                                                      onMouseLeave={()=>{this.updateHoverState(false)}}
-                                                                      className='rt-nav-item dropdown-toggle'>ΤΑ ΤΑΞΙΔΙΑ ΜΑΣ</span></a>
+                                            <Link href={'/'}>
+                                                <a>
+                                                    <span onMouseEnter={()=>{this.updateHoverState(true)}}
+                                                      onMouseLeave={()=>{this.updateHoverState(false)}}
+                                                      className='rt-nav-item dropdown-toggle'>ΤΑ ΤΑΞΙΔΙΑ ΜΑΣ</span>
+                                                </a>
                                             </Link>
                                             {
                                                 this.state.tripsHover &&

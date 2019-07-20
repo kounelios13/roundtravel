@@ -2,11 +2,16 @@ import React from 'react';
 import fetch from 'isomorphic-unfetch';
 import withError from "../../components/layouts/withError";
 import withLayout from "../../components/layouts/withLayout";
+import css from '../../styles/general.scss'
 
 const City = (props) => {
+
+
     return (
         <div>
-
+            <div className={css.imageHeaderImg}>
+                123
+            </div>
         </div>
     );
 };

@@ -1,41 +1,16 @@
 {
-  "devFiles": [],
+  "devFiles": [
+    "static/development/dll/dll_92fa9139568d8c3d8f78.js",
+    "static/development/dll/dll_92fa9139568d8c3d8f78.js.map"
+  ],
   "pages": {
-    "/": [
-      "static/runtime/webpack-f5e50b6b501ccea2a79b.js",
-      "static/chunks/commons.2c22f0f4cd28d86e370e.js",
-      "static/css/styles.6101dfed.chunk.css",
-      "static/chunks/styles.e3db1d47910e685f7087.js",
-      "static/runtime/main-07dfcab68b7024fc1621.js"
-    ],
     "/_app": [
-      "static/runtime/webpack-f5e50b6b501ccea2a79b.js",
-      "static/chunks/commons.2c22f0f4cd28d86e370e.js",
-      "static/runtime/main-07dfcab68b7024fc1621.js"
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
     ],
     "/_error": [
-      "static/runtime/webpack-f5e50b6b501ccea2a79b.js",
-      "static/chunks/commons.2c22f0f4cd28d86e370e.js",
-      "static/runtime/main-07dfcab68b7024fc1621.js"
-    ],
-    "/city/[city]": [
-      "static/runtime/webpack-f5e50b6b501ccea2a79b.js",
-      "static/chunks/commons.2c22f0f4cd28d86e370e.js",
-      "static/css/styles.6101dfed.chunk.css",
-      "static/chunks/styles.e3db1d47910e685f7087.js",
-      "static/runtime/main-07dfcab68b7024fc1621.js"
-    ],
-    "/contact": [
-      "static/runtime/webpack-f5e50b6b501ccea2a79b.js",
-      "static/chunks/commons.2c22f0f4cd28d86e370e.js",
-      "static/runtime/main-07dfcab68b7024fc1621.js"
-    ],
-    "/index": [
-      "static/runtime/webpack-f5e50b6b501ccea2a79b.js",
-      "static/chunks/commons.2c22f0f4cd28d86e370e.js",
-      "static/css/styles.6101dfed.chunk.css",
-      "static/chunks/styles.e3db1d47910e685f7087.js",
-      "static/runtime/main-07dfcab68b7024fc1621.js"
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
     ]
   }
 }
