@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1e304725-736e-4f95-ac59-5a7ff6c01b61" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../client-next/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client-next/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-next/.next/build-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../client-next/.next/build-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-next/.next/react-loadable-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../client-next/.next/react-loadable-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-next/.next/server/pages-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../client-next/.next/server/pages-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-next/.next/server/static/development/pages/index.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-next/.next/static/development/pages/index.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-next/.next/static/runtime/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client-next/.next/static/runtime/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-next/.next/static/runtime/webpack.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client-next/.next/static/runtime/webpack.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-next/.next/static/runtime/webpack.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../client-next/.next/static/runtime/webpack.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-next/components/image-headers/image-header.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-next/components/image-headers/landing-slider.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-next/components/image-headers/tour-image-header.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-next/components/static/app-router.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client-next/components/static/app-router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-next/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client-next/next.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-next/pages/city/[city].js" beforeDir="false" afterPath="$PROJECT_DIR$/../client-next/pages/city/[city].js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-next/styles/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../client-next/styles/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="1e304725-736e-4f95-ac59-5a7ff6c01b61" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -240,12 +222,12 @@
       <workItem from="1563459787165" duration="6800000" />
       <workItem from="1563523599267" duration="626000" />
       <workItem from="1563533699963" duration="599000" />
-      <workItem from="1563608302027" duration="404000" />
+      <workItem from="1563608302027" duration="599000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106516000" />
+    <option name="totallyTimeSpent" value="106711000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="528" y="43" width="1400" height="1000" extended-state="1" />

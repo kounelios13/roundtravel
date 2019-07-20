@@ -4,7 +4,6 @@
     <list default="true" id="50518602-481f-4e0a-9429-3d267aaf573c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.next/cache/autodll-webpack-plugin/development_instance_0_ab2113ed3ae72c05acf0468ddd77f46d/stats.json" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/autodll-webpack-plugin/development_instance_0_ab2113ed3ae72c05acf0468ddd77f46d/stats.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rest-api/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../rest-api/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -248,12 +247,12 @@
       <workItem from="1563469963882" duration="6472000" />
       <workItem from="1563477267996" duration="6995000" />
       <workItem from="1563533699959" duration="1253000" />
-      <workItem from="1563608414801" duration="292000" />
+      <workItem from="1563608414801" duration="561000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62155000" />
+    <option name="totallyTimeSpent" value="62424000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
