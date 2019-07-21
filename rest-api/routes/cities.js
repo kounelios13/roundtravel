@@ -4,7 +4,6 @@ module.exports = (app) =>{
     app.get('/private/cities', (req, res)=>{
         City.find({}, (err, cities)=>{
             if(err){
-                console.log(err)
                 return res.sendStatus(400)
             }
             if(cities){
