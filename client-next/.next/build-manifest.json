@@ -1,39 +1,32 @@
 {
-  "devFiles": [],
+  "devFiles": [
+    "static/development/dll/dll_92fa9139568d8c3d8f78.js",
+    "static/development/dll/dll_92fa9139568d8c3d8f78.js.map"
+  ],
   "pages": {
     "/": [
-      "static/runtime/webpack-f5e50b6b501ccea2a79b.js",
-      "static/chunks/commons.5ba2800fcc0d5bfd9237.js",
-      "static/css/styles.4a80ad02.chunk.css",
-      "static/chunks/styles.65671e34c733f07bf66e.js",
-      "static/runtime/main-aa33b21695e33a77c1c1.js"
+      "static/runtime/webpack.js",
+      "static/css/styles.chunk.css",
+      "static/chunks/styles.js",
+      "static/runtime/main.js"
     ],
     "/_app": [
-      "static/runtime/webpack-f5e50b6b501ccea2a79b.js",
-      "static/chunks/commons.5ba2800fcc0d5bfd9237.js",
-      "static/runtime/main-aa33b21695e33a77c1c1.js"
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
     ],
     "/_error": [
-      "static/runtime/webpack-f5e50b6b501ccea2a79b.js",
-      "static/chunks/commons.5ba2800fcc0d5bfd9237.js",
-      "static/runtime/main-aa33b21695e33a77c1c1.js"
-    ],
-    "/city/[id]": [
-      "static/runtime/webpack-f5e50b6b501ccea2a79b.js",
-      "static/chunks/commons.5ba2800fcc0d5bfd9237.js",
-      "static/runtime/main-aa33b21695e33a77c1c1.js"
-    ],
-    "/contact": [
-      "static/runtime/webpack-f5e50b6b501ccea2a79b.js",
-      "static/chunks/commons.5ba2800fcc0d5bfd9237.js",
-      "static/runtime/main-aa33b21695e33a77c1c1.js"
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
     ],
     "/index": [
-      "static/runtime/webpack-f5e50b6b501ccea2a79b.js",
-      "static/chunks/commons.5ba2800fcc0d5bfd9237.js",
-      "static/css/styles.4a80ad02.chunk.css",
-      "static/chunks/styles.65671e34c733f07bf66e.js",
-      "static/runtime/main-aa33b21695e33a77c1c1.js"
+      "static/runtime/webpack.js",
+      "static/css/styles.chunk.css",
+      "static/chunks/styles.js",
+      "static/runtime/main.js"
+    ],
+    "/next/dist/pages/_error": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
     ]
   }
 }
