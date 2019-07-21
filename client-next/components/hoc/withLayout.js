@@ -16,9 +16,7 @@ const withLayout = (Page) => {
                 <div className='container-fluid p-0 m-0'>
                     <Head>
                         <title>RoundTravel</title>
-                        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-                              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-                              crossOrigin="anonymous">
+                        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap-grid.css.map" >
                         </ link>
                     </Head>
                     <AppRouter/>
