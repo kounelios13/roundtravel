@@ -2,6 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e304725-736e-4f95-ac59-5a7ff6c01b61" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../gatsby-client/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gatsby-client/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gatsby-client/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gatsby-client/.idea/gatsby-client.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gatsby-client/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gatsby-client/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gatsby-client/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gatsby-client/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gatsby-client/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gatsby-client/.prettierrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gatsby-client/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gatsby-client/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gatsby-client/gatsby-browser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gatsby-client/gatsby-config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gatsby-client/gatsby-node.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gatsby-client/gatsby-ssr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gatsby-client/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gatsby-client/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gatsby-client/src/components/city/city-image.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gatsby-client/src/components/city/city.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gatsby-client/src/components/header.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gatsby-client/src/components/image.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gatsby-client/src/components/layout.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gatsby-client/src/components/layout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gatsby-client/src/components/seo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gatsby-client/src/images/city/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gatsby-client/src/images/city/gatsby-astronaut.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gatsby-client/src/images/city/paris/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gatsby-client/src/images/city/paris/gatsby-astronaut.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gatsby-client/src/images/gatsby-astronaut.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gatsby-client/src/images/gatsby-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gatsby-client/src/pages/404.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gatsby-client/src/pages/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gatsby-client/src/pages/page-2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/build-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../client-next/.next/build-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/static/development/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client-next/.next/static/development/pages/_app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/static/runtime/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client-next/.next/static/runtime/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/static/runtime/webpack.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client-next/.next/static/runtime/webpack.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client-next/.next/static/runtime/webpack.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../client-next/.next/static/runtime/webpack.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/cities.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/cities.js" afterDir="false" />
     </list>
@@ -37,8 +76,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/cities.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="17" column="50" lean-forward="true" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
+            <state relative-caret-position="475">
+              <caret line="45" column="38" selection-start-line="45" selection-start-column="38" selection-end-line="45" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -143,7 +182,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../client-next" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -208,14 +247,17 @@
       <workItem from="1563533699963" duration="599000" />
       <workItem from="1563608302027" duration="630000" />
       <workItem from="1563616508448" duration="1917000" />
+      <workItem from="1563868375256" duration="22000" />
+      <workItem from="1563877104497" duration="743000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110119000" />
+    <option name="totallyTimeSpent" value="110884000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17913593" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -231,7 +273,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32896066" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3281412" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -303,6 +345,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1265">
@@ -331,17 +380,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/cities.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="17" column="50" lean-forward="true" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
+        <state relative-caret-position="475">
+          <caret line="45" column="38" selection-start-line="45" selection-start-column="38" selection-end-line="45" selection-end-column="38" />
         </state>
       </provider>
     </entry>

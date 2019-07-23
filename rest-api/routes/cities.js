@@ -38,6 +38,16 @@ module.exports = (app) =>{
         })
     })
 
+    app.get('/cities/', (req, res)=>{
+        City.find({}, (err, cities)=>{
+            if(err){
+                return res.sendStatus(400)
+            }else{
+                return res.json(cities)
+            }
+        })
+    })
+
     app.post('/cities/get', (req, res)=>{
         console.log(req.body)
         City.findOne({url: req.body.url}, (err, city)=>{
