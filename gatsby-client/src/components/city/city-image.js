@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import '../../styles/image-header.scss'
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -13,7 +14,7 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const CityImage = () => {
+const CityImage = (props) => {
   const data = useStaticQuery(graphql`
       query{
         allFile(filter: {extension: {regex: "/(jpeg|jpg|gif|png)/"}, relativePath: {regex: "/city/paris/"}}) {
@@ -23,7 +24,7 @@ const CityImage = () => {
             name
             extension
             childImageSharp{
-              fluid(maxWidth: 300){
+              fluid(maxWidth: 1920){
                 ...GatsbyImageSharpFluid
               }
             }
@@ -35,19 +36,15 @@ const CityImage = () => {
 
 
   const imgFluid = data.allFile.edges.filter((edge=>{
-    return edge.node.name === '1'
-  }))
+    return `${edge.node.name}.${edge.node.extension}` === props.fileName
+    }))
     .map(edge=>{
       return edge.node.childImageSharp.fluid
     })
 
 
-  return (
-    <div>
-      <h3>Photo</h3>
-      <Img fluid={imgFluid} />
-    </div>
-  )
+  return <Img className={props.className} fluid={imgFluid} />
+
 }
 
 export default CityImage

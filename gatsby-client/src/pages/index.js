@@ -2,21 +2,14 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import ImageHeader from "../components/image-header/image-header"
+import CityImage from "../components/city/city-image"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `800px`, marginBottom: `1.45rem` }}>
-      <Image path={'1/1.jpg'} />
-      {/*<Image path={'gatsby-austronaut.jpg'} />*/}
-
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
+    <ImageHeader fileName={'2.jpg'} />
   </Layout>
 )
 
