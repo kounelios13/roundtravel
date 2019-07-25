@@ -2,30 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e304725-736e-4f95-ac59-5a7ff6c01b61" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../gatsby-client/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gatsby-client/src/components/app-router.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gatsby-client/src/components/image-header/image-header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gatsby-client/src/images/city/paris/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gatsby-client/src/images/general/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gatsby-client/src/images/general/phone-dial.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gatsby-client/src/styles/global.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gatsby-client/src/styles/image-header.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gatsby-client/src/styles/router.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-next/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client-next/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-next/static/images/general/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-next/static/images/general/phone-dial.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client-next/styles/image-header.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../adm/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../adm/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../gatsby-client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gatsby-client/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gatsby-client/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../gatsby-client/gatsby-config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gatsby-client/gatsby-node.js" beforeDir="false" afterPath="$PROJECT_DIR$/../gatsby-client/gatsby-node.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../gatsby-client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../gatsby-client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gatsby-client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../gatsby-client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/components/city/city-image.js" beforeDir="false" afterPath="$PROJECT_DIR$/../gatsby-client/src/components/city/city-image.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/components/city/city.js" beforeDir="false" afterPath="$PROJECT_DIR$/../gatsby-client/src/components/city/city.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/components/header.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/components/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/../gatsby-client/src/components/layout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/images/city/paris/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../gatsby-client/src/images/city/paris/1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../gatsby-client/src/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/styles/image-header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../gatsby-client/src/styles/image-header.scss" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -37,53 +18,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1265">
-              <caret line="55" column="20" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/upload.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/routes/cities.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="34" column="21" lean-forward="true" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/env/keys.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mongo-schemas/City.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -107,6 +42,7 @@
       <find>req.body</find>
       <find>/cities/get</find>
       <find>)</find>
+      <find>private/cities/get</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -124,19 +60,19 @@
         <option value="$PROJECT_DIR$/mongo-schemas/City.js" />
         <option value="$PROJECT_DIR$/mongo-schemas/Continent.js" />
         <option value="$PROJECT_DIR$/routes/continents.js" />
-        <option value="$PROJECT_DIR$/routes/upload.js" />
         <option value="$PROJECT_DIR$/routes/browse-files.js" />
         <option value="$PROJECT_DIR$/mongo-schemas/Country.js" />
         <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/routes/countries.js" />
-        <option value="$PROJECT_DIR$/env/keys.js" />
         <option value="$PROJECT_DIR$/routes/cities.js" />
+        <option value="$PROJECT_DIR$/env/keys.js" />
+        <option value="$PROJECT_DIR$/routes/upload.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="329" />
-    <option name="y" value="119" />
+    <option name="x" value="209" />
+    <option name="y" value="336" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
@@ -165,7 +101,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../adm" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -232,16 +168,16 @@
       <workItem from="1563616508448" duration="1917000" />
       <workItem from="1563868375256" duration="22000" />
       <workItem from="1563877104497" duration="743000" />
-      <workItem from="1563954351409" duration="2595000" />
+      <workItem from="1563891549111" duration="642000" />
+      <workItem from="1563893683743" duration="2444000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113479000" />
+    <option name="totallyTimeSpent" value="114565000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17913593" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -257,7 +193,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3281412" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32795155" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -284,13 +220,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="87">
           <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/auth.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -343,20 +272,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/upload.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/env/keys.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mongo-schemas/City.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
@@ -366,8 +281,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/cities.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="34" column="21" lean-forward="true" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+        <state relative-caret-position="390">
+          <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/auth.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="6" column="55" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/env/keys.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/upload.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="10" column="71" selection-start-line="10" selection-start-column="71" selection-end-line="10" selection-end-column="71" />
         </state>
       </provider>
     </entry>

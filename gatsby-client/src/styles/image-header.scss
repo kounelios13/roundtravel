@@ -7,12 +7,36 @@
 }
 
 .header-image{
+  z-index: 0 !important;
   object-fit: cover;
   height: 100vh;
 }
 
 .header-title{
   z-index: 1000 !important;
-  color: #eeeeee!important;
-  bottom: 0px;
+  color: #eeeeee !important;
+}
+
+.title-wrapper{
+  bottom: 3vh;
+}
+
+svg path {
+  fill: none;
+  stroke-width: 20px;
+  stroke-miterlimit: round;
+  transition: stroke-dashoffset 850ms ease-in-out;
+}
+
+.meter{
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+}
+
+.progress-wrapper{
+  z-index: 1000;
+}
+
+.progress-path{
+  width: 12000px;
 }
