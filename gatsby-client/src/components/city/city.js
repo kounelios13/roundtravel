@@ -5,10 +5,9 @@ import Layout from "../layout"
 
 
 const City = (props) => {
-  console.log(props)
   return (
     <Layout>
-      <ImageHeader fileName={'2.jpg'} />
+      <ImageHeader fileName={'1.jpg'} />
     </Layout>
   )
 }

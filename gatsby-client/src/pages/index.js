@@ -9,7 +9,7 @@ import CityImage from "../components/city/city-image"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <ImageHeader fileName={'2.jpg'} />
+    <ImageHeader fileName={'1.jpg'} />
   </Layout>
 )
 

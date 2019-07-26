@@ -21,22 +21,24 @@
   bottom: 3vh;
 }
 
-svg path {
-  fill: none;
-  stroke-width: 20px;
-  stroke-miterlimit: round;
-  transition: stroke-dashoffset 850ms ease-in-out;
-}
-
-.meter{
-  stroke-dasharray: 200;
-  stroke-dashoffset: 200;
-}
-
 .progress-wrapper{
   z-index: 1000;
 }
 
-.progress-path{
-  width: 12000px;
+
+.slider-progress-bar{
+  position: absolute;
+  background-color: red;
+  display: inline-block;
+  left: 0px;
+  min-height: 100%;
+}
+
+.insta-slider{
+  margin-right: 6px;
+  background-color: rgba(0,0,0,.1)
+}
+
+.insta-slider-wrapper{
+  height: 6px;
 }
