@@ -31,7 +31,6 @@ const Layout = ({ children }) => {
       <div>
         <main>{children}</main>
         <footer>
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>
       </div>
     </>

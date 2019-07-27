@@ -1,0 +1,15 @@
+.tour-group-image{
+  height: 100%;
+}
+
+.tour-group-wrapper{
+  overflow-x: auto;
+  overflow-y: auto !important;
+  scroll-behavior: smooth;
+}
+
+.tour-group-price{
+  position: absolute;
+  top: 10px;
+  background-color: red;
+}
