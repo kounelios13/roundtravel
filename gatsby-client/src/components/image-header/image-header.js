@@ -23,10 +23,8 @@ class ImageHeader extends Component {
         '1.jpg'
       ],
     }
-
     this.swipeRight = this.swipeRight.bind(this)
     this.swipeLeft = this.swipeLeft.bind(this)
-
   }
 
   triggerSlider(i){
@@ -40,6 +38,10 @@ class ImageHeader extends Component {
           })
           }else{
             this.setState({sliderIndex: 0}, ()=>{
+            let bars = document.getElementsByClassName('insta-slider')[0].children
+            for(let i = 0; i < bars.length; i++){
+              bars[i].style.width = '0%'
+            }
           })
           this.cleanSliderBars(this.state.sliderIndex)
           }
@@ -121,6 +123,7 @@ class ImageHeader extends Component {
           <div className="col-12 p-0 m-0 text-center">
             <div className='col-12 title-wrapper position-absolute'>
               <h1 className='header-title display-4 col-12 text-uppercase'>Ταξιδι στο παρισι</h1>
+              <h3 className='header-title display-5 col-12 text-uppercase text-info'>Ανακαλυψτε τα παντα ολα</h3>
             </div>
             <div onClick={this.swipeLeft} className="position-absolute left-swipe">
             &nbsp;

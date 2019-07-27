@@ -23,3 +23,19 @@ hr{
 .list-unstyled{
   list-style: none;
 }
+
+
+.display-4{
+  line-height:0.5em !important;
+}
+
+.text-info{
+  color: $text-info !important;
+}
+
+
+.display-5{
+  font-size:2.5rem;
+  font-weight:300;
+  line-height:0.7;
+}
