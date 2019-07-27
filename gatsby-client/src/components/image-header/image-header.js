@@ -8,39 +8,48 @@ class ImageHeader extends Component {
 
   constructor(props) {
     super(props)
-
     this.activeSlider = {}
     this.sliderInterval = {}
-    this.sliderIndex = 0
     this.slideDuration = 10000
-    this.slideIncrement = this.slideDuration / 100
+    this.slideIncrement = this.slideDuration / 300
     this.sliderCurrent = 0
+
     this.state = {
+      sliderIndex: 0,
       images: [
-        'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-1.2.1&auto=format&fit=crop&w=1952&q=80',
-        'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-1.2.1&auto=format&fit=crop&w=1952&q=80',
-        'https://images.unsplash.com/photo-1512853243713-6db02ed2237a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80'
-      ]
+        '3.jpg',
+        '4.jpg',
+        '2.jpg',
+        '1.jpg'
+      ],
     }
+
+    this.swipeRight = this.swipeRight.bind(this)
+    this.swipeLeft = this.swipeLeft.bind(this)
+
   }
 
   triggerSlider(i){
+    clearInterval(this.sliderInterval)
     this.sliderInterval = setInterval(()=>{
       this.sliderCurrent += this.slideIncrement
       let percentage =  (this.sliderCurrent / this.slideDuration) * 100
-      this.activeSlider.style.width = `${percentage}%`
-        if(this.sliderCurrent > this.slideDuration){
-            if(this.sliderIndex < this.state.images.length -1){
-              this.sliderIndex++
-            }else{
-              this.sliderIndex = 0
-              this.cleanSliderBars()
-            }
-            clearInterval(this.sliderInterval)
-            this.sliderCurrent = 0
-            this.initSliderBar(this.sliderIndex)
-        }
-    }, this.slideIncrement)
+      if(percentage > 100){
+        if(this.state.sliderIndex < this.state.images.length -1){
+          this.setState({sliderIndex: this.state.sliderIndex + 1}, ()=>{
+          })
+          }else{
+            this.setState({sliderIndex: 0}, ()=>{
+          })
+          this.cleanSliderBars(this.state.sliderIndex)
+          }
+          clearInterval(this.sliderInterval)
+          this.sliderCurrent = 0
+          this.initSliderBar(this.state.sliderIndex)
+      }else{
+        this.activeSlider.style.width = `${percentage}%`
+      }
+    }, 40)
   }
 
 
@@ -55,7 +64,7 @@ class ImageHeader extends Component {
   }
 
   initSliderBar(i){
-    console.log(i)
+    this.sliderCurrent = 0
     let el = document.getElementsByClassName('insta-slider')[i]
     let newEl = document.createElement("div")
     newEl.classList.add('slider-progress-bar')
@@ -64,12 +73,44 @@ class ImageHeader extends Component {
     this.triggerSlider(i)
   }
 
+  swipeRight(){
+    if(this.state.sliderIndex < this.state.images.length -1){
+      let activeBar = document.getElementsByClassName('insta-slider')[this.state.sliderIndex]
+      activeBar.children[0].style.width = '100%'
+      this.setState({sliderIndex: this.state.sliderIndex +1}, ()=>{
+        this.initSliderBar(this.state.sliderIndex)
+      })
+    }
+  }
+
+  swipeLeft(){
+    if(this.state.sliderIndex > 0){
+      this.setState({sliderIndex: this.state.sliderIndex -1}, ()=>{
+
+        let bars = document.getElementsByClassName('insta-slider')[this.state.sliderIndex + 1].children
+        for(let i = 0; i < bars.length; i++){
+          bars[i].style.width = '0%'
+        }
+        bars = document.getElementsByClassName('insta-slider')[this.state.sliderIndex].children
+        for(let i = 0; i < bars.length; i++){
+          bars[i].style.width = '0%'
+        }
+
+        this.initSliderBar(this.state.sliderIndex)
+        this.cleanSliderBars(this.state.sliderIndex)
+      })
+    }
+  }
 
 
-  cleanSliderBars(){
-    let bars = document.getElementsByClassName('slider-progress-bar')
-    for(let i = 0; i < bars.length; i++){
-      bars[i].parentNode.removeChild(bars[i])
+  cleanSliderBars(index){
+    const sliders = document.getElementsByClassName('insta-slider')
+    for(let i = index+1; i < this.state.images.length; i++) {
+      let child = sliders[i].lastElementChild;
+      while (child) {
+        sliders[i].removeChild(child);
+        child = sliders[i].lastElementChild;
+      }
     }
   }
 
@@ -79,22 +120,27 @@ class ImageHeader extends Component {
         <div className='row p-0 m-0'>
           <div className="col-12 p-0 m-0 text-center">
             <div className='col-12 title-wrapper position-absolute'>
-              <h1 className='header-title display-4 col-12'>Ταξιδι στο παρισι</h1>
+              <h1 className='header-title display-4 col-12 text-uppercase'>Ταξιδι στο παρισι</h1>
+            </div>
+            <div onClick={this.swipeLeft} className="position-absolute left-swipe">
+            &nbsp;
+            </div>
+            <div onClick={this.swipeRight} className="position-absolute right-swipe">
+              &nbsp;
             </div>
             <div className='col-12 position-absolute progress-wrapper p-0 m-0'>
               <div className='col-12 d-flex insta-slider-wrapper'>
                 {
-                  this.state.images.map(img=>{
+                  this.state.images.map((img,i)=>{
                     return (
-                      <div className='flex-grow-1 insta-slider position-relative'>&nbsp;</div>
+                      <div key={i} className='flex-grow-1 insta-slider position-relative'></div>
                     )
                   })
                 }
               </div>
             </div>
             <div>
-              {console.log(this.props.fileName)}
-              <CityImage className={'header-image'} fileName={this.props.fileName} />
+              <CityImage className={'header-image'} fileName={this.state.images[this.state.sliderIndex]} />
             </div>
           </div>
         </div>
