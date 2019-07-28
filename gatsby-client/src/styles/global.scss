@@ -1,6 +1,8 @@
-$text-info: #06A8FF;
-$text-light: #eee;
-$text-dark-black: rgba(0,0,0,.92);
+$color-info: #06A8FF;
+$color-light: #e6e6e6;
+$color-black: rgba(0,0,0,.92);
+$color-dark: rgba(0,0,0,.75);
+
 
 @media only screen and (max-width: 600px) {
   .display-4{
@@ -10,6 +12,11 @@ $text-dark-black: rgba(0,0,0,.92);
   .display-5{
     font-size: 1.3em !important;
   }
+}
+
+html{
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body{
@@ -34,19 +41,22 @@ hr{
   list-style: none;
 }
 
-
 .display-4{
   line-height:0.5em !important;
 }
 
 .text-info{
-  color: $text-info !important;
+  color: $color-info !important;
 }
 
 .display-6{
   font-size: 1.5rem;
   font-weight: 300;
+}
 
+.display-7{
+  font-weight:300;
+  font-size: 1.05em;
 }
 
 .display-5{
@@ -62,4 +72,8 @@ hr{
 .py-6{
   margin-top: 8vh !important;
   margin-bottom: 8vh !important;
+}
+
+.pb-6{
+  padding-bottom: 260px;
 }

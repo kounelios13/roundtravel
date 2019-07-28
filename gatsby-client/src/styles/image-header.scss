@@ -16,7 +16,7 @@
   height: 100vh;
 }
 
-.header-title{
+.Fheader-title{
   z-index: 1000 !important;
   color: #eeeeee !important;
 }
@@ -32,7 +32,7 @@
 
 .slider-progress-bar{
   position: absolute;
-  background-color: $text-info;
+  background-color: $color-info;
   display: inline-block;
   left: 0px;
   min-height: 100%;

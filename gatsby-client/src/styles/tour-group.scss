@@ -1,15 +1,36 @@
+@import "global";
+
 .tour-group-image{
   height: 100%;
 }
 
+.tour-block{
+  border-left: 2px solid white;
+  text-align: center;
+  vertical-align: middle;
+}
+
 .tour-group-wrapper{
-  overflow-x: auto;
-  overflow-y: auto !important;
+  bottom: 0px;
   scroll-behavior: smooth;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}::-webkit-scrollbar {
+   width: 0px;
+   background: transparent;
 }
 
 .tour-group-price{
   position: absolute;
   top: 10px;
-  background-color: red;
+  background-color: $color-info;
+}
+
+.tour-group-title{
+  border-top: 2px solid white;
+  background-color: $color-light;
+  color: $color-dark;
+  min-height: 60px;
+  font-weight: 400;
 }

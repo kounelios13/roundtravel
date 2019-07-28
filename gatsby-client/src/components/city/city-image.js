@@ -33,16 +33,12 @@ const CityImage = (props) => {
       }
     }
   `)
-
-
   const imgFluid = data.allFile.edges.filter((edge=>{
     return `${edge.node.name}.${edge.node.extension}` === props.fileName
     }))
     .map(edge=>{
       return edge.node.childImageSharp.fluid
     })
-
-
   return <Img className={props.className} fluid={imgFluid} />
 
 }
