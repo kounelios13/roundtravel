@@ -10,7 +10,7 @@ $color-dark: rgba(0,0,0,.75);
   }
 
   .display-5{
-    font-size: 1.3em !important;
+    font-size: 1.5em !important;
   }
 }
 
@@ -62,7 +62,6 @@ hr{
 .display-5{
   font-size:2.5rem;
   font-weight:300;
-  line-height:0.7;
 }
 
 .img-fit{
@@ -76,4 +75,8 @@ hr{
 
 .pb-6{
   padding-bottom: 260px;
+}
+
+.app-pointer{
+  cursor: pointer;
 }
