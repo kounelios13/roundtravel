@@ -6,12 +6,12 @@ import ShowMore from 'react-show-more';
 import CityBgImage from "./city-bg-image"
 
 const CityInfo = () => {
-  const content = <div className='p-5 text-white'>
-    <h3>Πολη του φωτος</h3>
-    <article>
+  const content = <div className='city-info-wrapper text-white'>
+    <h3 className='display-5 city-info-title'>Πολη του φωτος</h3>
+    <article className={'text-light'}>
       <ShowMore
         lines={3}
-        more='Show more'
+        more='Δείτε περισσότερα'
         less='Show less'
         anchorClass='app-show-more'
       >
@@ -21,7 +21,7 @@ const CityInfo = () => {
   </div>
 
   return (
-    <CityBgImage children={content} className={'city-info-image my-5'} fileName={'1.jpg'} />
+    <CityBgImage children={content} className={'city-info-image my-5'} fileName={'2.jpg'} />
   )
 }
 

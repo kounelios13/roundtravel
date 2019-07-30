@@ -39,7 +39,7 @@ class TourGroup extends Component {
         <div className="d-flex flex-wrap py-6">
           <div className="col-8 offset-2 p-0 d-flex flex-wrap">
             <div className="col-6 p-0">
-              <h2 className='display-5'>Οι πιο δημοφιλεις</h2>
+              <h2 className='display-5 title-candy'>Οι πιο δημοφιλεις</h2>
             </div>
             <div className="col-6 text-right">
               <p className='vertical-center app-pointer'>Ολα τα πακετα <img className='d-inline icon-right' src={rightArrow} alt=""/></p>

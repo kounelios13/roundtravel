@@ -3,6 +3,9 @@ $color-light: #e6e6e6;
 $color-black: rgba(0,0,0,.92);
 $color-dark: rgba(0,0,0,.75);
 
+.p-lg-6{
+  padding: 4.1rem !important;
+}
 
 @media only screen and (max-width: 600px) {
   .display-4{
@@ -12,11 +15,27 @@ $color-dark: rgba(0,0,0,.75);
   .display-5{
     font-size: 1.5em !important;
   }
+
+  .p-lg-6{
+    padding: 3.1rem !important;
+  }
 }
+
+.text-white-shade{
+  color: rgba(255,255,255,.96);
+}
+
 
 html{
   scroll-behavior: smooth;
   overflow-x: hidden;
+}
+
+.title-candy{
+  border-left:3px solid $color-info;
+  padding-left: 1rem;
+  padding-bottom: 0.2rem;
+  letter-spacing: -2px;
 }
 
 body{
@@ -83,4 +102,8 @@ hr{
 
 .app-show-more{
   display: block;
+}
+
+.text-light{
+  font-weight: 300;
 }

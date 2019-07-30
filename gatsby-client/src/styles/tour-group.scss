@@ -34,7 +34,8 @@
   background-color: $color-light;
   color: $color-dark;
   min-height: 60px;
-  font-weight: 400;
+  font-weight: 400 !important;
+
 }
 
 .icon-right{
