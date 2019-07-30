@@ -35,7 +35,7 @@ class TourGroup extends Component {
 
   render() {
     return (
-      <div className='row'>
+      <section className='row'>
         <div className="d-flex flex-wrap py-6">
           <div className="col-8 offset-2 p-0 d-flex flex-wrap">
             <div className="col-6 p-0">
@@ -58,11 +58,8 @@ class TourGroup extends Component {
               )
             })}
           </div>
-          <div className='col-10 offset-2'>
-            oaskdoaskd
-          </div>
         </div>
-      </div>
+      </section>
     )
   }
 }

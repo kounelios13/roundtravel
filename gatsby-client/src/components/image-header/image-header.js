@@ -118,7 +118,7 @@ class ImageHeader extends Component {
 
   render() {
     return (
-      <div>
+      <section>
         <div className='row p-0 m-0'>
           <div className="col-12 p-0 m-0 text-center">
             <div className='col-12 title-wrapper position-absolute'>
@@ -147,7 +147,7 @@ class ImageHeader extends Component {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     )
   }
 }
