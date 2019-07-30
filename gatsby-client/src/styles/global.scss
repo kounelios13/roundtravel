@@ -1,10 +1,10 @@
 $color-info: #06A8FF;
-$color-light: #e6e6e6;
+$color-light: #f8f8f8;
 $color-black: rgba(0,0,0,.92);
 $color-dark: rgba(0,0,0,.75);
 
 .p-lg-6{
-  padding: 4.1rem !important;
+  padding: 3.9rem 6.9rem !important;
 }
 
 @media only screen and (max-width: 600px) {
@@ -17,7 +17,7 @@ $color-dark: rgba(0,0,0,.75);
   }
 
   .p-lg-6{
-    padding: 3.1rem !important;
+    padding: 2.1rem !important;
   }
 }
 
@@ -106,4 +106,22 @@ hr{
 
 .text-light{
   font-weight: 300;
+}
+
+.badge-info{
+  background-color: $color-info !important;
+  font-weight: 300;
+  font-size: 1.01rem
+}
+
+.bg-light{
+  background-color: $color-light
+}
+
+.bg-info{
+  background-color: $color-info !important;
+}
+
+.text-normal{
+  font-weight: 400;
 }

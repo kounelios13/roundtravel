@@ -1,7 +1,7 @@
 @import "global";
 
 .tour-group-image{
-  height: 100%;
+  min-height: 35vh;
 }
 
 .tour-block{
@@ -25,23 +25,31 @@
   position: absolute;
   top: 10px;
   background-color: $color-info;
-  height: 7%;
+  height: 11%;
+  transform: translateX(-0.13rem);
   padding: 0px 10px 2px 10px;
 }
 
 .tour-group-title{
-  border-top: 2px solid white;
-  background-color: $color-light;
   color: $color-dark;
-  min-height: 60px;
-  font-weight: 400 !important;
-
+  font-weight: 500 !important;
 }
 
 .icon-right{
   width: 15px;
 }
 
-.vertical-center{
-  transform: translateY(70%);
+
+.tour-info-container{
+  background-color: $color-light
+}
+
+.early-booking-badge{
+  font-weight: 300;
+}
+
+.tour-group-icon{
+  background-color: #eaeaea;
+  padding: 5px;
+  width: 35px;
 }

@@ -42,7 +42,7 @@ const CityBgImage = (props) => {
   })
 
   return (
-    <BackgroundImage backgroundColor={`#040e18`} Tag="section" className={props.className} fluid={imgFluid} >
+    <BackgroundImage Tag="section" className={props.className} fluid={imgFluid} >
       {props.children}
     </BackgroundImage>
   )
