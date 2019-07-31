@@ -39,7 +39,7 @@ const CityImage = (props) => {
     .map(edge=>{
       return edge.node.childImageSharp.fluid
     })
-  return <Img className={props.className} fluid={imgFluid} />
+  return <Img onLoad={props.onLoad} className={props.className} fluid={imgFluid} />
 
 }
 

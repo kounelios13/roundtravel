@@ -15,6 +15,7 @@ class ImageHeader extends Component {
     this.sliderCurrent = 0
 
     this.state = {
+      activeOnLoad: this.flipFromRight,
       sliderIndex: 0,
       images: [
         '3.jpg',
@@ -25,6 +26,14 @@ class ImageHeader extends Component {
     }
     this.swipeRight = this.swipeRight.bind(this)
     this.swipeLeft = this.swipeLeft.bind(this)
+  }
+
+  flipFromRight(){
+      // document.getElementsByClassName('header-image')[0].
+  }
+
+  flipFromLeft(){
+
   }
 
   triggerSlider(i){
@@ -143,7 +152,7 @@ class ImageHeader extends Component {
               </div>
             </div>
             <div>
-              <CityImage className={'header-image'} fileName={this.state.images[this.state.sliderIndex]} />
+              <CityImage onLoad={()=>{}} className={'header-image'} fileName={this.state.images[this.state.sliderIndex]} />
             </div>
           </div>
         </div>

@@ -8,7 +8,9 @@
   border-left: 2px solid white;
   text-align: center;
   vertical-align: middle;
+  border-radius: 30px !important;
 }
+
 
 .tour-group-wrapper{
   bottom: 0px;
@@ -41,15 +43,25 @@
 
 
 .tour-info-container{
-  background-color: $color-light
+  background-color: $color-light;
+  min-height: 2.3rem;
+}
+
+.tour-group-icon-container{
+  position: absolute;
+  bottom: 1.1rem;
+  right: 0;
+  width: 3.5rem;
 }
 
 .early-booking-badge{
   font-weight: 300;
 }
 
+
 .tour-group-icon{
-  background-color: #eaeaea;
+  filter: invert(90%);
   padding: 5px;
-  width: 35px;
+  width: 1.9rem;
+  background-color: rgba(0,0,0,.05);
 }
