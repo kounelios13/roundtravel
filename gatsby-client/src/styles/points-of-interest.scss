@@ -1,0 +1,15 @@
+.interest-point-image{
+  height: 6rem !important;
+}
+
+.interest-point-short-description{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  font-size: 0.8rem;
+}
+
+.border-left-active{
+  border-right: 2px solid black !important;
+}
