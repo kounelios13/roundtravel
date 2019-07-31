@@ -135,3 +135,12 @@ figure{
 .euro-sign{
   font-size: .9rem;
 }
+
+.img-filter::before {
+  content: '';
+  top: 0;
+  width: 100%;
+  height: 100%;
+  filter: brightness(60%) blur(3px);
+  transform: scale(1.1)
+}

@@ -21,7 +21,7 @@ class PointsOfInterest extends Component {
 
   render() {
     return (
-      <section className='row'>
+      <section className='row mb-5'>
         <div className="col-10 offset-1 col-lg-8 offset-lg-2 d-flex flex-wrap my-5 p-0">
           <div className="col-12 space-candy my-4">
             <h2 className='display-5 m-0 text-normal'>Αξιοθεατα στο παρισι.</h2>

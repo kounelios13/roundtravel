@@ -5,6 +5,7 @@ import Layout from "../layout"
 import TourGroup from "../tours/tour-group"
 import CityInfo from "./city-info"
 import PointsOfInterest from "../general/points-of-interest"
+import TourOfferWide from "../tours/tour-offer-wide"
 
 
 const City = (props) => {
@@ -44,6 +45,7 @@ const City = (props) => {
       <TourGroup />
       <CityInfo />
       <PointsOfInterest points={pointsOfInterest} />
+      <TourOfferWide />
     </Layout>
   )
 }
