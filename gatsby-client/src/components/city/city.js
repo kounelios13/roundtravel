@@ -6,6 +6,7 @@ import TourGroup from "../tours/tour-group"
 import CityInfo from "./city-info"
 import PointsOfInterest from "../general/points-of-interest"
 import TourOfferWide from "../tours/tour-offer-wide"
+import CityInfoTabs from "./city-info-tabs"
 
 
 const City = (props) => {
@@ -46,6 +47,7 @@ const City = (props) => {
       <CityInfo />
       <PointsOfInterest points={pointsOfInterest} />
       <TourOfferWide />
+      <CityInfoTabs />
     </Layout>
   )
 }

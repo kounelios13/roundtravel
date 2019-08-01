@@ -1,10 +1,15 @@
-$color-info: #06A8FF;
+$color-info: #058cd5;
 $color-light: #f8f8f8;
 $color-black: rgba(0,0,0,.92);
 $color-dark: rgba(0,0,0,.75);
 
+
+
 .p-lg-6{
   padding: 4rem 0rem !important;
+}
+.mt-lg-5{
+  margin-top: 0rem !important;
 }
 
 @media only screen and (max-width: 600px) {
@@ -16,10 +21,24 @@ $color-dark: rgba(0,0,0,.75);
     font-size: 1.5em !important;
   }
 
+  .mt-lg-5{
+    margin-top: 3rem;
+  }
+
   .p-lg-6{
     padding: 4rem 0rem !important;
   }
+
+  .react-tabs__tab{
+    width: 100%
+  }
+
+  .react-tabs__tab-list{
+    border-bottom: none !important;
+  }
+
 }
+
 
 .text-white-shade{
   color: rgba(255,255,255,.96);
@@ -75,6 +94,11 @@ hr{
 }
 
 .display-7{
+  font-weight: 300;
+  font-size: 1.3rem;
+}
+
+.display-8{
   font-weight:300;
   font-size: 1.05em;
 }
@@ -95,6 +119,10 @@ hr{
 
 .pb-6{
   padding-bottom: 160px;
+}
+
+.mt-6{
+  margin-top: 6.5rem;
 }
 
 .app-pointer{
@@ -132,8 +160,9 @@ figure{
   font-weight: 500 !important;
 }
 
-.euro-sign{
-  font-size: .9rem;
+.euro-sign::after{
+  content: '€';
+  font-size: 0.7em;
 }
 
 .img-filter::before {
@@ -143,4 +172,65 @@ figure{
   height: 100%;
   filter: brightness(60%) blur(3px);
   transform: scale(1.1)
+}
+
+.strikethrough{
+  position: relative;
+}
+
+.strikethrough:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 55%;
+  right: 0;
+  border-top: 2px solid;
+  border-color: inherit;
+  color: red;
+  transform:rotate(-30deg) scale(1.2);
+}
+
+.text-weight-light{
+  font-weight: 300;
+}
+
+.btn-info{
+  background-color: $color-info;
+}
+
+.btn-info:hover{
+  background-color: $color-info !important;
+}
+
+
+.react-tabs__tab--selected{
+  border-radius: 0px !important;
+  border-top: 3px solid $color-info !important;
+  border-left: none !important;
+  border-right: none !important;
+}
+
+.react-tabs__tab{
+  border-radius: 0px;
+  background-color: #eee;
+  margin-left: 2px !important;
+  margin: 0px;
+  margin-bottom: 1px;
+}
+
+
+
+.react-tabs__tab-panel{
+  margin-top: 2rem;
+  margin-left: 0px;
+}
+
+.react-tabs__tab-list{
+  border-bottom: 1px solid rgba(0,0,0,.5);
+}
+
+
+
+.tab-article{
+  margin-bottom: 2rem;
 }
