@@ -1,7 +1,6 @@
 import React from "react"
 import '../../styles/global.scss'
 import '../../styles/city/city-info.scss'
-import CityImage from "./city-image"
 import ShowMore from 'react-show-more';
 import CityBgImage from "./city-bg-image"
 

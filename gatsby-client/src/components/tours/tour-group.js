@@ -42,7 +42,7 @@ class TourGroup extends Component {
         <div className="d-flex flex-wrap py-6 col-12 p-0">
           <div className="col-8 offset-1 p-0 offset-lg-2 d-flex flex-wrap">
             <div className="col-12 space-candy mb-3">
-              <h2 className='display-5 m-0 text-normal'>Εκδρομες που προτινουμε.</h2>
+              <h2 className='display-5 m-0 text-bold'>Εκδρομες που προτινουμε.</h2>
               <h4 className='display-8 m-1'>Ανακαλυψτε τα μυστικα του Παρισιου</h4>
             </div>
           </div>
@@ -71,7 +71,7 @@ class TourGroup extends Component {
                   </div>
                   <div className="col-12 d-flex p-0 flex-wrap bg-light tour-info-container">
                     <div className="col-12 p-2">
-                      <h3 className='display-8 text-normal m-0'>{tour.title}</h3>
+                      <h3 className='display-8 text-bold m-0'>{tour.title}</h3>
                     </div>
                   </div>
                   <hr/>

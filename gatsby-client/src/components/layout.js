@@ -13,6 +13,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 import "./layout.css"
 import AppRouter from "./app-router"
+import Footer from "./general/footer"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -30,8 +31,7 @@ const Layout = ({ children }) => {
       <AppRouter />
       <div>
         <main>{children}</main>
-        <footer>
-        </footer>
+        <Footer/>
       </div>
     </>
   )

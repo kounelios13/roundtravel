@@ -24,7 +24,7 @@ class PointsOfInterest extends Component {
       <section className='row mb-5'>
         <div className="col-10 offset-1 col-lg-8 offset-lg-2 d-flex flex-wrap my-5 p-0">
           <div className="col-12 space-candy my-4">
-            <h2 className='display-5 m-0 text-normal'>Αξιοθεατα στο παρισι.</h2>
+            <h2 className='display-5 m-0 text-bold'>Αξιοθεατα στο παρισι.</h2>
             <h4 className='display-8 m-1'>Ανακαλυψτε τα μυστικα του Παρισιου</h4>
           </div>
           <div className="col-12 d-flex flex-wrap mt-2 p-0">
@@ -39,7 +39,7 @@ class PointsOfInterest extends Component {
                           <CityImage className='col-12 p-0 m-0 img-fit interest-point-image img-hover' fileName={point.photo} />
                       </div>
                       <div className="col-8 p-1 m-0">
-                        <h4 className='p-0 m-0 display-8 text-normal'>{point.name}</h4>
+                        <h4 className='p-0 m-0 display-8 text-bold'>{point.name}</h4>
                         <p className='m-0 p-0 interest-point-short-description'>{point.description}</p>
                       </div>
                     </div>
@@ -48,7 +48,7 @@ class PointsOfInterest extends Component {
               }
             </div>
             <div id='point-article' className="col-12 pl-0 col-lg-7 p-0 mt-5 pl-lg-5 mt-lg-0">
-              <h4 className='display-5 text-normal'>{this.props.points[this.state.activeIndex].name}</h4>
+              <h4 className='display-5 text-bold'>{this.props.points[this.state.activeIndex].name}</h4>
               <article>
                 {this.props.points[this.state.activeIndex].description}
               </article>

@@ -156,8 +156,12 @@ figure{
   background-color: $color-info !important;
 }
 
-.text-normal{
+.text-bold{
   font-weight: 500 !important;
+}
+
+.text-normal{
+  font-weight: 400 !important;
 }
 
 .euro-sign::after{
@@ -229,7 +233,9 @@ figure{
   border-bottom: 1px solid rgba(0,0,0,.5);
 }
 
-
+.my-6{
+  margin: 6rem 0rem;
+}
 
 .tab-article{
   margin-bottom: 2rem;
