@@ -21,6 +21,11 @@ class EditCity extends Component {
 
         this.state = {
             name: '',
+            pageTitle: '',
+            pageSubtitle: '',
+            suggestedTitle: '',
+            suggestedSubtitle: '',
+            descriptionTitle: '',
             description: '',
             history: '',
             tags: '',
@@ -28,15 +33,16 @@ class EditCity extends Component {
             lon: '',
             url: '',
             visibleInMap: true,
-            activities: [],
+            information: [],
             images: [],
             continent: '',
             continents: []
         }
-        this.addActivity = this.addActivity.bind(this)
-        this.deleteActivity = this.deleteActivity.bind(this)
+
+        this.addInformationTab = this.addInformationTab.bind(this)
+        this.deleteInformation = this.deleteInformation.bind(this)
         this.handleChange = this.handleChange.bind(this)
-        this.handleActivityChange = this.handleActivityChange.bind(this)
+        this.handleInformationChange = this.handleInformationChange.bind(this)
         this.addImage = this.addImage.bind(this)
         this.moveImageUp = this.moveImageUp.bind(this)
         this.moveImageDown = this.moveImageDown.bind(this)
@@ -47,6 +53,7 @@ class EditCity extends Component {
         this.deleteCity = this.deleteCity.bind(this)
         this.onSelectChange = this.onSelectChange.bind(this)
         this.fetchGeolocationData = this.fetchGeolocationData.bind(this)
+        this.addContentEntry = this.addContentEntry.bind(this)
     }
 
     deleteCity(e){
@@ -94,8 +101,12 @@ class EditCity extends Component {
 
                 })
         }
+    }
 
-
+    addContentEntry(i){
+        const information = this.state.information
+        information[i].content.push({title: '', text: ''})
+        this.setState({information: information})
 
     }
 
@@ -103,12 +114,12 @@ class EditCity extends Component {
         this.setState({[e.target.name]: e.target.value});
     }
 
-    deleteActivity(i){
-        let activities = this.state.activities.filter((item, ind)=>{
+    deleteInformation(i){
+        let information = this.state.information.filter((item, ind)=>{
             return ind !== i
         })
 
-        this.setState({activities: activities})
+        this.setState({information: information})
     }
 
     addImage(){
@@ -144,19 +155,32 @@ class EditCity extends Component {
         return a;
     };
 
-    handleActivityChange(e){
+    handleInformationChange(e, j){
         let field = e.target.name.split('-')[1]
         let index = e.target.name.split('-')[2]
-        let activities = this.state.activities
+        let jIndex = e.target.name.split('-')[3]
+        let information = this.state.information
+
+
+        if(field === 'title'){
+            console.log('ol')
+            information[index].title = e.target.value
+            this.setState({information: information})
+        }
 
         if(field === 'name'){
-            activities[index].name = e.target.value
-            this.setState({activities: activities})
+            console.log(jIndex)
+            information[index].content[jIndex].name = e.target.value
+            this.setState({information: information})
         }
+
         if(field === 'description'){
-            activities[index].description = e.target.value
-            this.setState({activities: activities})
+            console.log(jIndex)
+            information[index].content[jIndex].text = e.target.value
+            this.setState({information: information})
         }
+        console.log(this.state)
+
     }
 
     submitForm(e){
@@ -193,7 +217,7 @@ class EditCity extends Component {
             formComplete = false
         }
 
-        this.state.activities.forEach(act=>{
+        this.state.information.forEach(act=>{
             if(act.name === '' || act.description === ''){
                 formComplete = false
             }
@@ -201,9 +225,9 @@ class EditCity extends Component {
         return formComplete
     }
 
-    addActivity(){
+    addInformationTab(){
         this.setState({
-            activities: [...this.state.activities, {name: '', description: ''}]
+            information: [...this.state.information, {title: '', content: [{title: '', text: ''}]}]
         })
     }
 
@@ -248,16 +272,37 @@ class EditCity extends Component {
                                             <label htmlFor="name">Όνομα πόλης</label>
                                             <input name='name' onBlur={this.fetchGeolocationData} value={this.state.name} className={'w-100'} type="text" onChange={this.handleChange} />
                                         </div>
-                                        
+
+                                        <div className='mt-3'>
+                                            <label htmlFor="name">Τιτλος σελιδας</label>
+                                            <input name='title' value={this.state.pageTitle} className={'w-100'} type="text" onChange={this.handleChange} />
+                                        </div>
+
+                                        <div className='mt-3'>
+                                            <label htmlFor="name">Υποτιτλος σελιδας</label>
+                                            <input name='subtitle' value={this.state.pageSubtitle} className={'w-100'} type="text" onChange={this.handleChange} />
+                                        </div>
+
+                                        <div className='mt-3'>
+                                            <label htmlFor="name">Τιτλος προτινομενων</label>
+                                            <input name='title' value={this.state.suggestedTitle} className={'w-100'} type="text" onChange={this.handleChange} />
+                                        </div>
+
+                                        <div className='mt-3'>
+                                            <label htmlFor="name">Υποτιτλος προτινομενων</label>
+                                            <input name='title' value={this.state.suggestedSubtitle} className={'w-100'} type="text" onChange={this.handleChange} />
+                                        </div>
+
+                                        <div className='mt-3'>
+                                            <label htmlFor="name">Τιτλος περιγραφης πολης</label>
+                                            <input name='title' value={this.state.descriptionTitle} className={'w-100'} type="text" onChange={this.handleChange} />
+                                        </div>
+
                                         <div className='mt-3'>
                                             <label htmlFor="description">Περιγραφή πόλης</label>
                                             <textarea name='description' value={this.state.description} onChange={this.handleChange} className='w-100' rows="4" cols="50"></textarea>
                                         </div>
                                         
-                                        <div className='mt-3'>
-                                            <label htmlFor="history">Ιστορικα δεδομένα</label>
-                                            <textarea name="history" value={this.state.history} onChange={this.handleChange} className="w-100" rows="4"></textarea>
-                                        </div>
 
                                         <div className='mt-3'>
                                             <label htmlFor="url">URL</label><p className='d-inline bg-primary rounded ml-2' data-tip="hello world"><FaQuestion /></p>
@@ -293,17 +338,30 @@ class EditCity extends Component {
 
 
 
-                                        <h3 className='d-inline'>Δραστηριοτητες</h3> <span className='text-danger' onClick={this.addActivity}><FaPlus /></span>
+                                        <h3 className='d-inline'>Tabs πληροφοριων</h3> <span className='text-danger' onClick={this.addInformationTab}><FaPlus /></span>
                                         <hr/>
                                         <div>
                                             {
-                                                this.state.activities.map((activity,i)=>{
+                                                this.state.information.map((activity, i)=>{
                                                     return (
                                                         <div className='mt-3 mb-3' key={i}>
-                                                            <label htmlFor={'activity-name-' + i}>Όνομα δραστηριότητας</label> <span onClick={()=>{this.deleteActivity(i)}} className='text-danger'><FaMinus /></span>
-                                                            <input name={'activity-name-' + i} value={this.state.activities[i].name} onChange={this.handleActivityChange} className={'w-100 mb-3'} type="text"/>
-                                                            <label htmlFor="name">Περιγραφη δραστηριότητας</label>
-                                                            <textarea name={'activity-description-' + i} value={this.state.activities[i].description} onChange={this.handleActivityChange} className="w-100" rows="4"></textarea>
+                                                            <label className={'display-5'} htmlFor={'information-title-' + i}>Όνομα δεσμης</label> <span onClick={()=>{this.deleteInformation(i)}} className='text-danger'><FaMinus /></span>
+                                                            <input name={'information-title-' + i} value={this.state.information[i].title} onChange={this.handleInformationChange} className={'w-100 mb-3'} type="text"/>
+                                                            {
+                                                                activity.content.map((entry, j)=>{
+
+                                                                    return (
+                                                                        <div key={j}>
+                                                                            <label htmlFor={'information-name-' + i + '-' +  j}>Τίτλος πεδιου</label> <span onClick={()=>{this.addContentEntry(i)}} className='text-danger'><FaPlus /></span>
+                                                                            <input name={'information-name-' + i + '-' +  j} value={this.state.information[i].name} onChange={this.handleInformationChange} className={'w-100 mb-3'} type="text"/>
+
+                                                                            <label htmlFor={'information-description-' + i + '-' +  j}>Περιγραφη πεδιου</label>
+                                                                            <textarea name={'information-description-' + i + '-' +  j} value={this.state.information[i].description} onChange={this.handleInformationChange} className="w-100" rows="4"></textarea>
+                                                                        </div>
+                                                                    )
+                                                                })
+                                                            }
+
                                                         </div>
                                                     )
                                                 })

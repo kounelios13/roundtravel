@@ -154,3 +154,7 @@ h6 {
 .app-hover:hover{
    opacity: .7;
 }
+
+.display-5{
+  font-size: 1.5rem;
+}

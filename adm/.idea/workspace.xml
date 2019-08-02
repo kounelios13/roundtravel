@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a586540-f268-4dbe-9c70-a1eddaaceab3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/components/cities/edit-city.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cities/edit-city.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../gatsby-client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gatsby-client/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gatsby-client/gatsby-node.js" beforeDir="false" afterPath="$PROJECT_DIR$/../gatsby-client/gatsby-node.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gatsby-client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../gatsby-client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/styles/image-header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../gatsby-client/src/styles/image-header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gatsby-client/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../gatsby-client/gatsby-config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/components/tours/tour-group.js" beforeDir="false" afterPath="$PROJECT_DIR$/../gatsby-client/src/components/tours/tour-group.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../rest-api/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../rest-api/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -18,7 +19,29 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/cities/edit-city.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="297" column="98" selection-start-line="297" selection-start-column="98" selection-end-line="297" selection-end-column="98" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/index.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="547">
+              <caret line="159" selection-start-line="159" selection-end-line="159" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -30,18 +53,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>!</find>
-      <find>!=</find>
-      <find>==</find>
-      <find>121</find>
-      <find>class=</find>
-      <find>αποθηκ</find>
-      <find>complete</find>
-      <find>toast</find>
-      <find>componentwill</find>
-      <find>submit</find>
-      <find>.push</find>
-      <find>.error</find>
       <find>lat</find>
       <find>visiblein</find>
       <find>formCom</find>
@@ -60,6 +71,18 @@
       <find>formcomplete</find>
       <find>πόλη</find>
       <find>axio</find>
+      <find>title</find>
+      <find>activities</find>
+      <find>add</find>
+      <find>information</find>
+      <find>addcontent</find>
+      <find>addc</find>
+      <find>.map</find>
+      <find>addContentEntry</find>
+      <find>asd</find>
+      <find>[j]</find>
+      <find>δεσμης</find>
+      <find>τιτλος</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -79,7 +102,6 @@
         <option value="$PROJECT_DIR$/src/components/main/cities.js" />
         <option value="$PROJECT_DIR$/src/components/cities/add-city.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/components/auth/login.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/Home.js" />
@@ -89,7 +111,6 @@
         <option value="$PROJECT_DIR$/src/components/locations/edit-location.js" />
         <option value="$PROJECT_DIR$/src/components/utils/file-browser.js" />
         <option value="$PROJECT_DIR$/src/config/config.js" />
-        <option value="$PROJECT_DIR$/src/index.css" />
         <option value="$PROJECT_DIR$/src/components/cities/cities.js" />
         <option value="$PROJECT_DIR$/src/components/countries/edit-country.js" />
         <option value="$PROJECT_DIR$/src/components/categories.js" />
@@ -98,8 +119,10 @@
         <option value="$PROJECT_DIR$/src/components/countries/countries.js" />
         <option value="$PROJECT_DIR$/src/components/categories/categories.js" />
         <option value="$PROJECT_DIR$/src/utils/init-auth-data.js" />
-        <option value="$PROJECT_DIR$/src/components/cities/edit-city.js" />
         <option value="$PROJECT_DIR$/src/components/utils/file-upload.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/index.css" />
+        <option value="$PROJECT_DIR$/src/components/cities/edit-city.js" />
       </list>
     </option>
   </component>
@@ -123,6 +146,24 @@
             <path>
               <item name="adm" type="b2602c69:ProjectViewProjectNode" />
               <item name="adm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="adm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="adm" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="adm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="adm" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="adm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="adm" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="cities" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -190,16 +231,18 @@
       <workItem from="1562400121067" duration="92000" />
       <workItem from="1563616530164" duration="1441000" />
       <workItem from="1563893531326" duration="2043000" />
+      <workItem from="1564731951232" duration="8868000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143708000" />
+    <option name="totallyTimeSpent" value="152576000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13856691" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13856691" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -213,7 +256,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32917964" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.23915237" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.23883697" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -373,20 +416,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3542">
-          <caret line="154" column="15" selection-start-line="154" selection-start-column="15" selection-end-line="154" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/countries/edit-country.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="876">
@@ -451,10 +480,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="547">
+          <caret line="159" selection-start-line="159" selection-end-line="159" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/cities/edit-city.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3034">
-          <caret line="318" column="45" selection-start-line="318" selection-start-column="45" selection-end-line="318" selection-end-column="45" />
+        <state relative-caret-position="357">
+          <caret line="297" column="98" selection-start-line="297" selection-start-column="98" selection-end-line="297" selection-end-column="98" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>

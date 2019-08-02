@@ -53,7 +53,7 @@ class TourGroup extends Component {
                   <div className="col-12 p-0">
                     <CityImage className='col-12 tour-group-image img-fit p-0 m-0' fileName={tour.image} alt=""/>
                     <div className='tour-group-price'>
-                      <p><span>350</span><span className='euro-sign'>€</span></p>
+                      <p><span className='euro-sign'>350</span></p>
                     </div>
                     <div className="tour-group-icon-container no-drag">
                       <div className='d-flex flex-wrap'>
