@@ -20,8 +20,8 @@
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -38,5 +38,8 @@
   },
   "resolutions": {
     "caniuse-lite": "1.0.30000974"
+  },
+  "devDependencies": {
+    "react-app-rewired": "^2.1.3"
   }
 }

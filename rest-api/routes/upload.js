@@ -10,7 +10,7 @@ module.exports = (app) =>{
 
         Object.values(req.files).map(img=>{
             console.log(req.body.name)
-            img.mv('./public/' + req.body.name + '/' + img.name)
+            img.mv('../gatsby-client/src/images/' + req.body.name + '/' + img.name)
                 .then((img)=>{
                     res.sendStatus(200)
                 })

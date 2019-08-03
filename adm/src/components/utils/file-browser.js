@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Button, Modal} from "react-bootstrap";
 import axios from 'axios'
 import config from '../../config/config'
+import img from '../../../../gatsby-client/src/images/city/paris/3.jpg'
 
 class FileBrowser extends Component {
 
@@ -45,7 +46,7 @@ class FileBrowser extends Component {
                 this.setState({files: files})
             }).catch(err=>{
                 console.log(err)
-        })
+            })
     }
 
     toogleSelected(i){
@@ -59,7 +60,6 @@ class FileBrowser extends Component {
 
 
     render() {
-
         return (
             <>
                 <Button variant="primary" onClick={this.handleShow}>
@@ -84,11 +84,12 @@ class FileBrowser extends Component {
                                 this.state.files.map((file, i)=>{
                                     const selectedClass = this.state.files[i].selected ? 'file-browser-image-selected' : ''
                                     const split = file.url.split('/')
+                                    const parentName = split[split.length - 2]
                                     const fileName = split[split.length -1]
 
                                     return (
                                         <div className="col-2 py-2" onClick={()=>{this.toogleSelected(i)}} key={i}>
-                                            <img className={'img-fluid file-browser-image ' + selectedClass} src={config.serverUrl + file.url} alt=""/>
+                                            <img className={'img-fluid img-fit file-browser-image ' + selectedClass} src={require(`../../../${file.url}`)} alt=""/>
                                             <div>
                                                 {fileName}
                                             </div>

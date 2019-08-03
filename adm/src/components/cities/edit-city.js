@@ -33,6 +33,9 @@ class EditCity extends Component {
             lon: '',
             url: '',
             visibleInMap: true,
+            metaTitle: '',
+            metaDescription: '',
+            metaImage: '',
             information: [],
             images: [],
             continent: '',
@@ -54,6 +57,7 @@ class EditCity extends Component {
         this.onSelectChange = this.onSelectChange.bind(this)
         this.fetchGeolocationData = this.fetchGeolocationData.bind(this)
         this.addContentEntry = this.addContentEntry.bind(this)
+        this.addMetaImage = this.addMetaImage.bind(this)
     }
 
     deleteCity(e){
@@ -231,6 +235,11 @@ class EditCity extends Component {
         })
     }
 
+    addMetaImage(images){
+        console.log(images[0].url)
+        this.setState({metaImage: images[0].url})
+    }
+
      addImages(images){
          const imagesToAdd = images.map(img=>{
              return {url: img.url, alt: ''}
@@ -263,7 +272,7 @@ class EditCity extends Component {
             <div>
                 <ReactTooltip />
                 <div className='col-8 offset-2 mt-5'>
-                                <div className='col-6 offset-3 p-5 bg-info bg-form'>
+                                <div className='col-8 offset-2 p-5 bg-info bg-form'>
                                     <form>
                                         <h4>Γενικές πληροφορίες</h4>
                                         <hr/>
@@ -336,6 +345,23 @@ class EditCity extends Component {
                                             <input name='tags' value={this.state.tags} onChange={this.handleChange} className={'w-100'} type="text"/>
                                         </div>
 
+                                        <h4>Meta πληροφοριες</h4>
+                                        <hr/>
+                                        <div className='mt-3'>
+                                            <label htmlFor="meta-title">Meta Τιτλος</label>
+                                            <input name='meta-title' value={this.state.metaTitle} onChange={this.handleChange} className={'w-100'} type="text"/>
+                                        </div>
+                                        <div className='mt-3'>
+                                            <label htmlFor="meta-title">Meta Περιγραφη</label>
+                                            <input name='meta-description' value={this.state.metaDescription} onChange={this.handleChange} className={'w-100'} type="text"/>
+                                        </div>
+                                        <p>Meta Είκονα</p>
+                                        {
+                                            this.state.name.length > 0
+                                            && <FileBrowser parentDir={'city'} folderPath={this.state.name} addFiles={this.addMetaImage} />
+                                        }
+                                        <img src={'../../../../' + this.state.metaImage} alt=""/>
+                                        <br/>
 
 
                                         <h3 className='d-inline'>Tabs πληροφοριων</h3> <span className='text-danger' onClick={this.addInformationTab}><FaPlus /></span>
@@ -373,7 +399,7 @@ class EditCity extends Component {
                                             <h5>Επίλογη είκονων</h5>
                                             {
                                                 this.state.name.length > 0
-                                                && <FileBrowser parentDir={'πολη'} folderPath={this.state.name} addFiles={this.addImages} />
+                                                && <FileBrowser parentDir={'city'} folderPath={this.state.name} addFiles={this.addImages} />
                                             }
                                             <div className={'my-5'}>
                                                 {
@@ -388,6 +414,7 @@ class EditCity extends Component {
                                                                             <span onClick={()=>{this.moveImageDown(i)}} className='city-edit-img-icon mr-2'><FaArrowDown /></span>
                                                                             <span onClick={()=>{this.setState({images: this.state.images.filter((img, ind)=>{return ind!==i})})}} className='city-edit-img-icon mr-2'><FaMinus /></span>
                                                                         </div>
+
                                                                         <img src={imgSrc} className='img-fluid city-edit-img' alt=""/>
                                                                     </div>
                                                                     <div>
