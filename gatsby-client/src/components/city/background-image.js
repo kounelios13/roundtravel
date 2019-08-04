@@ -14,10 +14,10 @@ import BackgroundImage from 'gatsby-background-image'
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const CityBgImage = (props) => {
+const BackgroundImage = (props) => {
   const data = useStaticQuery(graphql`
       query{
-        allFile(filter: {extension: {regex: "/(jpeg|jpg|gif|png)/"}, relativePath: {regex: "/city/paris/"}}) {
+        allFile(filter: {extension: {regex: "/(jpeg|jpg|gif|png)/"}, relativePath: {regex: "/"}}) {
         edges {
           node {
             relativePath
@@ -48,4 +48,6 @@ const CityBgImage = (props) => {
   )
 }
 
-export default CityBgImage
+BackgroundImage.propT
+
+export default BackgroundImage

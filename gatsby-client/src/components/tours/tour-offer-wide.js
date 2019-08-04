@@ -1,10 +1,10 @@
 import React from "react"
 import '../../styles/tour-offer-wide.scss'
-import CityBgImage from "../city/city-bg-image"
-import cloudMoon from '../../images/general/icons/cloud-moon.svg'
-import calendar from '../../images/general/icons/calendar.svg'
-import bus from '../../images/general/icons/bus.svg'
-import departure from '../../images/general/icons/departure.svg'
+import BackgroundImage from "../city/background-image"
+import cloudMoon from '../../images/cloud-moon.svg'
+import calendar from '../../images/calendar.svg'
+import bus from '../../images/bus.svg'
+import departure from '../../images/departure.svg'
 
 
 const grLocale = require('date-fns/locale/el')
@@ -68,7 +68,7 @@ const TourOfferWide = () => {
     </div>
 
   return (
-        <CityBgImage className={'img-filter'} children={tourOffer} fileName={'louvre-wide.jpg'} />
+        <BackgroundImage className={'img-filter'} children={tourOffer} fileName={'louvre-wide.jpg'} />
   )
 }
 

@@ -1,6 +1,7 @@
 import React, { Component } from "react"
-import CityImage from "../city/city-image"
+import Image from "../city/image"
 import '../../styles/image-header.scss'
+import PropTypes from "prop-types"
 
 
 
@@ -19,22 +20,13 @@ class ImageHeader extends Component {
       sliderIndex: 0,
       images: [
         '3.jpg',
-        '4.jpg',
-        '2.jpg',
-        '1.jpg'
+        '4.jpg'
       ],
     }
     this.swipeRight = this.swipeRight.bind(this)
     this.swipeLeft = this.swipeLeft.bind(this)
   }
 
-  flipFromRight(){
-      // document.getElementsByClassName('header-image')[0].
-  }
-
-  flipFromLeft(){
-
-  }
 
   triggerSlider(i){
     clearInterval(this.sliderInterval)
@@ -154,13 +146,19 @@ class ImageHeader extends Component {
               </div>
             </div>
             <div>
-              <CityImage onLoad={()=>{}} className={'header-image'} fileName={this.state.images[this.state.sliderIndex]} />
+              <Image className={'header-image'} fileName={this.state.images[this.state.sliderIndex]} />
             </div>
           </div>
         </div>
       </section>
     )
   }
+}
+
+ImageHeader.propTypes = {
+  fileName: PropTypes.string,
+  title: PropTypes.string,
+  subtitle: PropTypes.string
 }
 
 export default ImageHeader

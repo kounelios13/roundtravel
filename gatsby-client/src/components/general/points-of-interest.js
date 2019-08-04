@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import CityImage from "../city/city-image"
+import Image from "../city/image"
 import '../../styles/points-of-interest.scss'
 
 class PointsOfInterest extends Component {
@@ -36,7 +36,7 @@ class PointsOfInterest extends Component {
                     <div onClick={()=>{this.setActiveIndex(i)}} key={i} className={`app-pointer d-flex flex-wrap col-12 p-0 border-right ${activeClass}`}>
                       {console.log(point.photo)}
                       <div className="col-4 p-0 m-0">
-                          <CityImage className='col-12 p-0 m-0 img-fit interest-point-image img-hover' fileName={point.photo} />
+                          <Image className='col-12 p-0 m-0 img-fit interest-point-image img-hover' fileName={point.photo} />
                       </div>
                       <div className="col-8 p-1 m-0">
                         <h4 className='p-0 m-0 display-8 text-bold'>{point.name}</h4>

@@ -1,9 +1,9 @@
 import React, { Component } from "react"
-import CityImage from "../city/city-image"
+import Image from "../city/image"
 import '../../styles/tours/tour-group.scss'
-  import plane from '../../images/general/icons/plane.svg'
-import planet from '../../images/general/icons/planet.svg'
-import person from '../../images/general/icons/person.svg'
+  import plane from '../../images/plane.svg'
+import planet from '../../images/planet.svg'
+import person from '../../images/person.svg'
 
 class TourGroup extends Component {
   constructor(props) {
@@ -51,7 +51,7 @@ class TourGroup extends Component {
               return (
                 <div key={i} className='tour-block col-10 offset-1 col-md-4 offset-md-0 p-0'>
                   <div className="col-12 p-0">
-                    <CityImage className='col-12 tour-group-image img-fit p-0 m-0' fileName={tour.image} alt=""/>
+                    <Image className='col-12 tour-group-image img-fit p-0 m-0' fileName={tour.image} alt=""/>
                     <div className='tour-group-price'>
                       <p><span className='euro-sign'>350</span></p>
                     </div>
