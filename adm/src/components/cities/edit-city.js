@@ -236,8 +236,8 @@ class EditCity extends Component {
     }
 
     addMetaImage(images){
-        console.log(images[0].url)
-        this.setState({metaImage: images[0].url})
+        // console.log(images[0].url)
+        // this.setState({metaImage: images[0].url})
     }
 
      addImages(images){

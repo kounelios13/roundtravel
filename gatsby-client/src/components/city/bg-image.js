@@ -2,6 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import '../../styles/image-header.scss'
 import BackgroundImage from 'gatsby-background-image'
+import PropTypes from "prop-types"
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -14,7 +15,7 @@ import BackgroundImage from 'gatsby-background-image'
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const BackgroundImage = (props) => {
+const BgImage = (props) => {
   const data = useStaticQuery(graphql`
       query{
         allFile(filter: {extension: {regex: "/(jpeg|jpg|gif|png)/"}, relativePath: {regex: "/"}}) {
@@ -48,6 +49,5 @@ const BackgroundImage = (props) => {
   )
 }
 
-BackgroundImage.propT
 
-export default BackgroundImage
+export default BgImage

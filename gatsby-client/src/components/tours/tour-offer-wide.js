@@ -1,6 +1,6 @@
 import React from "react"
 import '../../styles/tour-offer-wide.scss'
-import BackgroundImage from "../city/background-image"
+import BgImage from "../city/bg-image"
 import cloudMoon from '../../images/cloud-moon.svg'
 import calendar from '../../images/calendar.svg'
 import bus from '../../images/bus.svg'
@@ -68,7 +68,7 @@ const TourOfferWide = () => {
     </div>
 
   return (
-        <BackgroundImage className={'img-filter'} children={tourOffer} fileName={'louvre-wide.jpg'} />
+        <BgImage className={'img-filter'} children={tourOffer} fileName={'louvre-wide.jpg'} />
   )
 }
 

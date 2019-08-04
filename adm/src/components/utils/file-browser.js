@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {Button, Modal} from "react-bootstrap";
 import axios from 'axios'
 import config from '../../config/config'
-import img from '../../../../gatsby-client/src/images/city/paris/3.jpg'
 
 class FileBrowser extends Component {
 
@@ -38,7 +37,7 @@ class FileBrowser extends Component {
 
     getDirectoryData(){
         axios
-            .post(config.serverUrl + 'private/browse', {folderPath: this.props.parentDir + '/' + this.props.folderPath})
+            .post(config.serverUrl + 'private/browse', {type: '.jpeg|.jpg|.gif|.png', dir: 'images'})
             .then((res)=>{
                 const files = res.data.files.map(file=>{
                     return {selected: false, url: file}
@@ -56,6 +55,11 @@ class FileBrowser extends Component {
         files[i] = el
 
         this.setState({files: files})
+    }
+
+    isImage(fileName){
+        const ext = fileName.split('.')[1]
+        return ext === 'jpg' || ext === 'jpeg' || ext === 'png' || ext === 'gif' || false
     }
 
 
@@ -83,13 +87,20 @@ class FileBrowser extends Component {
                             {
                                 this.state.files.map((file, i)=>{
                                     const selectedClass = this.state.files[i].selected ? 'file-browser-image-selected' : ''
+                                    console.log(file.url)
                                     const split = file.url.split('/')
                                     const parentName = split[split.length - 2]
                                     const fileName = split[split.length -1]
 
+                                    const isImage = this.isImage(fileName)
+
+
+
                                     return (
+                                        isImage &&
                                         <div className="col-2 py-2" onClick={()=>{this.toogleSelected(i)}} key={i}>
-                                            <img className={'img-fluid img-fit file-browser-image ' + selectedClass} src={require(`../../../${file.url}`)} alt=""/>
+                                            <img className={'img-fluid img-fit file-browser-image ' + selectedClass} src={`../../../../gatsby-client/src/images/${fileName}`} alt=""/>
+
                                             <div>
                                                 {fileName}
                                             </div>

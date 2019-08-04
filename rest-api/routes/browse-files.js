@@ -1,15 +1,25 @@
 var fs = require('fs')
-
+var path = require('path')
 
 module.exports = (app) =>{
     app.post('/private/browse', (req, res)=>{
-        const path = '../gatsby-client/src/images/' + req.body.folderPath;
-        const files = fs.readdirSync(path)
-        if(files.length > 0){
-            const fullPath = files.map(file=>{
-                return  path + '/' + file
+        const gatsbySrc = '../gatsby-client/src/';
+        const targetDir = gatsbySrc + req.body.dir
+
+        let fileList = []
+
+        const files = fs.readdirSync(targetDir)
+        files.forEach(file => {
+            const fileType = path.extname(file)
+            req.body.type.split('|').map(extension=>{
+                if(extension === fileType){
+                    fileList.push(file)
+                }
             })
-            return res.json({files: fullPath})
+        });
+
+        if(files.length > 0){
+            return res.json({files: fileList})
         }
     })
 }

@@ -2,7 +2,7 @@ import React from "react"
 import '../../styles/global.scss'
 import '../../styles/city/city-info.scss'
 import ShowMore from 'react-show-more';
-import BackgroundImage from "./background-image"
+import BgImage from "./bg-image"
 
 const CityInfo = () => {
   const content = <div className='text-white col-10 offset-1 col-lg-8 offset-lg-2 p-lg-6'>
@@ -23,7 +23,7 @@ const CityInfo = () => {
 
   return (
     <section>
-      <BackgroundImage children={content} className={'city-info-image img-filter my-5 '} fileName={'2.jpg'} />
+      <BgImage children={content} className={'city-info-image img-filter my-5 '} fileName={'2.jpg'} />
     </section>
   )
 }
