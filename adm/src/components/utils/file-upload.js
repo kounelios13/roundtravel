@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {toast} from "react-toastify";
 import axios from "axios";
+import PropTypes from "prop-types";
 
 class FileUpload extends Component {
 
@@ -25,7 +26,8 @@ class FileUpload extends Component {
         files.forEach((file,i)=>{
             data.append(i, file)
         })
-        data.append('name', this.props.parentDir + '/' + this.props.path)
+        data.append('type', this.props.mode)
+
 
         axios
             .post('http://localhost:9000/private/upload', data)
@@ -34,17 +36,22 @@ class FileUpload extends Component {
             })
             .catch(err=>{
                 toast.error('Η μεταφόρτωση ηταν ανεπιτυχής', {position: toast.POSITION.BOTTOM_RIGHT});
-
             })
     }
 
     render() {
         return (
             <div>
-                <input ref={this.uploadInput} type='file'  onChange={this.handleImageSubmit} className='bg-secondary w-100' multiple  />
+                <label className="btn btn-primary">
+                    <i className="fa fa-image"></i> Ανεβασμα εικονων<input ref={this.uploadInput} type='file'  onChange={this.handleImageSubmit} name='image' className='w-100 d-none' multiple  />
+                </label>
             </div>
         );
     }
+}
+
+FileUpload.propTypes = {
+    mode: PropTypes.string.isRequired
 }
 
 export default FileUpload;

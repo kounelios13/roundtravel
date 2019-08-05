@@ -3,6 +3,8 @@ import {Button, Modal} from "react-bootstrap";
 import axios from 'axios'
 import config from '../../config/config'
 import {toast} from "react-toastify";
+import PropTypes from "prop-types";
+import FileUpload from "./file-upload";
 
 
 class FileBrowser extends Component {
@@ -35,7 +37,7 @@ class FileBrowser extends Component {
                 const selectedFiles = this.state.files.filter((file)=>{
                     return file.selected !== false
                 })
-                this.props.addFiles(selectedFiles)
+                this.props.filesSelected(selectedFiles)
                 this.setState({files: []})
             }
         };
@@ -143,20 +145,26 @@ class FileBrowser extends Component {
                 <Modal show={this.state.show} onHide={this.handleHide} dialogClassName="modal-100w" className='file-browser' size={'xl'} >
                     <Modal.Header closeButton>
                         <Modal.Title className="file-browser-title"> Επιλογή αρχείων </Modal.Title>
+
                     </Modal.Header>
                     <Modal.Body className='file-browser-body'>
                         <div className='col-12 d-flex flex-wrap'>
-                            <input placeholder={'Αναζητηση αρχειου'} className='col-12' name='query' onKeyUp={this.getDirectoryData} onChange={this.handleChange} value={this.state.query} type="text"/>
+                            <div className="col-12 mb-4 d-flex flex-wrap">
+                                <input placeholder={'Αναζητηση αρχειου'} className='col-8' name='query' onKeyUp={this.getDirectoryData} onChange={this.handleChange} value={this.state.query} type="text"/>
+                                <div className='col-4'>
+                                    <FileUpload mode='images' />
+                                </div>
+                            </div>
                             {
                                 arr.map((file, i)=>{
                                     const selectedClass = file.selected ? 'file-browser-image-selected' : ''
                                     const split = file.url.split('/')
                                     const fileName = split[split.length -1]
-                                    const isImage = this.isImage(fileName)
+                                    const imageMode = this.props.mode === 'images'
 
 
                                     return (
-                                        isImage &&
+                                        imageMode &&
                                         <div key={i} className="col-2 py-2" onClick={()=>{this.toogleSelected(startingIndex + i)}} key={startingIndex + i}>
                                             <div className='position-relative'>
                                                 <div onClick={()=>{this.deleteFile(fileName, 'image')}} className="position-absolute file-browser-delete bg-info app-pointer">
@@ -167,7 +175,6 @@ class FileBrowser extends Component {
                                             <div onBlur={(e)=>{this.fileNameEdited(fileName, e.currentTarget.textContent, 'image')}} contentEditable suppressContentEditableWarning={true}>
                                                 {fileName}
                                             </div>
-
                                         </div>
                                     )
                                 })
@@ -194,6 +201,9 @@ class FileBrowser extends Component {
     }
 }
 
-
+FileBrowser.propTypes = {
+    mode: PropTypes.string.isRequired,
+    filesSelected: PropTypes.func.isRequired
+}
 
 export default FileBrowser;

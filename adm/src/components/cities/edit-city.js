@@ -357,7 +357,7 @@ class EditCity extends Component {
                                         <p>Meta Είκονα</p>
                                         {
                                             this.state.name.length > 0
-                                            && <FileBrowser parentDir={'city'} folderPath={this.state.name} addFiles={this.addMetaImage} />
+                                            && <FileBrowser mode={'images'} filesSelected={this.addMetaImage} />
                                         }
                                         <img src={'../../../../' + this.state.metaImage} alt=""/>
                                         <br/>
@@ -379,7 +379,6 @@ class EditCity extends Component {
                                                                         <div key={j}>
                                                                             <label htmlFor={'information-name-' + i + '-' +  j}>Τίτλος πεδιου</label> <span onClick={()=>{this.addContentEntry(i)}} className='text-danger'><FaPlus /></span>
                                                                             <input name={'information-name-' + i + '-' +  j} value={this.state.information[i].name} onChange={this.handleInformationChange} className={'w-100 mb-3'} type="text"/>
-
                                                                             <label htmlFor={'information-description-' + i + '-' +  j}>Περιγραφη πεδιου</label>
                                                                             <textarea name={'information-description-' + i + '-' +  j} value={this.state.information[i].description} onChange={this.handleInformationChange} className="w-100" rows="4"></textarea>
                                                                         </div>
@@ -398,7 +397,7 @@ class EditCity extends Component {
                                             <h5>Επίλογη είκονων</h5>
                                             {
                                                 this.state.name.length > 0
-                                                && <FileBrowser parentDir={'city'} folderPath={this.state.name} addFiles={this.addImages} />
+                                                && <FileBrowser  mode={'images'} filesSelected={this.addImages}  />
                                             }
                                             <div className={'my-5'}>
                                                 {
@@ -429,7 +428,7 @@ class EditCity extends Component {
                                         <div>
                                             <h4 className='d-inline'>Μεταφορτώση είκονων</h4>
                                             <hr/>
-                                            <FileUpload parentDir={'πολη'} path={this.state.name} />
+
                                         </div>
                                         <button onClick={this.submitForm} className='btn btn-primary w-75 mt-4'>Αποθήκευση</button><button onClick={this.deleteCity} className='btn btn-danger w-25 mt-4'>Διαγραφή</button>
                                     </form>
