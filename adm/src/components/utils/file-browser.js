@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import {Button, Modal} from "react-bootstrap";
 import axios from 'axios'
 import config from '../../config/config'
-const images = '../../../../gatsby-client/src/images/'
+import {toast} from "react-toastify";
+
 
 class FileBrowser extends Component {
 
@@ -44,6 +45,8 @@ class FileBrowser extends Component {
         this.setState({[e.target.name]: e.target.value});
     }
 
+
+
     getDirectoryData(e){
 
         if(typeof e !== 'undefined'){
@@ -68,7 +71,6 @@ class FileBrowser extends Component {
                     })
                     this.setState({files: files})
                 }).catch(err=>{
-                console.log(err)
             })
         }
 
@@ -88,6 +90,22 @@ class FileBrowser extends Component {
     isImage(fileName){
         const ext = fileName.split('.')[1]
         return ext === 'jpg' || ext === 'jpeg' || ext === 'png' || ext === 'gif' || false
+    }
+
+    deleteFile(fileName, type){
+        axios
+            .post(config.serverUrl + 'private/browse/delete', {type: type, fileName: fileName})
+            .then(res=>{
+                if(res.data.success){
+                    toast.success('Η διαγραφή του αρχείου ηταν επιτύχης', {position: toast.POSITION.BOTTOM_RIGHT})
+                    this.getDirectoryData()
+                    this.setState({fileIndex: 0})
+                }else{
+                    toast.error("Κατι πηγε στραβα", {position: toast.POSITION.BOTTOM_RIGHT});
+
+                }
+            })
+
     }
 
 
@@ -115,17 +133,23 @@ class FileBrowser extends Component {
                                 arr.map((file, i)=>{
                                     const selectedClass = file.selected ? 'file-browser-image-selected' : ''
                                     const split = file.url.split('/')
-                                    const parentName = split[split.length - 2]
                                     const fileName = split[split.length -1]
-
                                     const isImage = this.isImage(fileName)
+
+
                                     return (
                                         isImage &&
                                         <div key={i} className="col-2 py-2" onClick={()=>{this.toogleSelected(startingIndex + i)}} key={startingIndex + i}>
-                                            <img className={'img-fluid img-fit file-browser-image ' + selectedClass} src={`${config.imagesUrl}${fileName}`} alt=""/>
+                                            <div className='position-relative'>
+                                                <div onClick={()=>{this.deleteFile(fileName, 'image')}} className="position-absolute file-browser-delete bg-info app-pointer">
+                                                    X
+                                                </div>
+                                                <img className={'img-fluid img-fit file-browser-image ' + selectedClass} src={`${config.imagesUrl}${fileName}`} alt=""/>
+                                            </div>
                                             <div>
                                                 {fileName}
                                             </div>
+
                                         </div>
                                     )
                                 })

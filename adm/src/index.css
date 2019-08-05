@@ -174,4 +174,12 @@ h6 {
 
 .pagination-button-selected{
   color: rgb(255, 85, 72);
+  font-weight: 500;
+}
+
+.file-browser-delete{
+  top: 0px;
+  left: 3px;
+  padding: 1px 3px;
+  z-index: 4000;
 }
