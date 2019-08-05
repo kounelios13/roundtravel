@@ -122,7 +122,6 @@ class EditCity extends Component {
         let information = this.state.information.filter((item, ind)=>{
             return ind !== i
         })
-
         this.setState({information: information})
     }
 

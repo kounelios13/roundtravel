@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Button, Modal} from "react-bootstrap";
 import axios from 'axios'
 import config from '../../config/config'
+const images = '../../../../gatsby-client/src/images/'
 
 class FileBrowser extends Component {
 
@@ -10,10 +11,14 @@ class FileBrowser extends Component {
 
         this.getDirectoryData = this.getDirectoryData.bind(this)
         this.toogleSelected = this.toogleSelected.bind(this)
+        this.handleChange = this.handleChange.bind(this)
 
         this.state = {
             show: false,
             files: [],
+            query: '',
+            fileIndex: 1,
+            filesPerIndex: 6
         };
 
 
@@ -35,17 +40,39 @@ class FileBrowser extends Component {
         };
     }
 
-    getDirectoryData(){
-        axios
-            .post(config.serverUrl + 'private/browse', {type: '.jpeg|.jpg|.gif|.png', dir: 'images'})
-            .then((res)=>{
-                const files = res.data.files.map(file=>{
-                    return {selected: false, url: file}
+    handleChange(e){
+        this.setState({[e.target.name]: e.target.value});
+    }
+
+    getDirectoryData(e){
+
+        if(typeof e !== 'undefined'){
+            if(e.keyCode === 13){
+                axios
+                    .post(config.serverUrl + 'private/browse', {type: '.jpeg|.jpg|.gif|.png', dir: 'images', query: this.state.query})
+                    .then((res)=>{
+                        const files = res.data.files.map(file=>{
+                            return {selected: false, url: file}
+                        })
+                        this.setState({files: files})
+                    }).catch(err=>{
+                    console.log(err)
                 })
-                this.setState({files: files})
-            }).catch(err=>{
+            }
+        }else{
+            axios
+                .post(config.serverUrl + 'private/browse', {type: '.jpeg|.jpg|.gif|.png', dir: 'images'})
+                .then((res)=>{
+                    const files = res.data.files.map(file=>{
+                        return {selected: false, url: file}
+                    })
+                    this.setState({files: files})
+                }).catch(err=>{
                 console.log(err)
             })
+        }
+
+
     }
 
     toogleSelected(i){
@@ -64,6 +91,11 @@ class FileBrowser extends Component {
 
 
     render() {
+
+        const totalPages = Math.ceil(this.state.files.length / this.state.filesPerIndex)
+        const files = this.state.files
+        const arr = files.splice(this.state.fileIndex * this.state.filesPerIndex, (this.state.fileIndex +1) * this.state.filesPerIndex)
+
         return (
             <>
                 <Button variant="primary" onClick={this.handleShow}>
@@ -84,8 +116,9 @@ class FileBrowser extends Component {
                     </Modal.Header>
                     <Modal.Body className='file-browser-body'>
                         <div className='col-12 d-flex flex-wrap'>
+                            <input className='col-12' name='query' onKeyUp={this.getDirectoryData} onChange={this.handleChange} value={this.state.query} type="text"/>
                             {
-                                this.state.files.map((file, i)=>{
+                                arr.map((file, i)=>{
                                     const selectedClass = this.state.files[i].selected ? 'file-browser-image-selected' : ''
                                     console.log(file.url)
                                     const split = file.url.split('/')
@@ -94,13 +127,10 @@ class FileBrowser extends Component {
 
                                     const isImage = this.isImage(fileName)
 
-
-
                                     return (
                                         isImage &&
                                         <div className="col-2 py-2" onClick={()=>{this.toogleSelected(i)}} key={i}>
-                                            <img className={'img-fluid img-fit file-browser-image ' + selectedClass} src={`../../../../gatsby-client/src/images/${fileName}`} alt=""/>
-
+                                            <img className={'img-fluid img-fit file-browser-image ' + selectedClass} src={`${config.imagesUrl}${fileName}`} alt=""/>
                                             <div>
                                                 {fileName}
                                             </div>
@@ -108,6 +138,19 @@ class FileBrowser extends Component {
                                     )
                                 })
                             }
+                            <div className="col-12 ">
+                                <div className="float-right">
+                                    {
+                                        Array.from(Array(totalPages).keys()).map(i=>{
+                                            return (
+                                                <div onClick={()=>{this.setState({fileIndex: i})}} className='d-inline pagination-button'>
+                                                    {i}
+                                                </div>
+                                            )
+                                        })
+                                    }
+                                </div>
+                            </div>
                         </div>
                     </Modal.Body>
                 </Modal>

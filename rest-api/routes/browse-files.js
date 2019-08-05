@@ -13,7 +13,13 @@ module.exports = (app) =>{
             const fileType = path.extname(file)
             req.body.type.split('|').map(extension=>{
                 if(extension === fileType){
-                    fileList.push(file)
+                    if(typeof req.body.query !== 'undefined'){
+                        if(file.includes(req.body.query)){
+                            fileList.push(file)
+                        }
+                    }else{
+                        fileList.push(file)
+                    }
                 }
             })
         });

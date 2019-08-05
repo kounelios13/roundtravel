@@ -162,3 +162,11 @@ h6 {
 .img-fit{
     object-fit: cover;
 }
+
+.pagination-button{
+  background-color: #787a7c;
+  padding: 4px 10px;
+  margin-left: 3px;
+  color: white;
+  border-radius: 3px;
+}
