@@ -1,152 +1,89 @@
-import React, {Component} from 'react';
-import monaco from '../../assets/images/city/monaco4-3.jpg'
-import alsace from '../../assets/images/city/alsace4-3.jpg'
-import lubre from '../../assets/images/city/lubre4-3.jpg'
-import circle from '../../assets/images/general/circle.png'
-import circleSelected from '../../assets/images/general/circle2.svg'
-import {Swipe, Position} from "react-swipe-component"
-
+import React, { Component } from "react"
+import Image from "../city/image"
+import '../../styles/tours/tour-group.scss'
+  import plane from '../../images/plane.svg'
+import planet from '../../images/planet.svg'
+import person from '../../images/person.svg'
 
 class TourGroup extends Component {
+  constructor(props) {
+    super(props)
 
-
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            groupContainer: React.createRef(),
-            tours: [
-                {
-                    url: lubre,
-                    title: 'Φανταστικο Μονακο',
-                },
-                {
-                    url: alsace,
-                    title: 'Μαγευτικη Αλσατια'
-                },
-                {
-                    url: monaco,
-                    title: 'Φανταστικο Μονακο'
-                },
-                {
-                    url: monaco,
-                    title: 'Φανταστικο Μονακο'
-                },
-                {
-                    url: monaco,
-                    title: 'Φανταστικο Μονακο'
-                },
-                {
-                    url: monaco,
-                    title: 'Φανταστικο Μονακο'
-                },
-                {
-                    url: monaco,
-                    title: 'Φανταστικο Μονακο'
-                },
-                {
-                    url: monaco,
-                    title: 'Φανταστικο Μονακο'
-                },
-                {
-                    url: monaco,
-                    title: 'Φανταστικο Μονακο'
-                },
-                {
-                    url: monaco,
-                    title: 'Φανταστικο Μονακο'
-                }
-            ],
-            activeIndex: 0
+    this.state = {
+      tours: [
+        {
+          image: '2.jpg',
+          title: 'DISNEYLAND - ΠΑΡΙΣΙ ΑΠΟ ΗΡΑΚΛΕΙΟ',
+          price: '40€'
+        },
+        {
+          image: '3.jpg',
+          title: 'ΜΠΑΛΙ SPECIAL OFFER',
+          price: '40€'
+        },
+        {
+          image: '4.jpg',
+          title: 'ΒΟΥΔΑΠΕΣΤΗ - ΠΡΑΓΑ - ΔΡΕΣΔΗ - ΒΙΕΝΝΗ',
+          price: '40€'
+        },
+        {
+          image: '1.jpg',
+          title: 'ΠΟΛΩΝΙΑ-ΒΙΕΝΝΗ ΚΑΛΟΚΑΙΡΙ 2019',
+          price: '40€'
         }
-        this.selectIndex = this.selectIndex.bind(this)
+      ]
     }
+  }
 
 
-
-    selectIndex(i){
-        const currentRef= this.state.groupContainer.current
-        const widthFraction = currentRef.clientWidth
-        const scrollAmount = i * widthFraction
-        currentRef.scroll(scrollAmount, 0, 'smooth')
-        this.setState({activeIndex: i})
-    }
-
-    onSwipeListener = (p) => {
-        if (p.x !== 0) {
-            console.log(`Swipe x: ${p.x}`)
-        }
-        if (p.y !== 0) {
-            console.log(`Swipe y: ${p.y}`)
-        }
-    }
-
-    onSwipeEnd = () => {
-        console.log("Swiped right")
-    }
-
-    onSwipeRightListener = () => {
-        console.log("Swiped right")
-    }
-
-    render() {
-        let circleCount = Math.ceil(this.state.tours.length / 3)
-        if(window.screen.width < 600){
-            circleCount = this.state.tours.length
-        }
-
-        return (
-            <div className='row p-0 m-0 bg-jumbotron pb-7'>
-                <div className="col-8 offset-2 mt-5">
-                    <div className='mt-5'>
-                        <h3 className='display-5'>Τα πιο αγαπημενα</h3>
-                        <h4 className='text-info'>Ανακαλυψτε τα παντα στο Παρισι</h4>
-                        <hr className='col-12' />
-                    </div>
-                </div>
-                <div  ref={this.state.groupContainer} className="d-flex tours-group-wrapper col-8 p-0 offset-2">
-                    {this.state.tours.map((tour, i)=>{
-
-                        return (
-
-                            <Swipe nodeName="div" className={'border-black col-12 col-lg-4 mt-4 p-0'} onSwipedRight={this.onSwipeRightListener} onSwipe={this.onSwipeListener} onSwipeEnd={this.onSwipeEnd}>
-                                    <div>
-                                        <img className='tour-group-image img-fluid col-12 p-0' src={tour.url} alt=""/>
-                                        <div className='position-absolute tour-group-price-caption'>
-                                            από 330€
-                                        </div>
-                                    </div>
-                                    <div className='text-center'>
-                                        <span className='tour-grou-title'>{tour.title}</span>
-                                        <div>
-                                            Η προσφορα ληγει σε <span className="text-info">3 ώρες</span>
-                                        </div>
-                                    </div>
-
-                            </Swipe>
-
-
-                        )
-                    })}
-                    </div>
-                <div className='col-12 text-center mb-5 mt-4'>
-                    {
-                        Array(circleCount).fill(1).map((el, i)=>{
-                            let img = circle
-                            if(i === this.state.activeIndex){
-                                img = circleSelected
-                            }
-                            return (
-                                <span key={i * 300} className='mb-5' onClick={()=>{this.selectIndex(i)}}>
-                                    <img className='img-circle' src={img} alt=""/>
-                                </span>
-                            )
-                        })
-                    }
-                </div>
+  render() {
+    return (
+      <section className='row mt-5'>
+        <div className="d-flex flex-wrap py-6 col-12 p-0">
+          <div className="col-8 offset-1 p-0 offset-lg-2 d-flex flex-wrap">
+            <div className="col-12 space-candy mb-3">
+              <h2 className='display-5 m-0 text-bold'>Εκδρομες που προτινουμε.</h2>
+              <h4 className='display-8 m-1'>Ανακαλυψτε τα μυστικα του Παρισιου</h4>
             </div>
-        );
-    }
+          </div>
+          <div className='col-12 offset-0 col-lg-8 offset-lg-2 d-flex px-0 tour-group-wrapper app-pointer'>
+            {this.state.tours.map((tour, i)=>{
+              return (
+                <div key={i} className='tour-block col-10 offset-1 col-md-4 offset-md-0 p-0'>
+                  <div className="col-12 p-0">
+                    <Image className='col-12 tour-group-image img-fit p-0 m-0' fileName={tour.image} alt=""/>
+                    <div className='tour-group-price'>
+                      <p><span className='euro-sign'>350</span></p>
+                    </div>
+                    <div className="tour-group-icon-container no-drag">
+                      <div className='d-flex flex-wrap'>
+                        <div className="col-12">
+                          <img className='tour-group-icon rounded-circle mb-1' src={planet} alt=""/>
+                        </div>
+                        <div className="col-12">
+                          <img className='tour-group-icon rounded-circle mb-1' src={person} alt=""/>
+                        </div>
+                        <div className="col-12">
+                          <img className='tour-group-icon rounded-circle mb-1' src={plane} alt=""/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-12 d-flex p-0 flex-wrap bg-light tour-info-container">
+                    <div className="col-12 p-2">
+                      <h3 className='display-8 text-bold m-0'>{tour.title}</h3>
+                    </div>
+                  </div>
+                  <hr/>
+
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+    )
+  }
 }
 
-export default TourGroup;
+export default TourGroup

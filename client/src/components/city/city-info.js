@@ -1,37 +1,31 @@
-import React, {Component} from 'react';
-import {Tab, TabList, TabPanel, Tabs} from "react-tabs";
-import "react-tabs/style/react-tabs.css";
+import React from "react"
+import '../../styles/global.scss'
+import '../../styles/city/city-info.scss'
+import ShowMore from 'react-show-more';
+import BgImage from "./bg-image"
 
-class CityInfo extends Component {
+const CityInfo = () => {
+  const content = <div className='text-white col-10 offset-1 col-lg-8 offset-lg-2 p-lg-6'>
+    <h3 className='display-5 city-info-title'>Πολη του φωτος</h3>
+    <article className={'text-light'}>
+      <ShowMore
+        lines={5}
+        more='Διαβάστε περισσότερα'
+        less='Απόκρυψη'
+        anchorClass='app-show-more'
+      >
+        {
+          'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis deleniti doloribus enim laboriosam nulla quasi reprehenderit voluptate. Ad culpa, dolorem doloremque ea earum exercitationem impedit itaque labore laudantium minus nobis, officiis optio pariatur praesentium ratione rem totam ullam unde! Adipisci alias architecto, autem consequatur culpa cum cupiditate dignissimos doloribus eius est in iusto nesciunt nobis, optio pariatur qui quo repellat reprehenderit similique tempora temporibus ullam velit veniam veritatis vitae. Autem fugiat hic iusto nulla quis? Blanditiis, commodi est fugit hic nihil nisi placeat reiciendis sapiente sint velit! A ad aspernatur consequatur culpa cumque delectus deserunt dignissimos dolor earum enim excepturi facere incidunt iste itaque nam nostrum odit officia, optio perspiciatis placeat recusandae reiciendis saepe sapiente similique tenetur velit voluptatem. Accusamus accusantium aliquam architecto aspernatur consectetur dignissimos dolore eum exercitationem ipsum magni necessitatibus nesciunt, officia porro quidem quod sunt vitae? A aspernatur consectetur cupiditate dolor maiores mollitia, quae quas vero? Dolores modi, mollitia. Adipisci, reiciendis, repudiandae. Accusamus amet aut, distinctio error, ex labore maiores modi numquam optio placeat quae quidem repellendus soluta, temporibus voluptatem! Delectus eveniet quisquam quod repudiandae soluta vero voluptate voluptatum. Aspernatur, beatae deserunt dignissimos distinctio ea error est et fuga ipsum laudantium nostrum perferendis reiciendis sint temporibus ut voluptates voluptatibus? Ab asperiores cum delectus deleniti, dicta fuga id omnis provident quas veniam veritatis voluptate? Alias amet assumenda autem cumque, dolor ducimus eos illo laboriosam omnis pariatur perspiciatis porro repellat repellendus sunt totam unde velit. Consequuntur eos odio quisquam voluptates. Alias cupiditate debitis dicta, doloribus et in inventore laboriosam maxime molestiae nesciunt nostrum obcaecati optio porro praesentium quo rem unde, vitae. Asperiores blanditiis impedit magnam perspiciatis saepe sequi temporibus! Blanditiis dolore doloribus hic id laborum possimus. Fuga iste numquam sapiente sed voluptatum! Culpa, cum debitis deserunt dolores ducimus impedit odio odit quod repellendus repudiandae suscipit voluptates? Dolorum pariatur, voluptatum.'
+        }
+      </ShowMore>
+    </article>
+  </div>
 
-    constructor(props) {
-        super(props);
-    }
-
-
-    render() {
-        return (
-            <div className={'mb-6 ' + this.props.additionalClasses}>
-                <h2 className='display-5'>Γνωρίστε το Παρισί</h2>
-                <Tabs className='mt-5'>
-                    <TabList>
-                        <Tab>Δραστηριοτητες</Tab>
-                        <Tab>Φαγητο</Tab>
-                        <Tab>Εκδηλωσεις</Tab>
-                    </TabList>
-                    <TabPanel>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolores excepturi illum nihil odit quia soluta, unde voluptates! Enim inventore mollitia quas totam unde? Ab aliquam assumenda culpa eum excepturi iusto perspiciatis quasi saepe tenetur. Excepturi nesciunt quasi sapiente! Accusantium atque fugiat minima molestiae odit officiis quae quibusdam sed? Alias, libero magnam magni natus neque placeat veritatis voluptates? Autem dolorem excepturi incidunt modi pariatur. Alias aspernatur atque aut dolor dolore doloremque ducimus excepturi expedita facere id ipsa iusto laudantium magnam necessitatibus, nostrum nulla possimus quam quas quasi quis quo ratione rem tenetur velit, voluptatum? Aliquam cupiditate enim esse ex, in ipsum iste necessitatibus nemo nesciunt quibusdam, recusandae reprehenderit sequi sit totam voluptatum. A alias animi architecto commodi cumque dolores dolorum earum eius eum explicabo harum illo magni, maiores minima nam officia, omnis perspiciatis, placeat quaerat quisquam repudiandae sapiente sint voluptates? Adipisci esse explicabo magnam omnis voluptates. Amet aspernatur at beatae, blanditiis dolore dolorum ea inventore ipsa libero nihil nobis odio perferendis perspiciatis placeat porro quae recusandae rerum tempora tempore, tenetur unde vel, velit voluptatibus. Architecto quae unde voluptatem? Aperiam excepturi exercitationem fugit nobis veniam. Blanditiis cumque deleniti dolorum error et, labore laudantium maxime modi necessitatibus nihil non optio praesentium quaerat quibusdam recusandae reiciendis repellat. In modi natus suscipit tempore. Animi delectus dicta in magni minus molestias necessitatibus numquam officia quasi qui, quo quod sed sit tenetur vel! Ducimus incidunt inventore maxime sunt tempore! Corporis cum error iure labore nemo neque suscipit! Aspernatur doloremque, et, ipsam itaque laudantium libero minima modi nam odit officia porro qui rerum temporibus. Consectetur maiores molestiae neque odit quisquam repellendus voluptatibus. Accusamus amet architecto dignissimos dolore eos eveniet excepturi explicabo illum natus numquam, officiis praesentium, quae quia quisquam sequi sunt voluptate! Cum deleniti eius esse est et exercitationem id laborum, minus modi nam odio provident quod reprehenderit repudiandae rerum saepe sapiente vel voluptate. Ad animi cupiditate, delectus dolore ducimus eaque eligendi, exercitationem ipsa iste laborum optio possimus quia quis quos tempora vel voluptatibus. Ab, asperiores aut beatae commodi consequatur culpa, dignissimos eos eum id magni, molestias non odit pariatur possimus quae rem sequi sint sit tempore voluptatibus. Amet autem corporis cumque dolorem eaque, eligendi error ex exercitationem fuga illo iusto odit officiis quam quasi quia ratione sapiente sint soluta tempora voluptatibus. Alias aperiam ipsum rerum temporibus. Aliquam dolores libero odio optio quae sequi vitae, voluptatem. Autem beatae cum, dolor excepturi impedit maiores nemo repudiandae sapiente temporibus?</p>
-                    </TabPanel>
-                    <TabPanel>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam dolorem error eum fugit id inventore laborum nihil quisquam tenetur. Aliquam animi architecto at atque, cum delectus dolor earum eius enim eum facere id maiores neque nisi nulla obcaecati odio quas quia quibusdam rem reprehenderit saepe suscipit tempore temporibus ullam. Blanditiis enim esse est inventore nam nostrum quod reiciendis repellendus saepe totam. Animi aut debitis delectus eaque ipsum suscipit ut velit veritatis? Adipisci impedit molestiae sunt tempora! Dolores et explicabo id officiis recusandae repudiandae sint tenetur, voluptatum! Aspernatur at beatae dignissimos dolor eum harum id laboriosam minus officia placeat, possimus quam quibusdam quo, sit voluptate? A ad alias aliquid architecto corporis culpa delectus, deleniti deserunt distinctio earum enim ex explicabo fugiat ipsam labore libero magni maiores minima nam numquam omnis, placeat quo quod repellendus sint totam voluptatibus. Accusamus aliquid assumenda atque beatae blanditiis commodi consectetur consequuntur doloremque, eius enim esse fuga iste libero mollitia neque non nulla odio optio possimus quia quidem quis reprehenderit sit tempora temporibus, totam veniam voluptatem. A, aliquid autem commodi consequatur cupiditate dolor eaque eveniet fuga fugit harum in ipsum libero modi nihil obcaecati odit placeat praesentium quae quam quasi quis reprehenderit sapiente sit suscipit temporibus ullam veritatis? Minus nam quo tempore unde voluptatibus. Animi at atque dolore, ea excepturi laborum maxime perferendis provident quibusdam quis quisquam voluptate voluptates? Ad consequatur debitis eaque facere facilis in laborum natus, necessitatibus nulla obcaecati omnis quasi reiciendis soluta totam ut, vero voluptas. Asperiores aspernatur dolor dolorem, eum in ipsum iure iusto, magnam nemo officiis praesentium reprehenderit repudiandae tenetur! Ad, aspernatur eaque earum fugit, inventore maiores minima nesciunt officia perferendis perspiciatis quasi quo reiciendis sit suscipit ut, voluptatem voluptates! At cumque earum illo incidunt nostrum provident quasi recusandae voluptas. Doloribus est fugit libero nemo quibusdam ratione repudiandae temporibus totam veniam.</p>
-                    </TabPanel>
-                    <TabPanel>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut beatae, hic incidunt non odio porro quaerat repudiandae voluptas! Ad eaque excepturi modi perferendis quae tempora temporibus ullam. A accusamus architecto aut consequuntur cum debitis doloremque dolorum esse est explicabo fuga, ipsam itaque obcaecati officiis optio porro quis reiciendis vero voluptas voluptatem! Animi culpa eaque est facilis iure, maxime nam nesciunt obcaecati pariatur quis ratione rem tenetur ut velit voluptas voluptate voluptatem? Consequatur culpa deserunt ea fugiat hic minima neque omnis optio quaerat quasi quia ratione veniam, voluptate. Ab aliquid, at explicabo in magni nobis porro quia quos ratione recusandae sit?</p>
-                    </TabPanel>
-                </Tabs>
-            </div>
-        );
-    }
+  return (
+    <section>
+      <BgImage children={content} className={'city-info-image img-filter my-5 '} fileName={'2.jpg'} />
+    </section>
+  )
 }
 
-export default CityInfo;
+export default CityInfo

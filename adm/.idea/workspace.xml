@@ -2,22 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a586540-f268-4dbe-9c70-a1eddaaceab3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/utils/file-browser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/utils/file-browser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/utils/file-upload.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/utils/file-upload.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../gatsby-client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gatsby-client/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/images/architecture-18506asd76_1920.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/images/eiffel.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/images/louvre-wide.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/images/louvre.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/images/louvre2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/images/monaco4-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/images/opera.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/images/versa.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/images/versallies.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/images/w3.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../rest-api/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../rest-api/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rest-api/routes/browse-files.js" beforeDir="false" afterPath="$PROJECT_DIR$/../rest-api/routes/browse-files.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rest-api/routes/upload.js" beforeDir="false" afterPath="$PROJECT_DIR$/../rest-api/routes/upload.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -326,11 +313,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="193659000" />
+    <option name="totallyTimeSpent" value="194523000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15595363" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />

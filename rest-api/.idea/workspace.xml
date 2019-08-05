@@ -3,22 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1e304725-736e-4f95-ac59-5a7ff6c01b61" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../adm/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../adm/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../adm/src/components/utils/file-browser.js" beforeDir="false" afterPath="$PROJECT_DIR$/../adm/src/components/utils/file-browser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../adm/src/components/utils/file-upload.js" beforeDir="false" afterPath="$PROJECT_DIR$/../adm/src/components/utils/file-upload.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../adm/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../adm/src/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../gatsby-client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gatsby-client/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/images/architecture-18506asd76_1920.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/images/eiffel.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/images/louvre-wide.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/images/louvre.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/images/louvre2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/images/monaco4-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/images/opera.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/images/versa.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/images/versallies.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/browse-files.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/browse-files.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/upload.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/upload.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/images/w3.jpg" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -34,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/upload.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+            <state relative-caret-position="534">
+              <caret line="17" column="38" lean-forward="true" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -230,11 +216,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137943000" />
+    <option name="totallyTimeSpent" value="138797000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12802951" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -359,8 +344,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/upload.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+        <state relative-caret-position="534">
+          <caret line="17" column="38" lean-forward="true" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
         </state>
       </provider>
     </entry>
