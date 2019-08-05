@@ -2,8 +2,6 @@ var fs = require('fs')
 var path = require('path')
 
 module.exports = (app) =>{
-
-
     app.post('/private/browse/rename', (req,res)=>{
         const gatsbySrc = '../gatsby-client/src/images/';
         if(req.body.type === 'image'){

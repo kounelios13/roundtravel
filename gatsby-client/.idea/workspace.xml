@@ -7,7 +7,14 @@
       <change beforePath="$PROJECT_DIR$/../adm/src/components/utils/file-browser.js" beforeDir="false" afterPath="$PROJECT_DIR$/../adm/src/components/utils/file-browser.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../adm/src/components/utils/file-upload.js" beforeDir="false" afterPath="$PROJECT_DIR$/../adm/src/components/utils/file-upload.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/21323124.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/333.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/alsace1-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/eiffel.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/eiffel.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../rest-api/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../rest-api/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rest-api/routes/browse-files.js" beforeDir="false" afterPath="$PROJECT_DIR$/../rest-api/routes/browse-files.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rest-api/routes/upload.js" beforeDir="false" afterPath="$PROJECT_DIR$/../rest-api/routes/upload.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />

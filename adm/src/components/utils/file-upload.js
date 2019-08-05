@@ -33,8 +33,11 @@ class FileUpload extends Component {
             .post('http://localhost:9000/private/upload', data)
             .then((res)=>{
                 toast.success('Η μεταφόρτωση ηταν επιτύχης', {position: toast.POSITION.BOTTOM_RIGHT})
+                this.props.onSuccess()
             })
             .catch(err=>{
+                console.log('@@@@@')
+                console.log(err)
                 toast.error('Η μεταφόρτωση ηταν ανεπιτυχής', {position: toast.POSITION.BOTTOM_RIGHT});
             })
     }
@@ -51,7 +54,8 @@ class FileUpload extends Component {
 }
 
 FileUpload.propTypes = {
-    mode: PropTypes.string.isRequired
+    mode: PropTypes.string.isRequired,
+    onSuccess: PropTypes.func
 }
 
 export default FileUpload;

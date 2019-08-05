@@ -7,7 +7,14 @@
       <change beforePath="$PROJECT_DIR$/src/components/utils/file-browser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/utils/file-browser.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/utils/file-upload.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/utils/file-upload.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../gatsby-client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gatsby-client/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/images/21323124.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/images/333.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/images/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/images/alsace1-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/images/eiffel.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../gatsby-client/src/images/eiffel.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../rest-api/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../rest-api/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rest-api/routes/browse-files.js" beforeDir="false" afterPath="$PROJECT_DIR$/../rest-api/routes/browse-files.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rest-api/routes/upload.js" beforeDir="false" afterPath="$PROJECT_DIR$/../rest-api/routes/upload.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,20 +30,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/cities/edit-city.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="430" selection-start-line="430" selection-end-line="430" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/utils/file-browser.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-838">
-              <caret line="154" column="43" lean-forward="true" selection-start-line="154" selection-start-column="43" selection-end-line="154" selection-end-column="43" />
+            <state relative-caret-position="-748">
+              <caret line="373" column="147" selection-start-line="373" selection-start-column="139" selection-end-line="373" selection-end-column="147" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -45,10 +40,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/utils/file-browser.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="530">
+              <caret line="130" column="99" selection-start-line="130" selection-start-column="99" selection-end-line="130" selection-end-column="99" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/utils/file-upload.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="426">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="518">
+              <caret line="38" column="18" lean-forward="true" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="36" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -114,10 +121,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>add</find>
-      <find>information</find>
-      <find>addcontent</find>
-      <find>addc</find>
       <find>.map</find>
       <find>addContentEntry</find>
       <find>asd</find>
@@ -142,8 +145,12 @@
       <find>addMetaImage</find>
       <find>fileBrow</find>
       <find>addFiles</find>
-      <find>file</find>
+      <find>onsuc</find>
+      <find>getdirector</find>
       <find>toast</find>
+      <find>getdirectory</find>
+      <find>file</find>
+      <find>onclick</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -188,8 +195,8 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/index.css" />
         <option value="$PROJECT_DIR$/src/components/cities/edit-city.js" />
-        <option value="$PROJECT_DIR$/src/components/utils/file-browser.js" />
         <option value="$PROJECT_DIR$/src/components/utils/file-upload.js" />
+        <option value="$PROJECT_DIR$/src/components/utils/file-browser.js" />
       </list>
     </option>
   </component>
@@ -316,13 +323,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="187863000" />
+    <option name="totallyTimeSpent" value="191515000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15595363" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15595363" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -336,7 +343,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32896066" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.21493441" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.21493441" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -590,10 +597,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/utils/file-upload.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="38" column="18" lean-forward="true" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/cities/edit-city.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="430" selection-start-line="430" selection-end-line="430" />
+        <state relative-caret-position="-748">
+          <caret line="373" column="147" selection-start-line="373" selection-start-column="139" selection-end-line="373" selection-end-column="147" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -602,18 +619,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/utils/file-browser.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-838">
-          <caret line="154" column="43" lean-forward="true" selection-start-line="154" selection-start-column="43" selection-end-line="154" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/utils/file-upload.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="530">
+          <caret line="130" column="99" selection-start-line="130" selection-start-column="99" selection-end-line="130" selection-end-column="99" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>

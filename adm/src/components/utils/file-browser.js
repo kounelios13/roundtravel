@@ -13,15 +13,19 @@ class FileBrowser extends Component {
         super(props, context);
 
         this.getDirectoryData = this.getDirectoryData.bind(this)
+        this.filesUploaded = this.filesUploaded.bind(this)
         this.toogleSelected = this.toogleSelected.bind(this)
         this.handleChange = this.handleChange.bind(this)
+        this.updateDirectoryData = this.updateDirectoryData.bind(this)
+        this.editableTouched = this.editableTouched.bind(this)
 
         this.state = {
             show: false,
             files: [],
             query: '',
             fileIndex: 0,
-            filesPerIndex: 6
+            filesPerIndex: 6,
+            lastTouchedExtension: ''
         };
 
 
@@ -101,30 +105,56 @@ class FileBrowser extends Component {
             .then(res=>{
                 if(res.data.success){
                     toast.success('Η διαγραφή του αρχείου ηταν επιτύχης', {position: toast.POSITION.BOTTOM_RIGHT})
-                    this.getDirectoryData()
-                    this.setState({fileIndex: 0})
+                    this.updateDirectoryData()
                 }else{
                     toast.error("Κατι πηγε στραβα", {position: toast.POSITION.BOTTOM_RIGHT});
                 }
             })
     }
 
-    fileNameEdited(prevName, newName, type){
+    fileNameEdited(prevName, newName, type, e){
         console.log(prevName)
         console.log(newName)
+        newName = newName + this.state.lastTouchedExtension
         if(prevName !== newName){
             axios
                 .post(config.serverUrl + 'private/browse/rename', {type: type, prevName: prevName, newName: newName})
                 .then(res=>{
                     if(res.data.success) {
                         toast.success('Η αλλαγη ονοματος του αρχείου ηταν επιτύχης', {position: toast.POSITION.BOTTOM_RIGHT})
-                        this.getDirectoryData()
-                        this.setState({fileIndex: 0})
+                        this.updateDirectoryData()
                     }else{
                         toast.error("Κατι πηγε στραβα", {position: toast.POSITION.BOTTOM_RIGHT});
                     }
                 })
+        }else{
+            e.currentTarget.innerHTML = e.currentTarget.innerHTML + this.state.lastTouchedExtension
         }
+    }
+
+    editableTouched(e){
+        console.log(e.currentTarget.textContent)
+        '.jpg|.jpeg|.png|.gif'.split('|').forEach(ext=>{
+            if(e.currentTarget.textContent.includes(ext)){
+                this.setState({lastTouchedExtension: ext})
+                e.currentTarget.innerHTML = e.currentTarget.innerHTML.replace(ext, '')
+            }
+        })
+    }
+
+    editableUpdated(e){
+        if(e.key === 'Enter'){
+            e.currentTarget.blur()
+        }
+    }
+
+    filesUploaded(){
+        this.getDirectoryData()
+    }
+
+    updateDirectoryData(){
+        this.getDirectoryData()
+        this.setState({fileIndex: 0})
     }
 
 
@@ -135,7 +165,6 @@ class FileBrowser extends Component {
         const endingIndex = (this.state.fileIndex +1) * this.state.filesPerIndex
         const arr = files.slice(startingIndex, endingIndex)
 
-        console.log(this.state.files)
         return (
             <>
                 <Button variant="primary" onClick={this.handleShow}>
@@ -152,7 +181,7 @@ class FileBrowser extends Component {
                             <div className="col-12 mb-4 d-flex flex-wrap">
                                 <input placeholder={'Αναζητηση αρχειου'} className='col-8' name='query' onKeyUp={this.getDirectoryData} onChange={this.handleChange} value={this.state.query} type="text"/>
                                 <div className='col-4'>
-                                    <FileUpload mode='images' />
+                                    <FileUpload mode='images' onSuccess={this.filesUploaded} />
                                 </div>
                             </div>
                             {
@@ -165,14 +194,14 @@ class FileBrowser extends Component {
 
                                     return (
                                         imageMode &&
-                                        <div key={i} className="col-2 py-2" onClick={()=>{this.toogleSelected(startingIndex + i)}} key={startingIndex + i}>
+                                        <div key={i} className="col-2 py-2" >
                                             <div className='position-relative'>
                                                 <div onClick={()=>{this.deleteFile(fileName, 'image')}} className="position-absolute file-browser-delete bg-info app-pointer">
                                                     X
                                                 </div>
-                                                <img className={'img-fluid img-fit file-browser-image ' + selectedClass} src={`${config.imagesUrl}${fileName}`} alt=""/>
+                                                <img className={'img-fluid img-fit file-browser-image ' + selectedClass} src={`${config.imagesUrl}${fileName}`} onClick={()=>{this.toogleSelected(startingIndex + i)}} alt=""/>
                                             </div>
-                                            <div onBlur={(e)=>{this.fileNameEdited(fileName, e.currentTarget.textContent, 'image')}} contentEditable suppressContentEditableWarning={true}>
+                                            <div onBlur={(e)=>{this.fileNameEdited(fileName, e.currentTarget.textContent, 'image', e)}} onFocus={this.editableTouched} onKeyDown={this.editableUpdated} contentEditable suppressContentEditableWarning={true}>
                                                 {fileName}
                                             </div>
                                         </div>
