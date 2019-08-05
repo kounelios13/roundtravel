@@ -36,15 +36,19 @@ class FileUpload extends Component {
                 this.props.onSuccess()
             })
             .catch(err=>{
-                console.log('@@@@@')
-                console.log(err)
-                toast.error('Η μεταφόρτωση ηταν ανεπιτυχής', {position: toast.POSITION.BOTTOM_RIGHT});
+                console.log()
+                if(err.response.status === 400){
+                    toast.error('Η μεταφόρτωση ηταν ανεπιτυχής', {position: toast.POSITION.BOTTOM_RIGHT});
+                }
+                if(err.response.status === 409){
+                    toast.error('Υπαρχει αρχειο με αυτο το ονομα', {position: toast.POSITION.BOTTOM_RIGHT});
+                }
             })
     }
 
     render() {
         return (
-            <div>
+            <div className={this.props.additionalClasses}>
                 <label className="btn btn-primary">
                     <i className="fa fa-image"></i> Ανεβασμα εικονων<input ref={this.uploadInput} type='file'  onChange={this.handleImageSubmit} name='image' className='w-100 d-none' multiple  />
                 </label>
@@ -55,7 +59,8 @@ class FileUpload extends Component {
 
 FileUpload.propTypes = {
     mode: PropTypes.string.isRequired,
-    onSuccess: PropTypes.func
+    onSuccess: PropTypes.func,
+    additionalClasses: PropTypes.string
 }
 
 export default FileUpload;

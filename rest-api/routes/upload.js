@@ -1,6 +1,6 @@
 const fileUpload = require('express-fileupload');
 var multer  = require('multer')
-var upload = multer({ dest: 'uploads/' })
+var fs = require('fs')
 
 
 
@@ -10,17 +10,23 @@ module.exports = (app) =>{
 
         if(req.body.type === 'images'){
             Object.values(req.files).map(img=>{
-                console.log(img.name)
+                try {
+                    if (fs.existsSync('../gatsby-client/src/images/' + img.name)) {
+                        return res.sendStatus(409)
+                    }
+                } catch(err) {
+                    console.error(err)
+                }
+
+
                 img.mv('../gatsby-client/src/images/' + img.name)
                     .then((img)=>{
                         res.sendStatus(200)
                     })
                     .catch(err=>{
-                        console.log(err)
                         res.sendStatus(400)
                     })
             })
         }
-
     })
 }

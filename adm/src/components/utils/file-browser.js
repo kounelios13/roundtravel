@@ -25,7 +25,8 @@ class FileBrowser extends Component {
             query: '',
             fileIndex: 0,
             filesPerIndex: 6,
-            lastTouchedExtension: ''
+            lastTouchedExtension: '',
+            lastTouchedName: ''
         };
 
 
@@ -124,7 +125,12 @@ class FileBrowser extends Component {
                         toast.success('Η αλλαγη ονοματος του αρχείου ηταν επιτύχης', {position: toast.POSITION.BOTTOM_RIGHT})
                         this.updateDirectoryData()
                     }else{
-                        toast.error("Κατι πηγε στραβα", {position: toast.POSITION.BOTTOM_RIGHT});
+                        if(res.data.type === 'exists'){
+                            toast.error("Το ονομα υπαρχει ηδη", {position: toast.POSITION.BOTTOM_RIGHT});
+                            this.setState({ show: false });
+                        }else{
+                            toast.error("Κατι πηγε στραβα", {position: toast.POSITION.BOTTOM_RIGHT});
+                        }
                     }
                 })
         }else{
@@ -137,6 +143,8 @@ class FileBrowser extends Component {
         '.jpg|.jpeg|.png|.gif'.split('|').forEach(ext=>{
             if(e.currentTarget.textContent.includes(ext)){
                 this.setState({lastTouchedExtension: ext})
+                this.setState({lastTouchedName: e.currentTarget.textContent})
+
                 e.currentTarget.innerHTML = e.currentTarget.innerHTML.replace(ext, '')
             }
         })
@@ -174,14 +182,13 @@ class FileBrowser extends Component {
                 <Modal show={this.state.show} onHide={this.handleHide} dialogClassName="modal-100w" className='file-browser' size={'xl'} >
                     <Modal.Header closeButton>
                         <Modal.Title className="file-browser-title"> Επιλογή αρχείων </Modal.Title>
-
                     </Modal.Header>
                     <Modal.Body className='file-browser-body'>
                         <div className='col-12 d-flex flex-wrap'>
                             <div className="col-12 mb-4 d-flex flex-wrap">
                                 <input placeholder={'Αναζητηση αρχειου'} className='col-8' name='query' onKeyUp={this.getDirectoryData} onChange={this.handleChange} value={this.state.query} type="text"/>
-                                <div className='col-4'>
-                                    <FileUpload mode='images' onSuccess={this.filesUploaded} />
+                                <div className='col-4 '>
+                                    <FileUpload additionalClasses={'float-right'} mode='images' onSuccess={this.filesUploaded} />
                                 </div>
                             </div>
                             {
@@ -194,7 +201,7 @@ class FileBrowser extends Component {
 
                                     return (
                                         imageMode &&
-                                        <div key={i} className="col-2 py-2" >
+                                        <div key={i} className="col-4 py-2" >
                                             <div className='position-relative'>
                                                 <div onClick={()=>{this.deleteFile(fileName, 'image')}} className="position-absolute file-browser-delete bg-info app-pointer">
                                                     X

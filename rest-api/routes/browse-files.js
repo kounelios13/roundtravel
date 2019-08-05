@@ -5,9 +5,20 @@ module.exports = (app) =>{
     app.post('/private/browse/rename', (req,res)=>{
         const gatsbySrc = '../gatsby-client/src/images/';
         if(req.body.type === 'image'){
+
+            try {
+                if (fs.existsSync(`${gatsbySrc}${req.body.prevName}`)) {
+                    return res.json({success: false, type: 'exists'})
+                }
+            } catch(err) {
+                console.error(err)
+            }
+
             if(typeof req.body.prevName === 'undefined' || typeof req.body.newName === 'undefined'){
                 return res.json({success: false})
             }
+
+
             fs.rename(`${gatsbySrc}${req.body.prevName}`, `${gatsbySrc}${req.body.newName}`, function(err) {
                 if ( err ) return res.json({success: false});
                 return res.json({success: true})

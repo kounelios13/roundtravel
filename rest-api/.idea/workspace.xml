@@ -3,15 +3,20 @@
   <component name="ChangeListManager">
     <list default="true" id="1e304725-736e-4f95-ac59-5a7ff6c01b61" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../adm/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../adm/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../adm/src/components/cities/edit-city.js" beforeDir="false" afterPath="$PROJECT_DIR$/../adm/src/components/cities/edit-city.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../adm/src/components/utils/file-browser.js" beforeDir="false" afterPath="$PROJECT_DIR$/../adm/src/components/utils/file-browser.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../adm/src/components/utils/file-upload.js" beforeDir="false" afterPath="$PROJECT_DIR$/../adm/src/components/utils/file-upload.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../adm/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../adm/src/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../gatsby-client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gatsby-client/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/images/21323124.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/images/333.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/images/4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/images/alsace1-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/images/eiffel.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../gatsby-client/src/images/eiffel.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/images/architecture-18506asd76_1920.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/images/eiffel.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/images/louvre-wide.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/images/louvre.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/images/louvre2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/images/monaco4-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/images/opera.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/images/versa.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/images/versallies.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/browse-files.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/browse-files.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/upload.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/upload.js" afterDir="false" />
     </list>
@@ -29,8 +34,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/upload.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+            <state relative-caret-position="435">
+              <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -38,8 +43,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/browse-files.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1216">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            <state>
+              <caret selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -80,6 +85,7 @@
       <find>private/cities/get</find>
       <find>salt</find>
       <find>path</find>
+      <find>fs</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -224,7 +230,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135923000" />
+    <option name="totallyTimeSpent" value="137943000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -346,15 +352,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/browse-files.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1216">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        <state>
+          <caret selection-end-line="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/upload.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+        <state relative-caret-position="435">
+          <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
         </state>
       </provider>
     </entry>
