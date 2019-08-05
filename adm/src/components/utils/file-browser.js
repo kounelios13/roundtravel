@@ -93,6 +93,7 @@ class FileBrowser extends Component {
     }
 
     deleteFile(fileName, type){
+        console.log(fileName)
         axios
             .post(config.serverUrl + 'private/browse/delete', {type: type, fileName: fileName})
             .then(res=>{
@@ -102,10 +103,26 @@ class FileBrowser extends Component {
                     this.setState({fileIndex: 0})
                 }else{
                     toast.error("Κατι πηγε στραβα", {position: toast.POSITION.BOTTOM_RIGHT});
-
                 }
             })
+    }
 
+    fileNameEdited(prevName, newName, type){
+        console.log(prevName)
+        console.log(newName)
+        if(prevName !== newName){
+            axios
+                .post(config.serverUrl + 'private/browse/rename', {type: type, prevName: prevName, newName: newName})
+                .then(res=>{
+                    if(res.data.success) {
+                        toast.success('Η αλλαγη ονοματος του αρχείου ηταν επιτύχης', {position: toast.POSITION.BOTTOM_RIGHT})
+                        this.getDirectoryData()
+                        this.setState({fileIndex: 0})
+                    }else{
+                        toast.error("Κατι πηγε στραβα", {position: toast.POSITION.BOTTOM_RIGHT});
+                    }
+                })
+        }
     }
 
 
@@ -115,6 +132,7 @@ class FileBrowser extends Component {
         const startingIndex = this.state.fileIndex * this.state.filesPerIndex
         const endingIndex = (this.state.fileIndex +1) * this.state.filesPerIndex
         const arr = files.slice(startingIndex, endingIndex)
+
         console.log(this.state.files)
         return (
             <>
@@ -146,7 +164,7 @@ class FileBrowser extends Component {
                                                 </div>
                                                 <img className={'img-fluid img-fit file-browser-image ' + selectedClass} src={`${config.imagesUrl}${fileName}`} alt=""/>
                                             </div>
-                                            <div>
+                                            <div onBlur={(e)=>{this.fileNameEdited(fileName, e.currentTarget.textContent, 'image')}} contentEditable suppressContentEditableWarning={true}>
                                                 {fileName}
                                             </div>
 

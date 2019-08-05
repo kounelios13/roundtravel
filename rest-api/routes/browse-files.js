@@ -4,15 +4,28 @@ var path = require('path')
 module.exports = (app) =>{
 
 
+    app.post('/private/browse/rename', (req,res)=>{
+        const gatsbySrc = '../gatsby-client/src/images/';
+        if(req.body.type === 'image'){
+            if(typeof req.body.prevName === 'undefined' || typeof req.body.newName === 'undefined'){
+                return res.json({success: false})
+            }
+            fs.rename(`${gatsbySrc}${req.body.prevName}`, `${gatsbySrc}${req.body.newName}`, function(err) {
+                if ( err ) return res.json({success: false});
+                return res.json({success: true})
+            });
+        }
+    })
 
     app.post('/private/browse/delete', (req,res)=>{
         const gatsbySrc = '../gatsby-client/src/';
-
         if(req.body.type === 'image'){
             try {
+                console.log(`${gatsbySrc}images/${req.body.fileName}`)
                 fs.unlinkSync(`${gatsbySrc}images/${req.body.fileName}`)
                 return res.json({success: true})
             }catch(err) {
+                console.log(err)
                 return res.json({success: false})
             }
         }

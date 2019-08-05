@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="80367e6c-f64a-42aa-a903-d1a3bec28b62" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../adm/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../adm/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../adm/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../adm/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../adm/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../adm/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../adm/src/components/utils/file-browser.js" beforeDir="false" afterPath="$PROJECT_DIR$/../adm/src/components/utils/file-browser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../adm/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../adm/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../rest-api/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../rest-api/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../rest-api/routes/browse-files.js" beforeDir="false" afterPath="$PROJECT_DIR$/../rest-api/routes/browse-files.js" afterDir="false" />
     </list>
@@ -59,7 +55,7 @@
         <entry file="file://$PROJECT_DIR$/src/components/city/bg-image.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="516">
-              <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+              <caret line="50" selection-start-line="50" selection-end-line="50" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -310,7 +306,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="186124000" />
+    <option name="totallyTimeSpent" value="186762000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -710,7 +706,7 @@
     <entry file="file://$PROJECT_DIR$/src/components/city/bg-image.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="516">
-          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
