@@ -17,7 +17,7 @@ class FileBrowser extends Component {
             show: false,
             files: [],
             query: '',
-            fileIndex: 1,
+            fileIndex: 0,
             filesPerIndex: 6
         };
 
@@ -76,10 +76,11 @@ class FileBrowser extends Component {
     }
 
     toogleSelected(i){
-        const el = this.state.files[i]
-        el.selected = !el.selected
+        console.log(i)
+        const file = this.state.files[i]
+        file.selected = !file.selected
         const files = this.state.files
-        files[i] = el
+        files[i] = file
 
         this.setState({files: files})
     }
@@ -91,45 +92,36 @@ class FileBrowser extends Component {
 
 
     render() {
-
         const totalPages = Math.ceil(this.state.files.length / this.state.filesPerIndex)
         const files = this.state.files
-        const arr = files.splice(this.state.fileIndex * this.state.filesPerIndex, (this.state.fileIndex +1) * this.state.filesPerIndex)
-
+        const startingIndex = this.state.fileIndex * this.state.filesPerIndex
+        const endingIndex = (this.state.fileIndex +1) * this.state.filesPerIndex
+        const arr = files.slice(startingIndex, endingIndex)
+        console.log(this.state.files)
         return (
             <>
                 <Button variant="primary" onClick={this.handleShow}>
                     Επιλογή αρχείων
                 </Button>
 
-                <Modal
-                    show={this.state.show}
-                    onHide={this.handleHide}
-                    dialogClassName="modal-100w"
-                    className='file-browser'
-                    size={'xl'}
-                >
+                <Modal show={this.state.show} onHide={this.handleHide} dialogClassName="modal-100w" className='file-browser' size={'xl'} >
                     <Modal.Header closeButton>
-                        <Modal.Title className="file-browser-title">
-                            Επιλογή αρχείων
-                        </Modal.Title>
+                        <Modal.Title className="file-browser-title"> Επιλογή αρχείων </Modal.Title>
                     </Modal.Header>
                     <Modal.Body className='file-browser-body'>
                         <div className='col-12 d-flex flex-wrap'>
-                            <input className='col-12' name='query' onKeyUp={this.getDirectoryData} onChange={this.handleChange} value={this.state.query} type="text"/>
+                            <input placeholder={'Αναζητηση αρχειου'} className='col-12' name='query' onKeyUp={this.getDirectoryData} onChange={this.handleChange} value={this.state.query} type="text"/>
                             {
                                 arr.map((file, i)=>{
-                                    const selectedClass = this.state.files[i].selected ? 'file-browser-image-selected' : ''
-                                    console.log(file.url)
+                                    const selectedClass = file.selected ? 'file-browser-image-selected' : ''
                                     const split = file.url.split('/')
                                     const parentName = split[split.length - 2]
                                     const fileName = split[split.length -1]
 
                                     const isImage = this.isImage(fileName)
-
                                     return (
                                         isImage &&
-                                        <div className="col-2 py-2" onClick={()=>{this.toogleSelected(i)}} key={i}>
+                                        <div key={i} className="col-2 py-2" onClick={()=>{this.toogleSelected(startingIndex + i)}} key={startingIndex + i}>
                                             <img className={'img-fluid img-fit file-browser-image ' + selectedClass} src={`${config.imagesUrl}${fileName}`} alt=""/>
                                             <div>
                                                 {fileName}
@@ -142,9 +134,10 @@ class FileBrowser extends Component {
                                 <div className="float-right">
                                     {
                                         Array.from(Array(totalPages).keys()).map(i=>{
+                                            let additionalClass = i === this.state.fileIndex ? 'pagination-button-selected' : ''
                                             return (
-                                                <div onClick={()=>{this.setState({fileIndex: i})}} className='d-inline pagination-button'>
-                                                    {i}
+                                                <div key={i} onClick={()=>{this.setState({fileIndex: i})}} className={`d-inline pagination-button ${additionalClass}`}>
+                                                    {i + 1}
                                                 </div>
                                             )
                                         })

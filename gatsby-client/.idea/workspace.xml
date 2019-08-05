@@ -2,54 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="80367e6c-f64a-42aa-a903-d1a3bec28b62" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/serve-static.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../adm/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../adm/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../adm/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../adm/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../adm/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../adm/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../adm/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../adm/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../adm/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../adm/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../adm/public/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../adm/src/assets/images/krouaziera.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../adm/src/components/cities/edit-city.js" beforeDir="false" afterPath="$PROJECT_DIR$/../adm/src/components/cities/edit-city.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../adm/src/components/utils/file-browser.js" beforeDir="false" afterPath="$PROJECT_DIR$/../adm/src/components/utils/file-browser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../adm/src/config/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../adm/src/config/config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../adm/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../adm/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/notr.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../rest-api/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../rest-api/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rest-api/public/2/2-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rest-api/public/2/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rest-api/public/asd/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rest-api/public/paris/1-3.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rest-api/public/paris/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rest-api/public/parisi/1.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rest-api/public/parisi/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rest-api/public/parisi/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rest-api/public/parisi/smile.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rest-api/public/parisi2/64531.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rest-api/public/Παρισι/παρισι.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rest-api/public/πολη/asd/smile.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rest-api/public/πολη/Αμστερτναμ/munich-3385958_960_720.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rest-api/public/πολη/Βαρκελωνη/konstantinoupoli.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rest-api/public/πολη/Βερολινο/berchtesgaden-2928712_960_720.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rest-api/public/πολη/Κωνσταντινουπολη/1.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rest-api/public/πολη/Κωνσταντινουπολη/konstantinoupoli.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rest-api/public/πολη/Μιλανο/3847.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rest-api/public/πολη/Μιλανο/duomo-milano.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rest-api/public/πολη/Μοναχο/munich-1572429_960_720.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rest-api/public/πολη/Νανσι/95dd07ceb3b7aa2011e4fe8de42ee012_XL.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rest-api/public/πολη/Νυρεμβεργη/duomo-milano.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rest-api/public/πολη/Παρισι2/smile.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rest-api/public/πολη/ασδ/smile.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rest-api/public/πολη/παρισι/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rest-api/public/πολη/παρισι/nancy-3064868_960_720.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rest-api/public/πολη/παρισι/smile.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rest-api/public/ςε/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rest-api/public/ςε/5-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rest-api/public/ςε/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rest-api/routes/browse-files.js" beforeDir="false" afterPath="$PROJECT_DIR$/../rest-api/routes/browse-files.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -65,26 +22,77 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/city/city.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2208">
-              <caret line="105" column="16" selection-start-line="105" selection-start-column="16" selection-end-line="105" selection-end-column="16" />
+            <state relative-caret-position="1541">
+              <caret line="76" column="21" selection-start-line="76" selection-start-column="14" selection-end-line="76" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gatsby-config.js">
+        <entry file="file://$PROJECT_DIR$/src/components/general/points-of-interest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
-              <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+            <state relative-caret-position="414">
+              <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/image-header/image-header.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2898">
+              <caret line="126" column="89" selection-start-line="126" selection-start-column="83" selection-end-line="126" selection-end-column="89" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/serve-static.js">
+        <entry file="file://$PROJECT_DIR$/src/components/city/bg-image.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="516">
+              <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/general/footer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/app-router.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/city/image.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="598">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -92,62 +100,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/city/city-info.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/city/city-info-tabs.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="667">
-              <caret line="33" column="39" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/tours/tour-offer-wide.js">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="46">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/styles/tour-offer-wide.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
-              <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/styles/global.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5267">
-              <caret line="229" selection-start-line="229" selection-end-line="229" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/tours/tour-group.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1495">
-              <caret line="70" column="24" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
+              <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -266,6 +220,23 @@
               <item name="gatsby-client" type="b2602c69:ProjectViewProjectNode" />
               <item name="gatsby-client" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="gatsby-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gatsby-client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gatsby-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gatsby-client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gatsby-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gatsby-client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="styles" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -336,13 +307,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="185310000" />
+    <option name="totallyTimeSpent" value="186124000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.498452" visible="true" weight="0.27291885" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.498452" visible="true" weight="0.17913593" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" sideWeight="0.501548" side_tool="true" weight="0.24973656" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -356,7 +327,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50052685" side_tool="true" weight="0.30978808" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49947312" visible="true" weight="0.24714434" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49947312" visible="true" weight="0.27447024" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -674,8 +645,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/city/city.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2208">
-          <caret line="105" column="16" selection-start-line="105" selection-start-column="16" selection-end-line="105" selection-end-column="16" />
+        <state relative-caret-position="1541">
+          <caret line="76" column="21" selection-start-line="76" selection-start-column="14" selection-end-line="76" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -728,28 +699,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/city/city-info.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="46">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/city/bg-image.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="671">
-          <caret line="46" column="22" lean-forward="true" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
+        <state relative-caret-position="516">
+          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/component---src-pages-index-js-8e4a5e2a9bcced4aad45.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" column="45" selection-start-line="1" selection-start-column="45" selection-end-line="1" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/public/component---src-pages-index-js-8e4a5e2a9bcced4aad45.js" />
     <entry file="file://$PROJECT_DIR$/gatsby-config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="529">
