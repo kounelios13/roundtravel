@@ -236,7 +236,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../rest-api/.idea" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.idea" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -292,12 +292,12 @@
       <workItem from="1563608302183" duration="3740000" />
       <workItem from="1563781060463" duration="597000" />
       <workItem from="1563868375102" duration="601000" />
-      <workItem from="1565078582846" duration="320000" />
+      <workItem from="1565078582846" duration="443000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142696000" />
+    <option name="totallyTimeSpent" value="142819000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -310,7 +310,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12802951" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
