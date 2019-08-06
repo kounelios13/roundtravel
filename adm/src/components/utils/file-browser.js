@@ -42,7 +42,7 @@ class FileBrowser extends Component {
                 const selectedFiles = this.state.files.filter((file)=>{
                     return file.selected !== false
                 })
-                this.props.filesSelected(selectedFiles)
+                this.props.filesSelected(selectedFiles, this.props.i)
                 this.setState({files: []})
             }
         };
@@ -239,7 +239,8 @@ class FileBrowser extends Component {
 
 FileBrowser.propTypes = {
     mode: PropTypes.string.isRequired,
-    filesSelected: PropTypes.func.isRequired
+    filesSelected: PropTypes.func.isRequired,
+    i: PropTypes.number
 }
 
 export default FileBrowser;

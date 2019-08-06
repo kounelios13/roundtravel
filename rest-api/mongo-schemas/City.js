@@ -39,6 +39,10 @@ const CitySchema = new Schema({
         type: String,
         required: true
     },
+    sights: {
+      type: [],
+      required: false
+    },
     tags: {
         type: String,
         required: true

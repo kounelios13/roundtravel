@@ -30,6 +30,7 @@ class EditCity extends Component {
             metaTitle: '',
             metaDescription: '',
             metaImage: '',
+            sights: [],
             information: [],
             images: [],
             continent: '',
@@ -52,6 +53,11 @@ class EditCity extends Component {
         this.fetchGeolocationData = this.fetchGeolocationData.bind(this)
         this.addContentEntry = this.addContentEntry.bind(this)
         this.addMetaImage = this.addMetaImage.bind(this)
+        this.addSight = this.addSight.bind(this)
+        this.addSightImage = this.addSightImage.bind(this)
+        this.handleSightNameChange = this.handleSightNameChange.bind(this)
+        this.removeSight = this.removeSight.bind(this)
+        this.updateSightImageAlt = this.updateSightImageAlt.bind(this)
     }
 
     deleteCity(e){
@@ -103,13 +109,25 @@ class EditCity extends Component {
 
     addContentEntry(i){
         const information = this.state.information
-        information[i].content.push({title: '', text: ''})
+        information[i].content.push({name: '', text: ''})
         this.setState({information: information})
-
     }
+
+
 
     handleChange(e){
         this.setState({[e.target.name]: e.target.value});
+    }
+
+    addSightImage(images, i){
+        console.log(i)
+        if(images.length < 0){
+            return
+        }
+
+        const sights = this.state.sights
+        sights[i].photoUrl = images[0].url
+        this.setState({sights: sights})
     }
 
     deleteInformation(i){
@@ -121,6 +139,13 @@ class EditCity extends Component {
 
     addImage(){
         this.setState({images: [...this.state.images, {url: '', alt: ''}]})
+    }
+
+    updateSightImageAlt(e){
+        const i = parseInt(e.target.name.split('-')[1])
+        let sights = this.state.sights
+        sights[i].alt = e.target.value
+        this.setState({sights: sights})
     }
 
     moveImageDown(i){
@@ -160,7 +185,6 @@ class EditCity extends Component {
 
 
         if(field === 'title'){
-            console.log('ol')
             information[index].title = e.target.value
             this.setState({information: information})
         }
@@ -177,7 +201,6 @@ class EditCity extends Component {
             this.setState({information: information})
         }
         console.log(this.state)
-
     }
 
     submitForm(e){
@@ -200,9 +223,27 @@ class EditCity extends Component {
 
     formIsComplete(){
         let formComplete = true
-        if(this.state.name === '' || this.state.description === '' || this.state.history === '' || this.state.tags === '' || this.state.url === '' || this.state.lat === '' || this.state.lon === ''){
+        if(this.state.name === '' || this.state.description === '' || this.state.history === '' || this.state.tags === '' || this.state.url === '' || this.state.lat === '' || this.state.lon === '' || this.state.metaTitle === '' || this.state.metaDescription === '' || this.state.pageTitle === '' || this.state.pageSubtitle === '' || this.state.suggestedTitle === '' || this.state.suggestedSubtitle === '' ){
             formComplete = false
         }
+
+        this.state.sights.map(sight=>{
+            if(sight.name === '' || sight.description === '' || sight.photoUrl === '' || sight.alt === ''){
+                formComplete = false
+            }
+        })
+
+        this.state.information.map(info=>{
+            if(info.title === ''){
+                formComplete = false
+            }
+            info.content.map(section=>{
+                if(section.name === '' || section.text === ''){
+                    formComplete = false;
+                }
+            })
+        })
+
         this.state.images.forEach(img=>{
             if(img.alt === ''){
                 formComplete = false
@@ -224,8 +265,12 @@ class EditCity extends Component {
 
     addInformationTab(){
         this.setState({
-            information: [...this.state.information, {title: '', content: [{title: '', text: ''}]}]
+            information: [...this.state.information, {title: '', content: [{name: '', text: ''}]}]
         })
+    }
+
+    addSight(){
+        this.setState({sights: [...this.state.sights, {name: '', description: '', photoUrl: '', alt: ''}]})
     }
 
     addMetaImage(images){
@@ -239,6 +284,33 @@ class EditCity extends Component {
          })
          this.setState({images: [...this.state.images, ...imagesToAdd]})
      }
+
+    handleSightNameChange(e){
+        const sights = this.state.sights
+
+        const i = parseInt(e.target.name.split('-')[2])
+
+        if(e.target.name.includes('name')){
+            console.log(i)
+            sights[i].name = e.target.value
+            this.setState({sights: sights})
+        }
+
+        if(e.target.name.includes('description')){
+            console.log(i)
+            sights[i].description = e.target.value
+            this.setState({sights: sights})
+        }
+
+    }
+
+    removeSight(i){
+        let sights = this.state.sights
+        sights = sights.filter((sight,i)=>{
+            return i !== i
+        })
+        this.setState({sights: sights})
+    }
 
      onSelectChange(e){
         this.setState({continent: e.target.value})
@@ -360,35 +432,8 @@ class EditCity extends Component {
                                         <br/>
 
 
-                                        <h3 className='d-inline'>Tabs πληροφοριων</h3> <span className='text-danger' onClick={this.addInformationTab}><FaPlus /></span>
-                                        <hr/>
-                                        <div className='pb-4'>
-                                            {
-                                                this.state.information.map((activity, i)=>{
-                                                    return (
-                                                        <div className='mt-3 mb-3' key={i}>
-                                                            <label className={'display-5'} htmlFor={'information-title-' + i}>Όνομα δεσμης</label> <span onClick={()=>{this.deleteInformation(i)}} className='text-danger'><FaMinus /></span>
-                                                            <input name={'information-title-' + i} value={this.state.information[i].title} onChange={this.handleInformationChange} className={'w-100 mb-3'} type="text"/>
-                                                            {
-                                                                activity.content.map((entry, j)=>{
 
-                                                                    return (
-                                                                        <div key={j}>
-                                                                            <label htmlFor={'information-name-' + i + '-' +  j}>Τίτλος πεδιου</label> <span onClick={()=>{this.addContentEntry(i)}} className='text-danger'><FaPlus /></span>
-                                                                            <input name={'information-name-' + i + '-' +  j} value={this.state.information[i].name} onChange={this.handleInformationChange} className={'w-100 mb-3'} type="text"/>
-                                                                            <label htmlFor={'information-description-' + i + '-' +  j}>Περιγραφη πεδιου</label>
-                                                                            <textarea name={'information-description-' + i + '-' +  j} value={this.state.information[i].description} onChange={this.handleInformationChange} className="w-100" rows="4"></textarea>
-                                                                        </div>
-                                                                    )
-                                                                })
-                                                            }
-
-                                                        </div>
-                                                    )
-                                                })
-                                            }
-                                        </div>
-                                        <div>
+                                        <div className='pb-5 pt-5'>
                                             <h4 className='d-inline'>Είκονες πόλης</h4>
                                             <hr/>
                                             <h5>Επίλογη είκονων</h5>
@@ -416,7 +461,7 @@ class EditCity extends Component {
                                                                             </div>
                                                                         </div>
                                                                         <div>
-                                                                            <input className='col-12' value={this.state.images[i].alt} onChange={(e)=>{this.onImageAltChange(e, i)}} placeholder='Περιγραφή εικόνας' type="text"/>
+                                                                            <input className='col-12' value={this.state.images[i].alt} onChange={(e)=>{this.onImageAltChange(e, i)}} placeholder='Περιγραφή εικfileόνας' type="text"/>
                                                                         </div>
                                                                     </div>
 
@@ -426,6 +471,70 @@ class EditCity extends Component {
                                                     })
                                                 }
                                             </div>
+                                        </div>
+
+
+                                        <h3 className='d-inline'>Αξιοθεατα</h3> <span className='text-danger' onClick={this.addSight}><FaPlus /></span>
+                                        <hr/>
+
+                                        <div className="pb-5">
+                                            {
+                                                this.state.sights.map((sight, i)=>{
+                                                    return (
+                                                        <div key={i} className={'pb-4'}>
+                                                            <label htmlFor="sight-name">Όνομα αξιοθεατου</label><span className={'text-danger'} onClick={()=>{this.removeSight(i)}}><FaMinus /></span>
+                                                            <input value={this.state.sights[i].name} className={'w-100 mb-3'} type="text" name={`sight-name-${i}`} onChange={(i)=>{this.handleSightNameChange(i)}} />
+
+                                                            <label htmlFor="sight-name">Περιγραφή αξιοθεατου</label>
+                                                            <textarea value={this.state.sights[i].description} type="text" name={`sight-description-${i}`} className="w-100" rows="4"  onChange={(i)=>{this.handleSightNameChange(i)}}></textarea>
+                                                            {
+                                                                sight.photoUrl !== '' &&
+                                                                <div>
+                                                                    <img className='img-fluid' src={`${config.imagesUrl}${sight.photoUrl}`} alt=""/>
+                                                                    <input name={'imgAlt-' + i} value={this.state.sights[i].alt} placeholder={'Περιγραφη εικονας'} onChange={(i)=>{this.updateSightImageAlt(i)}} className={'col-12'} type="text"/>
+                                                                </div>
+                                                            }
+                                                            {
+                                                                sight.photoUrl === '' &&
+                                                                <div>
+                                                                    <label htmlFor="sight-name">Επιλογη εικονας</label><br/>
+                                                                    <FileBrowser i={i} mode={'images'} filesSelected={this.addSightImage}  />
+                                                                </div>
+                                                            }
+                                                        </div>
+                                                    )
+                                                })
+                                            }
+                                        </div>
+
+                                        <h3 className='d-inline'>Tabs πληροφοριων</h3> <span className='text-danger' onClick={this.addInformationTab}><FaPlus /></span>
+                                        <hr/>
+
+                                        <div className='pb-4'>
+                                            {
+                                                this.state.information.map((activity, i)=>{
+                                                    return (
+                                                        <div className='mt-3 mb-3' key={i}>
+                                                            <label className={'display-5'} htmlFor={'information-title-' + i}>Όνομα δεσμης</label> <span onClick={()=>{this.deleteInformation(i)}} className='text-danger'><FaMinus /></span>
+                                                            <input name={'information-title-' + i} value={this.state.information[i].title} onChange={this.handleInformationChange} className={'w-100 mb-3'} type="text"/>
+                                                            {
+                                                                activity.content.map((entry, j)=>{
+
+                                                                    return (
+                                                                        <div key={j}>
+                                                                            <label htmlFor={'information-name-' + i + '-' +  j}>Τίτλος πεδιου</label> <span onClick={()=>{this.addContentEntry(i)}} className='text-danger'><FaPlus /></span>
+                                                                            <input name={'information-name-' + i + '-' +  j} value={this.state.information[i].content[j].name} onChange={this.handleInformationChange} className={'w-100 mb-3'} type="text"/>
+                                                                            <label htmlFor={'information-description-' + i + '-' +  j}>Περιγραφη πεδιου</label>
+                                                                            <textarea name={'information-description-' + i + '-' +  j} value={this.state.information[i].content[j].text} onChange={this.handleInformationChange} className="w-100" rows="4"></textarea>
+                                                                        </div>
+                                                                    )
+                                                                })
+                                                            }
+
+                                                        </div>
+                                                    )
+                                                })
+                                            }
                                         </div>
 
                                         <button onClick={this.submitForm} className='btn btn-primary w-75 mt-4'>Αποθήκευση</button><button onClick={this.deleteCity} className='btn btn-danger w-25 mt-4'>Διαγραφή</button>
