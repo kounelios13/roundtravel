@@ -44,7 +44,7 @@ class Cities extends Component {
                             return (
                                 <div key={i} className={'m-5 app-pointer'} onClick={()=>{this.props.history.push('/cities/edit/' + city._id)}}>
 
-                                    <img src={config.serverUrl + city.images[0].url} className='city-image p-0 m-0' alt=""/>
+                                    <img src={config.imagesUrl + city.images[0].url} className='city-image p-0 m-0' alt=""/>
                                     <div className={'text-center'}>
                                         {city.name.toUpperCase()}
                                     </div>

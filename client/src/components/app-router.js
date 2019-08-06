@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import roundTravelLogo from '../images/logo.png'
-import telSvg from '../images/phone-dial.svg'
+import telSvg from '../images/icon-phone-dial.svg'
 import '../styles/router.scss'
 import { Link } from "gatsby"
 

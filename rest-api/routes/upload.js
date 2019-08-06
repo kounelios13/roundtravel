@@ -11,7 +11,7 @@ module.exports = (app) =>{
         if(req.body.type === 'images'){
             Object.values(req.files).map(img=>{
                 try {
-                    if (fs.existsSync('../gatsby-client/src/images/' + img.name)) {
+                    if (fs.existsSync('../client/src/images/' + img.name)) {
                         return res.sendStatus(409)
                     }
                 } catch(err) {
@@ -19,7 +19,7 @@ module.exports = (app) =>{
                 }
 
 
-                img.mv('../gatsby-client/src/images/' + img.name)
+                img.mv('../client/src/images/' + img.name)
                     .then((img)=>{
                         res.sendStatus(200)
                     })

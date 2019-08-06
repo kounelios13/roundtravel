@@ -3,11 +3,11 @@ var path = require('path')
 
 module.exports = (app) =>{
     app.post('/private/browse/rename', (req,res)=>{
-        const gatsbySrc = '../gatsby-client/src/images/';
+        const gatsbySrc = '../client/src/images/';
         if(req.body.type === 'image'){
 
             try {
-                if (fs.existsSync(`${gatsbySrc}${req.body.prevName}`)) {
+                if (fs.existsSync(`${gatsbySrc}${req.body.newName}`)) {
                     return res.json({success: false, type: 'exists'})
                 }
             } catch(err) {
@@ -27,7 +27,7 @@ module.exports = (app) =>{
     })
 
     app.post('/private/browse/delete', (req,res)=>{
-        const gatsbySrc = '../gatsby-client/src/';
+        const gatsbySrc = '../client/src/';
         if(req.body.type === 'image'){
             try {
                 console.log(`${gatsbySrc}images/${req.body.fileName}`)
@@ -41,7 +41,7 @@ module.exports = (app) =>{
     })
 
     app.post('/private/browse', (req, res)=>{
-        const gatsbySrc = '../gatsby-client/src/';
+        const gatsbySrc = '../client/src/';
 
         const targetDir = gatsbySrc + req.body.dir
 

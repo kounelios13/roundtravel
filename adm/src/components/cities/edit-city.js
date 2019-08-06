@@ -3,7 +3,6 @@ import {FaArrowDown, FaArrowUp, FaMinus, FaPlus, FaQuestion} from "react-icons/f
 import axios from 'axios'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import FileUpload from "../utils/file-upload";
 import config from '../../config/config'
 import FileBrowser from "../utils/file-browser";
 import ReactTooltip from 'react-tooltip'
@@ -12,13 +11,8 @@ import setAuthToken from "../../utils/set-auth-token";
 
 class EditCity extends Component {
 
-
-
     constructor(props) {
         super(props);
-
-
-
         this.state = {
             name: '',
             pageTitle: '',
@@ -197,7 +191,7 @@ class EditCity extends Component {
                     }
                 })
                 .catch(err=>{
-                    console.log('err')
+                    toast.error("Κατι πηγε στραβα", {position: toast.POSITION.BOTTOM_RIGHT});
                 })
         }else{
             toast.error("Συμπληρώστε ολα τα απαραίτητα πεδια", {position: toast.POSITION.BOTTOM_RIGHT});
@@ -283,34 +277,43 @@ class EditCity extends Component {
 
                                         <div className='mt-3'>
                                             <label htmlFor="name">Τιτλος σελιδας</label>
-                                            <input name='title' value={this.state.pageTitle} className={'w-100'} type="text" onChange={this.handleChange} />
+                                            <input name='pageTitle' value={this.state.pageTitle} className={'w-100'} type="text" onChange={this.handleChange} />
                                         </div>
 
-                                        <div className='mt-3'>
-                                            <label htmlFor="name">Υποτιτλος σελιδας</label>
-                                            <input name='subtitle' value={this.state.pageSubtitle} className={'w-100'} type="text" onChange={this.handleChange} />
+                                        <div className='mt-3 mb-5'>
+                                            <label htmlFor="pageSubtitle">Υποτιτλος σελιδας</label>
+                                            <input name='pageSubtitle' value={this.state.pageSubtitle} className={'w-100'} type="text" onChange={this.handleChange} />
                                         </div>
+
+                                        <h4>Περιγραφη πολης</h4>
+                                        <hr/>
 
                                         <div className='mt-3'>
                                             <label htmlFor="name">Τιτλος προτινομενων</label>
-                                            <input name='title' value={this.state.suggestedTitle} className={'w-100'} type="text" onChange={this.handleChange} />
+                                            <input name='suggestedTitle' value={this.state.suggestedTitle} className={'w-100'} type="text" onChange={this.handleChange} />
                                         </div>
 
-                                        <div className='mt-3'>
+                                        <div className='mt-3 mb-5'>
                                             <label htmlFor="name">Υποτιτλος προτινομενων</label>
-                                            <input name='title' value={this.state.suggestedSubtitle} className={'w-100'} type="text" onChange={this.handleChange} />
+                                            <input name='suggestedSubtitle' value={this.state.suggestedSubtitle} className={'w-100'} type="text" onChange={this.handleChange} />
                                         </div>
+
+                                        <h4>Προτινομενες εκρδοεμες</h4>
+                                        <hr/>
 
                                         <div className='mt-3'>
                                             <label htmlFor="name">Τιτλος περιγραφης πολης</label>
-                                            <input name='title' value={this.state.descriptionTitle} className={'w-100'} type="text" onChange={this.handleChange} />
+                                            <input name='descriptionTitle' value={this.state.descriptionTitle} className={'w-100'} type="text" onChange={this.handleChange} />
                                         </div>
 
-                                        <div className='mt-3'>
+                                        <div className='mt-3 mb-5'>
                                             <label htmlFor="description">Περιγραφή πόλης</label>
                                             <textarea name='description' value={this.state.description} onChange={this.handleChange} className='w-100' rows="4" cols="50"></textarea>
                                         </div>
-                                        
+
+
+                                        <h4>Λοιπα στοιχεια</h4>
+                                        <hr/>
 
                                         <div className='mt-3'>
                                             <label htmlFor="url">URL</label><p className='d-inline bg-primary rounded ml-2' data-tip="hello world"><FaQuestion /></p>
@@ -347,25 +350,19 @@ class EditCity extends Component {
                                         <h4>Meta πληροφοριες</h4>
                                         <hr/>
                                         <div className='mt-3'>
-                                            <label htmlFor="meta-title">Meta Τιτλος</label>
-                                            <input name='meta-title' value={this.state.metaTitle} onChange={this.handleChange} className={'w-100'} type="text"/>
+                                            <label htmlFor="metaTitle">Meta Τιτλος</label>
+                                            <input name='metaTitle' value={this.state.metaTitle} onChange={this.handleChange} className={'w-100'} type="text"/>
                                         </div>
                                         <div className='mt-3'>
-                                            <label htmlFor="meta-title">Meta Περιγραφη</label>
-                                            <input name='meta-description' value={this.state.metaDescription} onChange={this.handleChange} className={'w-100'} type="text"/>
+                                            <label htmlFor="metaDescription">Meta Περιγραφη</label>
+                                            <input name='metaDescription' value={this.state.metaDescription} onChange={this.handleChange} className={'w-100'} type="text"/>
                                         </div>
-                                        <p>Meta Είκονα</p>
-                                        {
-                                            this.state.name.length > 0
-                                            && <FileBrowser mode={'images'} filesSelected={this.addMetaImage} />
-                                        }
-                                        <img src={'../../../../' + this.state.metaImage} alt=""/>
                                         <br/>
 
 
                                         <h3 className='d-inline'>Tabs πληροφοριων</h3> <span className='text-danger' onClick={this.addInformationTab}><FaPlus /></span>
                                         <hr/>
-                                        <div>
+                                        <div className='pb-4'>
                                             {
                                                 this.state.information.map((activity, i)=>{
                                                     return (
@@ -402,22 +399,27 @@ class EditCity extends Component {
                                             <div className={'my-5'}>
                                                 {
                                                     this.state.images.map((img, i)=>{
-                                                        const imgSrc = config.serverUrl + img.url
+                                                        const imgSrc = config.imagesUrl + img.url
+                                                        {console.log(this.state)}
                                                         return(
                                                             <div className=' mb-3' key={i}>
                                                                 <div>
                                                                     <div className='d-inline'>
-                                                                        <div className='position-absolute text-danger bg-dark'>
-                                                                            <span onClick={()=>{this.moveImageUp(i)}} className='city-edit-img-icon mr-2'><FaArrowUp /></span>
-                                                                            <span onClick={()=>{this.moveImageDown(i)}} className='city-edit-img-icon mr-2'><FaArrowDown /></span>
-                                                                            <span onClick={()=>{this.setState({images: this.state.images.filter((img, ind)=>{return ind!==i})})}} className='city-edit-img-icon mr-2'><FaMinus /></span>
+                                                                        <div className="d-flex flex-wrap">
+                                                                            <div className='text-danger bg-dark col-12'>
+                                                                                <span onClick={()=>{this.moveImageUp(i)}} className='city-edit-img-icon mr-2'><FaArrowUp /></span>
+                                                                                <span onClick={()=>{this.moveImageDown(i)}} className='city-edit-img-icon mr-2'><FaArrowDown /></span>
+                                                                                <span onClick={()=>{this.setState({images: this.state.images.filter((img, ind)=>{return ind!==i})})}} className='city-edit-img-icon mr-2'><FaMinus /></span>
+                                                                            </div>
+                                                                            <div className="col-12 p-0 m-0">
+                                                                                <img src={imgSrc} className='img-fluid city-edit-img col-12 p-0 m-0' alt=""/>
+                                                                            </div>
                                                                         </div>
+                                                                        <div>
+                                                                            <input className='col-12' value={this.state.images[i].alt} onChange={(e)=>{this.onImageAltChange(e, i)}} placeholder='Περιγραφή εικόνας' type="text"/>
+                                                                        </div>
+                                                                    </div>
 
-                                                                        <img src={imgSrc} className='img-fluid city-edit-img' alt=""/>
-                                                                    </div>
-                                                                    <div>
-                                                                        <input value={this.state.images[i].alt} onChange={(e)=>{this.onImageAltChange(e, i)}} placeholder='Περιγραφή εικόνας' type="text"/>
-                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         )
@@ -425,10 +427,7 @@ class EditCity extends Component {
                                                 }
                                             </div>
                                         </div>
-                                        <div>
-                                            <h4 className='d-inline'>Μεταφορτώση είκονων</h4>
-                                            <hr/>
-                                        </div>
+
                                         <button onClick={this.submitForm} className='btn btn-primary w-75 mt-4'>Αποθήκευση</button><button onClick={this.deleteCity} className='btn btn-danger w-25 mt-4'>Διαγραφή</button>
                                     </form>
                         </div>

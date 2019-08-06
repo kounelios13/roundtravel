@@ -1,9 +1,9 @@
 import React, { Component } from "react"
 import Image from "../city/image"
 import '../../styles/tours/tour-group.scss'
-  import plane from '../../images/plane.svg'
-import planet from '../../images/planet.svg'
-import person from '../../images/person.svg'
+  import plane from '../../images/icon-plane.svg'
+import planet from '../../images/icon-planet.svg'
+import person from '../../images/icon-person.svg'
 
 class TourGroup extends Component {
   constructor(props) {
@@ -12,22 +12,22 @@ class TourGroup extends Component {
     this.state = {
       tours: [
         {
-          image: '2.jpg',
+          image: 'paris-garden.jpg',
           title: 'DISNEYLAND - ΠΑΡΙΣΙ ΑΠΟ ΗΡΑΚΛΕΙΟ',
           price: '40€'
         },
         {
-          image: '3.jpg',
+          image: 'paris-notre.jpg',
           title: 'ΜΠΑΛΙ SPECIAL OFFER',
           price: '40€'
         },
         {
-          image: '4.jpg',
+          image: 'paris-eiffel-2.jpg',
           title: 'ΒΟΥΔΑΠΕΣΤΗ - ΠΡΑΓΑ - ΔΡΕΣΔΗ - ΒΙΕΝΝΗ',
           price: '40€'
         },
         {
-          image: '1.jpg',
+          image: 'paris-eiffel-2.jpg',
           title: 'ΠΟΛΩΝΙΑ-ΒΙΕΝΝΗ ΚΑΛΟΚΑΙΡΙ 2019',
           price: '40€'
         }

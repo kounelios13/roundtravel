@@ -2,9 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a586540-f268-4dbe-9c70-a1eddaaceab3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../gatsby-client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gatsby-client/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gatsby-client/src/images/w3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cities/cities.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cities/cities.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cities/edit-city.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cities/edit-city.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/components/app-router.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/components/app-router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/components/city/city-info.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/components/city/city-info.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/components/city/city.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/components/city/city.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/components/image-header/image-header.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/components/image-header/image-header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/components/tours/tour-group.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/components/tours/tour-group.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/components/tours/tour-offer-wide.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/components/tours/tour-offer-wide.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/images/4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/images/alsace4-3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/images/alsace4-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/images/bus.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/images/calendar.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/images/clock.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/images/cloud-moon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/images/departure.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/images/flame.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/images/mapview.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/images/paris-louvre.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/images/paris-louvre.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/images/paris-opera.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/images/paris-opera.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/images/person.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/images/phone-dial.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/images/plane.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/images/planet.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/images/yes--" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../rest-api/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../rest-api/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rest-api/mongo-schemas/City.js" beforeDir="false" afterPath="$PROJECT_DIR$/../rest-api/mongo-schemas/City.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rest-api/routes/browse-files.js" beforeDir="false" afterPath="$PROJECT_DIR$/../rest-api/routes/browse-files.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rest-api/routes/upload.js" beforeDir="false" afterPath="$PROJECT_DIR$/../rest-api/routes/upload.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,11 +48,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/cities/edit-city.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-748">
-              <caret line="373" column="147" selection-start-line="373" selection-start-column="139" selection-end-line="373" selection-end-column="147" />
+            <state relative-caret-position="188">
+              <caret line="283" column="72" selection-start-line="283" selection-start-column="72" selection-end-line="283" selection-end-column="72" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/cities/cities.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="46" column="62" selection-start-line="46" selection-start-column="62" selection-end-line="46" selection-end-column="62" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -32,23 +75,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/utils/file-browser.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-924">
-              <caret line="47" column="10" lean-forward="true" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="543">
+              <caret line="130" column="30" lean-forward="true" selection-start-line="130" selection-start-column="30" selection-end-line="130" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/utils/file-upload.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="606">
-              <caret line="43" column="64" selection-start-line="43" selection-start-column="64" selection-end-line="43" selection-end-column="64" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="728">
+              <caret line="44" column="17" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -65,7 +102,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
+            <state relative-caret-position="528">
               <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
             </state>
           </provider>
@@ -74,7 +111,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config-overrides.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
+            <state relative-caret-position="120">
               <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
             </state>
           </provider>
@@ -83,7 +120,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/config/config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
+            <state relative-caret-position="41">
               <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
             </state>
           </provider>
@@ -92,8 +129,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="129" selection-start-line="129" selection-end-line="129" />
+            <state relative-caret-position="186">
+              <caret line="110" selection-start-line="110" selection-end-line="110" />
             </state>
           </provider>
         </entry>
@@ -111,16 +148,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>δεσμης</find>
-      <find>τιτλος</find>
-      <find>tabs</find>
-      <find>file-browser-image-selected</find>
-      <find>meta</find>
-      <find>metaImage</find>
-      <find>metaim</find>
-      <find>img</find>
-      <find>image</find>
-      <find>[0]</find>
       <find>addMeta</find>
       <find>component</find>
       <find>selected</find>
@@ -141,6 +168,16 @@
       <find>toast</find>
       <find>touched</find>
       <find>υπαρχ</find>
+      <find>το ονομα</find>
+      <find>Τιτλος προτινομενων</find>
+      <find>img</find>
+      <find>suggestedSub</find>
+      <find>descriptionTitle</find>
+      <find>title</find>
+      <find>pageTitle</find>
+      <find>http</find>
+      <find>config.</find>
+      <find>pageSubtitle</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -167,7 +204,6 @@
         <option value="$PROJECT_DIR$/src/components/locations/locations.js" />
         <option value="$PROJECT_DIR$/src/components/locations/edit-locations.js" />
         <option value="$PROJECT_DIR$/src/components/locations/edit-location.js" />
-        <option value="$PROJECT_DIR$/src/components/cities/cities.js" />
         <option value="$PROJECT_DIR$/src/components/countries/edit-country.js" />
         <option value="$PROJECT_DIR$/src/components/categories.js" />
         <option value="$PROJECT_DIR$/src/components/categories/edit-categories.js" />
@@ -183,10 +219,11 @@
         <option value="$PROJECT_DIR$/src/public/manifest.json" />
         <option value="$PROJECT_DIR$/src/config/config.js" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/src/components/cities/edit-city.js" />
-        <option value="$PROJECT_DIR$/src/index.css" />
         <option value="$PROJECT_DIR$/src/components/utils/file-browser.js" />
         <option value="$PROJECT_DIR$/src/components/utils/file-upload.js" />
+        <option value="$PROJECT_DIR$/src/index.css" />
+        <option value="$PROJECT_DIR$/src/components/cities/cities.js" />
+        <option value="$PROJECT_DIR$/src/components/cities/edit-city.js" />
       </list>
     </option>
   </component>
@@ -240,7 +277,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -309,14 +346,16 @@
       <workItem from="1564731951232" duration="8868000" />
       <workItem from="1564818340376" duration="11166000" />
       <workItem from="1564955628441" duration="4264000" />
+      <workItem from="1565080265248" duration="6172000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="194523000" />
+    <option name="totallyTimeSpent" value="200695000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15595363" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -332,7 +371,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32896066" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.21493441" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.21391486" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -505,16 +544,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/cities/cities.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/react.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
@@ -530,27 +559,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config-overrides.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../gatsby-client/serve-static.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="656">
-          <caret line="16" column="15" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../gatsby-client/serve-static.js" />
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="685">
@@ -565,51 +574,69 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/config/config.js">
+    <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
+        <state relative-caret-position="528">
           <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/cities/edit-city.js">
+    <entry file="file://$PROJECT_DIR$/config-overrides.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-748">
-          <caret line="373" column="147" selection-start-line="373" selection-start-column="139" selection-end-line="373" selection-end-column="147" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="129" selection-start-line="129" selection-end-line="129" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/utils/file-browser.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-924">
-          <caret line="47" column="10" lean-forward="true" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="120">
+          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/utils/file-upload.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="606">
-          <caret line="43" column="64" selection-start-line="43" selection-start-column="64" selection-end-line="43" selection-end-column="64" />
+        <state relative-caret-position="728">
+          <caret line="44" column="17" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/utils/file-browser.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="543">
+          <caret line="130" column="30" lean-forward="true" selection-start-line="130" selection-start-column="30" selection-end-line="130" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="110" selection-start-line="110" selection-end-line="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/cities/cities.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="46" column="62" selection-start-line="46" selection-start-column="62" selection-end-line="46" selection-end-column="62" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/config/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="41">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/cities/edit-city.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="283" column="72" selection-start-line="283" selection-start-column="72" selection-end-line="283" selection-end-column="72" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>

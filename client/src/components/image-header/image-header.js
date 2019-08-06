@@ -19,8 +19,9 @@ class ImageHeader extends Component {
       activeOnLoad: this.flipFromRight,
       sliderIndex: 0,
       images: [
-        '3.jpg',
-        '4.jpg'
+        'paris-louvre.jpg',
+        'paris-eiffel-3.jpg',
+        'paris-louvre-2.jpg'
       ],
     }
     this.swipeRight = this.swipeRight.bind(this)

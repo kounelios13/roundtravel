@@ -7,11 +7,35 @@ const CitySchema = new Schema({
         type: String,
         required: true
     },
+    pageTitle: {
+        type: String,
+        required: true
+    },
+    pageSubtitle: {
+        type: String,
+        required: true
+    },
+    descriptionTitle: {
+        type: String,
+        required: true
+    },
     description: {
         type: String,
         required: true
     },
-    history: {
+    metaTitle: {
+        type: String,
+        required: true
+    },
+    metaDescription: {
+        type: String,
+        required: true
+    },
+    suggestedTitle: {
+        type: String,
+        required: true
+    },
+    suggestedSubtitle: {
         type: String,
         required: true
     },
@@ -37,6 +61,10 @@ const CitySchema = new Schema({
     },
     lon: {
         type: Number,
+        required: false
+    },
+    information: {
+        type: [],
         required: false
     },
     visibleInMap: {

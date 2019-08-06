@@ -23,7 +23,7 @@ const CityInfo = () => {
 
   return (
     <section>
-      <BgImage children={content} className={'city-info-image img-filter my-5 '} fileName={'2.jpg'} />
+      <BgImage children={content} className={'city-info-image img-filter my-5 '} fileName={'paris-eiffel-3.jpg'} />
     </section>
   )
 }
