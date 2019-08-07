@@ -4,34 +4,14 @@ import '../../styles/tours/tour-group.scss'
   import plane from '../../images/icon-plane.svg'
 import planet from '../../images/icon-planet.svg'
 import person from '../../images/icon-person.svg'
+import PropTypes from "prop-types";
 
 class TourGroup extends Component {
   constructor(props) {
     super(props)
 
     this.state = {
-      tours: [
-        {
-          image: 'paris-garden.jpg',
-          title: 'DISNEYLAND - ΠΑΡΙΣΙ ΑΠΟ ΗΡΑΚΛΕΙΟ',
-          price: '40€'
-        },
-        {
-          image: 'paris-notre.jpg',
-          title: 'ΜΠΑΛΙ SPECIAL OFFER',
-          price: '40€'
-        },
-        {
-          image: 'paris-eiffel-2.jpg',
-          title: 'ΒΟΥΔΑΠΕΣΤΗ - ΠΡΑΓΑ - ΔΡΕΣΔΗ - ΒΙΕΝΝΗ',
-          price: '40€'
-        },
-        {
-          image: 'paris-eiffel-2.jpg',
-          title: 'ΠΟΛΩΝΙΑ-ΒΙΕΝΝΗ ΚΑΛΟΚΑΙΡΙ 2019',
-          price: '40€'
-        }
-      ]
+      tours: this.props.tours
     }
   }
 
@@ -42,8 +22,8 @@ class TourGroup extends Component {
         <div className="d-flex flex-wrap py-6 col-12 p-0">
           <div className="col-8 offset-1 p-0 offset-lg-2 d-flex flex-wrap">
             <div className="col-12 space-candy mb-3">
-              <h2 className='display-5 m-0 text-bold'>Εκδρομες που προτινουμε.</h2>
-              <h4 className='display-8 m-1'>Ανακαλυψτε τα μυστικα του Παρισιου</h4>
+              <h2 className='display-5 m-0 text-bold'>{this.props.suggestedTitle}</h2>
+              <h4 className='display-8 m-1'>{this.props.suggestedSubtitle}</h4>
             </div>
           </div>
           <div className='col-12 offset-0 col-lg-8 offset-lg-2 d-flex px-0 tour-group-wrapper app-pointer'>
@@ -84,6 +64,12 @@ class TourGroup extends Component {
       </section>
     )
   }
+}
+
+TourGroup.propTypes = {
+  tours: PropTypes.array.isRequired,
+  suggestedTitle: PropTypes.string.isRequired,
+  suggestedSubtitle: PropTypes.string.isRequired
 }
 
 export default TourGroup

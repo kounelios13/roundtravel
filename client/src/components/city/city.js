@@ -12,6 +12,29 @@ import InlineContactUs from "../general/inline-contact-us"
 
 const City = (props) => {
 
+  const tours = [
+    {
+      image: 'paris-garden.jpg',
+      title: 'DISNEYLAND - ΠΑΡΙΣΙ ΑΠΟ ΗΡΑΚΛΕΙΟ',
+      price: '40€'
+    },
+    {
+      image: 'paris-notre.jpg',
+      title: 'ΜΠΑΛΙ SPECIAL OFFER',
+      price: '40€'
+    },
+    {
+      image: 'paris-eiffel-2.jpg',
+      title: 'ΒΟΥΔΑΠΕΣΤΗ - ΠΡΑΓΑ - ΔΡΕΣΔΗ - ΒΙΕΝΝΗ',
+      price: '40€'
+    },
+    {
+      image: 'paris-eiffel-2.jpg',
+      title: 'ΠΟΛΩΝΙΑ-ΒΙΕΝΝΗ ΚΑΛΟΚΑΙΡΙ 2019',
+      price: '40€'
+    }
+  ]
+
   const cityInfo = [
     {
       title: 'Δραστηριοτητες',
@@ -96,12 +119,14 @@ const City = (props) => {
   ]
 
 
+  const city = props.pageContext
+  console.log(city);
 
   return (
     <Layout>
-      <ImageHeader title={'Ταξιδι στο παρισι'} subtitle={'Φτηνα εισητηρια και εκδρομες'} fileName={'1.jpg'} />
-      <TourGroup />
-      <CityInfo />
+      <ImageHeader images={city.images} pageTitle={city.pageTitle} pageSubtitle={city.pageSubtitle} />
+      <TourGroup tours={tours} suggestedTitle={city.suggestedTitle} suggestedSubtitle={city.suggestedSubtitle} />
+      <CityInfo descriptionTitle={city.descriptionTitle} description={city.description} fileName={city.descriptionImage} />
       <PointsOfInterest points={pointsOfInterest} />
       <TourOfferWide />
       <CityInfoTabs cityInfo={cityInfo} />

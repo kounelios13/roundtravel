@@ -179,3 +179,7 @@ h6 {
   padding: 1px 3px;
   z-index: 4000;
 }
+
+.z-index-5000{
+  z-index: 5000;
+}

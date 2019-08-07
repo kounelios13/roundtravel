@@ -43,11 +43,23 @@ const BgImage = (props) => {
   })
 
   return (
-    <BackgroundImage Tag="section" className={props.className} fluid={imgFluid} >
+    <BackgroundImage Tag={props.tag} className={props.className} fluid={imgFluid} >
       {props.children}
     </BackgroundImage>
   )
 }
+
+BackgroundImage.propTypes = {
+  className: PropTypes.string,
+  fileName: PropTypes.string.isRequired,
+  tag: PropTypes.string
+
+}
+
+BackgroundImage.defaultProps = {
+  Tag: 'section'
+}
+
 
 
 export default BgImage

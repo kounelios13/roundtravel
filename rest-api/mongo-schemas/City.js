@@ -23,6 +23,18 @@ const CitySchema = new Schema({
         type: String,
         required: true
     },
+    descriptionImage: {
+        type: String,
+        required: true
+    },
+    descriptionImageX: {
+      type: String,
+      required: true,
+    },
+    descriptionImageY: {
+        type: String,
+        required: true
+    },
     metaTitle: {
         type: String,
         required: true
@@ -36,6 +48,14 @@ const CitySchema = new Schema({
         required: true
     },
     suggestedSubtitle: {
+        type: String,
+        required: true
+    },
+    sightsTitle: {
+        type: String,
+        required: true
+    },
+    sightsSubtitle: {
         type: String,
         required: true
     },

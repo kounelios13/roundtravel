@@ -21,7 +21,7 @@ class EditCity extends Component {
             suggestedSubtitle: '',
             descriptionTitle: '',
             description: '',
-            history: '',
+            descriptionImage: '',
             tags: '',
             lat: '',
             lon: '',
@@ -29,7 +29,11 @@ class EditCity extends Component {
             visibleInMap: true,
             metaTitle: '',
             metaDescription: '',
+            descriptionImageX: '50%',
+            descriptionImageY: '50%',
             metaImage: '',
+            sightsTitle: '',
+            sightsSubtitle: '',
             sights: [],
             information: [],
             images: [],
@@ -58,6 +62,7 @@ class EditCity extends Component {
         this.handleSightNameChange = this.handleSightNameChange.bind(this)
         this.removeSight = this.removeSight.bind(this)
         this.updateSightImageAlt = this.updateSightImageAlt.bind(this)
+        this.addDescriptionImage = this.addDescriptionImage.bind(this)
     }
 
     deleteCity(e){
@@ -205,6 +210,7 @@ class EditCity extends Component {
 
     submitForm(e){
         e.preventDefault()
+        console.log(this.state)
         if(this.formIsComplete()){
             axios.post(config.serverUrl + 'private/cities', this.state)
                 .then(res=>{
@@ -332,6 +338,15 @@ class EditCity extends Component {
          setAuthToken(localStorage.token)
      }
 
+    addDescriptionImage(images) {
+        if(!images.length > 0){
+            return
+        }
+        this.setState({descriptionImage: images[0].url}, ()=>{
+            console.log(this.state.descriptionImage)
+        })
+    }
+
     render() {
         return (
             <div>
@@ -357,7 +372,39 @@ class EditCity extends Component {
                                             <input name='pageSubtitle' value={this.state.pageSubtitle} className={'w-100'} type="text" onChange={this.handleChange} />
                                         </div>
 
+
+
                                         <h4>Περιγραφη πολης</h4>
+                                        <hr/>
+
+                                        <div className='mt-3'>
+                                            <label htmlFor="name">Τιτλος περιγραφης πολης</label>
+                                            <input name='descriptionTitle' value={this.state.descriptionTitle} className={'w-100'} type="text" onChange={this.handleChange} />
+                                        </div>
+
+                                        <div className='mt-3'>
+                                            <label htmlFor="description">Περιγραφή πόλης</label>
+                                            <textarea name='description' value={this.state.description} onChange={this.handleChange} className='w-100' rows="4" cols="50"></textarea>
+                                        </div>
+
+                                        <div className='mt-3 mb-5'>
+                                            {
+                                                this.state.descriptionImage !== '' &&
+                                                <div>
+                                                    <span onClick={()=>{this.setState({descriptionImage: ''})}} className='position-absolute z-index-5000 bg-info ml-3 p-1'><FaMinus/></span>
+                                                    <img src={`${config.imagesUrl}${this.state.descriptionImage}`} className='col-12 p-0 m-0' alt=""/>
+                                                    <input name={'descriptionImageX'} value={this.state.descriptionImageX} onChange={this.handleChange} type="text" className="col-6"/>
+                                                    <input name={'descriptionImageY'} value={this.state.descriptionImageY} onChange={this.handleChange} type="text" className="col-6"/>
+                                                </div>
+                                            }
+                                            {
+                                                this.state.descriptionImage === '' &&
+                                                <FileBrowser mode={'images'} filesSelected={this.addDescriptionImage} />
+                                            }
+
+                                        </div>
+
+                                        <h4>Προτινομενα</h4>
                                         <hr/>
 
                                         <div className='mt-3'>
@@ -368,19 +415,6 @@ class EditCity extends Component {
                                         <div className='mt-3 mb-5'>
                                             <label htmlFor="name">Υποτιτλος προτινομενων</label>
                                             <input name='suggestedSubtitle' value={this.state.suggestedSubtitle} className={'w-100'} type="text" onChange={this.handleChange} />
-                                        </div>
-
-                                        <h4>Προτινομενες εκρδοεμες</h4>
-                                        <hr/>
-
-                                        <div className='mt-3'>
-                                            <label htmlFor="name">Τιτλος περιγραφης πολης</label>
-                                            <input name='descriptionTitle' value={this.state.descriptionTitle} className={'w-100'} type="text" onChange={this.handleChange} />
-                                        </div>
-
-                                        <div className='mt-3 mb-5'>
-                                            <label htmlFor="description">Περιγραφή πόλης</label>
-                                            <textarea name='description' value={this.state.description} onChange={this.handleChange} className='w-100' rows="4" cols="50"></textarea>
                                         </div>
 
 
@@ -477,7 +511,17 @@ class EditCity extends Component {
                                         <h3 className='d-inline'>Αξιοθεατα</h3> <span className='text-danger' onClick={this.addSight}><FaPlus /></span>
                                         <hr/>
 
-                                        <div className="pb-5">
+                                        <div className='mt-3'>
+                                            <label htmlFor="metaTitle">Τιτλος αξιοθεταων</label>
+                                            <input name='metaTitle' value={this.state.sightsTitle} onChange={this.handleChange} className={'w-100'} type="text"/>
+                                        </div>
+
+                                        <div className='mt-3'>
+                                            <label htmlFor="metaTitle">Υποτιτλος αξιοθεταων</label>
+                                            <input name='metaTitle' value={this.state.sightsSubtitle} onChange={this.handleChange} className={'w-100'} type="text"/>
+                                        </div>
+
+                                        <div className="pb-5 mt-3">
                                             {
                                                 this.state.sights.map((sight, i)=>{
                                                     return (

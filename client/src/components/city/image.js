@@ -2,6 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import '../../styles/image-header.scss'
+import PropTypes from "prop-types";
 
 
 
@@ -34,10 +35,15 @@ const Image = (props) => {
 
   return (
     <figure>
-      <Img className={props.className} fluid={imgFluid} />
+      <Img alt={props.alt} className={props.className} fluid={imgFluid} />
     </figure>
   )
+}
 
+Image.propTypes = {
+  fileName: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  alt: PropTypes.string.isRequired
 }
 
 export default Image

@@ -18,11 +18,7 @@ class ImageHeader extends Component {
     this.state = {
       activeOnLoad: this.flipFromRight,
       sliderIndex: 0,
-      images: [
-        'paris-louvre.jpg',
-        'paris-eiffel-3.jpg',
-        'paris-louvre-2.jpg'
-      ],
+      images: this.props.images,
     }
     this.swipeRight = this.swipeRight.bind(this)
     this.swipeLeft = this.swipeLeft.bind(this)
@@ -125,8 +121,8 @@ class ImageHeader extends Component {
           <div className="col-12 p-0 m-0 text-center">
             <div className='col-12 title-wrapper position-absolute'>
               <figcaption>
-                <h1 className='header-title display-4 col-12 text-uppercase'>{this.props.title}</h1>
-                <h3 className='header-title display-5 col-12 text-uppercase text-info'>{this.props.subtitle}</h3>
+                <h1 className='header-title display-4 col-12 text-uppercase'>{this.props.pageTitle}</h1>
+                <h3 className='header-title display-5 col-12 text-uppercase text-info'>{this.props.pageSubtitle}</h3>
               </figcaption>
             </div>
             <div onClick={this.swipeLeft} className="position-absolute left-swipe">
@@ -147,7 +143,7 @@ class ImageHeader extends Component {
               </div>
             </div>
             <div>
-              <Image className={'header-image'} fileName={this.state.images[this.state.sliderIndex]} />
+              <Image alt={this.state.images[this.state.sliderIndex].alt} className={'header-image'} fileName={this.state.images[this.state.sliderIndex].url} />
             </div>
           </div>
         </div>
@@ -158,8 +154,8 @@ class ImageHeader extends Component {
 
 ImageHeader.propTypes = {
   fileName: PropTypes.string,
-  title: PropTypes.string,
-  subtitle: PropTypes.string
+  pageTitle: PropTypes.string,
+  pageSubtitle: PropTypes.string
 }
 
 export default ImageHeader
