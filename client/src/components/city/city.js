@@ -4,7 +4,7 @@ import ImageHeader from "../image-header/image-header"
 import Layout from "../layout"
 import TourGroup from "../tours/tour-group"
 import CityInfo from "./city-info"
-import PointsOfInterest from "../general/points-of-interest"
+import Sights from "../general/points-of-interest"
 import TourOfferWide from "../tours/tour-offer-wide"
 import CityInfoTabs from "./city-info-tabs"
 import InlineContactUs from "../general/inline-contact-us"
@@ -90,7 +90,7 @@ const City = (props) => {
   ]
 
 
-  const pointsOfInterest = [
+  const sights = [
     {
       photo: 'paris-versailles.jpg',
       name: 'Βερσαλλιες',
@@ -120,16 +120,16 @@ const City = (props) => {
 
 
   const city = props.pageContext
-  console.log(city);
+  console.log(city.sights);
 
   return (
     <Layout>
       <ImageHeader images={city.images} pageTitle={city.pageTitle} pageSubtitle={city.pageSubtitle} />
       <TourGroup tours={tours} suggestedTitle={city.suggestedTitle} suggestedSubtitle={city.suggestedSubtitle} />
       <CityInfo descriptionTitle={city.descriptionTitle} description={city.description} fileName={city.descriptionImage} />
-      <PointsOfInterest points={pointsOfInterest} />
+      <Sights sightsTitle={city.sightsTitle} sightsSubtitle={city.sightsSubtitle} sights={city.sights} />
       <TourOfferWide />
-      <CityInfoTabs cityInfo={cityInfo} />
+      <CityInfoTabs infoTitle={city.infoTitle} infoSubtitle={city.infoSubtitle} cityInfo={city.information} />
       <InlineContactUs />
     </Layout>
   )

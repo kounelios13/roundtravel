@@ -9,8 +9,8 @@ const CityInfoTabs = (props) => {
     <section className='col-10 offset-1 col-lg-8 offset-lg-2 mt-6'>
       <div className={'m-0 p-0'}>
         <div className="col-12 space-candy">
-          <h2 className='display-5 m-0 text-bold'>Μάθετε τα παντα για το Παρίσι.</h2>
-          <h4 className='display-8 m-1'>Ανακαλυψτε τα μυστικα του Παρισιου</h4>
+          <h2 className='display-5 m-0 text-bold'>{props.infoTitle}</h2>
+          <h4 className='display-8 m-1'>{props.infoSubtitle}</h4>
         </div>
         <Tabs className='mt-5'>
           <TabList>
@@ -29,7 +29,7 @@ const CityInfoTabs = (props) => {
                       info.content.map(section=>{
                         return (
                           <article className='tab-article'>
-                            <h3 className={'m-0 p-0 text-normal'}>{section.header}</h3>
+                            <h3 className={'m-0 p-0 text-normal'}>{section.name}</h3>
                             <div className={'text-secondary'}>
                               <ShowMore
                                 lines={3}

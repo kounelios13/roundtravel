@@ -61,7 +61,7 @@ const CitySchema = new Schema({
     },
     sights: {
       type: [],
-      required: false
+      required: true
     },
     tags: {
         type: String,
@@ -86,6 +86,14 @@ const CitySchema = new Schema({
     lon: {
         type: Number,
         required: false
+    },
+    infoTitle: {
+        type: String,
+        required: true
+    },
+    infoSubtitle: {
+        type: String,
+        required: true
     },
     information: {
         type: [],

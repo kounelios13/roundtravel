@@ -240,3 +240,11 @@ figure{
 .tab-article{
   margin-bottom: 2rem;
 }
+
+.inline-list > li{
+  display: inline;
+}
+
+.img-reverse{
+  filter: invert(100%);
+}

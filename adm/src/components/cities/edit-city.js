@@ -35,6 +35,8 @@ class EditCity extends Component {
             sightsTitle: '',
             sightsSubtitle: '',
             sights: [],
+            infoTitle: '',
+            infoSubtitle: '',
             information: [],
             images: [],
             continent: '',
@@ -512,13 +514,13 @@ class EditCity extends Component {
                                         <hr/>
 
                                         <div className='mt-3'>
-                                            <label htmlFor="metaTitle">Τιτλος αξιοθεταων</label>
-                                            <input name='metaTitle' value={this.state.sightsTitle} onChange={this.handleChange} className={'w-100'} type="text"/>
+                                            <label htmlFor="sightsTitle">Τιτλος αξιοθεταων</label>
+                                            <input name='sightsTitle' value={this.state.sightsTitle} onChange={this.handleChange} className={'w-100'} type="text"/>
                                         </div>
 
                                         <div className='mt-3'>
-                                            <label htmlFor="metaTitle">Υποτιτλος αξιοθεταων</label>
-                                            <input name='metaTitle' value={this.state.sightsSubtitle} onChange={this.handleChange} className={'w-100'} type="text"/>
+                                            <label htmlFor="sightsSubtitle">Υποτιτλος αξιοθεταων</label>
+                                            <input name='sightsSubtitle' value={this.state.sightsSubtitle} onChange={this.handleChange} className={'w-100'} type="text"/>
                                         </div>
 
                                         <div className="pb-5 mt-3">
@@ -555,6 +557,14 @@ class EditCity extends Component {
                                         <hr/>
 
                                         <div className='pb-4'>
+                                            <div className='mt-3'>
+                                                <label htmlFor="sightsSubtitle">Τιτλος ενοτητας πληροφοριων</label>
+                                                <input name='infoTitle' value={this.state.infoTitle} onChange={this.handleChange} className={'w-100'} type="text"/>
+                                            </div>
+                                            <div className='mt-3'>
+                                                <label htmlFor="sightsSubtitle">Υποτιτλος ενοτητας πληροφοριων</label>
+                                                <input name='infoSubtitle' value={this.state.infoSubtitle} onChange={this.handleChange} className={'w-100'} type="text"/>
+                                            </div>
                                             {
                                                 this.state.information.map((activity, i)=>{
                                                     return (
