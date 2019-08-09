@@ -2,7 +2,7 @@ import React from "react"
 import '../../styles/global.scss'
 import '../../styles/city/city-info.scss'
 import ShowMore from 'react-show-more';
-import BgImage from "./bg-image"
+import BgImage from "../general/bg-image"
 import PropTypes from "prop-types";
 
 const CityInfo = (props) => {

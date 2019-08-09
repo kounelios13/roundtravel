@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import Image from "../city/image"
+import Image from "../general/image"
 import '../../styles/tours/tour-group.scss'
   import plane from '../../images/icon-plane.svg'
 import planet from '../../images/icon-planet.svg'

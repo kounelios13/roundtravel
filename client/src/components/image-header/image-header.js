@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import Image from "../city/image"
+import Image from "../general/image"
 import '../../styles/image-header.scss'
 import PropTypes from "prop-types"
 
@@ -153,9 +153,9 @@ class ImageHeader extends Component {
 }
 
 ImageHeader.propTypes = {
-  fileName: PropTypes.string,
+  images: PropTypes.array.isRequired,
   pageTitle: PropTypes.string,
-  pageSubtitle: PropTypes.string
+  pageSubtitle: PropTypes.string,
 }
 
 export default ImageHeader

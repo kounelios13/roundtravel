@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import Image from "../city/image"
+import Image from "./image"
 import '../../styles/points-of-interest.scss'
 
 class PointsOfInterest extends Component {

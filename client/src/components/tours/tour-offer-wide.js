@@ -1,6 +1,6 @@
 import React from "react"
 import '../../styles/tour-offer-wide.scss'
-import BgImage from "../city/bg-image"
+import BgImage from "../general/bg-image"
 import cloudMoon from '../../images/icon-cloud-moon.svg'
 import calendar from '../../images/icon-calendar.svg'
 import bus from '../../images/icon-bus.svg'

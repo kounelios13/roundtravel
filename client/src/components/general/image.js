@@ -9,7 +9,7 @@ import PropTypes from "prop-types";
 const Image = (props) => {
   const data = useStaticQuery(graphql`
       query{
-        allFile(filter: {extension: {regex: "/(jpeg|jpg|gif|png)/"}, relativePath: {regex: "/"}}) {
+        allFile(filter: {extension: {regex: "/(jpeg|jpg|gif|png|svg)/"}, relativePath: {regex: "/"}}) {
         edges {
           node {
             relativePath
@@ -17,7 +17,7 @@ const Image = (props) => {
             extension
             childImageSharp{
               fluid(maxWidth: 1920){
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp_tracedSVG
               }
             }
           }

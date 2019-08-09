@@ -1,5 +1,5 @@
 import React from "react"
-import Image from "./image"
+import Image from "../general/image"
 import ImageHeader from "../image-header/image-header"
 import Layout from "../layout"
 import TourGroup from "../tours/tour-group"
