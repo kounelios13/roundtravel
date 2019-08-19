@@ -122,17 +122,17 @@ const City = (props) => {
 
 
   const city = props.pageContext
-  console.log(city.sights);
+
 
   return (
     <Layout>
       <ImageHeader images={city.images} pageTitle={city.pageTitle} pageSubtitle={city.pageSubtitle} />
-      {/*<TourGroup tours={tours} suggestedTitle={city.suggestedTitle} suggestedSubtitle={city.suggestedSubtitle} />*/}
-      {/*<CityInfo descriptionTitle={city.descriptionTitle} description={city.description} fileName={city.descriptionImage} />*/}
-      {/*<Sights sightsTitle={city.sightsTitle} sightsSubtitle={city.sightsSubtitle} sights={city.sights} />*/}
-      {/*<TourOfferWide />*/}
-      {/*<CityInfoTabs infoTitle={city.infoTitle} infoSubtitle={city.infoSubtitle} cityInfo={city.information} />*/}
-      {/*<InlineContactUs />*/}
+      <TourGroup tours={tours} suggestedTitle={city.suggestedTitle} suggestedSubtitle={city.suggestedSubtitle} />
+      <CityInfo descriptionTitle={city.descriptionTitle} description={city.description} fileName={city.descriptionImage} />
+      <Sights sightsTitle={city.sightsTitle} sightsSubtitle={city.sightsSubtitle} sights={city.sights} />
+      <TourOfferWide />
+      <CityInfoTabs infoTitle={city.infoTitle} infoSubtitle={city.infoSubtitle} cityInfo={city.information} />
+      <InlineContactUs />
     </Layout>
   )
 }

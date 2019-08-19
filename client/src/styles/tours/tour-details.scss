@@ -1,0 +1,41 @@
+.included-icon{
+  width: 1rem;
+  margin:0rem .5rem;
+}
+
+.included-list > li{
+  margin: .2rem 0rem;
+}
+
+.locations-list > li{
+  padding: .35rem 0rem;
+  margin: 0;
+  border-bottom: 1px solid rgba(52, 52, 52, 0.07);
+}
+
+.locations-list > li:hover{
+  background-color: rgba(0, 0, 0, 0.09);
+  cursor: pointer;
+}
+
+.text-smaller{
+  font-size: 0.98rem;
+  font-weight: 700;
+}
+
+.location-icon{
+  width: 1.5rem;
+  padding-top: .6rem;
+}
+
+.more-fix{
+  transform: translateY(-100%);
+}
+
+.no-underline{
+  text-decoration: none !important;
+}
+
+.display-7-2{
+  font-size: 1.5rem;
+}

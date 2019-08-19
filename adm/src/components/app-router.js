@@ -9,6 +9,8 @@ import Countries from "./countries/countries";
 import EditCountry from "./countries/edit-country";
 import Categories from "./categories/categories";
 import EditCategories from "./categories/edit-categories";
+import Tours from "./tours/tours";
+import EditTour from "./tours/edit-tour";
 
 class AppRouter extends Component {
 
@@ -46,6 +48,10 @@ class AppRouter extends Component {
                                     </li>
 
                                     <li className="nav-item">
+                                        <Link className="nav-link" to={'/tours'}>ΕΚΔΡΟΜΕΣ</Link>
+                                    </li>
+
+                                    <li className="nav-item">
                                         <Link className="nav-link" to={'/countries'}>ΧΩΡΕΣ</Link>
                                     </li>
                                     <li className="nav-item">
@@ -57,6 +63,7 @@ class AppRouter extends Component {
                                     </li>
 
 
+
                                 </ul>
                             </div>
                         </nav>
@@ -64,6 +71,9 @@ class AppRouter extends Component {
                 }
                 <Route path="/" exact component={Home} />
                 <Route path="/home" exact component={Home} />
+
+                <Route path="/tours" exact component={Tours} />
+                <Route path="/tours/edit/:id" exact component={EditTour} />
 
                 <Route path="/cities" exact component={Cities} />
                 <Route path="/cities/edit/:id" exact component={EditCity} />

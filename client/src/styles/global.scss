@@ -36,13 +36,12 @@ $color-dark: rgba(0,0,0,.75);
   .react-tabs__tab-list{
     border-bottom: none !important;
   }
-
 }
 
-
-.text-white-shade{
-  color: rgba(255,255,255,.96);
+.text-small{
+  font-size: .85rem;
 }
+
 
 
 html{
@@ -56,6 +55,8 @@ html{
   letter-spacing: .2rem;
   padding-bottom: .15rem;
 }
+
+
 
 body{
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
@@ -89,7 +90,7 @@ hr{
 }
 
 .display-6{
-  font-size: 1.5rem;
+  font-size: 1.9rem;
   font-weight: 300;
 }
 
@@ -214,6 +215,7 @@ figure{
   border-right: none !important;
 }
 
+
 .react-tabs__tab{
   border-radius: 0px;
   background-color: #eee;
@@ -251,4 +253,20 @@ figure{
 
 .text-secondary{
   color: #cfcfcf !important;
+}
+
+.link{
+  color: #007bff;
+  text-decoration: underline !important;
+  cursor: pointer !important;
+}
+
+.btn{
+  transition: all 0.3s !important;
+  -webkit-transition: all 0.3s !important;
+  -moz-transition: all 0.3s !important;
+}
+
+.no-border{
+  border: 0px !important;
 }

@@ -1,5 +1,5 @@
 import React from "react"
-import '../../styles/tour-offer-wide.scss'
+import '../../styles/tours/tour-offer-wide.scss'
 import BgImage from "../general/bg-image"
 import cloudMoon from '../../images/icon-cloud-moon.svg'
 import calendar from '../../images/icon-calendar.svg'
@@ -50,7 +50,7 @@ const TourOfferWide = () => {
               </details>
             </div>
           </div>
-          <div className="col-12 col-lg-5 tour-offer-wide-price-wrapper align-self-end mt-lg-5">
+          <div className="col-12 col-lg-5 tour-offer-wide-price-wrapper align-self-end pt-4 mt-lg-5">
             <div className='p-0 m-0'>
               <span className='strikethrough euro-sign tour-offer-prev-price'>380</span>
               <span className='pl-4 tour-offer-wide-price euro-sign text-info'>290</span>
@@ -63,12 +63,11 @@ const TourOfferWide = () => {
             </div>
           </div>
         </div>
-
       </div>
     </div>
 
   return (
-        <BgImage className={'img-filter'} children={tourOffer} fileName={'paris-louvre-wide.jpg'} />
+        <BgImage className={'img-filter parallax'} children={tourOffer} fileName={'paris-louvre-wide.jpg'} />
   )
 }
 

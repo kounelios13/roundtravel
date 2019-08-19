@@ -6,6 +6,8 @@ npm-debug.log*
 .idea/*
 .idea
 
+*.keys.js
+
 # Runtime data
 pids
 *.pid

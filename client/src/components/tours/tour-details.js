@@ -1,0 +1,143 @@
+import React from "react"
+import infoIcon from '../../images/icon-info.svg'
+import '../../styles/tours/tour-details.scss'
+import { Tab, TabList, TabPanel, Tabs } from "react-tabs"
+import boardIcon from '../../images/icon-board.svg'
+import iconCheck from '../../images/icon-check.svg'
+import iconMinus from '../../images/icon-minus.svg'
+import iconBook from '../../images/icon-book.svg'
+
+import keys from '../../env/keys/keys'
+
+const TourDetails = () => {
+  return (
+    <section className='p-0 m-0 d-flex flex-wrap mb-5'>
+      <div className="col-12 text-center my-6">
+        <h3 className='display-5 text-bold py-2 m-0'>Πληροφοριες εκδρομης</h3>
+        <h2 className='display-7 m-0 p-0'>Πληροφοριες οπως πτησεις, προγραμμα, αεροπορικα εισητηρια, ξενοδοχεια</h2>
+      </div>
+      <div className="col-lg-5 offset-lg-2">
+        <div className="col-12 d-flex flex-wrap">
+          <div className="col-12">
+            <h6 className='display-6 text-bold'>Περιλαμβανομενα <span className="text-small">(6)</span></h6>
+            <ul className='list-unstyled included-list'>
+              <li>
+                <img className='included-icon' src={iconCheck} alt=""/>
+                Διαμονή σε επιλεγμένα ξενοδοχεία πεντε αστερων
+              </li>
+              <li>
+                <img className='included-icon' src={iconCheck} alt=""/>
+                Αεροπορικό εισιτήριο σε οικονομική θέση
+              </li>
+              <li>
+                <img className='included-icon' src={iconCheck} alt=""/>
+                Φόροι αεροδρομίων & επίναυλος καυσίμων (200 € ανά άτομο)
+              </li>
+              <li>
+                <img className='included-icon' src={iconCheck} alt=""/>
+                Μία (1) αποσκευή και μία (1) χειραποσκευή ο έκαστος
+              </li>
+              <li>
+                <img className='included-icon' src={iconCheck} alt=""/>
+                Μεταφορές από και προς το αεροδρόμιο στο Μπαλί
+              </li>
+              <li>
+                <img className='included-icon' src={iconCheck} alt=""/>
+                Ολοήμερη εκδρομή στα καλύτερα του Ubud (ομαδικό πρόγραμμα)
+              </li>
+              <li>
+                <img className='included-icon' src={iconCheck} alt=""/>
+                24ωρο τηλέφωνο ανάγκης & Υπηρεσίες τοπικών αντιπροσώπων
+              </li>
+              <li>
+                <img className='included-icon' src={iconCheck} alt=""/>
+                Ελληνόφωνος τοπικός αντιπρόσωπος
+              </li>
+              <li>
+                <img className='included-icon' src={iconCheck} alt=""/>
+                Ενημερωτικά έντυπα, Τοπικοί φόροι, Ασφάλεια αστικής ευθύνης, ΦΠΑ
+              </li>
+            </ul>
+          </div>
+          <div className="col-12 mt-3">
+            <h6 className='display-6 text-bold'>Μή περιλαμβανομενα</h6>
+            <ul className='list-unstyled included-list'>
+              <li>
+                <img className='included-icon' src={iconMinus} alt=""/>
+                Αχθοφορικά και φιλοδωρήματα (20 € πληρωτέα κατά την άφιξη)
+              </li>
+              <li>
+                <img className='included-icon' src={iconMinus} alt=""/>
+                Οτιδήποτε αναφέρεται ως προαιρετικό ή προτεινόμενο
+              </li>
+              <li>
+                <img className='included-icon' src={iconMinus} alt=""/>
+                Έξοδα προσωπικής φύσεως, Ταξιδιωτική ασφάλεια
+              </li>
+              <li>
+                <img className='included-icon' src={iconMinus} alt=""/>
+                Φαγητό και ποτά κατά τη διάρκεια των πτήσεων της Scoot
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div className="col-lg-3">
+          <div className="col-12 p-0 m-0">
+            <img
+              className='img-fluid p-0 m-0'
+              src={`https://maps.googleapis.com/maps/api/staticmap?key=${keys.googleMapsApi}&zoom=auto&format=png&maptype=roadmap&style=element:labels%7Cvisibility:off&style=feature:administrative%7Celement:geometry%7Cvisibility:off&style=feature:administrative.country%7Celement:geometry.fill%7Ccolor:0x58dce2&style=feature:administrative.land_parcel%7Cvisibility:off&style=feature:administrative.neighborhood%7Cvisibility:off&style=feature:poi%7Cvisibility:off&style=feature:road%7Cvisibility:off&style=feature:road%7Celement:labels.text%7Cvisibility:off&style=feature:transit%7Cvisibility:off&size=480x360
+            &markers=size:mid%7Ccolor:0x058cd5%7Clabel:A%7CΜπαλι
+            &markers=size:mid%7Ccolor:0x058cd5%7Clabel:B%7CΤζακαρτα
+            &markers=size:mid%7Ccolor:0x058cd5%7Clabel:C%7CΛομποκ`} alt=""/>
+          </div>
+          <div className="col-12 p-0 m-0">
+            <h3 className='display-7-2 text-bold p-0 mt-4'>Προορισμοι</h3>
+            <ul className="list-unstyled locations-list">
+              <li>
+                <h3 className='display-7 text-bold p-0 m-0'><span className='text-info mr-2 text-smaller'>A</span>Μπαλι</h3>
+                <div className='p-0 m-0'>
+                  <div className='text-small'>
+                    <div>
+                      Απεχει <span className="text-bold">1293</span>km απο την αθήνα
+                    </div>
+                    <div className="float-right more-fix">
+                      <a href="" className="link no-underline text-info text-bold">περισσοτερα</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <h3 className='display-7 text-bold p-0 m-0'><span className='text-info mr-2 text-smaller'>B</span>Τζακαρτα</h3>
+                <div className='p-0 m-0'>
+                  <div className='text-small'>
+                    <div>
+                      Απεχει <span className="text-bold">1293</span>km απο την αθήνα
+                    </div>
+                    <div className="float-right more-fix">
+                      <a href="" className="link text-info no-underline text-bold">περισσοτερα</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <h3 className='display-7 text-bold p-0 m-0'><span className='text-info mr-2 text-smaller'>Γ</span>Λομποκ</h3>
+                <div className='p-0 m-0'>
+                  <div className='text-small'>
+                    <div>
+                      Απεχει <span className="text-bold">1293</span>km απο την αθήνα
+                    </div>
+                    <div className="float-right more-fix">
+                      <a href="" className="link text-info no-underline text-bold">περισσοτερα</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+      </div>
+    </section>
+  )
+}
+
+export default TourDetails
