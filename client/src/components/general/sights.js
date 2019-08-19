@@ -2,9 +2,10 @@ import React, { Component } from "react"
 import Image from "./image"
 import '../../styles/points-of-interest.scss'
 
-class PointsOfInterest extends Component {
+class Sights extends Component {
   constructor(props) {
     super(props)
+    console.log(props)
     this.state = {
       activeIndex: 0
     }
@@ -49,9 +50,11 @@ class PointsOfInterest extends Component {
             </div>
             <div id='point-article' className="col-12 pl-0 col-lg-7 p-0 mt-5 pl-lg-5 mt-lg-0">
               <h4 className='display-5 text-bold'>{this.props.sights[this.state.activeIndex].name}</h4>
+
               <article>
                 {this.props.sights[this.state.activeIndex].description}
               </article>
+
             </div>
           </div>
         </div>
@@ -60,4 +63,4 @@ class PointsOfInterest extends Component {
   }
 }
 
-export default PointsOfInterest
+export default Sights

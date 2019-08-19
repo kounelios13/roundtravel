@@ -26,7 +26,7 @@ const BgImage = (props) => {
             extension
             childImageSharp{
               fluid(maxWidth: 1920){
-                ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
