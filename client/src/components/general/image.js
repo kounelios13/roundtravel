@@ -3,6 +3,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import '../../styles/image-header.scss'
 import PropTypes from "prop-types";
+import { Parallax } from "react-scroll-parallax"
+import BackgroundImage from "gatsby-background-image"
 
 
 

@@ -270,3 +270,11 @@ figure{
 .no-border{
   border: 0px !important;
 }
+
+.filter-info{
+  filter: invert(45%) sepia(39%) saturate(6612%) hue-rotate(178deg) brightness(95%) contrast(96%);
+}
+
+.border-top-info{
+  border-top: 3px solid $color-info;
+}

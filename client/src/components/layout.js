@@ -4,6 +4,7 @@
  *
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 import React from "react"
 import PropTypes from "prop-types"
@@ -27,13 +28,13 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <div>
       <AppRouter />
       <div>
         <main>{children}</main>
         <Footer/>
       </div>
-    </>
+    </div>
   )
 }
 

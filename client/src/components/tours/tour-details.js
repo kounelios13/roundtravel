@@ -1,13 +1,18 @@
 import React from "react"
-import infoIcon from '../../images/icon-info.svg'
 import '../../styles/tours/tour-details.scss'
-import { Tab, TabList, TabPanel, Tabs } from "react-tabs"
-import boardIcon from '../../images/icon-board.svg'
 import iconCheck from '../../images/icon-check.svg'
 import iconMinus from '../../images/icon-minus.svg'
-import iconBook from '../../images/icon-book.svg'
+import iconCloudMoon from '../../images/icon-cloud-moon.svg'
+import iconBoard from '../../images/icon-board.svg'
+import iconPlane from '../../images/icon-plane.svg'
+import iconDeparture from '../../images/icon-departure.svg'
+import iconPrinter from '../../images/icon-printer.svg'
+import iconArrowRight from '../../images/icon-arrow-right.svg'
+import iconEnvelope from '../../images/icon-envelope.svg'
+import iconPhone from '../../images/icon-phone.svg'
 
-import keys from '../../env/keys/keys'
+
+import keys from '../../env/keys/maps.keys'
 
 const TourDetails = () => {
   return (
@@ -18,9 +23,31 @@ const TourDetails = () => {
       </div>
       <div className="col-lg-5 offset-lg-2">
         <div className="col-12 d-flex flex-wrap">
-          <div className="col-12">
-            <h6 className='display-6 text-bold'>Περιλαμβανομενα <span className="text-small">(6)</span></h6>
-            <ul className='list-unstyled included-list'>
+          <div className="col-12 shadow p-4 border-top-info">
+            <h6 className='display-7-2 text-bold mb-2'>Γενικες πληροφοριες</h6>
+            <ul className='list-unstyled included-list mt-3'>
+              <li>
+                <img className='details-icon' src={iconCloudMoon} alt=""/>
+                Διαρκεια: <span className='d-inline text-bold'>8 Μερές/ 9 Νυχτές</span>
+              </li>
+              <li>
+                <img className='details-icon' src={iconBoard} alt=""/>
+                Επομενη αναχωρηση: <span className="d-inline text-bold">31/9</span>
+              </li>
+              <li>
+                <img className='details-icon' src={iconDeparture} alt=""/>
+                Αναχώρηση από: <span className="d-inline text-bold">Ηράκλειο</span>
+              </li>
+              <li>
+                <img className='details-icon' src={iconPlane} alt=""/>
+                Τυπος: <span className='d-inline text-bold'>Αεροπορικως</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="col-12 mt-5 shadow p-4 border-top-info">
+            <h6 className='display-7-2 text-bold mb-2'>Περιλαμβανομενα <span className="text-small">(9)</span></h6>
+            <ul className='list-unstyled included-list mt-3'>
               <li>
                 <img className='included-icon' src={iconCheck} alt=""/>
                 Διαμονή σε επιλεγμένα ξενοδοχεία πεντε αστερων
@@ -59,9 +86,9 @@ const TourDetails = () => {
               </li>
             </ul>
           </div>
-          <div className="col-12 mt-3">
-            <h6 className='display-6 text-bold'>Μή περιλαμβανομενα</h6>
-            <ul className='list-unstyled included-list'>
+          <div className="col-12 mt-3 p-4 shadow border-top-info">
+            <h6 className='display-7-2 text-bold mb-2'>Μή περιλαμβανομενα  <span className="text-small">(4)</span></h6>
+            <ul className='list-unstyled included-list mt-3'>
               <li>
                 <img className='included-icon' src={iconMinus} alt=""/>
                 Αχθοφορικά και φιλοδωρήματα (20 € πληρωτέα κατά την άφιξη)
@@ -82,18 +109,17 @@ const TourDetails = () => {
           </div>
         </div>
       </div>
-      <div className="col-lg-3">
+      <div className="col-10 offset-1 mt-5 mt-lg-0 offset-lg-0 col-lg-3">
           <div className="col-12 p-0 m-0">
             <img
-              className='img-fluid p-0 m-0'
+              className='img-fluid p-0 m-0 shadow'
               src={`https://maps.googleapis.com/maps/api/staticmap?key=${keys.googleMapsApi}&zoom=auto&format=png&maptype=roadmap&style=element:labels%7Cvisibility:off&style=feature:administrative%7Celement:geometry%7Cvisibility:off&style=feature:administrative.country%7Celement:geometry.fill%7Ccolor:0x58dce2&style=feature:administrative.land_parcel%7Cvisibility:off&style=feature:administrative.neighborhood%7Cvisibility:off&style=feature:poi%7Cvisibility:off&style=feature:road%7Cvisibility:off&style=feature:road%7Celement:labels.text%7Cvisibility:off&style=feature:transit%7Cvisibility:off&size=480x360
             &markers=size:mid%7Ccolor:0x058cd5%7Clabel:A%7CΜπαλι
             &markers=size:mid%7Ccolor:0x058cd5%7Clabel:B%7CΤζακαρτα
             &markers=size:mid%7Ccolor:0x058cd5%7Clabel:C%7CΛομποκ`} alt=""/>
           </div>
           <div className="col-12 p-0 m-0">
-            <h3 className='display-7-2 text-bold p-0 mt-4'>Προορισμοι</h3>
-            <ul className="list-unstyled locations-list">
+            <ul className="list-unstyled locations-list p-0 m-0 mt-3">
               <li>
                 <h3 className='display-7 text-bold p-0 m-0'><span className='text-info mr-2 text-smaller'>A</span>Μπαλι</h3>
                 <div className='p-0 m-0'>
@@ -134,6 +160,26 @@ const TourDetails = () => {
                 </div>
               </li>
             </ul>
+          </div>
+          <div className="col-12 d-flex flex-wrap p-0 m-0 mt-3 mt-lg-4">
+            <button className='btn btn-info tour-details-button col-12'>
+              <span className="text-bold">Καντε κρατήση</span>
+              <img className='btn-icon img-reverse pulse' src={iconArrowRight} alt=""/>
+            </button>
+            <button className='btn btn-info tour-details-button col-12 mt-2'>
+              <span className="text-bold">Εκτυπωστε την εκδρομή</span>
+              <img className='btn-icon img-reverse' src={iconPrinter} alt=""/>
+            </button>
+
+
+            {/*<button className='btn btn-info tour-details-button col-6 mt-1'>*/}
+            {/*  <span className="text-bold">Καλεστε μας</span>*/}
+            {/*  <img className='btn-icon img-reverse' src={iconPhone} alt=""/>*/}
+            {/*</button>*/}
+            {/*<button className='btn btn-info tour-details-button col-6 mt-1'>*/}
+            {/*  <span className="text-bold">Email</span>*/}
+            {/*  <img className='btn-icon img-reverse' src={iconEnvelope} alt=""/>*/}
+            {/*</button>*/}
           </div>
       </div>
     </section>
