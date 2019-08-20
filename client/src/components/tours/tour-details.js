@@ -24,29 +24,29 @@ const TourDetails = () => {
       <div className="col-lg-5 offset-lg-2">
         <div className="col-12 d-flex flex-wrap">
           <div className="col-12 shadow p-4 border-top-info">
-            <h6 className='display-7-2 text-bold mb-2'>Γενικες πληροφοριες</h6>
+            <h6 className='display-7-2 text-normal mb-2'>Γενικες πληροφοριες</h6>
             <ul className='list-unstyled included-list mt-3'>
               <li>
                 <img className='details-icon' src={iconCloudMoon} alt=""/>
-                Διαρκεια: <span className='d-inline text-bold'>8 Μερές/ 9 Νυχτές</span>
+                <span className="text-secondary">Διαρκεια:</span> <span className="text-bold">8 Μερές/ 9 Νυχτές</span>
               </li>
               <li>
                 <img className='details-icon' src={iconBoard} alt=""/>
-                Επομενη αναχωρηση: <span className="d-inline text-bold">31/9</span>
+                <span className="text-secondary">Επομενη αναχωρηση:</span> <span className="text-bold">31/9</span>
               </li>
               <li>
                 <img className='details-icon' src={iconDeparture} alt=""/>
-                Αναχώρηση από: <span className="d-inline text-bold">Ηράκλειο</span>
+                <span className="text-secondary">Αναχώρηση από:</span> <span className="text-bold">Ηράκλειο</span>
               </li>
               <li>
                 <img className='details-icon' src={iconPlane} alt=""/>
-                Τυπος: <span className='d-inline text-bold'>Αεροπορικως</span>
+                <span className="text-secondary">Τυπος:</span> <span className="text-bold">Αεροπορικως</span>
               </li>
             </ul>
             <div>
-              <h6 className='display-7 text-bold m-0 p-0 mb-2'>Σημαντικες σημειωσεις</h6>
+              <h6 className='display-7 text-bold m-0 p-0 mb-2 text-normal'>Σημαντικες σημειωσεις</h6>
               <div className='m-0 p-0 ml-2'>
-                <ul className='list-unstyled'>
+                <ul className='list-unstyled text-secondary'>
                   <li>Η Σειρά εκτέλεσης του προγράμματος είναι ενδεικτική και τροποποιείται σύμφωνα με τις αργίες, τις ώρες πτήσεων και τα ραντεβού των μουσείων για τις ξεναγήσεις.</li>
                 </ul>
               </div>
@@ -54,8 +54,8 @@ const TourDetails = () => {
           </div>
 
           <div className="col-12 mt-5 shadow p-4 border-top-info">
-            <h6 className='display-7-2 text-bold mb-2'>Περιλαμβανομενα <span className="text-small">(9)</span></h6>
-            <ul className='list-unstyled included-list mt-3'>
+            <h6 className='display-7-2 text-normal mb-2'>Περιλαμβανομενα <span className="text-small text-secondary">(9)</span></h6>
+            <ul className='list-unstyled included-list mt-3 text-secondary'>
               <li>
                 <img className='included-icon' src={iconCheck} alt=""/>
                 Διαμονή σε επιλεγμένα ξενοδοχεία πεντε αστερων
@@ -95,8 +95,8 @@ const TourDetails = () => {
             </ul>
           </div>
           <div className="col-12 mt-3 p-4 shadow border-top-info">
-            <h6 className='display-7-2 text-bold mb-2'>Μή περιλαμβανομενα  <span className="text-small">(4)</span></h6>
-            <ul className='list-unstyled included-list mt-3'>
+            <h6 className='display-7-2 text-normal mb-2'>Μή περιλαμβανομενα  <span className="text-small text-secondary">(4)</span></h6>
+            <ul className='list-unstyled included-list mt-3 text-secondary'>
               <li>
                 <img className='included-icon' src={iconMinus} alt=""/>
                 Αχθοφορικά και φιλοδωρήματα (20 € πληρωτέα κατά την άφιξη)
@@ -132,7 +132,7 @@ const TourDetails = () => {
                 <h3 className='display-7 text-bold p-0 m-0'><span className='text-info mr-2 text-smaller'>A</span>Μπαλι</h3>
                 <div className='p-0 m-0'>
                   <div className='text-small'>
-                    <div>
+                    <div className='text-secondary'>
                       Απεχει <span className="text-bold">1293</span>km απο την αθήνα
                     </div>
                     <div className="float-right more-fix">
@@ -145,7 +145,7 @@ const TourDetails = () => {
                 <h3 className='display-7 text-bold p-0 m-0'><span className='text-info mr-2 text-smaller'>B</span>Τζακαρτα</h3>
                 <div className='p-0 m-0'>
                   <div className='text-small'>
-                    <div>
+                    <div className='text-secondary'>
                       Απεχει <span className="text-bold">1293</span>km απο την αθήνα
                     </div>
                     <div className="float-right more-fix">
@@ -155,10 +155,10 @@ const TourDetails = () => {
                 </div>
               </li>
               <li>
-                <h3 className='display-7 text-bold p-0 m-0'><span className='text-info mr-2 text-smaller'>Γ</span>Λομποκ</h3>
+                <h3 className='display-7 text-bold p-0 m-0'><span className='mr-2 text-smaller text-info'>Γ</span>Λομποκ</h3>
                 <div className='p-0 m-0'>
                   <div className='text-small'>
-                    <div>
+                    <div className='text-secondary'>
                       Απεχει <span className="text-bold">1293</span>km απο την αθήνα
                     </div>
                     <div className="float-right more-fix">

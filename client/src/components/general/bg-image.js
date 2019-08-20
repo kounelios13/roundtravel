@@ -3,7 +3,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import '../../styles/image-header.scss'
 import BackgroundImage from 'gatsby-background-image'
 import PropTypes from "prop-types"
-import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons'
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized

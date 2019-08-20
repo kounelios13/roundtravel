@@ -1,5 +1,7 @@
-$color-info: #058cd5;
+$color-info: rgba(14, 124, 234, 0.95);
+$color-complementary: #ea7c0e;
 $color-light: #f8f8f8;
+$color-success: #7cea0e;
 $color-black: rgba(0,0,0,.92);
 $color-dark: rgba(0,0,0,.75);
 
@@ -208,7 +210,8 @@ figure{
 }
 
 .btn-info:hover{
-  background-color: $color-info !important;
+  background-color: rgba(14, 135, 255, 0.87) !important;
+  border: 1px solid rgba(0,0,0,.005);
 }
 
 
@@ -256,7 +259,7 @@ figure{
 }
 
 .text-secondary{
-  color: #cfcfcf !important;
+  color: rgba(39, 39, 39, 0.74) !important;
 }
 
 .link{
@@ -280,5 +283,17 @@ figure{
 }
 
 .border-top-info{
-  border-top: 3px solid $color-info;
+  border-top: 4px solid $color-info;
+}
+
+.border-top-primary{
+  border-top: 4px solid rgba(25, 25, 25, 0.86);
+}
+
+.border-top-success{
+  border-top: 4px solid $color-success;
+}
+
+.text-complementary{
+  color: $color-complementary;
 }
