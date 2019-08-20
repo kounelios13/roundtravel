@@ -122,9 +122,9 @@ const TourDetails = () => {
             <img
               className='img-fluid p-0 m-0 shadow'
               src={`https://maps.googleapis.com/maps/api/staticmap?key=${process.env.MAP_API_KEY || keys.googleMapsApi}&zoom=auto&format=png&maptype=roadmap&style=element:labels%7Cvisibility:off&style=feature:administrative%7Celement:geometry%7Cvisibility:off&style=feature:administrative.country%7Celement:geometry.fill%7Ccolor:0x58dce2&style=feature:administrative.land_parcel%7Cvisibility:off&style=feature:administrative.neighborhood%7Cvisibility:off&style=feature:poi%7Cvisibility:off&style=feature:road%7Cvisibility:off&style=feature:road%7Celement:labels.text%7Cvisibility:off&style=feature:transit%7Cvisibility:off&size=480x360
-            &markers=size:mid%7Ccolor:0x058cd5%7Clabel:A%7CΜπαλι
-            &markers=size:mid%7Ccolor:0x058cd5%7Clabel:B%7CΤζακαρτα
-            &markers=size:mid%7Ccolor:0x058cd5%7Clabel:C%7CΛομποκ`} alt=""/>
+              &markers=size:mid%7Ccolor:0x058cd5%7Clabel:A%7CΜπαλι
+              &markers=size:mid%7Ccolor:0x058cd5%7Clabel:B%7CΤζακαρτα
+              &markers=size:mid%7Ccolor:0x058cd5%7Clabel:C%7CΛομποκ`} alt=""/>
 
           </div>
           <div className="col-12 p-0 m-0">
