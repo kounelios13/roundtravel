@@ -128,6 +128,7 @@ const TourDetails = () => {
 
           </div>
           <div className="col-12 p-0 m-0">
+
             <ul className="list-unstyled locations-list p-0 m-0 mt-3">
               <li>
                 <span className='text-info mr-2 text-smaller'>A</span><h3 className='display-7 d-inline-block text-bold p-0 m-0'>Μπαλι</h3>
