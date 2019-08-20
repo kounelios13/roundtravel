@@ -1,7 +1,6 @@
 import React from "react"
 import '../../styles/tours/tour-schedule.scss'
 import ShowMore from "react-show-more"
-import isMobile from '../../utils/isMobile'
 
 const TourSchedule = () => {
   const schedule = [
@@ -44,7 +43,7 @@ const TourSchedule = () => {
                     <div className="list-text w-100">
                       <article className={'text-secondary w-100'}>
                         <ShowMore
-                          lines={isMobile.getBoolean() ? 5 : 8}
+                          lines={6}
                           more='Διαβάστε περισσότερα'
                           less='Απόκρυψη'
                           anchorClass='app-show-more'

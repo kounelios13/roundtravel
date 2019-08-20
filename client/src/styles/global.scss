@@ -209,9 +209,32 @@ figure{
   background-color: $color-info;
 }
 
+.btn-info:focus, .btn-info.focus {
+  box-shadow: 0 0 0 0.2rem rgba(66, 65, 69, 0.15);
+}
+
+.btn-info.disabled, .btn-info:disabled {
+  color: #fff;
+  background-color: rgba(66, 65, 69, 0.87);
+  border-color: rgba(66, 65, 69, 0.87);
+}
+
+.btn-info:not(:disabled):not(.disabled):active, .btn-info:not(:disabled):not(.disabled).active,
+.show > .btn-info.dropdown-toggle {
+  color: #fff;
+  background-color: rgba(161, 161, 163, 0.87);
+  border-color: rgba(66, 65, 69, 0.87);
+}
+
+.btn-info:not(:disabled):not(.disabled):active:focus, .btn-info:not(:disabled):not(.disabled).active:focus,
+.show > .btn-info.dropdown-toggle:focus {
+  box-shadow: inherit;
+}
+
+
 .btn-info:hover{
-  background-color: rgba(14, 135, 255, 0.87) !important;
-  border: 1px solid rgba(0,0,0,.005);
+  background-color: rgb(43, 148, 255) !important;
+  border: 1px solid rgba(255,255,255,.005) !important;
 }
 
 

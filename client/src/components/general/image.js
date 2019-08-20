@@ -19,7 +19,7 @@ const Image = (props) => {
             extension
             childImageSharp{
               fluid(maxWidth: 1920){
-                ...GatsbyImageSharpFluid_withWebp
+                ...GatsbyImageSharpFluid
               }
             }
           }
