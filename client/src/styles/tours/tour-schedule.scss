@@ -1,0 +1,50 @@
+@import "../global";
+
+.list-wrapper {
+  z-index: 400;
+  position:relative;
+}
+.list-item-wrapper {
+  margin-top:10px;
+  position:relative;
+  padding-bottom: 1.5rem;
+}
+
+.list-item-wrapper:last-child{
+  padding-bottom: 0rem;
+}
+
+.list-bullet {
+  float:left;
+  margin-right:20px;
+  background: rgb(14, 124, 234);
+  width:2rem;
+  height: 2rem;
+  line-height:2rem;
+  border-radius:100px;
+  font-weight:600;
+  font-size: 1.4rem;
+  color:white;
+  text-align:center;
+}
+.list-item {
+  display:table-row;
+  vertical-align:middle;
+}
+.list-title {
+  line-height: 1.7rem;
+  font-size: 1.5rem;
+}
+.list-text {
+  margin: .3rem 0rem .15rem 0rem;
+  font-weight:400;
+}
+.blue-line {
+  background: $color-info;
+  z-index:-1;
+  width:3px;
+  height:100%;
+  position:absolute;
+  left:15px;
+}
+

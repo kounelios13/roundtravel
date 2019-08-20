@@ -4,6 +4,7 @@ import ImageHeader from "../image-header/image-header"
 import TourIntro from "./tour-intro"
 import TourSummary from "./tour-summary"
 import TourDetails from "./tour-details"
+import TourSchedule from "./tour-schedule"
 
 class Tour extends Component {
   render() {
@@ -13,6 +14,7 @@ class Tour extends Component {
         <TourIntro />
         <TourSummary />
         <TourDetails />
+        <TourSchedule />
       </Layout>
     )
   }

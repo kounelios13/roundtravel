@@ -35,10 +35,10 @@ class Sights extends Component {
                   let activeClass = (i === this.state.activeIndex) ? 'border-left-active' : ''
                   return (
                     <div onClick={()=>{this.setActiveIndex(i)}} key={i} className={`app-pointer d-flex flex-wrap col-12 p-0 border-right ${activeClass}`}>
-
                       <div className="col-4 p-0 m-0">
                           <Image className='col-12 p-0 m-0 img-fit interest-point-image img-hover' alt={point.alt} fileName={point.photoUrl} />
                       </div>
+
                       <div className="col-8 p-1 m-0">
                         <h4 className='p-0 m-0 display-8 text-bold'>{point.name}</h4>
                         <p className='m-0 p-0 interest-point-short-description'>{point.description}</p>
@@ -48,13 +48,12 @@ class Sights extends Component {
                 })
               }
             </div>
+
             <div id='point-article' className="col-12 pl-0 col-lg-7 p-0 mt-5 pl-lg-5 mt-lg-0">
               <h4 className='display-5 text-bold'>{this.props.sights[this.state.activeIndex].name}</h4>
-
               <article>
                 {this.props.sights[this.state.activeIndex].description}
               </article>
-
             </div>
           </div>
         </div>

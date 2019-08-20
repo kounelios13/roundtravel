@@ -129,7 +129,7 @@ const TourDetails = () => {
           <div className="col-12 p-0 m-0">
             <ul className="list-unstyled locations-list p-0 m-0 mt-3">
               <li>
-                <h3 className='display-7 text-bold p-0 m-0'><span className='text-info mr-2 text-smaller'>A</span>Μπαλι</h3>
+                <span className='text-info mr-2 text-smaller'>A</span><h3 className='display-7 d-inline-block text-bold p-0 m-0'>Μπαλι</h3>
                 <div className='p-0 m-0'>
                   <div className='text-small'>
                     <div className='text-secondary'>
@@ -142,7 +142,7 @@ const TourDetails = () => {
                 </div>
               </li>
               <li>
-                <h3 className='display-7 text-bold p-0 m-0'><span className='text-info mr-2 text-smaller'>B</span>Τζακαρτα</h3>
+                <span className='text-info mr-2 text-smaller'>B</span><h3 className='display-7 d-inline-block text-bold p-0 m-0'>Ουμπουντ</h3>
                 <div className='p-0 m-0'>
                   <div className='text-small'>
                     <div className='text-secondary'>
@@ -155,7 +155,7 @@ const TourDetails = () => {
                 </div>
               </li>
               <li>
-                <h3 className='display-7 text-bold p-0 m-0'><span className='mr-2 text-smaller text-info'>Γ</span>Λομποκ</h3>
+                <span className='text-info mr-2 text-smaller'>Γ</span><h3 className='display-7 d-inline-block text-bold p-0 m-0'>Τζακαρτα</h3>
                 <div className='p-0 m-0'>
                   <div className='text-small'>
                     <div className='text-secondary'>
