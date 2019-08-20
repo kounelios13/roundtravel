@@ -19,7 +19,7 @@ const TourDetails = () => {
     <section className='p-0 m-0 d-flex flex-wrap mb-5'>
       <div className="col-12 text-center my-6">
         <h3 className='display-5 text-bold py-2 m-0'>Πληροφοριες εκδρομης</h3>
-        <h2 className='display-7 m-0 p-0'>Πληροφοριες οπως πτησεις, προγραμμα, αεροπορικα εισητηρια, ξενοδοχεια</h2>
+        <h2 className='display-7 text-normal m-0 p-0'>Πληροφοριες οπως πτησεις, προγραμμα, αεροπορικα εισητηρια, ξενοδοχεια</h2>
       </div>
       <div className="col-lg-5 offset-lg-2">
         <div className="col-12 d-flex flex-wrap">
@@ -43,6 +43,14 @@ const TourDetails = () => {
                 Τυπος: <span className='d-inline text-bold'>Αεροπορικως</span>
               </li>
             </ul>
+            <div>
+              <h6 className='display-7 text-bold m-0 p-0 mb-2'>Σημαντικες σημειωσεις</h6>
+              <div className='m-0 p-0 ml-2'>
+                <ul className='list-unstyled'>
+                  <li>Η Σειρά εκτέλεσης του προγράμματος είναι ενδεικτική και τροποποιείται σύμφωνα με τις αργίες, τις ώρες πτήσεων και τα ραντεβού των μουσείων για τις ξεναγήσεις.</li>
+                </ul>
+              </div>
+            </div>
           </div>
 
           <div className="col-12 mt-5 shadow p-4 border-top-info">
@@ -165,10 +173,12 @@ const TourDetails = () => {
             <button className='btn btn-info tour-details-button col-12'>
               <span className="text-bold">Καντε κρατήση</span>
               <img className='btn-icon img-reverse pulse' src={iconArrowRight} alt=""/>
+              <span className="btn-icon-overlay"></span>
             </button>
             <button className='btn btn-info tour-details-button col-12 mt-2'>
-              <span className="text-bold">Εκτυπωστε την εκδρομή</span>
+              <span className="text-bold">Εκτυπωστε σε PDF</span>
               <img className='btn-icon img-reverse' src={iconPrinter} alt=""/>
+              <span className="btn-icon-overlay"></span>
             </button>
 
 
