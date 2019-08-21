@@ -1,0 +1,47 @@
+@import "global";
+
+.DayPicker-Day{
+  padding: .2rem .2rem !important;
+  margin: 1rem 2rem !important;
+  font-weight: 400;
+  color: #525b64 !important;
+}
+
+.DayPicker-Day--selected{
+  background-color: transparent !important;
+  color: $color-info !important;
+  border: 0px;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+.DayPicker-Month{
+  margin: 0px !important;
+}
+
+.DayPicker{
+  width: 100%;
+  font-size: 1.15rem;
+}
+
+.DayPicker-Day--today{
+  color: black;
+}
+
+.DayPicker-Weekday{
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+
+
+.DayPicker-Caption{
+  font-size: 1rem;
+  transform: translateY(50%);
+  color: rgba(54, 54, 54, 0.94) !important;
+}
+
+.DayPicker-NavButton{
+  transform: translateY(-10%) translateX(100%);
+  z-index: 1000 !important;
+}

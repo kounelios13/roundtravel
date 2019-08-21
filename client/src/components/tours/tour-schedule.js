@@ -43,7 +43,7 @@ const TourSchedule = () => {
                     <div className="list-text w-100">
                       <article className={'text-secondary w-100'}>
                         <ShowMore
-                          lines={6}
+                          lines={5}
                           more='Διαβάστε περισσότερα'
                           less='Απόκρυψη'
                           anchorClass='app-show-more'

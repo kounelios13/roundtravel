@@ -11,7 +11,19 @@ class TourIntro extends Component {
             <h2 className='display-6 m-1'>Ζειστε την εμπειρια</h2>
           </div>
           <div className="col-10 offset-1 col-lg-8 offset-lg-2 mt-5">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam aliquid architecto atque deserunt dicta doloribus excepturi harum iure libero, modi nesciunt porro provident quae ratione recusandae rerum sequi tempora unde veniam? Alias autem, commodi dolor dolore dolores eum fugiat, hic laborum libero natus nemo nostrum quaerat sint sunt temporibus! Accusantium ad adipisci alias animi cum distinctio dolore dolores eaque eius, expedita illum ipsam iste iusto magnam nostrum numquam, officiis porro quae quam quisquam quod totam ullam voluptates? Aut blanditiis deserunt dicta distinctio dolore est exercitationem ipsum nisi placeat vitae. Atque cumque facilis impedit in iste minus nemo, omnis provident? Ab architecto consequuntur corporis cumque cupiditate deleniti ducimus, fuga fugiat, hic id libero modi nemo neque placeat, provident ullam vero. Aliquam amet architecto aspernatur cumque, excepturi quis. Alias cupiditate debitis dolorem neque voluptates. Assumenda corporis cumque dignissimos dolorum repellat voluptate?
+            Ένας μοναδικός συνδιασμος δυο κορυφαίων ταξιδιώτικων προορισμών της Νοτιανατολικης Ασίας. Το γαλήνιο νησί των θεών, συνάντα
+
+            την πολυπολιτισμική Σιγκαπούρη σ' ένα πολύ ενδιαφέρον ταξίδι. Ένα συνοθυλευμα από Ινδουιστικούς ναούς, εξωτικές παράλιες,
+
+            χλιδατων ξενοδοχείων σε συνδιασμο με την καταπράσινη φύση, κυματιστούς ορίζοντες της Ουμπουτ, το καλοσυνάτο χαμόγελο των
+
+            ντόπιων και τον γαλήνιο τρόπο ζωής κάνουν το Μπαλί ένα ταξίδι μοναδικό!
+
+            Στην Σιγκαπούρη, η Ανατολή συνάντα τη Δύση. Κοσμοπολίτικη νυχτερινή ζωή, εκπληκτικά εστιατόρια με κουζίνες απ' όλο τον κόσμο,
+
+            και η οδός Ορχιντ με τα πολυκαταστήματα και τις υπαίθριες αγορές της China Town είναι αληθινός πειρασμός. Το Juroung Bird Park,
+
+            το νυχτερινό σαφάρι στο ζωολογικό πάρκο και τα Universal Studios θα σας καταπλήξουν!
           </div>
         </div>
       </section>

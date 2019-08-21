@@ -5,19 +5,22 @@
   margin:0rem .5rem;
 }
 
+.locations-list{
+  padding: 0px;
+}
+
 .included-list > li{
   margin: .2rem 0rem;
   font-size: .95rem;
 }
 
 .locations-list > li{
-  padding: .35rem 0rem;
-  margin: 0;
-  border-bottom: 1px solid rgba(52, 52, 52, 0.07);
+  padding: .35rem .6rem;
+  margin: 0px !important;
 }
 
 .locations-list > li:hover{
-  background-color: rgba(0, 0, 0, 0.09);
+  background-color: rgba(173, 173, 173, 0.09);
   cursor: pointer;
 }
 
@@ -57,7 +60,7 @@
   transform: translateY(10%);
   margin-left: 1.4rem;
   position: absolute;
-  right: 1.6rem;
+  right: calc(100% * 0.05);
 }
 
 .btn-icon-overlay{
