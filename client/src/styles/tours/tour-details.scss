@@ -71,7 +71,7 @@
   right: 0px;
   background-color: rgba(255, 255, 255, 0.11);
   clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
-  transition: all 1.2s cubic-bezier(.37,-0.54,.62,.3);
+  transition: all 1.2s cubic-bezier(.58,-0.96,.83,.67);
 }
 
 .btn-icon:hover{
@@ -85,4 +85,14 @@
 .tour-details-button:hover > .btn-icon-overlay{
   width: 100%;
   opacity: 0;
+}
+
+.hotel-star-icon{
+  width: 1rem;
+  margin: 0rem .005rem .15rem 0rem;
+}
+
+.tour-price-table > table > th{
+  padding: 0rem;
+
 }

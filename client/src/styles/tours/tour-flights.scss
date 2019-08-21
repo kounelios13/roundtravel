@@ -1,0 +1,23 @@
+.tour-flights-aviation-img{
+
+}
+
+.tour-flights-aviation-icon--departure{
+  width: 1.7rem;
+  filter: invert(25%);
+  transform: rotate(90deg) translateX(30%);
+}
+
+.tour-flights-aviation-icon--arrival{
+  width: 1.7rem;
+  filter: invert(25%);
+  transform: rotate(-90deg) translateX(-30%);
+}
+
+.reduced-line-height{
+  line-height: .7rem;
+}
+
+.tour-flights-caption-space{
+  transform: translateY(15%);
+}
