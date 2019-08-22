@@ -3,8 +3,11 @@
 .DayPicker-Day{
   padding: .2rem .2rem !important;
   margin: 1rem 2rem !important;
-  font-weight: 400;
   color: #525b64 !important;
+}
+
+.DayPicker-Day:hover{
+  background-color: transparent !important;
 }
 
 .DayPicker-Day--selected{
@@ -15,14 +18,25 @@
   font-weight: 700;
 }
 
+.DayPicker-Day--selected:hover{
+  background-color: $color-complementary !important;
+  border: 0px;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
 .DayPicker-Month{
   margin: 0px !important;
 }
 
 .DayPicker{
+  z-index: 2200 !important;
   width: 100%;
   font-size: 1.15rem;
+  transition: all .3s ease-in;
+  transition-delay: .4s;
 }
+
 
 .DayPicker-Day--today{
   color: black;
@@ -34,7 +48,6 @@
 }
 
 
-
 .DayPicker-Caption{
   font-size: 1rem;
   transform: translateY(50%);
@@ -44,4 +57,18 @@
 .DayPicker-NavButton{
   transform: translateY(-10%) translateX(100%);
   z-index: 1000 !important;
+}
+
+.togglableDatepicker{
+  position: absolute;
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+.datepicker-off{
+  opacity: 0;
+  transform: translateX(-60%);
+  transition-delay: 0s !important;
+  transition-timing-function: cubic-bezier(0,1.1,0,1.14);
+  transition-duration: .8s !important;
 }

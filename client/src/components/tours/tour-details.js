@@ -6,8 +6,8 @@ import '../../styles/tours/tour-details.scss'
 
 import React, { Component } from "react"
 import TourFlights from "./tour-flights"
-import TourIncluded from "../../styles/tours/tour-included"
-import TourPricing from "../../styles/tours/tour-pricing"
+import TourIncluded from "./tour-included"
+import TourPricing from "./tour-pricing"
 import TourInfo from "./tour-info"
 import TourLocations from "./tour-locations"
 import TourActionButtons from "./tour-action-buttons"

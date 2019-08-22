@@ -19,7 +19,7 @@ exports.createPages = async ({ actions: { createPage } }) => {
   })
 
   createPage({
-    path: `tours/parisi`,
+    path: `tours/bali`,
     component: path.resolve(`./src/components/tours/tour.js`),
   })
 

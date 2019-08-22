@@ -33,19 +33,19 @@ class TourSummary extends Component {
                   </summary>
                   <div className={'m-0 d-flex flex-wrap'}>
                     <img className='tour-offer-wide-icon d-inline m-0' src={cloudMoon} alt=""/>
-                    <h4 className='display-8 m-0 d-inline pl-1'><span className="text-light-grey">Διαρκεια:</span> 9 Μέρες /8 Νύχτες</h4>
+                    <h6 className='m-0 d-inline pl-1'><span className="text-normal">Διαρκεια:</span> 9 Μέρες /8 Νύχτες</h6>
                   </div>
                   <div className={'m-0 d-flex flex-wrap pt-2'}>
                     <img className='tour-offer-wide-icon d-inline m-0' src={calendar} alt=""/>
-                    <h4 className='display-8 m-0 d-inline pl-1'>Επομενη αναχώρηση: 31/ 8</h4>
+                    <h6 className='m-0 d-inline pl-1'>Επομενη αναχώρηση: 31/ 8</h6>
                   </div>
                   <div className={'m-0 d-flex flex-wrap pt-2'}>
                     <img className='tour-offer-wide-icon d-inline m-0' src={airplane} alt=""/>
-                    <h4 className='display-8 m-0 d-inline pl-1'>Τύπος: Αεροπορικως</h4>
+                    <h6 className='m-0 d-inline pl-1'>Τύπος: Αεροπορικως</h6>
                   </div>
                   <div className={'m-0 d-flex flex-wrap pt-2'}>
                     <img className='tour-offer-wide-icon d-inline m-0' src={departure} alt=""/>
-                    <h4 className='display-8 m-0 d-inline pl-1'>Αναχώρηση απο: Αθηνα</h4>
+                    <h6 className='m-0 d-inline pl-1'>Αναχώρηση απο: Αθηνα</h6>
                   </div>
                 </details>
                 <div className='link mt-3'>

@@ -1,7 +1,3 @@
-.tour-flights-aviation-img{
-
-}
-
 .tour-flights-aviation-icon--departure{
   width: 1.7rem;
   filter: invert(25%);
@@ -20,4 +16,10 @@
 
 .tour-flights-caption-space{
   transform: translateY(15%);
+}
+
+.tour-flights-aviation-img{
+  max-height: 3rem !important;
+  object-fit: cover;
+
 }

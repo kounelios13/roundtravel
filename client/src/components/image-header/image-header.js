@@ -121,7 +121,7 @@ class ImageHeader extends Component {
           <div className="col-12 p-0 m-0 text-center">
             <div className='col-12 title-wrapper position-absolute'>
               <figcaption>
-                <h1 className='header-title display-4 col-12 text-uppercase'>{this.props.pageTitle}</h1>
+                <h1 className='header-title display-4 col-12 text-uppercase text-normal'>{this.props.pageTitle}</h1>
                 <h3 className='header-title display-5 col-12 text-uppercase text-info'>{this.props.pageSubtitle}</h3>
               </figcaption>
             </div>
