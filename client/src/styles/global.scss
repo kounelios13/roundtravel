@@ -46,6 +46,11 @@ h6{
   }
 }
 
+.display-1{
+  font-size: 5rem;
+  font-weight: 500;
+}
+
 .text-small{
   font-size: .85rem;
 }
@@ -87,8 +92,8 @@ li{
   margin: 0rem .5rem !important;
 }
 
-.float-right{
-  float: right;
+.display-3{
+  font-size: 4.5rem;
 }
 
 .list-unstyled{
@@ -175,16 +180,24 @@ figure{
 }
 
 .text-normal{
+  font-weight: 400 !important;
+}
+
+.text-medium{
   font-weight: 500 !important;
 }
 
 .text-bold{
-  font-weight: 400 !important;
+  font-weight: 600 !important;
 }
 
 .euro-sign::after{
   content: '€';
   font-size: 0.7em;
+}
+
+.display-3{
+
 }
 
 .img-filter::before {
