@@ -1,5 +1,5 @@
 import React from "react"
-import aviationScoot from '../../images/aviation-scoot.png'
+import aviationScoot from '../../images/aviation-aegean.png'
 import '../../styles/tours/tour-flights.scss'
 import iconPlane from '../../images/icon-plane-plain.svg'
 
@@ -15,6 +15,7 @@ const TourFlights = () => {
               <div className='text-bold reduced-line-height'>ATH</div>
               <div className='text-small text-secondary'>14:20</div>
             </div>
+
             <div className='col-4'>
               <img className='tour-flights-aviation-icon--departure' src={iconPlane} alt=""/>
             </div>
