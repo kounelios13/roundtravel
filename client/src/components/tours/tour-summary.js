@@ -20,7 +20,7 @@ class TourSummary extends Component {
       ,{locale: grLocale}
     )
     this.tourSummary =
-      <div className={'text-light col-10 offset-1 col-lg-8 offset-lg-2 py-5'}>
+      <section className={'text-light col-10 offset-1 col-lg-8 offset-lg-2 py-5'}>
         <div className="col-12 my-4">
           <h2 className='display-5 m-0'>Εξερευνειστε το μαγικο Μπαλι</h2>
           <h3 className='text-weight-light'>Καλοκαιρινη υπερπροσφορα!</h3>
@@ -72,7 +72,7 @@ class TourSummary extends Component {
             </div>
           </div>
         </div>
-      </div>
+      </section>
   }
 
 

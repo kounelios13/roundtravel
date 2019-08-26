@@ -14,8 +14,13 @@ const TourInfo = () => {
       <div className="col-12">
         <ul className='list-unstyled included-list mt-3'>
           <li>
-            <img className='details-icon' src={iconCloudMoon} alt=""/>
-            <span className="text-secondary">Διαρκεια:</span> <span className="text-bold">8 Μερές/ 9 Νυχτές</span>
+            <img className='details-icon d-inline' src={iconCloudMoon} alt=""/>
+            <div className='d-inline-block'>
+              <span className="text-secondary">Διαρκεια:</span>
+              <div>
+                <span className="text-bold">8 Μερές/ 9 Νυχτές</span>
+              </div>
+            </div>
           </li>
           <li>
             <img className='details-icon' src={iconBoard} alt=""/>

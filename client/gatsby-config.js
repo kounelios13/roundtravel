@@ -20,7 +20,7 @@ module.exports = {
       resolve: `gatsby-plugin-purgecss`,
       options: {
         printRejected: true, // Print removed selectors and processed file names
-        ignore: ['react-day-picker/lib/style.css', 'styles/datepicker.scss'],
+        ignore: ['react-day-picker/lib/style.css', 'styles/datepicker.scss', 'react-tabs/style/react-tabs.css', 'styles/city/city-info-tabs.scss'],
         develop: true
       }
     },

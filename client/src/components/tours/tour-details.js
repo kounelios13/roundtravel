@@ -21,8 +21,8 @@ class TourDetails extends Component {
 
   render() {
     return (
-      <div>
-        <section className='p-0 m-0 d-flex flex-wrap mb-5'>
+      <section>
+        <div className='p-0 m-0 d-flex flex-wrap mb-5'>
           <div className="col-12 text-center my-6">
             <h3 className='display-5 text-bold py-2 m-0'>Πληροφοριες εκδρομης</h3>
             <h2 className='display-7 text-normal m-0 p-0'>Πληροφοριες οπως πτησεις, προγραμμα, αεροπορικα εισητηρια, ξενοδοχεια</h2>
@@ -37,8 +37,8 @@ class TourDetails extends Component {
             <TourActionButtons />
             <TourFlights />
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     )
   }
 }

@@ -1,0 +1,51 @@
+import React from "react"
+import { Tab, TabList, TabPanel, Tabs } from "react-tabs"
+import ShowMore from "react-show-more"
+import PropTypes from "prop-types";
+
+const InfoTabs = (props) => {
+  return (
+    <Tabs className='mt-5'>
+      <TabList>
+        {
+          props.tabInfo.map(info=>{
+            return <Tab>{info.title}</Tab>
+          })
+        }
+      </TabList>
+      {
+        props.tabInfo.map(info=>{
+          return (
+            <TabPanel>
+              {
+                info.content.map(section=>{
+                  return (
+                    <article className='tab-article'>
+                      <h3 className={'m-0 p-0 text-normal'}>{section.name}</h3>
+                      <div className={'text-secondary'}>
+                        <ShowMore
+                          lines={3}
+                          more='Διαβάστε περισσότερα'
+                          less='Απόκρυψη'
+                          anchorClass='app-show-more'
+                        >
+                          {section.text}
+                        </ShowMore>
+                      </div>
+                    </article>
+                  )
+                })
+              }
+            </TabPanel>
+          )
+        })
+      }
+    </Tabs>
+  )
+}
+
+InfoTabs.propTypes = {
+  tabInfo: PropTypes.array.isRequired,
+}
+
+export default InfoTabs
