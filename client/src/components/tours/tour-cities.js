@@ -1,13 +1,7 @@
 import React, { Component } from "react"
 import Image from "../general/image"
-import '../../styles/tours/tour-cities.scss'
-import BgImage from "../general/bg-image"
-import ShowMore from "react-show-more"
+import "../../styles/tours/tour-cities.scss"
 import InfoTabs from "../general/info-tabs"
-import iconArrowLeft from '../../images/icon-arrow-left.svg'
-import bali from '../../images/bali-waterfall.jpg'
-import ubud from '../../images/ubud-forrest.jpg'
-import jakarta from '../../images/jakarta-center.jpg'
 
 class TourCities extends Component {
 
@@ -42,7 +36,7 @@ class TourCities extends Component {
       <section className='d-flex flex-wrap col-lg-8 offset-lg-2'>
         <div className="col-12 d-flex flex-wrap p-0">
           <div className="col-6 p-0 text-left">
-            <img className='tour-cities-img p-0 m-0' src={bali} alt=""/>
+            <Image className='tour-cities-img p-0 m-0' fileName={'bali-waterfall.jpg'} alt={''} />
           </div>
           <div className="col-6 p-0">
             <h4 className='display-5 m-0 mb-5'>Μπαλι</h4>
@@ -55,12 +49,12 @@ class TourCities extends Component {
             <InfoTabs className='m-0' tabInfo={[{"title":"Γενικα","content":[{"title":"","text":"Το Παρίσι (γαλλικά: Paris, ΔΦΑ [paˈʁi]), γνωστό και ως η Πόλη του φωτός (Ville lumière), από τότε που εφοδιάστηκαν οι κύριες λεωφόροι του με φανούς γκαζιού το 1828, είναι η πρωτεύουσα της Γαλλίας και της περιφέρειας Ιλ ντε Φρανς (Île-de-France) και μία από τις ιστορικότερες πόλεις της Ευρώπης. Το Παρίσι περιλαμβάνει την πόλη του Παρισιού και τα περίχωρα και βρίσκεται σε ένα λεκανοπέδιο.","name":"Γενικα"},{"name":"Πληθησμος","text":"Το Παρίσι είναι κτισμένο στο κέντρο του λεκανοπεδίου του Παρισιού, κατά μέσο όρο 65 μέτρα πάνω από τη στάθμη της θάλασσας. Η πόλη του Παρισιού περιβάλλεται από μεγάλα δάση, τα οποία προσφέρουν ανάσα δροσιάς και ανάπαυσης στους Παριζιάνους. Η έκταση της πόλης φτάνει τα 105,4 τετραγωνικά χιλιόμετρα, ενώ ολόκληρη η μητροπολιτική περιοχή ξεπερνά τα 14.518 τετραγωνικά χιλιόμετρα."},{"name":"Πληθησμος","text":"Το Παρίσι είναι κτισμένο στο κέντρο του λεκανοπεδίου του Παρισιού, κατά μέσο όρο 65 μέτρα πάνω από τη στάθμη της θάλασσας. Η πόλη του Παρισιού περιβάλλεται από μεγάλα δάση, τα οποία προσφέρουν ανάσα δροσιάς και ανάπαυσης στους Παριζιάνους. Η έκταση της πόλης φτάνει τα 105,4 τετραγωνικά χιλιόμετρα, ενώ ολόκληρη η μητροπολιτική περιοχή ξεπερνά τα 14.518 τετραγωνικά χιλιόμετρα."}]},{"title":"Φαγητο","content":[{"name":"οαερκοεα","text":"ροεακορεακ"}]},{"title":"Πολιτισμος","content":[{"name":"εοακρο","text":"εραοκροαεκ"}]}]}/>
           </div>
           <div className="col-6 px-5 text-left">
-            <img className='tour-cities-img p-0 m-0' src={ubud} alt=""/>
+            <Image className='tour-cities-img p-0 m-0' fileName={'indonesia-ubud-forrest.jpg'} alt={''} />
           </div>
         </div>
         <div className="col-12 d-flex flex-wrap p-0 mt-5">
           <div className="col-6 p-0 text-left">
-            <img className='tour-cities-img p-0 m-0' src={jakarta} alt=""/>
+            <Image className='tour-cities-img p-0 m-0' fileName={'indonesia-jakarta-center.jpg'} alt={''} />
           </div>
           <div className="col-6 p-0">
             <h4 className='display-5 m-0 mb-5'>Τζακαρτα</h4>

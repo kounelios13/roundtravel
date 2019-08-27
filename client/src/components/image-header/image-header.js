@@ -121,8 +121,8 @@ class ImageHeader extends Component {
           <div className="col-12 p-0 m-0 text-center">
             <div className='col-12 title-wrapper position-absolute'>
               <figcaption>
-                <h1 className='header-title display-4 col-12 text-uppercase text-bold m-0'>{this.props.pageTitle}</h1>
-                <h3 className='header-title display-1 col-12 text-uppercase text-info'>{this.props.pageSubtitle}</h3>
+                <h1 className='header-title display-2 col-12 text-uppercase text-bold m-0'>{this.props.pageTitle}</h1>
+                <h3 className='header-title display-5 col-12 text-uppercase text-info text-normal'>{this.props.pageSubtitle}</h3>
               </figcaption>
             </div>
             <div onClick={this.swipeLeft} className="position-absolute left-swipe">
