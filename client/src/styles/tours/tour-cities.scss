@@ -1,17 +1,5 @@
-.tour-cities-content{
-  background-color: rgba(255,255,255,.8) !important;
-  z-index: 1239;
-}
-
-.tabs{
-  background-color: white !important;
-}
-
-.tour-cities-browse-icons{
-  width: 2rem;
-  filter: invert(80%);
-}
-
-.tour-cities-image{
-  background-position: 80% 20% !important;
+.tour-cities-img{
+  height: 70vh !important;
+  width: 31vw !important;
+  object-fit: cover;
 }

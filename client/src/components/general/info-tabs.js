@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 
 const InfoTabs = (props) => {
   return (
-    <Tabs className='mt-5'>
+    <Tabs className={`${props.className}`}>
       <TabList>
         {
           props.tabInfo.map(info=>{
@@ -46,6 +46,7 @@ const InfoTabs = (props) => {
 
 InfoTabs.propTypes = {
   tabInfo: PropTypes.array.isRequired,
+  className: PropTypes.string
 }
 
 export default InfoTabs
