@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import ReactTags from 'react-tag-autocomplete'
 import "react-datepicker/dist/react-datepicker.css";
 import DatePicker from "react-datepicker";
-import {FaPlus} from "react-icons/all";
+import {FaMinus, FaPlus} from "react-icons/all";
 
 
 class EditTour extends Component {
@@ -26,6 +26,26 @@ class EditTour extends Component {
                     sat: false,
                     sun: false
                 }
+            },
+            flights: {
+                departure: [
+                    {
+                        from: '',
+                        fromTime: '',
+                        to: '',
+                        toTime: '',
+                        aviation: ''
+                    }
+                ],
+                arrival: [
+                    {
+                        from: '',
+                        fromTime: '',
+                        to: '',
+                        toTime: '',
+                        aviation: ''
+                    }
+                ]
             },
             name: '',
             tags: [
@@ -57,17 +77,55 @@ class EditTour extends Component {
         this.setState({departureDates: dates})
     }
 
+    onRecurringDeparturesEnabledChange = () => {
+        let recurring = this.state.recurringDepartures
+        recurring.enabled = !recurring.enabled
+        this.setState({recurringDepartures: recurring})
+    }
+
+    handleRecurringDeparturesStartingDateChange = date => {
+        let recurring = this.state.recurringDepartures
+        recurring.startingDate = date
+        this.setState({recurringDepartures: recurring})
+    }
+
+    handleRecurringDeparturesEndingDateChange = date => {
+        let recurring = this.state.recurringDepartures
+        recurring.endingDate = date
+        this.setState({recurringDepartures: recurring})
+    }
 
 
-    handleDelete (i) {
-        const tags = this.state.tags.slice(0)
-        tags.splice(i, 1)
+   handleDelete = i => {
+       const tags = this.state.tags.slice(0)
+       tags.splice(i, 1)
+       this.setState({ tags })
+   }
+
+    handleAddition = tag =>{
+        const tags = [].concat(this.state.tags, tag)
         this.setState({ tags })
     }
 
-    handleAddition (tag) {
-        const tags = [].concat(this.state.tags, tag)
-        this.setState({ tags })
+    updateRecurringDatesDay = day => {
+        const recurring = this.state.recurringDepartures
+        recurring.days[day] = !recurring.days[day]
+        this.setState({recurringDepartures: recurring})
+    }
+
+    removeDepartureDate = i => {
+        if(this.state.departureDates.length === 1){
+            return
+        }
+
+        let dates = this.state.departureDates
+        dates = dates.filter((date, ind)=>{
+            if(i !== ind)
+                return true
+        })
+        console.log(i)
+        this.setState({departureDates: dates})
+
     }
 
 
@@ -80,7 +138,7 @@ class EditTour extends Component {
             <div>
                 <div className='col-8 offset-2 mt-5'>
                     <div className='col-8 offset-2 p-5 bg-info bg-form'>
-                        <h4>Γενικές πληροφορίες</h4>
+                        <h3>Γενικές πληροφορίες</h3>
                         <hr/>
 
                         <div className='mt-3'>
@@ -103,7 +161,7 @@ class EditTour extends Component {
                             <input name='name'  value={this.state.name} className={'w-100'} type="text" onChange={this.handleChange} />
                         </div>
 
-                        <h4>Με μια ματια</h4>
+                        <h3>Με μια ματια</h3>
                         <hr/>
 
                         <div className='mt-3'>
@@ -117,7 +175,7 @@ class EditTour extends Component {
                         </div>
 
 
-                        <h4>Στοιχεια εκδρομης</h4>
+                        <h3>Στοιχεια εκδρομης</h3>
                         <hr/>
 
                         <div className='mt-3'>
@@ -177,29 +235,98 @@ class EditTour extends Component {
                             </select>
                         </div>
 
-                        <h4 className='d-inline'>Αναχωρησεις</h4><span className='text-danger' onClick={this.addDepartureDate}><FaPlus /></span>
+                        <h3 className='d-inline'>Αναχωρησεις</h3><span className='text-danger pl-2' onClick={this.addDepartureDate}><FaPlus /></span>
                         <hr/>
 
                         <div className="form-check">
-                            <input className="form-check-input" type="checkbox" value="" onChange={()=>{this.setState({earlyBookingEnabled: !this.state.earlyBookingEnabled})}} defaultChecked={this.state.earlyBookingEnabled} id="earlyBookingEnabled"></input>
-                            <label className="form-check-label" htmlFor="earlyBookingEnabled">Επαναλαμβανομενη αναχωρηση</label>
+                            <input className="form-check-input" type="checkbox" value="" onChange={this.onRecurringDeparturesEnabledChange} defaultChecked={this.state.recurringDepartures.enabled} id="recurringDeparturesEnabled"></input>
+                            <label className="form-check-label" htmlFor="recurringDeparturesEnabled">Επαναλαμβανομενη αναχωρηση</label>
+                        </div>
+
+                        <div className='flex-wrap' style={{display: this.state.recurringDepartures.enabled ? 'flex' : 'none'}}>
+                            <div className="d-inline w-25">
+                                <div>Ημερομηνια εναρξης</div>
+                                <DatePicker
+                                    selected={this.state.recurringDepartures.startingDate}
+                                    onChange={(date) => this.handleRecurringDeparturesStartingDateChange(date)}
+                                />
+                            </div>
+                            <div className="d-inline w-25">
+                                <div>Ημερομηνια λήξης</div>
+                                <DatePicker
+                                    selected={this.state.recurringDepartures.endingDate}
+                                    onChange={(date) => this.handleRecurringDeparturesEndingDateChange(date)}
+                                />
+                            </div>
+
+                            <div className='w-100 mt-3'>
+                                {Array.of(Object.keys(this.state.recurringDepartures.days))[0].map((day, i)=>{
+
+                                    return (
+                                        <div className="form-check">
+                                            <input className="form-check-input" type="checkbox" value="" onChange={()=>this.updateRecurringDatesDay(day)} defaultChecked={this.state.recurringDepartures.days[day]} id={day}></input>
+                                            <label className="form-check-label" htmlFor={day}>{day}</label>
+                                        </div>
+                                    )
+                                })}
+                            </div>
 
                         </div>
 
-                        {
-                            this.state.departureDates.map((dt,i)=>{
-                                return (
-                                    <div className='mt-3'>
-                                        <label className='d-block' htmlFor="name">Ημερομηνια {i + 1}</label>
-                                        <DatePicker
-                                            selected={this.state.departureDates[i]}
-                                            onChange={(date) => this.handleDepartureDateChange(date, i)}
-                                        />
-                                    </div>
-                                )
-                            })
-                        }
+                        <div className="mb-5">
+                            {
+                                this.state.departureDates.map((dt,i)=>{
+                                    return (
+                                        <div className='mt-3'>
+                                            <label className='d-block' htmlFor="name" style={{color: this.state.earlyBookingDate.toLocaleDateString() === today ? 'pink' : 'white'}}>Ημερομηνια {i + 1}</label>
+                                            <DatePicker
+                                                selected={this.state.departureDates[i]}
+                                                onChange={(date) => this.handleDepartureDateChange(date, i)}
+                                            />
+                                            <span onClick={()=>this.removeDepartureDate(i)} className='text-danger pl-2'><FaMinus /></span>
+                                        </div>
+                                    )
+                                })
+                            }
+                        </div>
 
+                        <h3>Πτησεις</h3>
+                        <hr/>
+
+                        <div>
+                            <h4>Αναχωρηση</h4><span></span>
+                            {
+                                this.state.flights.departure.map(flight=>{
+                                    return (
+                                        <div>
+                                            <div className='d-flex flex-wrap'>
+                                                <div className='d-inline w-25'>
+                                                    <label htmlFor="name">Πολη αναχωρησης</label>
+                                                    <input name='name' value={this.state.name} className={'d-block py-1'} type="text" onChange={this.handleChange} />
+                                                </div>
+                                                <div className='d-inline w-25'>
+                                                    <label htmlFor="name">Ωρα αναχωρησης</label>
+                                                    <input name='name' value={this.state.name} className={'d-block py-1'} type="text" onChange={this.handleChange} />
+                                                </div>
+                                                <div className="d-inline w-50">
+                                                    <label htmlFor="name">Αεροπορικη Εταιρια</label>
+                                                    <select className="custom-select">
+                                                        <option value="1">Aegean</option>
+                                                        <option value="2">Scoot</option>
+                                                        <option value="2">Sky Express</option>
+                                                        <option value="2">Qatar</option>
+                                                        <option value="3">Emirates</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    )
+                                })
+                            }
+
+                        </div>
 
                     </div>
                 </div>
