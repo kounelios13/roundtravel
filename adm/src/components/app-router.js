@@ -61,9 +61,6 @@ class AppRouter extends Component {
                                     <li className="nav-item">
                                         <Link className="nav-link" to={'/categories'}>ΚΑΤΗΓΟΡΙΕΣ</Link>
                                     </li>
-
-
-
                                 </ul>
                             </div>
                         </nav>

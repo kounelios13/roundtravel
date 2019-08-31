@@ -1,11 +1,32 @@
 import React, {Component} from 'react';
 import ReactTags from 'react-tag-autocomplete'
+import "react-datepicker/dist/react-datepicker.css";
+import DatePicker from "react-datepicker";
+import {FaPlus} from "react-icons/all";
+
 
 class EditTour extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
+            earlyBookingDate: new Date(),
+            earlyBookingEnabled: false,
+            departureDates: [new Date()],
+            recurringDepartures: {
+                enabled: false,
+                startingDate: new Date(),
+                endingDate: new Date(),
+                days: {
+                    mon: false,
+                    tue: false,
+                    wed: false,
+                    thu: false,
+                    fri: false,
+                    sat: false,
+                    sun: false
+                }
+            },
             name: '',
             tags: [
             ],
@@ -17,6 +38,26 @@ class EditTour extends Component {
             ]
         }
     }
+
+    handleEarlyBookingDateChange = date => {
+        this.setState({
+            earlyBookingDate: date
+        });
+    };
+
+    handleDepartureDateChange = (date, i) =>{
+        const dates = this.state.departureDates
+        dates[i] = date
+        this.setState({departureDates: dates})
+    }
+
+    addDepartureDate = () => {
+        const dates = this.state.departureDates
+        dates.push(new Date())
+        this.setState({departureDates: dates})
+    }
+
+
 
     handleDelete (i) {
         const tags = this.state.tags.slice(0)
@@ -32,6 +73,9 @@ class EditTour extends Component {
 
 
     render() {
+        let today = new Date()
+        today = today.toLocaleDateString()
+
         return (
             <div>
                 <div className='col-8 offset-2 mt-5'>
@@ -77,6 +121,26 @@ class EditTour extends Component {
                         <hr/>
 
                         <div className='mt-3'>
+                            <label htmlFor="lat">Τιμή</label><br/>
+                            <input name='lat' value={this.state.lat} onChange={this.handleChange} className={this.state.earlyBookingEnabled ? 'w-75' : 'w-100'} placeholder='Τιμή' type="text"/>
+                            <input name='lon' value={this.state.lon} onChange={this.handleChange} className={'w-25'} placeholder='Early booking τιμή' type="text"  style={{display: this.state.earlyBookingEnabled ? 'inline-block' : 'none'}} />
+                            <div className="form-check">
+                                <input className="form-check-input" type="checkbox" value="" onChange={()=>{this.setState({earlyBookingEnabled: !this.state.earlyBookingEnabled})}} defaultChecked={this.state.earlyBookingEnabled} id="earlyBookingEnabled"></input>
+                                    <label className="form-check-label" htmlFor="earlyBookingEnabled">
+                                        Ενεργοποιηση Early booking
+                                    </label>
+                            </div>
+                            <div className='mt-2' style={{display: this.state.earlyBookingEnabled ? 'block' : 'none'}}>
+                                <label style={{color: this.state.earlyBookingDate.toLocaleDateString() === today ? 'pink' : 'white'}} htmlFor="lat">Ημ. Λήξης early booking</label><br/>
+                                <DatePicker
+                                    selected={this.state.earlyBookingDate}
+                                    onChange={this.handleEarlyBookingDateChange}
+                                />
+                            </div>
+                        </div>
+
+
+                        <div className='mt-3'>
                             <label htmlFor="lat">Μερες/ Νυχτες</label><br/>
                             <input name='lat' value={this.state.lat} onChange={this.handleChange} className={'w-50'} placeholder='Μερες' type="text"/>
                             <input name='lon' value={this.state.lon} onChange={this.handleChange} className={'w-50'} placeholder='Νυχτες' type="text"/>
@@ -89,7 +153,8 @@ class EditTour extends Component {
                                 tags={this.state.tags}
                                 suggestions={this.state.suggestions}
                                 handleDelete={this.handleDelete.bind(this)}
-                                handleAddition={this.handleAddition.bind(this)} />
+                                handleAddition={this.handleAddition.bind(this)}
+                            />
                         </div>
 
                         <div className='mt-3'>
@@ -101,7 +166,7 @@ class EditTour extends Component {
                             </select>
                         </div>
 
-                        <div className='mt-3'>
+                        <div className='mt-3 mb-5'>
                             <label htmlFor="name">Καταλληλο για</label>
                             <select className="custom-select">
                                 <option value="1">Ολους</option>
@@ -111,6 +176,30 @@ class EditTour extends Component {
                                 <option value="3">Ατομα με καλη φυσικη κατασταση</option>
                             </select>
                         </div>
+
+                        <h4 className='d-inline'>Αναχωρησεις</h4><span className='text-danger' onClick={this.addDepartureDate}><FaPlus /></span>
+                        <hr/>
+
+                        <div className="form-check">
+                            <input className="form-check-input" type="checkbox" value="" onChange={()=>{this.setState({earlyBookingEnabled: !this.state.earlyBookingEnabled})}} defaultChecked={this.state.earlyBookingEnabled} id="earlyBookingEnabled"></input>
+                            <label className="form-check-label" htmlFor="earlyBookingEnabled">Επαναλαμβανομενη αναχωρηση</label>
+
+                        </div>
+
+                        {
+                            this.state.departureDates.map((dt,i)=>{
+                                return (
+                                    <div className='mt-3'>
+                                        <label className='d-block' htmlFor="name">Ημερομηνια {i + 1}</label>
+                                        <DatePicker
+                                            selected={this.state.departureDates[i]}
+                                            onChange={(date) => this.handleDepartureDateChange(date, i)}
+                                        />
+                                    </div>
+                                )
+                            })
+                        }
+
 
                     </div>
                 </div>
