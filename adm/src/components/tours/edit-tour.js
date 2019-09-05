@@ -300,13 +300,22 @@ class EditTour extends Component {
                                     return (
                                         <div>
                                             <div className='d-flex flex-wrap'>
-                                                <div className='d-inline w-25'>
-                                                    <label htmlFor="name">Πολη αναχωρησης</label>
-                                                    <input name='name' value={this.state.name} className={'d-block py-1'} type="text" onChange={this.handleChange} />
+                                                <div className='d-inline w-50'>
+                                                    <label htmlFor="name">Πολη αφετηρια αναχωρησης</label>
+                                                    <input name='name' value={this.state.name} className={'d-block py-1 w-100'} type="text" onChange={this.handleChange} />
                                                 </div>
-                                                <div className='d-inline w-25'>
+                                                <div className='d-inline w-50'>
                                                     <label htmlFor="name">Ωρα αναχωρησης</label>
-                                                    <input name='name' value={this.state.name} className={'d-block py-1'} type="text" onChange={this.handleChange} />
+                                                    <input name='name' value={this.state.name} className={'d-block py-1 w-100'} type="text" onChange={this.handleChange} />
+                                                </div>
+
+                                                <div className='d-inline w-50'>
+                                                    <label htmlFor="name">Πολη προορισμος αναχωρησης</label>
+                                                    <input name='name' value={this.state.name} className={'d-block py-1 w-100'} type="text" onChange={this.handleChange} />
+                                                </div>
+                                                <div className='d-inline w-50'>
+                                                    <label htmlFor="name">Ωρα αναχωρησης</label>
+                                                    <input name='name' value={this.state.name} className={'d-block py-1 w-100'} type="text" onChange={this.handleChange} />
                                                 </div>
                                                 <div className="d-inline w-50">
                                                     <label htmlFor="name">Αεροπορικη Εταιρια</label>
@@ -319,8 +328,6 @@ class EditTour extends Component {
                                                     </select>
                                                 </div>
                                             </div>
-
-
                                         </div>
                                     )
                                 })
