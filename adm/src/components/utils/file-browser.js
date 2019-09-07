@@ -175,7 +175,7 @@ class FileBrowser extends Component {
 
         return (
             <>
-                <Button variant="primary" onClick={this.handleShow}>
+                <Button variant="success" onClick={this.handleShow}>
                     Επιλογή αρχείων
                 </Button>
 

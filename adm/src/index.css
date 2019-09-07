@@ -1,24 +1,31 @@
 body {
   width: 100wh;
-  height: 90vh;
   color: #fff;
-  background: linear-gradient(-45deg, rgba(82, 82, 82, 0.75), #b9b9b9, rgba(63, 63, 63, 0.77), rgba(117, 117, 117, 0.6)) repeat-x center center fixed;
-  /*background: rgba(0,0,0,.42);*/
-  background-size: 1400% 1400%;
+  background: linear-gradient(45deg, rgb(112, 112, 112) 0%, rgb(42, 42, 42) 13%, rgb(29, 29, 29) 69%, rgb(43, 43, 43) 100%);  /*background: rgba(0,0,0,.42);*/
+  background-size: 500% 500%;
   -webkit-animation: Gradient 15s ease infinite;
   -moz-animation: Gradient 15s ease infinite;
-  animation: Gradient 30s ease infinite;
+  animation: Gradient 5s ease infinite;
+  font-size: 1.05rem;
+}
+
+.bg-info{
+  background-color: rgba(14, 124, 234, 0.95) !important;
+}
+
+.text-info{
+  color: rgba(14, 124, 234, 0.95) !important;
 }
 
 @-webkit-keyframes Gradient {
   0% {
-    background-position: 0% 50%
+    background-position: 0% 50%;
   }
   50% {
-    background-position: 100% 50%
+    background-position: 100% 50%;
   }
   100% {
-    background-position: 0% 50%
+    background-position: 0% 50%;
   }
 }
 
@@ -155,7 +162,7 @@ html {
 }
 
 .rt-adm-nav{
-  background-color: rgb(35, 35, 35) !important;
+  background-color: rgb(13, 13, 13) !important;
 }
 
 .city-image{
@@ -366,4 +373,47 @@ html {
 .react-tags__suggestions li.is-disabled {
   opacity: 0.5;
   cursor: auto;
+}
+
+.bg-secondary{
+  background-color: rgba(26, 26, 26, 0.81) !important;
+}
+
+.text-light{
+  color: #c5c6c5;
+}
+
+.cities-table > tbody > tr:nth-child(2){
+  background-color: rgba(35, 35, 35, 0.81) !important;
+}
+
+.cities-table > tbody > tr:hover{
+  background-color: #bcbcbc !important;
+  color: black !important;
+}
+
+
+
+input[type=text]{
+  background-color: rgba(255,255,255,.8);
+  border: 1px solid rgba(226, 229, 234, 0.95) !important;
+}
+
+textarea{
+  background-color: rgba(255,255,255,.8);
+  border: 1px solid rgba(226, 229, 234, 0.95) !important;
+}
+
+input[type=text]::placeholder{
+  color: rgba(14, 124, 234, 0.95);
+  font-size: 0.8em;
+  font-weight: 600;
+  padding-left: 0.3rem;
+}
+
+
+
+
+.text-success{
+  color: #4bf540 !important;
 }

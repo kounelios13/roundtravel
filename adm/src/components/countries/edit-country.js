@@ -97,7 +97,7 @@ class EditCountry extends Component {
         return (
             <div>
                 <div className='col-8 offset-3 mt-5'>
-                    <div className='col-6 offset-3 m-5 bg-info bg-form p-4'>
+                    <div className='col-8 offset-2 m-5 bg-secondary bg-form p-4'>
                         <form>
                             <h4>Πληροφορίες χώρας</h4>
                             <hr/>

@@ -29,28 +29,48 @@ class Cities extends Component {
         return (
             <div>
                 <div>
-                    <div className='offset-2 col-8 bg-secondary mt-5 d-flex flex-wrap p-0'>
-                        <input onChange={(e)=>{this.setState({searchQuery: e.target.value})}} value={this.state.searchQuery} placeholder={'Αναζητηση πολης'} className='col-8 offset-2' type="text"/>
-                        {this.state.cities.filter(city=> {
-                            if(this.state.searchQuery !== ''){
-                                if(city.name.toLowerCase().includes(this.state.searchQuery.toLowerCase())){
-                                    return city
-                                }
-                            }else{
-                                return city
-                            }
-                        })
-                            .map((city,i)=>{
-                            return (
-                                <div key={i} className={'m-5 app-pointer'} onClick={()=>{this.props.history.push('/cities/edit/' + city._id)}}>
+                    <div className='offset-2 col-8 bg-secondary mt-5 d-flex flex-wrap p-0 text-light'>
+                        <input autoFocus onChange={(e)=>{this.setState({searchQuery: e.target.value})}} value={this.state.searchQuery} placeholder={'Αναζητηση πολης'} className='col-12' type="text"/>
+                        <div className="col-12 p-0">
+                            <table className="table text-white cities-table">
+                                <thead>
+                                <tr>
+                                    <th scope="col">Όνομα πόλης</th>
+                                    <th scope="col">URL</th>
+                                    <th scope="col">Αριθμος εκδρομων</th>
+                                </tr>
+                                </thead>
+                            <tbody>
 
-                                    <img src={config.imagesUrl + city.images[0].url} className='city-image p-0 m-0' alt=""/>
-                                    <div className={'text-center'}>
-                                        {city.name.toUpperCase()}
-                                    </div>
-                                </div>
-                            )
-                        })}
+                            {
+                                this.state.cities.filter(city=> {
+                                    if(this.state.searchQuery !== ''){
+                                        if(city.name.toLowerCase().includes(this.state.searchQuery.toLowerCase()) || city.url.toLowerCase().includes(this.state.searchQuery.toLowerCase())){
+                                            return city
+                                        }
+                                    }else{
+                                        return city
+                                    }
+                                })
+                                    .map((city,i)=>{
+                                        return (
+                                            <tr key={i} className='app-pointer' onClick={()=>{this.props.history.push('/cities/edit/' + city._id)}}>
+                                                <td>
+                                                    {city.name}
+                                                </td>
+                                                <td>
+                                                    /city/{city.url}
+                                                </td>
+                                                <td>
+                                                    {((i + 3) + (i+1*2))}
+                                                </td>
+                                            </tr>
+                                        )
+                                    })
+                            }
+                            </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
 

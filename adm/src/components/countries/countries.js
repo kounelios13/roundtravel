@@ -29,8 +29,18 @@ class Countries extends Component {
     render() {
         return (
             <div>
-                <div className='bg-info col-6 offset-3 p-0 mt-5'>
+                <div className='bg-info col-8 offset-2 p-0 mt-5 bg-secondary'>
                     <input placeholder='Αναζητηση πολης' value={this.state.searchQuery} onChange={(e)=>{this.setState({searchQuery: e.target.value})}} type="text" autoFocus className='w-100'/>
+                    <div className="col-12 p-0">
+                        <table className="table text-white cities-table">
+                            <thead>
+                            <tr>
+                                <th scope="col">Όνομα πόλης</th>
+                                <th scope="col">URL</th>
+                                <th scope="col">Αριθμος εκδρομων</th>
+                            </tr>
+                            </thead>
+                            <tbody>
                     {
                         this.state.countries
                             .filter(country=>{
@@ -42,19 +52,25 @@ class Countries extends Component {
                                     }
                                 }
                             })
-                            .map(country=>{
+                            .map((country, i)=>{
                             return (
-                                <div onClick={()=>{this.props.history.push('/countries/edit/' + country._id)}} className='border-bottom my-3 app-hover app-pointer my-4' key={country._id}>
-                                    <div className={'display-7 d-inline text-uppercase'}>
-                                        {country.name}
-                                    </div>
-                                    <div className={'d-inline ml-5 mr-auto'}>
-                                        <small>{country.url}</small>
-                                    </div>
-                                </div>
+                                    <tr onClick={()=>{this.props.history.push('/countries/edit/' + country._id)}}  key={i} className='app-pointer'>
+                                        <td>
+                                            {country.name}
+                                        </td>
+                                        <td>
+                                            /city/{country.url}
+                                        </td>
+                                        <td>
+                                            {((i + 3) + (i+1*2))}
+                                        </td>
+                                    </tr>
                             )
                         })
                     }
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
 
                 <div className='add-new-wrapper'>

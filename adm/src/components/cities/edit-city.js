@@ -223,6 +223,7 @@ class EditCity extends Component {
                 })
                 .catch(err=>{
                     toast.error("Κατι πηγε στραβα", {position: toast.POSITION.BOTTOM_RIGHT});
+                    console.log(err)
                 })
         }else{
             toast.error("Συμπληρώστε ολα τα απαραίτητα πεδια", {position: toast.POSITION.BOTTOM_RIGHT});
@@ -354,7 +355,7 @@ class EditCity extends Component {
             <div>
                 <ReactTooltip />
                 <div className='col-8 offset-2 mt-5'>
-                                <div className='col-8 offset-2 p-5 bg-info bg-form'>
+                                <div className='col-8 offset-2 p-5 bg-secondary bg-form'>
                                     <form>
                                         <h4>Γενικές πληροφορίες</h4>
                                         <hr/>
@@ -424,7 +425,7 @@ class EditCity extends Component {
                                         <hr/>
 
                                         <div className='mt-3'>
-                                            <label htmlFor="url">URL</label><p className='d-inline bg-primary rounded ml-2' data-tip="hello world"><FaQuestion /></p>
+                                            <label htmlFor="url">URL</label><p className='d-inline bg-info rounded ml-2' data-tip="hello world"><FaQuestion /></p>
                                             <input name='url' value={this.state.url} onChange={this.handleChange} className={'w-100'} type="text"/>
                                         </div>
 
@@ -487,7 +488,7 @@ class EditCity extends Component {
                                                                 <div>
                                                                     <div className='d-inline'>
                                                                         <div className="d-flex flex-wrap">
-                                                                            <div className='text-danger bg-dark col-12'>
+                                                                            <div className='text-info bg-secondary col-12'>
                                                                                 <span onClick={()=>{this.moveImageUp(i)}} className='city-edit-img-icon mr-2'><FaArrowUp /></span>
                                                                                 <span onClick={()=>{this.moveImageDown(i)}} className='city-edit-img-icon mr-2'><FaArrowDown /></span>
                                                                                 <span onClick={()=>{this.setState({images: this.state.images.filter((img, ind)=>{return ind!==i})})}} className='city-edit-img-icon mr-2'><FaMinus /></span>
@@ -510,7 +511,7 @@ class EditCity extends Component {
                                         </div>
 
 
-                                        <h3 className='d-inline'>Αξιοθεατα</h3> <span className='text-danger' onClick={this.addSight}><FaPlus /></span>
+                                        <h3 className='d-inline'>Αξιοθεατα</h3> <span className='text-success' onClick={this.addSight}><FaPlus /></span>
                                         <hr/>
 
                                         <div className='mt-3'>
@@ -553,7 +554,7 @@ class EditCity extends Component {
                                             }
                                         </div>
 
-                                        <h3 className='d-inline'>Tabs πληροφοριων</h3> <span className='text-danger' onClick={this.addInformationTab}><FaPlus /></span>
+                                        <h3 className='d-inline'>Tabs πληροφοριων</h3> <span className='text-success' onClick={this.addInformationTab}><FaPlus /></span>
                                         <hr/>
 
                                         <div className='pb-4'>
@@ -576,7 +577,7 @@ class EditCity extends Component {
 
                                                                     return (
                                                                         <div key={j}>
-                                                                            <label htmlFor={'information-name-' + i + '-' +  j}>Τίτλος πεδιου</label> <span onClick={()=>{this.addContentEntry(i)}} className='text-danger'><FaPlus /></span>
+                                                                            <label htmlFor={'information-name-' + i + '-' +  j}>Τίτλος πεδιου - Πεδιο</label> <span onClick={()=>{this.addContentEntry(i)}} className='text-success'><FaPlus /></span>
                                                                             <input name={'information-name-' + i + '-' +  j} value={this.state.information[i].content[j].name} onChange={this.handleInformationChange} className={'w-100 mb-3'} type="text"/>
                                                                             <label htmlFor={'information-description-' + i + '-' +  j}>Περιγραφη πεδιου</label>
                                                                             <textarea name={'information-description-' + i + '-' +  j} value={this.state.information[i].content[j].text} onChange={this.handleInformationChange} className="w-100" rows="4"></textarea>
