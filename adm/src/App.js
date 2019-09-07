@@ -15,28 +15,8 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <div className="position-absolute w-100">
-                    <Particles
-                        params={{
-                            "particles": {
-                                "number": {
-                                    "value": 50
-                                },
-                                "size": {
-                                    "value": 1
-                                }
-                            },
-                            "interactivity": {
-                                "events": {
-                                    "onhover": {
-                                        "enable": true,
-                                        "mode": "repulse"
-                                    }
-                                }
-                            }
-                        }} />
-                </div>
                 <AppRouter/>
+
                 <ToastContainer />
 
             </div>

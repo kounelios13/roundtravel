@@ -11,6 +11,7 @@ import TourPricing from "./tour-pricing"
 import TourInfo from "./tour-info"
 import TourLocations from "./tour-locations"
 import TourActionButtons from "./tour-action-buttons"
+import TourImportantNote from "./tour-important-note"
 
 class TourDetails extends Component {
   state = {
@@ -36,6 +37,7 @@ class TourDetails extends Component {
             <TourLocations />
             <TourActionButtons />
             <TourFlights />
+            <TourImportantNote />
           </div>
         </div>
       </section>

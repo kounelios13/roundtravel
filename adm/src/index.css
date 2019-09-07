@@ -2,10 +2,10 @@ body {
   width: 100wh;
   height: 90vh;
   color: #fff;
-  background: linear-gradient(-45deg, rgba(82, 82, 82, 0.75), #b9b9b9, rgba(101, 101, 101, 0.77), rgba(117, 117, 117, 0.6)) no-repeat center center fixed;
+  background: linear-gradient(-45deg, rgba(82, 82, 82, 0.75), #b9b9b9, rgba(63, 63, 63, 0.77), rgba(117, 117, 117, 0.6)) repeat-x center center fixed;
   /*background: rgba(0,0,0,.42);*/
-  /*background-size: 1400% 1400%;*/
-  /*-webkit-animation: Gradient 15s ease infinite;*/
+  background-size: 1400% 1400%;
+  -webkit-animation: Gradient 15s ease infinite;
   -moz-animation: Gradient 15s ease infinite;
   animation: Gradient 30s ease infinite;
 }
@@ -66,9 +66,33 @@ h6 {
   left: 0;
 }
 
+.particles{
+  position: fixed;
+  width: 100vw;
+}
+
 .city-plus-sign{
   width: 30px;
   height: 30px;
+}
+
+
+html {
+  position:relative;
+  min-height: 100%;
+}
+
+.App{
+  margin-bottom:1.5rem;
+}
+
+.footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height:1.5rem;
+  background-color: rgb(35, 35, 35) !important;
 }
 
 .login-input-form{

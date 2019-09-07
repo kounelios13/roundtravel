@@ -6,6 +6,7 @@ import TourSummary from "./tour-summary"
 import TourDetails from "./tour-details"
 import TourSchedule from "./tour-schedule"
 import TourCities from "./tour-cities"
+import TourReviews from "./tour-reviews"
 
 class Tour extends Component {
   render() {
@@ -17,6 +18,7 @@ class Tour extends Component {
         <TourDetails />
         <TourSchedule />
         <TourCities />
+        <TourReviews />
       </Layout>
     )
   }
