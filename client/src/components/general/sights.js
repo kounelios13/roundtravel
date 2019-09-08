@@ -22,6 +22,7 @@ class Sights extends Component {
 
   render() {
     return (
+      this.props.sights.length !== 0 &&
       <section className='row mb-5'>
         <div className="col-10 offset-1 col-lg-8 offset-lg-2 d-flex flex-wrap my-5 p-0">
           <div className="col-12 space-candy my-4">
@@ -36,7 +37,7 @@ class Sights extends Component {
                   return (
                     <div onClick={()=>{this.setActiveIndex(i)}} key={i} className={`app-pointer d-flex flex-wrap col-12 p-0 border-right ${activeClass}`}>
                       <div className="col-4 p-0 m-0">
-                          <Image className='col-12 p-0 m-0 img-fit interest-point-image img-hover' alt={point.alt} fileName={point.photoUrl} />
+                        <Image className='col-12 p-0 m-0 img-fit interest-point-image img-hover' alt={point.alt} fileName={point.photoUrl} />
                       </div>
 
                       <div className="col-8 p-1 m-0">

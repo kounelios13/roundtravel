@@ -5,7 +5,7 @@ body {
   background-size: 500% 500%;
   -webkit-animation: Gradient 15s ease infinite;
   -moz-animation: Gradient 15s ease infinite;
-  animation: Gradient 5s ease infinite;
+  animation: Gradient 15s ease infinite;
   font-size: 1.05rem;
 }
 
@@ -392,6 +392,9 @@ html {
   color: black !important;
 }
 
+.display-6{
+  font-size: 1.2rem;
+}
 
 
 input[type=text]{
@@ -405,10 +408,11 @@ textarea{
 }
 
 input[type=text]::placeholder{
-  color: rgba(14, 124, 234, 0.95);
-  font-size: 0.8em;
+  color: rgba(25, 25, 25, 0.95);
+  font-size: 0.9em;
   font-weight: 600;
   padding-left: 0.3rem;
+  text-transform: uppercase;
 }
 
 

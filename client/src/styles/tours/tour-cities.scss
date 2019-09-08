@@ -1,5 +1,17 @@
-.tour-cities-img{
-  height: 70vh !important;
-  width: 31vw !important;
-  object-fit: cover;
+@media screen and (max-width: 800px) {
+
+  .tour-cities-img{
+    object-fit: cover;
+    height: 30vh;
+  }
 }
+
+@media screen and (min-width: 1200px) {
+  .tour-cities-img{
+    height: 70vh !important;
+    width: 31vw !important;
+    object-fit: cover;
+  }
+}
+
+

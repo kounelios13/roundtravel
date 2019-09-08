@@ -511,7 +511,7 @@ class EditCity extends Component {
                                         </div>
 
 
-                                        <h3 className='d-inline'>Αξιοθεατα</h3> <span className='text-success' onClick={this.addSight}><FaPlus /></span>
+                                        <h3 className='d-inline'>Αξιοθεατα</h3> ({this.state.sights.length}) <span className='text-success' onClick={this.addSight}><FaPlus /></span>
                                         <hr/>
 
                                         <div className='mt-3'>
@@ -554,7 +554,7 @@ class EditCity extends Component {
                                             }
                                         </div>
 
-                                        <h3 className='d-inline'>Tabs πληροφοριων</h3> <span className='text-success' onClick={this.addInformationTab}><FaPlus /></span>
+                                        <h3 className='d-inline'>Tabs πληροφοριων</h3>({this.state.information.length}) <span className='text-success' onClick={this.addInformationTab}><FaPlus /></span>
                                         <hr/>
 
                                         <div className='pb-4'>
@@ -566,18 +566,20 @@ class EditCity extends Component {
                                                 <label htmlFor="sightsSubtitle">Υποτιτλος ενοτητας πληροφοριων</label>
                                                 <input name='infoSubtitle' value={this.state.infoSubtitle} onChange={this.handleChange} className={'w-100'} type="text"/>
                                             </div>
+                                            <h3 className="display-5 mt-4">Δεσμες δεδομενων</h3>
                                             {
-                                                this.state.information.map((activity, i)=>{
+                                                this.state.information.map((section, i)=>{
                                                     return (
                                                         <div className='mt-3 mb-3' key={i}>
-                                                            <label className={'display-5'} htmlFor={'information-title-' + i}>Όνομα δεσμης</label> <span onClick={()=>{this.deleteInformation(i)}} className='text-danger'><FaMinus /></span>
+                                                            <label htmlFor={'information-title-' + i}>Όνομα δεσμης</label> <span onClick={()=>{this.deleteInformation(i)}} className='text-danger'><FaMinus /></span>
                                                             <input name={'information-title-' + i} value={this.state.information[i].title} onChange={this.handleInformationChange} className={'w-100 mb-3'} type="text"/>
                                                             {
-                                                                activity.content.map((entry, j)=>{
+                                                                section.content.map((entry, j)=>{
 
                                                                     return (
                                                                         <div key={j}>
-                                                                            <label htmlFor={'information-name-' + i + '-' +  j}>Τίτλος πεδιου - Πεδιο</label> <span onClick={()=>{this.addContentEntry(i)}} className='text-success'><FaPlus /></span>
+                                                                            <h3 className='display-6'>Πεδιο - {j+1}</h3>
+                                                                            <label htmlFor={'information-name-' + i + '-' +  j}>Τίτλος πεδιου</label> <span onClick={()=>{this.addContentEntry(i)}} className='text-success'><FaPlus /></span>
                                                                             <input name={'information-name-' + i + '-' +  j} value={this.state.information[i].content[j].name} onChange={this.handleInformationChange} className={'w-100 mb-3'} type="text"/>
                                                                             <label htmlFor={'information-description-' + i + '-' +  j}>Περιγραφη πεδιου</label>
                                                                             <textarea name={'information-description-' + i + '-' +  j} value={this.state.information[i].content[j].text} onChange={this.handleInformationChange} className="w-100" rows="4"></textarea>
