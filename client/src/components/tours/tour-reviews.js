@@ -9,7 +9,7 @@ const TourReviews = () => {
             <h3 className='m-0 display-6'>Σχολια πελατων για την εκδρομη</h3>
             <h4 className='m-0 display-7 text-normal'>Διαβαστε τι εχουν να πουν οι αλλοι...</h4>
           </div>
-          <div className="col-12 bg-secondary reviews text-center">
+          <div className="col-12 reviews text-center">
             <h4 className="display-8 mb-0 mt-5">Αντιγονη Χομπιτη</h4>
             <article>
               Ταξιδεψαμε στο Παρισι κ μονο θετικα σχολια εχουμε.

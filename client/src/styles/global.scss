@@ -41,8 +41,15 @@ h6{
     width: 100%
   }
 
-  .react-tabs__tab-list{
-    border-bottom: none !important;
+
+
+  .react-tabs{
+    background-color: white;
+  }
+
+  .react-tabs__tab{
+    border-left: 0px solid white !important;
+    border-top: 1px solid rgba(155,155,155,.2);
   }
 }
 
@@ -275,6 +282,7 @@ figure{
   background-color: rgb(43, 148, 255) !important;
   border: 1px solid rgba(255,255,255,.005) !important;
 }
+
 
 
 .react-tabs__tab--selected{
