@@ -116,8 +116,7 @@ class ImageHeader extends Component {
 
   render() {
     return (
-      <section>
-        <div className='row p-0 m-0'>
+      <section className='row p-0 m-0'>
           <div className="col-12 p-0 m-0 text-center">
             <div className='col-12 title-wrapper position-absolute'>
               <figcaption>
@@ -146,7 +145,6 @@ class ImageHeader extends Component {
               <Image alt={this.state.images[this.state.sliderIndex].alt} className={'header-image'} fileName={this.state.images[this.state.sliderIndex].url} />
             </div>
           </div>
-        </div>
       </section>
     )
   }

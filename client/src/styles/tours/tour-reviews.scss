@@ -26,3 +26,26 @@
   width: 1.2rem;
   height: 1.2rem;
 }
+
+.reviews-icon{
+  padding: 0 1rem;
+}
+
+
+
+.reviews-icon:hover{
+  cursor: pointer;
+}
+
+.reviews-icon-img{
+  width: 1.3rem;
+  margin: 0;
+}
+
+.reviews-icon-hidden{
+  visibility: hidden !important;
+}
+
+.reviews-browse{
+  margin-top: 4rem !important;
+}

@@ -1,3 +1,5 @@
+@import "../global";
+
 @media screen and (max-width: 800px) {
 
   .tour-cities-img{
@@ -10,17 +12,15 @@
     color: white;
     font-size: 2.0rem !important;
     padding: .2rem .5rem;
-    margin-bottom: .15rem !important;
+    margin-bottom: .05rem !important;
   }
 
-  .tour-city-title:before{
-    content: "πόλη: ";
-    font-size: 0.5em;
+  .tour-city-title-before{
+    display: inline-block !important;
   }
 
   .tour-cities:nth-of-type(2n){
     flex-direction: row;
-
   }
 
   .tour-cities-info{
@@ -33,12 +33,32 @@
 @media screen and (min-width: 1200px) {
   .tour-cities-img{
     height: 70vh !important;
-    width: 31vw !important;
     object-fit: cover;
   }
 }
+
+
 
 .tour-cities:nth-of-type(2n){
   flex-direction: row-reverse;
 }
 
+
+.tour-city-title-before{
+  display: none;
+  font-size: 0.6em;
+}
+
+
+
+.tour-cities-caption{
+  z-index: 400;
+  background-color: $color-info;
+  color: white;
+  top: 1.3rem;
+  padding: .15rem 1.4rem;
+}
+
+*:not(.tour-cities):nth-of-type(2n){
+  background-color: red !important;
+}

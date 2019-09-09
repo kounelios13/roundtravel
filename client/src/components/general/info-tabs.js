@@ -18,8 +18,9 @@ const InfoTabs = (props) => {
           return (
             <TabPanel>
               {
-                info.content.map(section=>{
+                info.content.map((section,i)=>{
                   return (
+                    i < (props.limitSections) &&
                     <article className='tab-article'>
                       <h3 className={'m-0 p-0 text-normal'}>{section.name}</h3>
                       <div className={'text-secondary'}>
@@ -47,6 +48,10 @@ const InfoTabs = (props) => {
 InfoTabs.propTypes = {
   tabInfo: PropTypes.array.isRequired,
   className: PropTypes.string
+}
+
+InfoTabs.defaultProps = {
+  limitSections: 100
 }
 
 export default InfoTabs

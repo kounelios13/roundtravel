@@ -14,26 +14,33 @@ const TourInfo = () => {
       <div className="col-12">
         <ul className='list-unstyled included-list mt-3'>
           <li>
-            <img className='details-icon d-inline' src={iconCloudMoon} alt=""/>
-            <div className='d-inline-block'>
-              <span className="text-secondary">Διαρκεια:</span>
-              <div>
-                <span className="text-bold">8 Μερές/ 9 Νυχτές</span>
-              </div>
-            </div>
-          </li>
-          <li>
-            <img className='details-icon' src={iconBoard} alt=""/>
-            <span className="text-secondary">Επομενη αναχωρηση:</span> <span className="text-bold">31/9</span>
+            <img className='details-icon' src={iconPlane} alt=""/>
+            <span className="text-secondary">Τυπος:</span> <span className="text-bold">Αεροπορικως</span>
           </li>
           <li>
             <img className='details-icon' src={iconDeparture} alt=""/>
             <span className="text-secondary">Αναχώρηση από:</span> <span className="text-bold">Αθήνα/ Ηράκλειο</span>
           </li>
           <li>
-            <img className='details-icon' src={iconPlane} alt=""/>
-            <span className="text-secondary">Τυπος:</span> <span className="text-bold">Αεροπορικως</span>
+            <img className='details-icon d-inline' src={iconCloudMoon} alt=""/>
+            <div className='d-inline-block'>
+              <span className="text-secondary">Διαρκεια:</span>
+                <span className="text-bold"> 8 Μερές/ 9 Νυχτές</span>
+            </div>
           </li>
+          <li>
+            <img className='details-icon d-inline' src={iconCloudMoon} alt=""/>
+            <div className='d-inline-block'>
+              <span className="text-secondary">Τυπος:</span>
+              <span className="text-bold"> Ομαδικο</span>
+            </div>
+          </li>
+          <li>
+            <img className='details-icon' src={iconBoard} alt=""/>
+            <span className="text-secondary">Επομενη αναχωρηση:</span> <span className="text-bold">31/9</span>
+          </li>
+
+
           <li>
             <img className='details-icon' src={iconPlus} alt=""/>
             <span className="text-secondary">Αναχωρησεις που απομενουν:</span> <span className="text-bold">9</span>
@@ -45,6 +52,10 @@ const TourInfo = () => {
           <li>
             <img className='details-icon' src={iconHuman} alt=""/>
             <span className="text-secondary">Καταλληλο για:</span> <span className="text-bold">Ολους</span>
+          </li>
+          <li>
+            <img className='details-icon' src={iconHuman} alt=""/>
+            <span className="text-secondary">Δυνατοτητα παρατασης</span> <span className="text-bold">Ναι</span>
           </li>
         </ul>
       </div>
