@@ -20,11 +20,11 @@ class TourSummary extends Component {
       ,{locale: grLocale}
     )
     this.tourSummary =
-      <section className={'text-light col-10 offset-1 col-lg-8 offset-lg-2 py-5'}>
+      <section className={'text-light col-10 offset-1 col-lg-8 offset-lg-2 py-5 w-100'}>
         <div className="col-12 my-4">
           <h2 className='display-5 m-0'>Εξερευνειστε το μαγικο Μπαλι</h2>
           <h3 className='text-weight-light'>Καλοκαιρινη υπερπροσφορα!</h3>
-          <div className="col-12 p-0 m-0 d-flex flex-wrap">
+            <div className="col-12 p-0 m-0 d-flex flex-wrap">
             <div className="col-12 col-lg-7 p-0 m-0">
               <div className='mt-3 p-0 m-0'>
                 <details open>
@@ -78,7 +78,7 @@ class TourSummary extends Component {
 
   render() {
     return (
-      <section>
+      <section className='p-0 m-0'>
         <BgImage className={'img-filter'} children={this.tourSummary} fileName={'bali-land.jpg'} />
       </section>
     )

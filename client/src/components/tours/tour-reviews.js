@@ -55,18 +55,15 @@ class TourReviews extends Component {
 
 
   render() {
-
-
-
     return (
-      <section className="bg-light d-flex p-5">
+      <section className="bg-light-2 d-flex p-5">
         <div className="col-12 col-lg-6 offset-lg-3">
           <div className="col-12">
             <h3 className='m-0 display-6'>Σχολια πελατων για την εκδρομη</h3>
             <h4 className='m-0 display-7 text-normal'>Διαβαστε για εμπειριες αλλων...</h4>
           </div>
           <div className="col-12 reviews text-center">
-            <h4 className="display-8 mb-0 mt-5">{this.state.reviews[this.state.reviewIndex].name}</h4>
+            <h4 className="display-8 mb-0 mt-5 text-secondary-2">{this.state.reviews[this.state.reviewIndex].name}</h4>
             <article>
               {this.state.reviews[this.state.reviewIndex].text}
             </article>

@@ -226,10 +226,12 @@ figure{
 .img-filter::before {
   content: '';
   top: 0;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   filter: brightness(60%) blur(3px);
-  transform: scale(1.1)
+  //transform: scale(1.1)
+  padding: 0;
+  margin: 0;
 }
 
 .strikethrough{
@@ -362,15 +364,23 @@ figure{
   border-top: 4px solid rgba(25, 25, 25, 0.86);
 }
 
+.border-bottom-primary{
+  border-bottom: 4px solid rgba(25, 25, 25, 0.86);
+}
+
+
+
+.bg-light-2{
+  background-color: #f0f0f0;
+}
+
 .border-top-secondary{
-  border-top: 4px solid #ea7c0e;
+  border-top: 4px solid #ff6526;
 
 }
 
 .border-top-success{
   border-top: 4px solid $color-success;
-
-
 }
 
 .text-complementary{

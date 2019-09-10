@@ -34,6 +34,16 @@ const City = (props) => {
       image: 'paris-eiffel-2.jpg',
       title: 'ΠΟΛΩΝΙΑ-ΒΙΕΝΝΗ ΚΑΛΟΚΑΙΡΙ 2019',
       price: '40€'
+    },
+    {
+      image: 'paris-eiffel-2.jpg',
+      title: 'ΠΟΛΩΝΙΑ-ΒΙΕΝΝΗ ΚΑΛΟΚΑΙΡΙ 2019',
+      price: '40€'
+    },
+    {
+      image: 'paris-notre.jpg',
+      title: 'ΠΟΛΩΝΙΑ-ΒΙΕΝΝΗ ΚΑΛΟΚΑΙΡΙ 2019',
+      price: '40€'
     }
   ]
 
