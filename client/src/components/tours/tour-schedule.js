@@ -27,7 +27,7 @@ const TourSchedule = () => {
   ]
 
   return (
-    <section className='bg-light p-4 p-lg-5 my-6'>
+    <section className='bg-light-2 p-4 p-lg-5 my-6'>
       <div className="col-12 offset-0 col-lg-8 offset-lg-2 p-0 p-lg-1">
         <h3 className='display-5 text-normal mb-0'>Αναλυτικο προγραμμα ταξιδιου</h3>
         <h4 className='display-7 text-normal p-0 m-0'>Συνοψη της εκδρομης καθημερινα</h4>

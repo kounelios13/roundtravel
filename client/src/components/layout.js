@@ -28,7 +28,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <div className='container-fluid'>
+    <div className='container-fluid p-0 m-0'>
       <AppRouter />
         <main>{children}</main>
         <Footer/>

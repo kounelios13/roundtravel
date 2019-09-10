@@ -21,7 +21,7 @@ class TourGroup extends Component {
       <section className='row mt-5'>
         <div className="d-flex flex-wrap py-6 col-12 p-0">
           <div className="col-8 offset-1 p-0 offset-lg-2 d-flex flex-wrap">
-            <div className="col-12 space-candy mb-3">
+            <div className="col-12 mb-3 p-0">
               <h2 className='display-5 m-0 text-bold'>{this.props.suggestedTitle}</h2>
               <h4 className='display-8 m-1'>{this.props.suggestedSubtitle}</h4>
             </div>
@@ -51,14 +51,22 @@ class TourGroup extends Component {
                   </div>
                   <div className="col-12 d-flex p-0 flex-wrap bg-light tour-info-container">
                     <div className="col-12 p-2">
-                      <h3 className='display-8 text-bold m-0'>{tour.title}</h3>
+                      <h3 className='display-8 text-bold m-0 text-uppercase'>{tour.title}</h3>
                     </div>
                   </div>
                   <hr/>
-
                 </div>
               )
             })}
+          </div>
+          <div className="col-12 bg-info text-center">
+            {
+              [...Array(this.state.tours.length)].map((x, i)=>{
+                return (
+                  <div>asodk</div>
+                )
+              })
+            }
           </div>
         </div>
       </section>
