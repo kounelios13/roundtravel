@@ -142,7 +142,6 @@ const City = (props) => {
       <Sights sightsTitle={city.sightsTitle} sightsSubtitle={city.sightsSubtitle} sights={city.sights} />
       <TourOfferWide />
       <CityInfoTabs infoTitle={city.infoTitle} infoSubtitle={city.infoSubtitle} cityInfo={city.information} />
-      <InlineContactUs />
     </Layout>
   )
 }

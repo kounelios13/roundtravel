@@ -116,35 +116,35 @@ class ImageHeader extends Component {
 
   render() {
     return (
-      <section className='row p-0 m-0'>
-          <div className="col-12 p-0 m-0 text-center">
-            <div className='col-12 title-wrapper position-absolute'>
-              <figcaption>
-                <h1 className='header-title display-2 col-12 text-uppercase text-bold m-0'>{this.props.pageTitle}</h1>
-                <h3 className='header-title display-5 col-12 text-uppercase text-info text-normal'>{this.props.pageSubtitle}</h3>
-              </figcaption>
-            </div>
-            <div onClick={this.swipeLeft} className="position-absolute left-swipe">
-            &nbsp;
-            </div>
-            <div onClick={this.swipeRight} className="position-absolute right-swipe">
-              &nbsp;
-            </div>
-            <div className='col-12 position-absolute progress-wrapper p-0 m-0'>
-              <div className='col-12 d-flex insta-slider-wrapper'>
-                {
-                  this.state.images.map((img,i)=>{
-                    return (
-                      <div key={i} className='flex-grow-1 insta-slider position-relative'></div>
-                    )
-                  })
-                }
+      <section className='p-0 m-0 row'>
+            <div className="col-12 p-0 m-0 text-center">
+              <div className='col-12 title-wrapper position-absolute'>
+                <figcaption>
+                  <h1 className='header-title display-2 col-12 text-uppercase text-bold m-0'>{this.props.pageTitle}</h1>
+                  <h3 className='header-title display-5 col-12 text-uppercase text-info text-normal'>{this.props.pageSubtitle}</h3>
+                </figcaption>
+              </div>
+              <div onClick={this.swipeLeft} className="position-absolute left-swipe">
+                &nbsp;
+              </div>
+              <div onClick={this.swipeRight} className="position-absolute right-swipe">
+                &nbsp;
+              </div>
+              <div className='col-12 position-absolute progress-wrapper p-0 m-0'>
+                <div className='col-12 d-flex insta-slider-wrapper'>
+                  {
+                    this.state.images.map((img,i)=>{
+                      return (
+                        <div key={i} className='flex-grow-1 insta-slider position-relative'></div>
+                      )
+                    })
+                  }
+                </div>
+              </div>
+              <div>
+                <Image alt={this.state.images[this.state.sliderIndex].alt} className={'header-image'} fileName={this.state.images[this.state.sliderIndex].url} />
               </div>
             </div>
-            <div>
-              <Image alt={this.state.images[this.state.sliderIndex].alt} className={'header-image'} fileName={this.state.images[this.state.sliderIndex].url} />
-            </div>
-          </div>
       </section>
     )
   }

@@ -21,7 +21,10 @@
   position: absolute;
   z-index: 3000;
   color: rgba(255,255,255,.9);
-  padding: 10px 50px 10px 50px;
+}
+
+.rt-nav-wrap > *{
+  overflow-x: hidden;
 }
 
 .rt-nav-dropdown{

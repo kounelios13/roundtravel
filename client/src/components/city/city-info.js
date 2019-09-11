@@ -6,7 +6,8 @@ import BgImage from "../general/bg-image"
 import PropTypes from "prop-types";
 
 const CityInfo = (props) => {
-  const content = <div className='text-white col-10 offset-1 col-lg-8 offset-lg-2 p-lg-6'>
+  const content =
+    <section className='text-white col-10 offset-1 col-lg-8 offset-lg-2 p-lg-6'>
     <h3 className='display-5 city-info-title'>{props.descriptionTitle}</h3>
     <article className='text-light'>
       <ShowMore
@@ -18,7 +19,7 @@ const CityInfo = (props) => {
         {props.description}
       </ShowMore>
     </article>
-  </div>
+  </section>
 
   return (
     <section>

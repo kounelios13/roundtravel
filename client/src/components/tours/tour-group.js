@@ -1,24 +1,45 @@
 import React, { Component } from "react"
 import Image from "../general/image"
 import '../../styles/tours/tour-group.scss'
-  import plane from '../../images/icon-plane.svg'
+import plane from '../../images/icon-plane.svg'
 import planet from '../../images/icon-planet.svg'
 import person from '../../images/icon-person.svg'
+import arrowRight from '../../images/icon-arrow-right.svg'
+import arrowLeft from '../../images/icon-arrow-left.svg'
 import PropTypes from "prop-types";
 
 class TourGroup extends Component {
   constructor(props) {
     super(props)
-
+    this.tourGroup = React.createRef()
     this.state = {
-      tours: this.props.tours
+      tours: this.props.tours,
+      activeIndex: 0
     }
+
+    this.increaseIndex = this.increaseIndex.bind(this)
+    this.decreaseIndex = this.decreaseIndex.bind(this)
+  }
+
+  increaseIndex(){
+
+      // this.setState({activeIndex: this.state.activeIndex + 1})
+      // this.tourGroup.current.style
+      let tourGroupSize = this.tourGroup.current.scrollWidth
+      let scrollOfsset = tourGroupSize / this.state.tours.length
+      console.log(scrollOfsset)
+      this.tourGroup.current.scrollBy(scrollOfsset, 0);
+
+  }
+
+  decreaseIndex(){
+
   }
 
 
   render() {
     return (
-      <section className='row mt-5'>
+      <section className='mt-5'>
         <div className="d-flex flex-wrap py-6 col-12 p-0">
           <div className="col-8 offset-1 p-0 offset-lg-2 d-flex flex-wrap">
             <div className="col-12 mb-3 p-0">
@@ -26,10 +47,11 @@ class TourGroup extends Component {
               <h4 className='display-8 m-1'>{this.props.suggestedSubtitle}</h4>
             </div>
           </div>
-          <div className='col-12 offset-0 col-lg-8 offset-lg-2 d-flex px-0 tour-group-wrapper app-pointer'>
-            {this.state.tours.map((tour, i)=>{
+          <div ref={this.tourGroup} className='col-12 offset-0 col-lg-8 offset-lg-2 d-flex px-0 tour-group-wrapper app-pointer'>
+            {
+              this.state.tours.map((tour, i)=>{
               return (
-                <div key={i} className='tour-block col-10 offset-1 col-md-4 offset-md-0 p-0'>
+                <div key={i} className={`tour-block col-10 offset-1 col-md-4 offset-md-0 p-0 ${(i +1) ===this.state.tours.length ? `offset-2` : ``}`}>
                   <div className="col-12 p-0">
                     <Image className='col-12 tour-group-image img-fit p-0 m-0' fileName={tour.image} alt=""/>
                     <div className='tour-group-price'>
@@ -59,7 +81,19 @@ class TourGroup extends Component {
               )
             })}
           </div>
-          <div className="col-12 bg-info text-center">
+
+          <div className="col-12 tour-group-arrows-wrapper">
+            <div className="tour-group-arrows">
+              <div className='tour-group-arrow tour-group-arrow__left'>
+                <img src={arrowLeft} alt="" className="tour-group-arrow__img"/>
+              </div>
+              <div className='tour-group-arrow tour-group-arrow__right' onClick={this.increaseIndex}>
+                <img className='tour-group-arrow__img' src={arrowRight} alt=""/>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-12 bg-info text-center d-none d-md-block">
             {
               [...Array(this.state.tours.length)].map((x, i)=>{
                 return (
