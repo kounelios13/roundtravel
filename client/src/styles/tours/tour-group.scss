@@ -1,9 +1,5 @@
 @import "../global";
 
-
-
-
-
 .tour-group-image{
   height: 35vh;
 }
@@ -41,33 +37,12 @@
   font-weight: 500 !important;
 }
 
-.icon-right{
-  width: 15px;
-}
 
 
 .tour-info-container{
-  background-color: $color-light;
   min-height: 2.3rem;
 }
 
-.tour-group-icon-container{
-  position: absolute;
-  bottom: 1.1rem;
-  right: 0;
-  width: 3.5rem;
-}
-
-.early-booking-badge{
-  font-weight: 300;
-}
-
-.tour-group-icon{
-  filter: invert(90%);
-  padding: 5px;
-  width: 1.9rem;
-  background-color: rgba(0,0,0,.05);
-}
 
 .tour-group-arrows-wrapper{
   position: absolute;
@@ -79,15 +54,29 @@
 
 .tour-group-arrow{
   position: absolute;
-  top: 35%;
+  top: 40%;
+  padding:0 calc(100% - 85.25%);
+  cursor: pointer;
 }
 
 .tour-group-arrow__right{
   right: 1rem;
+  transform: translateX(4px);
+}
+
+.tour-group-arrow__left{
+  transform: scaleX(-1);
 }
 
 .tour-group-arrow__img{
   z-index: 2000;
-  width: 2.5rem;
-  background-color: #ececec;
+  width: 2.9rem;
+  border-radius: 50% !important;
+  background-color: rgba(255, 255, 255, 0.56);
+}
+
+.tour-group-arrow__img:hover{
+  filter: invert(93%) sepia(0%) saturate(7500%) hue-rotate(118deg) brightness(107%) contrast(110%);
+  //box-shadow: 0px 0px 15px 7px #0b0b0b;
+
 }

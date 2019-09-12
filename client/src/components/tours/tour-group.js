@@ -1,12 +1,9 @@
 import React, { Component } from "react"
 import Image from "../general/image"
 import '../../styles/tours/tour-group.scss'
-import plane from '../../images/icon-plane.svg'
-import planet from '../../images/icon-planet.svg'
-import person from '../../images/icon-person.svg'
-import arrowRight from '../../images/icon-arrow-right.svg'
-import arrowLeft from '../../images/icon-arrow-left.svg'
 import PropTypes from "prop-types";
+import play from '../../images/icon-arrow-left-2.svg'
+
 
 class TourGroup extends Component {
   constructor(props) {
@@ -57,19 +54,19 @@ class TourGroup extends Component {
                     <div className='tour-group-price'>
                       <p><span className='euro-sign'>350</span></p>
                     </div>
-                    <div className="tour-group-icon-container no-drag">
-                      <div className='d-flex flex-wrap'>
-                        <div className="col-12">
-                          <img className='tour-group-icon rounded-circle mb-1' src={planet} alt=""/>
-                        </div>
-                        <div className="col-12">
-                          <img className='tour-group-icon rounded-circle mb-1' src={person} alt=""/>
-                        </div>
-                        <div className="col-12">
-                          <img className='tour-group-icon rounded-circle mb-1' src={plane} alt=""/>
-                        </div>
-                      </div>
-                    </div>
+                    {/*<div className="tour-group-icon-container no-drag">*/}
+                    {/*  <div className='d-flex flex-wrap'>*/}
+                    {/*    <div className="col-12">*/}
+                    {/*      <img className='tour-group-icon rounded-circle mb-1' src={planet} alt=""/>*/}
+                    {/*    </div>*/}
+                    {/*    <div className="col-12">*/}
+                    {/*      <img className='tour-group-icon rounded-circle mb-1' src={person} alt=""/>*/}
+                    {/*    </div>*/}
+                    {/*    <div className="col-12">*/}
+                    {/*      <img className='tour-group-icon rounded-circle mb-1' src={plane} alt=""/>*/}
+                    {/*    </div>*/}
+                    {/*  </div>*/}
+                    {/*</div>*/}
                   </div>
                   <div className="col-12 d-flex p-0 flex-wrap bg-light tour-info-container">
                     <div className="col-12 p-2">
@@ -85,10 +82,10 @@ class TourGroup extends Component {
           <div className="col-12 tour-group-arrows-wrapper">
             <div className="tour-group-arrows">
               <div className='tour-group-arrow tour-group-arrow__left'>
-                <img src={arrowLeft} alt="" className="tour-group-arrow__img"/>
+                <img src={play} alt="" className="tour-group-arrow__img"/>
               </div>
               <div className='tour-group-arrow tour-group-arrow__right' onClick={this.increaseIndex}>
-                <img className='tour-group-arrow__img' src={arrowRight} alt=""/>
+                <img className='tour-group-arrow__img' src={play} alt=""/>
               </div>
             </div>
           </div>
@@ -113,5 +110,6 @@ TourGroup.propTypes = {
   suggestedTitle: PropTypes.string.isRequired,
   suggestedSubtitle: PropTypes.string.isRequired
 }
+
 
 export default TourGroup

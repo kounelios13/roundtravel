@@ -37,7 +37,7 @@ module.exports = (app) =>{
             }
         })
     })
-
+    -
     app.get('/cities/', (req, res)=>{
         City.find({}, (err, cities)=>{
             if(err){
